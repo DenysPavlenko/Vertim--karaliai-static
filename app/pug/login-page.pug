@@ -2,6 +2,7 @@ extends /layouts/main
 include /partials/input
 include /partials/button
 include /partials/form-divider
+include /partials/status-message
 
 block variables
   - const title = 'Login page'
@@ -24,9 +25,11 @@ block content
               .form-group
                 +input()(type="password" placeholder="Password:")
             .form__line
-              .column-group.column-group--md.column-group--justify-items-center
+              .column-group.column-group--justify-items-center
                 .column-group__item
                   +button({fluid:true})(type="submit")| Sign in
+                .column-group__item
+                  +status-message({text:'Oops... Incorrect Email or Password.', icon:{name:'attention', width:'24', height:'24'}, color:'brick-red'})
                 .column-group__item
                   a(href="#").p.font-semibold.text-surfie-green Forgot password?
         .form-box__divider
@@ -43,4 +46,4 @@ block content
               span Sign in with Facebook
 
         .form-box__footer
-          a(href="#").p.font-semibold.text-surfie-green Create an account
+          a(href="#").p.font-semibold.text-surfie-green.text-underline Create an account

@@ -427,6 +427,10 @@ p,
   font-weight: 400;
 }
 
+.p-xl {
+  font-size: 1.125rem;
+}
+
 .text-white {
   color: #ffffff;
 }
@@ -437,6 +441,10 @@ p,
 
 .text-surfie-green {
   color: #0E7D7D;
+}
+
+.text-brick-red {
+  color: #CC2936;
 }
 
 .font-regular {
@@ -570,6 +578,10 @@ p,
 
 .svg-icon--white {
   fill: #ffffff;
+}
+
+.svg-icon--brick-red {
+  fill: #CC2936;
 }
 
 .form__line:not(:last-child) {
@@ -771,6 +783,19 @@ p,
 
 .button__append {
   right: 30px;
+}
+
+.status-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.status-message__icon {
+  margin-right: 9px;
 }
 
 @media (min-width: 361px) {
