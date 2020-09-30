@@ -16,7 +16,7 @@ mixin select(props = {})
       .select__left
         if(label.image)
           img(src=label.image, class="select__thumbnail" alt="icon")
-        p #{label.name}
+        span #{label.name}
       if(label.right)
         .select__right
           | !{label.right}
@@ -30,8 +30,9 @@ mixin select(props = {})
             .select__left
               if(image)
                 img(src=image, class="select__thumbnail" alt="icon")
-              p #{name}
+              span #{name}
             if(right)
               .select__right
                 | !{right}
+
     input(type="hidden" class="select__input js-select-input")

@@ -716,6 +716,7 @@ p,
   top: 0;
   font-weight: 600;
   background-color: #ffffff;
+  color: #444444;
 }
 
 .input__label {
@@ -729,10 +730,11 @@ p,
   left: 10px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  font-size: 1rem;
-  line-height: 1;
-  cursor: text;
+  font-size: 0.9375rem;
   font-weight: 400;
+  line-height: 1;
+  color: #9D9D9D;
+  cursor: text;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
@@ -741,7 +743,7 @@ p,
   width: 100%;
   display: block;
   padding: 10px 15px 11px;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1;
   font-weight: 400;
   border-radius: 3px;
@@ -909,10 +911,10 @@ p,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-size: 1rem;
-  line-height: 1;
+  font-size: 0.9375rem;
   font-weight: 600;
-  color: #9D9D9D;
+  line-height: 1;
+  color: #444444;
   white-space: nowrap;
 }
 
