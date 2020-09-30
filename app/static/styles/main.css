@@ -497,7 +497,7 @@ p,
 
 .login-page {
   position: relative;
-  padding: 100px 0 150px;
+  padding: 80px 0 100px;
 }
 
 .login-page:after,
@@ -625,7 +625,7 @@ p,
 }
 
 .form__line:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .form-box {
@@ -634,7 +634,7 @@ p,
   border: 1px solid #DADADA;
   border-radius: 3px;
   background-color: #ffffff;
-  padding: 50px 135px 60px;
+  padding: 40px 120px 60px;
 }
 
 .form-box__header {
@@ -644,15 +644,15 @@ p,
 
 .form-box__icon {
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .form-box__form {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .form-box__divider {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .form-box__buttons {
@@ -728,7 +728,7 @@ p,
 .input__field {
   width: 100%;
   display: block;
-  padding: 18px 15px 18px;
+  padding: 13px 15px 13px;
   font-size: 1rem;
   line-height: 1;
   font-weight: 400;
@@ -785,7 +785,7 @@ p,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 20px 20px;
+  padding: 17px 20px;
   color: #ffffff;
   font-size: 1rem;
   line-height: 1;
@@ -887,7 +887,7 @@ p,
 .select__label {
   position: relative;
   padding: 0 40px 0 20px;
-  height: 60px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1436,7 +1436,7 @@ p,
   }
 
   .form-box {
-    padding: 50px 100px 60px;
+    padding: 40px 100px 60px;
   }
 }
 
@@ -1445,12 +1445,8 @@ p,
     max-width: 540px;
   }
 
-  .login-page {
-    padding: 80px 0 130px;
-  }
-
   .form-box {
-    padding: 50px 15px 60px;
+    padding: 40px 15px 60px;
   }
 
   .button__prepend {
@@ -1468,6 +1464,6 @@ p,
   }
 
   .login-page {
-    padding: 40px 0 80px;
+    padding: 40px 0 60px;
   }
 }
