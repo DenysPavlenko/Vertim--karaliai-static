@@ -510,7 +510,7 @@ p,
 
 .login-page:before {
   bottom: 0;
-  background-image: url("../images/login-page/login-page-image.svg");
+  background-image: url("../images/login-page/login-page-image.png");
   background-size: contain;
   background-position: left bottom;
   background-repeat: no-repeat;
