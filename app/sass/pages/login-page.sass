@@ -1,6 +1,10 @@
 .login-page
   position: relative
-  padding: 80px 0 100px
+  padding: 40px 0
+  height: 100%
+  min-height: 100vh
+  display: flex
+  align-items: center
   +media-max($bp-sm)
     padding: 40px 0 60px
   &:after,
@@ -30,9 +34,11 @@
       display: flex
       justify-content: flex-end
       margin-bottom: 20px
-      padding-right: 70px
     +media-max($bp-lg)
+      padding-right: 65px
+    +media-max($bp-md)
       padding-right: 0
   &__box
     display: flex
     justify-content: center
+

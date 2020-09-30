@@ -497,7 +497,15 @@ p,
 
 .login-page {
   position: relative;
-  padding: 80px 0 100px;
+  padding: 40px 0;
+  height: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .login-page:after,
@@ -625,16 +633,16 @@ p,
 }
 
 .form__line:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .form-box {
   width: 100%;
-  max-width: 790px;
+  max-width: 560px;
   border: 1px solid #DADADA;
   border-radius: 3px;
   background-color: #ffffff;
-  padding: 40px 120px 60px;
+  padding: 40px 80px 60px;
 }
 
 .form-box__header {
@@ -648,11 +656,11 @@ p,
 }
 
 .form-box__form {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .form-box__divider {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .form-box__buttons {
@@ -728,7 +736,7 @@ p,
 .input__field {
   width: 100%;
   display: block;
-  padding: 13px 15px 13px;
+  padding: 10px 15px 11px;
   font-size: 1rem;
   line-height: 1;
   font-weight: 400;
@@ -755,7 +763,7 @@ p,
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-bottom: -20px;
+  margin-bottom: -10px;
 }
 
 .button-group--column {
@@ -770,11 +778,11 @@ p,
 }
 
 .button-group__button {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .button-group__button:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .button {
@@ -785,7 +793,7 @@ p,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 17px 20px;
+  padding: 14px 20px 15px;
   color: #ffffff;
   font-size: 1rem;
   line-height: 1;
@@ -887,7 +895,7 @@ p,
 .select__label {
   position: relative;
   padding: 0 40px 0 20px;
-  height: 50px;
+  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1422,7 +1430,6 @@ p,
     -ms-flex-pack: end;
     justify-content: flex-end;
     margin-bottom: 20px;
-    padding-right: 70px;
   }
 }
 
@@ -1432,11 +1439,7 @@ p,
   }
 
   .login-page__lang {
-    padding-right: 0;
-  }
-
-  .form-box {
-    padding: 40px 100px 60px;
+    padding-right: 65px;
   }
 }
 
@@ -1445,8 +1448,12 @@ p,
     max-width: 540px;
   }
 
+  .login-page__lang {
+    padding-right: 0;
+  }
+
   .form-box {
-    padding: 40px 15px 60px;
+    padding: 40px 55px 60px;
   }
 
   .button__prepend {
@@ -1463,7 +1470,16 @@ p,
     max-width: 100%;
   }
 
+  html,
+  body {
+    font-size: 15px;
+  }
+
   .login-page {
     padding: 40px 0 60px;
+  }
+
+  .form-box {
+    padding: 40px 15px 60px;
   }
 }
