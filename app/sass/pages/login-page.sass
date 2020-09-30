@@ -1,11 +1,13 @@
 .login-page
   position: relative
-  padding: 40px 0
+  padding: 80px 0
   height: 100%
   min-height: 100vh
   display: flex
+  flex-direction: column
+  justify-content: center
   align-items: center
-  +media-max($bp-sm)
+  +media-max($bp-xl)
     padding: 40px 0 60px
   &:after,
   &:before
@@ -24,11 +26,10 @@
     width: 100%
     background: $c-white
     opacity: 0.5
-  &__container
-    position: relative
   &__lang
     position: absolute
-    right: 15px
+    top: 40px
+    right: 40px
     +media-max($bp-xl)
       position: static
       display: flex
