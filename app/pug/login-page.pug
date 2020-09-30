@@ -16,6 +16,7 @@ block content
             img(src="images/login-page/login-page-icon.svg", alt="login-page-icon")
           .form-box__title
             h2.text-surfie-green Log in
+
         .form-box__form
           .form
             .form__line
@@ -29,11 +30,13 @@ block content
                 .column-group__item
                   +button({fluid:true})(type="submit")| Sign in
                 .column-group__item
-                  +status-message({text:'Oops... Incorrect Email or Password.', icon:{name:'attention', width:'24', height:'24'}, color:'brick-red'})
+                  +status-message({text:'Oops... Incorrect Email or Password.', icon:{name:'warning', width:'24', height:'24'}, color:'brick-red'})
                 .column-group__item
                   a(href="#").p.font-semibold.text-surfie-green Forgot password?
+
         .form-box__divider
           +form-divider()
+
         .form-box__buttons
           .button-group.button-group--column
             +button({fluid:true, classes:'button-group__button', bg:'cornflower-blue'})(type="submit" placeholder="Password:")
