@@ -1,16 +1,34 @@
 .input
-  width: 100%
-  display: block
-  padding: 13px 15px 13px
-  font-size: rem(16px)
-  line-height: 1
-  font-weight: 400
-  border-radius: $radius-primary
-  background-color: $c-white
-  border: 1px solid $c-alto
-  color: $c-tundora
-  font-size: 16px
-  line-height: 1
-  &::placeholder
-    color: $c-silver-chalice
-  // Elements
+  position: relative
+  // States
+  &.is-active
+    .input__label
+      top: 0
+      font-weight: 600
+      background-color: $c-white
+  // Elemenst
+  &__label
+    position: absolute
+    padding: 0 5px
+    top: 50%
+    left: 10px
+    transform: translateY(-50%)
+    font-size: rem(16px)
+    line-height: 1
+    font-weight: 400
+    transition: 0.2s
+  &__field
+    width: 100%
+    display: block
+    padding: 18px 15px 18px
+    font-size: rem(16px)
+    line-height: 1
+    font-weight: 400
+    border-radius: $radius-primary
+    background-color: $c-white
+    border: 1px solid $c-alto
+    color: $c-tundora
+    &:placeholder
+      color: $c-silver-chalice
+    &:focus
+      border-color: $c-surfie-green

@@ -33,7 +33,7 @@
                 </div>
               </div>
             </div>
-            <input class="input select__input js-select-input" type="hidden"/>
+            <input class="select__input js-select-input" type="hidden"/>
           </div>
         </div>
         <div class="login-page__box">
@@ -45,15 +45,21 @@
               </div>
             </div>
             <div class="form-box__form">
-              <div class="form">
+              <form class="form">
                 <div class="form__line">
                   <div class="form-group">
-                    <input class="input" type="email" placeholder="Email address"/>
+                    <div class="input js-input-animation">
+                      <label class="input__label js-input-animation-label">Email:</label>
+                      <input class="input__field js-input-animation-field" type="email"/>
+                    </div>
                   </div>
                 </div>
                 <div class="form__line">
                   <div class="form-group">
-                    <input class="input" type="password" placeholder="Password:"/>
+                    <div class="input js-input-animation">
+                      <label class="input__label js-input-animation-label">Password:</label>
+                      <input class="input__field js-input-animation-field" type="password"/>
+                    </div>
                   </div>
                 </div>
                 <div class="form__line">
@@ -79,7 +85,7 @@
                     <div class="column-group__item"><a class="p font-semibold text-surfie-green" href="#">Forgot password?</a></div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
             <div class="form-box__divider">
               <div class="form-divider">
