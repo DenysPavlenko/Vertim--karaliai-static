@@ -750,6 +750,8 @@ p,
   background-color: #ffffff;
   border: 1px solid #DADADA;
   color: #444444;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .input__field:placeholder {
