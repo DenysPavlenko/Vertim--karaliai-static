@@ -709,6 +709,10 @@ p,
 .input__label {
   position: absolute;
   padding: 0 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   top: 50%;
   left: 10px;
   -webkit-transform: translateY(-50%);
