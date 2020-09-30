@@ -7,7 +7,6 @@
   font-size: rem(16px)
   line-height: 1
   font-weight: 600
-  overflow: hidden
   z-index: 1
   border-radius: $radius-primary
   &:after
@@ -17,21 +16,31 @@
     height: 100%
     top: 0
     left: 0
+    border-radius: $radius-primary
     background-color: $c-surfie-green
     transition: 0.2s
     z-index: -1
   &:hover
     &:after
       opacity: 0.8
+  &:focus
+    &:after
+      box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5);
   // Modifiers
   &--fluid
     width: 100%
   &--bg-cornflower-blue
     &:after
       background-color: $c-cornflower-blue
+    &:focus
+      &:after
+        box-shadow: 0 0 0 0.2rem rgba($c-cornflower-blue, .5);
   &--bg-azure-radiance
     &:after
       background-color: $c-azure-radiance
+    &:focus
+      &:after
+        box-shadow: 0 0 0 0.2rem rgba($c-azure-radiance, .5);
   // Elements
   &__prepend,
   &__append
