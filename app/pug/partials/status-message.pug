@@ -1,9 +1,10 @@
 mixin status-message(props = {})
-  -const { text, icon = {}, color } = props
+  -const { title, link, icon = {}, color } = props
 
   .status-message
     .status-message__icon
       +icon(icon.name, `svg-icon--${color}`)(width=icon.width height=icon.height)
     .status-message__info
-      .status-message__text
-        p(class=`p-xl font-semibold text-${color}`) #{text}
+      span.status-message__title #{title}
+      if(link)
+        a(href=link).status-message__link Information

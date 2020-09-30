@@ -1,0 +1,12 @@
+mixin link(props = {})
+  -const { color, underline, link } = props
+  -
+    const classnames = classNames({
+      'link': true,
+      [`link--${color}`]: color,
+      'link--underline': underline,
+      [classes]: classes,
+    })
+
+  a(href=link class=classnames)
+    block

@@ -427,10 +427,6 @@ p,
   font-weight: 400;
 }
 
-.p-xl {
-  font-size: 1.125rem;
-}
-
 .text-white {
   color: #ffffff;
 }
@@ -445,6 +441,10 @@ p,
 
 .text-brick-red {
   color: #CC2936;
+}
+
+.text-boston-blue {
+  color: #3F88C5;
 }
 
 .font-regular {
@@ -602,6 +602,26 @@ p,
 
 .svg-icon--brick-red {
   fill: #CC2936;
+}
+
+.link {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.link:hover {
+  opacity: 0.8;
+}
+
+.link--underline {
+  text-decoration: underline;
+}
+
+.link--surfie-green {
+  color: #0E7D7D;
 }
 
 .form__line:not(:last-child) {
@@ -958,7 +978,23 @@ p,
 
 .status-message__icon {
   margin-right: 9px;
-  margin-top: 1px;
+  margin-top: 1;
+}
+
+.status-message__title {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #CC2936;
+}
+
+.status-message__link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #3F88C5;
+  text-decoration: underline;
 }
 
 @media (min-width: 361px) {
@@ -1388,8 +1424,8 @@ p,
     max-width: 540px;
   }
 
-  .login-page:before {
-    display: none;
+  .login-page {
+    padding: 80px 0 130px;
   }
 
   .form-box {
@@ -1408,5 +1444,9 @@ p,
 @media (max-width: 576px) {
   .container {
     max-width: 100%;
+  }
+
+  .login-page {
+    padding: 40px 0 80px;
   }
 }
