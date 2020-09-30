@@ -1,0 +1,26 @@
+.login-page
+  position: relative
+  padding: 100px 0 150px
+  &::after,
+  &::before
+    position: fixed
+    content: ''
+    left: 0
+    z-index: -1
+  &::before
+    bottom: 0
+    +bg-img('../images/login-page/login-page-image.svg', contain, left bottom)
+    width: 49%
+    height: 49%
+    +media-max($bp-md)
+      display: none
+  &::after
+    top: 0
+    height: 100%
+    width: 100%
+    background: $c-white
+    opacity: 0.5
+  &__box
+    display: flex
+    justify-content: center
+    padding: 0 15px

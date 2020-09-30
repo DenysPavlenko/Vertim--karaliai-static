@@ -1,0 +1,17 @@
+.button-group
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  margin-bottom: -20px
+  // Modifiers
+  &--column
+    flex-direction: column
+    .button-group__button
+      &:not(:last-child)
+        margin-right: 0
+  // Elements
+  &__button
+    margin-bottom: 20px
+    &:not(:last-child)
+      margin-right: 20px
+

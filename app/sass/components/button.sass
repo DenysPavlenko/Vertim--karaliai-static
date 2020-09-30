@@ -1,0 +1,49 @@
+.button
+  position: relative
+  display: inline-flex
+  justify-content: center
+  padding: 20px 20px
+  color: $c-white
+  font-size: rem(16px)
+  line-height: 1
+  font-weight: 600
+  overflow: hidden
+  z-index: 1
+  border-radius: $radius-primary
+  &:after
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: $c-surfie-green
+    transition: 0.2s
+    z-index: -1
+  &:hover
+    &:after
+      opacity: 0.8
+  // Modifiers
+  &--fluid
+    width: 100%
+  &--bg-cornflower-blue
+    &:after
+      background-color: $c-cornflower-blue
+  &--bg-azure-radiance
+    &:after
+      background-color: $c-azure-radiance
+  // Elements
+  &__prepend,
+  &__append
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+  &__prepend
+    left: 30px
+    +media-max($bp-md)
+      left: 15px
+  &__append
+    right: 30px
+    +media-max($bp-md)
+      right: 15px

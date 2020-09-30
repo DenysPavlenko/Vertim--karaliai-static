@@ -1,0 +1,17 @@
+$max: 12
+
+// Static orders
+$i: 0
+@while $i <= $max
+  .order-#{$i}
+    order: $i
+  $i: $i + 1
+
+// Responsive orders
+@each $bp, $name in $breakpoints
+  $i: 0
+  +media-min($bp)
+    @while $i <= $max
+      .order-#{$name}-#{$i}
+        order: $i
+      $i: $i + 1

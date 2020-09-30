@@ -1,0 +1,16 @@
+.d-none
+  display: none
+.d-block
+  display: block
+.d-flex
+  display: flex
+
+// Responsive margins
+@each $bp, $name in $breakpoints
+  +media-min($bp)
+    .d-#{$name}-none
+      display: none
+    .d-#{$name}-block
+      display: block
+    .d-#{$name}-flex
+      display: flex

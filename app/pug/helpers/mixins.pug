@@ -1,0 +1,13 @@
+mixin times(limit)
+  - for (var i = 1; i <= limit; i++) {
+      block
+  - }
+
+mixin icon(name, classes)
+  -
+    const classnames = classNames({
+      'svg-icon' : true,
+      [classes]: classes,
+    })
+  svg(class=classnames)&attributes(attributes)
+    use(href=`images/svg/svg-sprite/symbol/sprite.svg#${name}` x="0" y="0")

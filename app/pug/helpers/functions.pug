@@ -1,0 +1,10 @@
+-
+  const classNames = (classes) => {
+    let res = '';
+    for (const className in classes) {
+      if(classes[className]){
+        res+= `${className} `
+      }
+    }
+    return res.trim();
+  }

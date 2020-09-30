@@ -1,0 +1,29 @@
+$max: 20
+
+// Static margins
+$i: 0
+@while $i <= $max
+  .mt-#{$i}
+    margin-top: $i+px
+  .mr-#{$i}
+    margin-right: $i+px
+  .mb-#{$i}
+    margin-bottom: $i+px
+  .ml-#{$i}
+    margin-left: $i+px
+  $i: $i + 5
+
+// Responsive margins
+@each $bp, $name in $breakpoints
+  $i: 0
+  +media-min($bp)
+    @while $i <= $max
+      .mt-#{$name}-#{$i}
+        margin-top: $i+px
+      .mr-#{$name}-#{$i}
+        margin-right: $i+px
+      .mb-#{$name}-#{$i}
+        margin-bottom: $i+px
+      .ml-#{$name}-#{$i}
+        margin-left: $i+px
+      $i: $i + 5

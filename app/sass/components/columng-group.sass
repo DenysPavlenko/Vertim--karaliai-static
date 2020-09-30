@@ -1,0 +1,35 @@
+.column-group
+  display: flex
+  flex-direction: column
+  // Modifiers
+  &--align-center
+    display: inline-flex
+    align-items: center
+  &--justify-items-center
+    >.column-group__item
+      display: inline-flex
+      justify-content: center
+  &--xl
+    >.column-group__item
+      &:not(:last-child)
+        margin-bottom: 30px
+  &--lg
+    >.column-group__item
+      &:not(:last-child)
+        margin-bottom: 25px
+  &--md
+    >.column-group__item
+      &:not(:last-child)
+        margin-bottom: 15px
+  &--sm
+    >.column-group__item
+      &:not(:last-child)
+        margin-bottom: 10px
+  &--xs
+    >.column-group__item
+      &:not(:last-child)
+        margin-bottom: 5px
+  // Elements
+  &__item
+    &:not(:last-child)
+      margin-bottom: 20px

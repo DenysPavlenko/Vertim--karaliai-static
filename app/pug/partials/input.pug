@@ -1,0 +1,9 @@
+mixin input(props = {})
+  -const { classes } = props
+  -
+    const classnames = classNames({
+      'input': true,
+      [classes]: classes,
+    })
+
+  input(class=classnames)&attributes(attributes)

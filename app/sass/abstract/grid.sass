@@ -1,0 +1,43 @@
+// Grid variables
+$gutter-half: ($gutter / 2)
+$col-width  : (100% / $columns)
+
+// Row
+@mixin row()
+  display: flex
+  flex-wrap: wrap
+  margin-left: -$gutter-half
+  margin-right: -$gutter-half
+
+// Container
+@mixin container($maxWidth: 100%, $initial: true, $fluid: false)
+  @if $initial
+    margin: 0 auto
+    width: 100%
+    padding: 0 $gutter-half
+  @if $fluid
+    width: 100%
+    padding: 0 $gutter-half
+  max-width: $maxWidth
+
+// Col with paddings
+@mixin col($col: 0, $offset-col: false, $paddings: true)
+  @if $col > 0
+    width: #{$col-width * $col}
+  @else
+    flex: 1 0 0
+  @if $offset-col
+    margin-left: #{$col-width * $offset-col}
+  @if $paddings
+    padding-left: $gutter-half
+    padding-right: $gutter-half
+
+// Col with margins
+@mixin col-mx($col: 0, $offset-col: false)
+  @if $col > 0
+    width: calc(#{$col-width * $col} - #{$gutter})
+  @if $offset-col
+    margin-left: calc(#{$col-width * $offset-col} + #{$gutter-half})
+  @else
+    margin-left: $gutter-half
+  margin-right: $gutter-half
