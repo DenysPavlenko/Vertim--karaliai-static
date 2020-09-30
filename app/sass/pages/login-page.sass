@@ -20,7 +20,19 @@
     width: 100%
     background: $c-white
     opacity: 0.5
+  &__container
+    position: relative
+  &__lang
+    position: absolute
+    right: 15px
+    +media-max($bp-xl)
+      position: static
+      display: flex
+      justify-content: flex-end
+      margin-bottom: 20px
+      padding-right: 70px
+    +media-max($bp-lg)
+      padding-right: 0
   &__box
     display: flex
     justify-content: center
-    padding: 0 15px

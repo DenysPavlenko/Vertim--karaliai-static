@@ -87,7 +87,7 @@ svg {
   margin: 0 auto;
   width: 100%;
   padding: 0 15px;
-  max-width: 1320px;
+  max-width: 1720px;
 }
 
 .container-fluid {
@@ -483,6 +483,18 @@ p,
   cursor: pointer;
 }
 
+.custom-scroll {
+  height: 100%;
+}
+
+.custom-scroll .simplebar-scrollbar:before {
+  border-radius: 3px;
+  background: #9D9D9D;
+  right: 0;
+  left: auto;
+  width: 5px;
+}
+
 .login-page {
   position: relative;
   padding: 100px 0 150px;
@@ -514,6 +526,15 @@ p,
   opacity: 0.5;
 }
 
+.login-page__container {
+  position: relative;
+}
+
+.login-page__lang {
+  position: absolute;
+  right: 15px;
+}
+
 .login-page__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -521,7 +542,6 @@ p,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0 15px;
 }
 
 .column-group {
@@ -785,7 +805,88 @@ p,
   right: 30px;
 }
 
-.status-message {
+.select {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  background-color: #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  border: 1px solid #DADADA;
+}
+
+.select.is-expanded {
+  border-radius: 3px 3px 0 0;
+}
+
+.select.is-expanded .select__label:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.select--auto {
+  width: auto;
+  display: inline-block;
+}
+
+.select__label {
+  position: relative;
+  padding: 0 40px 0 20px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #9D9D9D;
+  white-space: nowrap;
+}
+
+.select__label[data-selected] {
+  color: #444444;
+}
+
+.select__label:before,
+.select__label:after {
+  position: absolute;
+  content: '';
+}
+
+.select__label:before {
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 0 3px 3px 0;
+}
+
+.select__label:after {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  right: 17px;
+  width: 11px;
+  height: 6px;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  background-image: url("../images/icons/triangle-down.svg");
+  background-size: 11px 6px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.select__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,8 +895,60 @@ p,
   align-items: center;
 }
 
+.select__thumbnail {
+  max-width: 18px;
+  margin-right: 10px;
+}
+
+.select__options {
+  position: absolute;
+  display: none;
+  right: -1px;
+  min-width: 100%;
+  top: calc(100% + 1px);
+  background-color: #ffffff;
+  border-radius: 0 0 3px 3px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 200;
+}
+
+.select__options-scroll {
+  max-height: 168px;
+}
+
+.select__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 10px 15px;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #9D9D9D;
+}
+
+.select__option:hover {
+  background-color: #0E7D7D;
+  color: #ffffff;
+}
+
+.status-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .status-message__icon {
   margin-right: 9px;
+  margin-top: 1px;
 }
 
 @media (min-width: 361px) {
@@ -1192,11 +1345,31 @@ p,
   .container {
     max-width: 960px;
   }
+
+  .login-page__lang {
+    position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    padding-right: 70px;
+  }
 }
 
 @media (max-width: 991px) {
   .container {
     max-width: 720px;
+  }
+
+  .login-page__lang {
+    padding-right: 0;
+  }
+
+  .form-box {
+    padding: 50px 100px 60px;
   }
 }
 

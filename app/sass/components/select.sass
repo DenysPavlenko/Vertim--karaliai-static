@@ -1,0 +1,84 @@
+$select-height: 60px
+
+.select
+  position: relative
+  width: 100%
+  display: block
+  border-radius: $radius-primary
+  background-color: $c-white
+  user-select: none
+  cursor: pointer
+  border: 1px solid $c-alto
+  &.is-expanded
+    border-radius: $radius-primary $radius-primary 0 0
+    .select__label
+      &:after
+        transform: rotate(180deg)
+  // Modifiers
+  &--auto
+    width: auto
+    display: inline-block
+  // Elements
+  &__label
+    position: relative
+    padding: 0 40px 0 20px
+    height: $select-height
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-size: rem(16px)
+    line-height: 1
+    font-weight: 600
+    color: $c-silver-chalice
+    white-space: nowrap
+    &[data-selected]
+      color: $c-tundora
+    &:before,
+    &:after
+      position: absolute
+      content: ''
+    &:before
+      right: 0
+      top: 0
+      width: 30px
+      height: 100%
+      background-color: $c-white
+      border-radius: 0 $radius-primary $radius-primary 0
+    &:after
+      transition: 0.2s
+      right: 17px
+      width: 11px
+      height: 6px
+      transform-origin: center
+      +bg-img('../images/icons/triangle-down.svg', 11px 6px)
+  &__left
+    display: flex
+    align-items: center
+  &__thumbnail
+    max-width: 18px
+    margin-right: 10px
+  &__options
+    position: absolute
+    display: none
+    right: -1px
+    min-width: 100%
+    top: calc(100% + 1px)
+    background-color: $c-white
+    border-radius: 0 0 $radius-primary $radius-primary
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
+    overflow: hidden
+    z-index: 200
+    &-scroll
+      max-height: 168px
+  &__option
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 10px 15px
+    white-space: nowrap
+    font-size: rem(16px)
+    font-weight: 400
+    color: $c-silver-chalice
+    &:hover
+      background-color: $c-surfie-green
+      color: $c-white

@@ -11,75 +11,101 @@
   </head>
   <body>
     <div class="login-page">
-      <div class="login-page__box">
-        <div class="form-box">
-          <div class="form-box__header">
-            <div class="form-box__icon"><img src="images/login-page/login-page-icon.svg" alt="login-page-icon"></div>
-            <div class="form-box__title">
-              <h2 class="text-surfie-green">Log in</h2>
+      <div class="container login-page__container">
+        <div class="login-page__lang">
+          <div class="select js-select select--auto">
+            <div class="select__label js-select-label" data-selected="English">
+              <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/>
+                <p>English</p>
+              </div>
             </div>
-          </div>
-          <div class="form-box__form">
-            <div class="form">
-              <div class="form__line">
-                <div class="form-group">
-                  <input class="input" type="email" placeholder="Email address"/>
-                </div>
-              </div>
-              <div class="form__line">
-                <div class="form-group">
-                  <input class="input" type="password" placeholder="Password:"/>
-                </div>
-              </div>
-              <div class="form__line">
-                <div class="column-group column-group--justify-items-center">
-                  <div class="column-group__item">
-                    <button class="button button--fluid" type="submit">Sign in
-                    </button>
+            <div class="select__options  js-select-options">
+              <div class="custom-scroll select__options-scroll" data-select-simplebar="data-select-simplebar">
+                <div class="select__option  js-select-option" data-option="English">
+                  <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/>
+                    <p>English</p>
                   </div>
-                  <div class="column-group__item">
-                    <div class="status-message">
-                      <div class="status-message__icon">
-                        <svg class="svg-icon svg-icon--brick-red" width="24" height="24">
-                          <use href="images/svg/svg-sprite/symbol/sprite.svg#warning" x="0" y="0"></use>
-                        </svg>
-                      </div>
-                      <div class="status-message__info">
-                        <div class="status-message__text">
-                          <p class="p-xl font-semibold text-brick-red">Oops... Incorrect Email or Password.</p>
+                </div>
+                <div class="select__option  js-select-option" data-option="Lithuanian">
+                  <div class="select__left"><img class="select__thumbnail" src="images/flags/lt.svg" alt="icon"/>
+                    <p>Lithuanian</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input class="input select__input js-select-input" type="hidden"/>
+          </div>
+        </div>
+        <div class="login-page__box">
+          <div class="form-box">
+            <div class="form-box__header">
+              <div class="form-box__icon"><img src="images/login-page/login-page-icon.svg" alt="login-page-icon"></div>
+              <div class="form-box__title">
+                <h2 class="text-surfie-green">Log in</h2>
+              </div>
+            </div>
+            <div class="form-box__form">
+              <div class="form">
+                <div class="form__line">
+                  <div class="form-group">
+                    <input class="input" type="email" placeholder="Email address"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="form-group">
+                    <input class="input" type="password" placeholder="Password:"/>
+                  </div>
+                </div>
+                <div class="form__line">
+                  <div class="column-group column-group--justify-items-center">
+                    <div class="column-group__item">
+                      <button class="button button--fluid" type="submit">Sign in
+                      </button>
+                    </div>
+                    <div class="column-group__item">
+                      <div class="status-message">
+                        <div class="status-message__icon">
+                          <svg class="svg-icon svg-icon--brick-red" width="24" height="24">
+                            <use href="images/svg/svg-sprite/symbol/sprite.svg#warning" x="0" y="0"></use>
+                          </svg>
+                        </div>
+                        <div class="status-message__info">
+                          <div class="status-message__text">
+                            <p class="p-xl font-semibold text-brick-red">Oops... Incorrect Email or Password.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="column-group__item"><a class="p font-semibold text-surfie-green" href="#">Forgot password?</a></div>
                   </div>
-                  <div class="column-group__item"><a class="p font-semibold text-surfie-green" href="#">Forgot password?</a></div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-box__divider">
-            <div class="form-divider">
-              <div class="form-divider__text">Or</div>
+            <div class="form-box__divider">
+              <div class="form-divider">
+                <div class="form-divider__text">Or</div>
+              </div>
             </div>
-          </div>
-          <div class="form-box__buttons">
-            <div class="button-group button-group--column">
-              <button class="button button--fluid button--bg-cornflower-blue button-group__button" type="submit" placeholder="Password:">
-                <div class="button__prepend">
-                  <svg class="svg-icon svg-icon--white" width="25" height="25">
-                    <use href="images/svg/svg-sprite/symbol/sprite.svg#google" x="0" y="0"></use>
-                  </svg>
-                </div><span>Sign in with Google</span>
-              </button>
-              <button class="button button--fluid button--bg-azure-radiance button-group__button" type="submit" placeholder="Password:">
-                <div class="button__prepend">
-                  <svg class="svg-icon svg-icon--white" width="25" height="25">
-                    <use href="images/svg/svg-sprite/symbol/sprite.svg#facebook" x="0" y="0"></use>
-                  </svg>
-                </div><span>Sign in with Facebook</span>
-              </button>
+            <div class="form-box__buttons">
+              <div class="button-group button-group--column">
+                <button class="button button--fluid button--bg-cornflower-blue button-group__button" type="submit" placeholder="Password:">
+                  <div class="button__prepend">
+                    <svg class="svg-icon svg-icon--white" width="25" height="25">
+                      <use href="images/svg/svg-sprite/symbol/sprite.svg#google" x="0" y="0"></use>
+                    </svg>
+                  </div><span>Sign in with Google</span>
+                </button>
+                <button class="button button--fluid button--bg-azure-radiance button-group__button" type="submit" placeholder="Password:">
+                  <div class="button__prepend">
+                    <svg class="svg-icon svg-icon--white" width="25" height="25">
+                      <use href="images/svg/svg-sprite/symbol/sprite.svg#facebook" x="0" y="0"></use>
+                    </svg>
+                  </div><span>Sign in with Facebook</span>
+                </button>
+              </div>
             </div>
+            <div class="form-box__footer"><a class="p font-semibold text-surfie-green text-underline" href="#">Create an account</a></div>
           </div>
-          <div class="form-box__footer"><a class="p font-semibold text-surfie-green text-underline" href="#">Create an account</a></div>
         </div>
       </div>
     </div>

@@ -1,6 +1,4 @@
-'use strict';
-
-function select () {
+export default function () {
   var $selects = $('.js-select');
 
   $selects.each(function () {
@@ -47,12 +45,3 @@ function select () {
     });
   });
 }
-
-// On document ready
-$(function () {
-  svg4everybody();
-  select();
-});
-
-// On window load
-$(window).on('load', function () { });
