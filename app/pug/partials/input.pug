@@ -1,5 +1,5 @@
 mixin input(props = {})
-  -const { classes, label, animated } = props
+  -const { classes, label, animated, name } = props
   -
     const classnames = classNames({
       'input__field': true,
@@ -8,8 +8,8 @@ mixin input(props = {})
 
   if(animated)
     .input.js-input-animation
-      label.input__label.js-input-animation-label #{label}
-      input(class=`${classnames} js-input-animation-field`)&attributes(attributes)
+      label.input__label.js-input-animation-label(for=name) #{label}
+      input(class=`${classnames} js-input-animation-field` id=name)&attributes(attributes)
   else
     .input
       input(class=classnames)&attributes(attributes)

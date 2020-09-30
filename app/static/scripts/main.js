@@ -53,9 +53,8 @@ function inputAnimation () {
   $inputs.each(function () {
     var $input = $(this);
     var $inputField = $input.find('.js-input-animation-field');
-    $input.on('click', function () {
+    $inputField.on('focus', function () {
       $input.addClass('is-active');
-      $inputField.trigger('focus');
     });
     $inputField.on('focusout', function () {
       if ($inputField.val() === '') {
