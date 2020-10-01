@@ -1,0 +1,12 @@
+extends /layouts/main
+include /partials/inner-header
+
+block variables
+  - const title = 'Application page'
+
+block content
+  .application-page
+    .application-page__header
+      +inner-header()
+    .application-page__form
+      include /pages/application-page/step-1/_index

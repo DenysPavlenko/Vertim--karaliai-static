@@ -1,0 +1,15 @@
+include /partials/input
+
+mixin checkbox(props = {})
+  -const { checked, classes, label } = props
+  -
+    const classnames = classNames({
+      'checkbox': true,
+      [classes]: boxed,
+    })
+
+  label(class=classnames)
+    .checkbox__box
+      input(class="checkbox__input" type="checkbox" checked=checked)
+      span.checkbox__checkmark
+    span.checkbox__name #{label}

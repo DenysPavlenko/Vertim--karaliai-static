@@ -3,7 +3,7 @@ mixin status-message(props = {})
 
   .status-message
     .status-message__icon
-      +icon(icon.name, `svg-icon--${color}`)(width=icon.width height=icon.height)
+      +icon({name:icon.name, fill:color, width:icon.width, height:icon.height})
     .status-message__info
       span.status-message__title #{title}
       if(link)

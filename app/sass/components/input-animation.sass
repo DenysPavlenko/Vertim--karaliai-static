@@ -1,0 +1,23 @@
+.input-animation
+  position: relative
+  // States
+  &.is-active
+    .input-animation__label
+      top: 0
+      font-weight: 600
+      background-color: $c-white
+      color: $c-tundora
+  // Elemenst
+  &__label
+    position: absolute
+    padding: 0 5px
+    user-select: none
+    top: 50%
+    left: 10px
+    transform: translateY(-50%)
+    font-size: rem(15px)
+    font-weight: 400
+    line-height: 1
+    color: $c-silver-chalice
+    cursor: text
+    transition: 0.2s

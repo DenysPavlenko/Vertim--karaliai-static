@@ -4,20 +4,34 @@ $select-height: 45px
   position: relative
   width: 100%
   display: block
-  border-radius: $radius-primary
-  background-color: $c-white
+  border-radius: $r-primary
   user-select: none
+  background-color: $c-alabaster
   cursor: pointer
-  border: 1px solid $c-alto
   &.is-expanded
-    border-radius: $radius-primary $radius-primary 0 0
+    border-radius: $r-primary $r-primary 0 0
     .select__label
       &:after
         transform: rotate(180deg)
+
   // Modifiers
+  &--bordered
+    border: 1px solid $c-alto
+    background-color: transparent
+    .select__label
+      &:before
+        background-color: transparent
+      &:after
+        background-image: url('../images/icons/triangle-down.svg')
   &--auto
     width: auto
     display: inline-block
+  &--transparent
+    background-color: transparent
+    .select__label
+      &:before
+        background-color: transparent
+
   // Elements
   &__label
     position: relative
@@ -27,9 +41,9 @@ $select-height: 45px
     align-items: center
     justify-content: space-between
     font-size: rem(15px)
-    font-weight: 600
+    font-weight: 400
     line-height: 1
-    color: $c-tundora
+    color: $c-silver-chalice
     white-space: nowrap
     &[data-selected]
       color: $c-tundora
@@ -42,15 +56,15 @@ $select-height: 45px
       top: 0
       width: 30px
       height: 100%
-      background-color: $c-white
-      border-radius: 0 $radius-primary $radius-primary 0
+      background-color: $c-alabaster
+      border-radius: 0 $r-primary $r-primary 0
     &:after
       transition: 0.2s
       right: 17px
       width: 11px
       height: 6px
       transform-origin: center
-      +bg-img('../images/icons/triangle-down.svg', 11px 6px)
+      +bg-img('../images/icons/triangle-down-blue.svg', 11px 6px)
   &__left
     display: flex
     align-items: center
@@ -64,7 +78,7 @@ $select-height: 45px
     min-width: 100%
     top: calc(100% + 1px)
     background-color: $c-white
-    border-radius: 0 0 $radius-primary $radius-primary
+    border-radius: 0 0 $r-primary $r-primary
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
     overflow: hidden
     z-index: 200

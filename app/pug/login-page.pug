@@ -1,7 +1,7 @@
 extends /layouts/main
-include /partials/input
+include /partials/input-animation
 include /partials/button
-include /partials/select
+include /partials/lang-select
 include /partials/form-divider
 include /partials/status-message
 include /partials/link
@@ -13,31 +13,24 @@ block content
   .login-page
     .container
       .login-page__lang
-        +select({
-          auto:true,
-          label:{name:'English', selected:true, image:'images/flags/gb.svg'},
-          options:[
-            {name:'English', image:'images/flags/gb.svg'},
-            {name:'Lithuanian', image:'images/flags/lt.svg'},
-          ]
-        })
+        +lang-select()
       .login-page__box
         .form-box
           .form-box__header
             .form-box__icon
-              img(src="images/login-page/login-page-icon.svg", alt="login-page-icon")
+              img(src="images/logo.svg", alt="logo")
             .form-box__title
               h2.text-surfie-green Log in
           .form-box__form
             form.form
               .form__line
                 .form-group
-                  +input({label:'Email:', name:'email', animated:true})(type="email")
+                  +input-animation({label:'Email:', name:'email', animated:true})(type="email")
               .form__line
                 .form-group
-                  +input({label:'Password:', name:'password', animated:true})(type="password")
+                  +input-animation({label:'Password:', name:'password', animated:true})(type="password")
               .form__line
-                .column-group.column-group--sm.column-group--justify-items-center
+                .column-group.column-group--md.column-group--justify-items-center
                   .column-group__item
                     +button({fluid:true})(type="submit")| Sign in
                   .column-group__item
@@ -50,14 +43,10 @@ block content
 
           .form-box__buttons
             .button-group.button-group--column
-              +button({fluid:true, classes:'button-group__button', bg:'cornflower-blue'})(type="submit" placeholder="Password:")
+              +button({fluid:true, classes:'button-group__button', bg:'cornflower-blue'})(type="button")
                 .button__prepend
-                  +icon('google', 'svg-icon--white')(width="25" height="25")
+                  +icon({name:'google', fill:'white', width:'25', height:'25'})
                 span Sign in with Google
-              +button({fluid:true, classes:'button-group__button', bg:'azure-radiance'})(type="submit" placeholder="Password:")
-                .button__prepend
-                  +icon('facebook', 'svg-icon--white')(width="25" height="25")
-                span Sign in with Facebook
 
           .form-box__footer
             +link({link:'#', underline:true})| Create an account

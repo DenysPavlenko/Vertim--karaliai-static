@@ -3,11 +3,13 @@ mixin times(limit)
       block
   - }
 
-mixin icon(name, classes)
+mixin icon(props = {})
+  -const { name, classes, fill, width, height } = props
   -
     const classnames = classNames({
       'svg-icon' : true,
+      [`svg-icon--${fill}`] : fill,
       [classes]: classes,
     })
-  svg(class=classnames)&attributes(attributes)
+  svg(class=classnames width=width height=height)&attributes(attributes)
     use(href=`images/svg/svg-sprite/symbol/sprite.svg#${name}` x="0" y="0")

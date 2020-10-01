@@ -1,0 +1,38 @@
+include /partials/form-steps
+include /partials/select
+include /partials/radio
+include /partials/input
+include /partials/button
+include /partials/checkbox
+
+form.application-form
+  .application-form__title
+    h2 Application form <span class="text-surfie-green">1/3</span>
+
+  .application-form__item
+    +form-steps([
+      {title:'1. Services & Prices', isActive:true},
+      {title:'2. Education & Legal'},
+      {title:'3. Contact information'},
+    ])
+
+  .application-form__item
+    .application-form__heading
+      h4.text-surfie-green What kind of services do you provide?
+  .application-form__item
+    include ./card-1
+  .application-form__item
+    include ./card-2
+  .application-form__item
+    include ./card-3
+  .application-form__item
+    include ./card-4
+  .application-form__item
+    include ./card-5
+  .application-form__item
+    include ./card-6
+  .application-form__item
+    .button-group
+      +button({classes:'button-group__button', type:'white'})(href="application-page-1.html")| Back
+      +button({classes:'button-group__button'})(href="application-page-2.html")| Next
+      +button({classes:'button-group__button', type:'transparent'})| Discard

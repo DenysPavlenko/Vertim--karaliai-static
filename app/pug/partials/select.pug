@@ -1,12 +1,14 @@
 include /partials/input
 
 mixin select(props = {})
-  -const { modifiers, label = {}, optionsClass, options, auto } = props;
+  -const { modifiers, label = {}, optionsClass, options, auto, bordered, transparent } = props;
   -
     const classnames = classNames({
       'select': true,
       'js-select': true,
+      'select--bordered': bordered,
       'select--auto': auto,
+      'select--transparent': transparent,
       [modifiers]: modifiers,
     })
 

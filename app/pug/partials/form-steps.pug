@@ -1,0 +1,5 @@
+mixin form-steps(steps = [])
+
+  .form-steps
+    each step in steps
+      div(class=`form-steps__step ${step.isActive ? 'is-active' : ''}`) #{step.title}

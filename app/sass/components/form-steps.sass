@@ -1,0 +1,62 @@
+$c-step-1: #f0f0f1
+$c-step-2: #f4f4f6
+$c-text  : #9b9b9b
+
+.form-steps
+  display: flex
+  align-items: center
+  &__step
+    position: relative
+    flex: 1
+    padding: 14px 20px
+    text-align: center
+    border-bottom: 3px solid transparent
+    background-color: $c-white
+    background-color: rgba($c-white, 1.3)
+    font-size: rem(14px)
+    line-height: 1
+    font-weight: 600
+    color: $c-text
+    cursor: default
+    user-select: none
+    &:focus
+      color: $c-text
+    &:after
+      position: absolute
+      content: ''
+      top: 0
+      right: -10px
+      width: 0
+      height: 0
+      border-top: 22px solid transparent
+      border-bottom: 22px solid transparent
+      border-left: 10px solid $c-white
+      z-index: 1
+    &:nth-child(1)
+      border-radius: $r-primary 0 0 $r-primary
+      background-color: $c-step-1
+      z-index: 3
+      &:after
+        border-left-color: $c-step-1
+    &:nth-child(2)
+      left: -10px
+      background-color: $c-step-2
+      z-index: 2
+      &:after
+        border-left-color: $c-step-2
+    &:nth-child(3)
+      left: -10px
+      background-color: $c-step-1
+      z-index: 1
+      &:after
+        border-left-color: $c-step-1
+    // State
+    &.is-active
+      border-color: $c-surfie-green
+      background-color: $c-white
+      box-shadow: $s-primary
+      line-height: 1
+      font-weight: 700
+      color: $c-mine-shaft
+      &:after
+        border-left-color: $c-white

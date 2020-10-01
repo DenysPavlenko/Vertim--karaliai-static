@@ -1,0 +1,13 @@
+include /partials/select
+
+mixin lang-select(props = {})
+
+  +select({
+    auto:true,
+    bordered:true,
+    label:{name:'English', selected:true, image:'images/flags/gb.svg'},
+    options:[
+      {name:'English', image:'images/flags/gb.svg'},
+      {name:'Lithuanian', image:'images/flags/lt.svg'},
+    ]
+  })

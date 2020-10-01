@@ -2,13 +2,15 @@
   position: relative
   display: inline-flex
   justify-content: center
-  padding: 14px 20px 15px
+  align-items: center
+  padding: 14px 30px 15px
   color: $c-white
   font-size: rem(16px)
   line-height: 1
   font-weight: 600
   z-index: 1
-  border-radius: $radius-primary
+  border-radius: $r-primary
+  transition: 0.2s
   &:after
     position: absolute
     content: ''
@@ -16,7 +18,7 @@
     height: 100%
     top: 0
     left: 0
-    border-radius: $radius-primary
+    border-radius: $r-primary
     background-color: $c-surfie-green
     transition: 0.2s
     z-index: -1
@@ -35,12 +37,35 @@
     &:focus
       &:after
         box-shadow: 0 0 0 0.2rem rgba($c-cornflower-blue, .5);
-  &--bg-azure-radiance
+  &--bordered
+    color: $c-surfie-green
     &:after
-      background-color: $c-azure-radiance
+      background-color: transparent
+      border: 2px solid $c-surfie-green
+    &:hover
+      color: $c-white
+      svg
+        fill: $c-white
+      &:after
+        opacity: 1
+        background-color: $c-surfie-green
+  &--white
+    color: $c-surfie-green
+    &:after
+      background-color: $c-white
+    &:hover
+      &:after
+        opacity: 0.6
     &:focus
       &:after
-        box-shadow: 0 0 0 0.2rem rgba($c-azure-radiance, .5);
+        box-shadow: 0 0 0 0.2rem rgba($c-white, .5);
+  &--transparent
+    color: $c-tundora
+    &:after
+      background-color: transparent
+    &:hover
+      color: $c-surfie-green
+
   // Elements
   &__prepend,
   &__append
@@ -56,3 +81,8 @@
     right: 30px
     +media-max($bp-md)
       right: 15px
+  &__icon
+    &:first-child
+      margin-right: 10px
+    &:last-child
+      margin-left: 10px

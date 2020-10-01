@@ -1,0 +1,27 @@
+.row-group
+  display: flex
+  flex-wrap: wrap
+  // Modifiers
+  &--align-center
+    align-items: center
+  &--justify-center
+    justify-content: center
+  &--flex-1
+    .row-group__item
+      flex: 1
+  &--md
+    >.row-group__item
+      &:not(:last-child)
+        margin-right: 15px
+  &--sm
+    >.row-group__item
+      &:not(:last-child)
+        margin-right: 10px
+  &--xs
+    >.row-group__item
+      &:not(:last-child)
+        margin-right: 5px
+  // Elements
+  &__item
+    &:not(:last-child)
+      margin-right: 20px

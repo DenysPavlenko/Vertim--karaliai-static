@@ -1,0 +1,15 @@
+include /partials/input
+
+mixin radio(props = {})
+  -const { checked, classes, label, name, value } = props
+  -
+    const classnames = classNames({
+      'radio': true,
+      [classes]: boxed,
+    })
+
+  label(class=classnames)
+    .radio__box
+      input(class="radio__input" type="radio" checked=checked value=value name=name)
+      span.radio__checkmark
+    span.radio__name #{label}

@@ -13,7 +13,7 @@
     <div class="login-page">
       <div class="container">
         <div class="login-page__lang">
-          <div class="select js-select select--auto">
+          <div class="select js-select select--bordered select--auto">
             <div class="select__label js-select-label" data-selected="English">
               <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/><span>English</span>
               </div>
@@ -36,7 +36,7 @@
         <div class="login-page__box">
           <div class="form-box">
             <div class="form-box__header">
-              <div class="form-box__icon"><img src="images/login-page/login-page-icon.svg" alt="login-page-icon"></div>
+              <div class="form-box__icon"><img src="images/logo.svg" alt="logo"></div>
               <div class="form-box__title">
                 <h2 class="text-surfie-green">Log in</h2>
               </div>
@@ -45,22 +45,22 @@
               <form class="form">
                 <div class="form__line">
                   <div class="form-group">
-                    <div class="input js-input-animation">
-                      <label class="input__label js-input-animation-label" for="email">Email:</label>
-                      <input class="input__field js-input-animation-field" id="email" type="email"/>
+                    <div class="input-animation js-input-animation">
+                      <label class="input-animation__label js-input-animation-label" for="email">Email:</label>
+                      <input class="input input--bordered js-input-animation-field" id="email" type="email"/>
                     </div>
                   </div>
                 </div>
                 <div class="form__line">
                   <div class="form-group">
-                    <div class="input js-input-animation">
-                      <label class="input__label js-input-animation-label" for="password">Password:</label>
-                      <input class="input__field js-input-animation-field" id="password" type="password"/>
+                    <div class="input-animation js-input-animation">
+                      <label class="input-animation__label js-input-animation-label" for="password">Password:</label>
+                      <input class="input input--bordered js-input-animation-field" id="password" type="password"/>
                     </div>
                   </div>
                 </div>
                 <div class="form__line">
-                  <div class="column-group column-group--sm column-group--justify-items-center">
+                  <div class="column-group column-group--md column-group--justify-items-center">
                     <div class="column-group__item">
                       <button class="button button--fluid" type="submit">Sign in
                       </button>
@@ -89,19 +89,12 @@
             </div>
             <div class="form-box__buttons">
               <div class="button-group button-group--column">
-                <button class="button button--fluid button--bg-cornflower-blue button-group__button" type="submit" placeholder="Password:">
+                <button class="button button--fluid button--bg-cornflower-blue button-group__button" type="button">
                   <div class="button__prepend">
                     <svg class="svg-icon svg-icon--white" width="25" height="25">
                       <use href="images/svg/svg-sprite/symbol/sprite.svg#google" x="0" y="0"></use>
                     </svg>
                   </div><span>Sign in with Google</span>
-                </button>
-                <button class="button button--fluid button--bg-azure-radiance button-group__button" type="submit" placeholder="Password:">
-                  <div class="button__prepend">
-                    <svg class="svg-icon svg-icon--white" width="25" height="25">
-                      <use href="images/svg/svg-sprite/symbol/sprite.svg#facebook" x="0" y="0"></use>
-                    </svg>
-                  </div><span>Sign in with Facebook</span>
                 </button>
               </div>
             </div>
