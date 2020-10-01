@@ -11,12 +11,12 @@
 
   .application-form__card-line
     .row
-      .col-md-7
+      .col-12.col-md-6.mb-6.mb-md-0
         .form-group
           .form-group__header
             p What languages do you write?
           .row
-            .col-6
+            .col-12.col-lg-6
               +select({
                 label:{name:'Lithianian', selected:true},
                 options:[
@@ -25,12 +25,12 @@
                   {name:'German'},
                 ]
               })
-      .col-md-5
+      .col-12.col-md-6
         .form-group
           .form-group__header
             p Your prefered price per <span class="font-bold">1 word</span>
           .row
-            .col-12.col-md-8
+            .col-12.col-lg-8
               .input-group
                 .input-group__input
                   +input({})(type="number" placeholder="0.00")
@@ -57,7 +57,7 @@
       .form-group__header
         +checkbox({ label:'Additional (custom) services:', checked:true })
       .row
-        .col-5
+        .col-12.col-md-6
           .input-group
             .input-group__prepend
               p Your price per <span class="font-bold">1 hr</span>

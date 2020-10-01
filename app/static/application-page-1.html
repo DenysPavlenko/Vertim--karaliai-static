@@ -13,28 +13,26 @@
     <div class="application-page">
       <div class="application-page__header">
         <div class="inner-header">
-          <div class="container">
-            <div class="inner-header__wrap"><a class="inner-header__logo" href="#"><img src="images/logo.svg" alt="logo"/></a>
-              <div class="inner-header__lang">
-                <div class="select js-select select--bordered select--auto">
-                  <div class="select__label js-select-label" data-selected="English">
-                    <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/><span>English</span>
-                    </div>
+          <div class="inner-header__wrap"><a class="inner-header__logo" href="#"><img src="images/logo.svg" alt="logo"/></a>
+            <div class="inner-header__lang">
+              <div class="select js-select select--bordered select--auto">
+                <div class="select__label js-select-label" data-selected="English">
+                  <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/><span>English</span>
                   </div>
-                  <div class="select__options  js-select-options">
-                    <div class="custom-scroll select__options-scroll" data-select-simplebar="data-select-simplebar">
-                      <div class="select__option  js-select-option" data-option="English">
-                        <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/><span>English</span>
-                        </div>
-                      </div>
-                      <div class="select__option  js-select-option" data-option="Lithuanian">
-                        <div class="select__left"><img class="select__thumbnail" src="images/flags/lt.svg" alt="icon"/><span>Lithuanian</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <input class="select__input js-select-input" type="hidden"/>
                 </div>
+                <div class="select__options  js-select-options">
+                  <div class="custom-scroll select__options-scroll" data-select-simplebar="data-select-simplebar">
+                    <div class="select__option  js-select-option" data-option="English">
+                      <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/><span>English</span>
+                      </div>
+                    </div>
+                    <div class="select__option  js-select-option" data-option="Lithuanian">
+                      <div class="select__left"><img class="select__thumbnail" src="images/flags/lt.svg" alt="icon"/><span>Lithuanian</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input class="select__input js-select-input" type="hidden"/>
               </div>
             </div>
           </div>
@@ -84,7 +82,7 @@
               </div>
               <div class="application-form__card-line">
                 <div class="row">
-                  <div class="col-12 col-md-5">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>How do you calculate the price?</p>
@@ -118,13 +116,13 @@
               </div>
               <div class="application-form__card-line">
                 <div class="row">
-                  <div class="col-md-7">
+                  <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>What combinations do you translate?</p>
                       </div>
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                           <div class="input-group">
                             <div class="input-group__prepend">
                               <p>From</p>
@@ -156,7 +154,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                           <div class="input-group">
                             <div class="input-group__prepend">
                               <p>To</p>
@@ -191,14 +189,223 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-12 col-md-6 col-lg-5">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>Your prefered price per <span class="font-bold">1700 c.w.s.:</span></p>
                       </div>
+                      <div class="input-group">
+                        <div class="input-group__input">
+                                  <input class="input" type="number" placeholder="0.00">
+                        </div>
+                        <div class="input-group__append input-group__append--p-0">
+                                  <div class="select js-select select--transparent">
+                                    <div class="select__label js-select-label" data-selected="EUR">
+                                      <div class="select__left"><span>EUR</span>
+                                      </div>
+                                    </div>
+                                    <div class="select__options  js-select-options">
+                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                        <div class="select__option  js-select-option" data-option="EUR">
+                                          <div class="select__left"><span>EUR</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="GBP">
+                                          <div class="select__left"><span>GBP</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="LVL">
+                                          <div class="select__left"><span>LVL</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="LTL">
+                                          <div class="select__left"><span>LTL</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <input class="select__input js-select-input" type="hidden">
+                                  </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="application-form__card-line">
+                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                            </svg></span>
+                        </button>
+              </div>
+            </div>
+          </div>
+          <div class="application-form__item">
+            <div class="application-form__card">
+              <div class="application-form__card-line">
+                <div class="form-group">
+                  <div class="form-group__header">
+                    <h4>Standard proofreading</h4>
+                  </div>
+                  <div class="row-group">
+                    <div class="row-group__item">
+                              <label class="radio">
+                                <div class="radio__box">
+                                  <input class="radio__input" type="radio" checked value="yes" name="proofreading"><span class="radio__checkmark"></span>
+                                </div><span class="radio__name">Yes</span>
+                              </label>
+                    </div>
+                    <div class="row-group__item">
+                              <label class="radio">
+                                <div class="radio__box">
+                                  <input class="radio__input" type="radio" value="no" name="proofreading"><span class="radio__checkmark"></span>
+                                </div><span class="radio__name">No</span>
+                              </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="application-form__card-line">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <div class="form-group__header">
+                        <p>How do you calculate the price?</p>
+                      </div>
+                              <div class="select js-select">
+                                <div class="select__label js-select-label" data-selected="Select">
+                                  <div class="select__left"><span>Select</span>
+                                  </div>
+                                </div>
+                                <div class="select__options  js-select-options">
+                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                    <div class="select__option  js-select-option" data-option="Select 1">
+                                      <div class="select__left"><span>Select 1</span>
+                                      </div>
+                                    </div>
+                                    <div class="select__option  js-select-option" data-option="Select 2">
+                                      <div class="select__left"><span>Select 2</span>
+                                      </div>
+                                    </div>
+                                    <div class="select__option  js-select-option" data-option="Select 3">
+                                      <div class="select__left"><span>Select 3</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <input class="select__input js-select-input" type="hidden">
+                              </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="application-form__card-line">
+                <div class="form-group">
+                  <div class="form-group__header">
+                    <p>What languages do you proofread?</p>
+                  </div>
+                  <div class="column-group column-group--sm">
+                    <div class="column-group__item">
                       <div class="row">
+                        <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                  <div class="select js-select">
+                                    <div class="select__label js-select-label" data-selected="Lithianian">
+                                      <div class="select__left"><span>Lithianian</span>
+                                      </div>
+                                    </div>
+                                    <div class="select__options  js-select-options">
+                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                        <div class="select__option  js-select-option" data-option="Lithianian">
+                                          <div class="select__left"><span>Lithianian</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="English">
+                                          <div class="select__left"><span>English</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="German">
+                                          <div class="select__left"><span>German</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <input class="select__input js-select-input" type="hidden">
+                                  </div>
+                        </div>
                         <div class="col-12 col-md-8">
                           <div class="input-group">
+                            <div class="input-group__prepend">
+                              <p>Your prefered price per <span class="font-bold">1 word</span></p>
+                            </div>
+                            <div class="input-group__input">
+                                      <input class="input" type="number" placeholder="0.00">
+                            </div>
+                            <div class="input-group__append input-group__append--p-0">
+                                      <div class="select js-select select--transparent">
+                                        <div class="select__label js-select-label" data-selected="EUR">
+                                          <div class="select__left"><span>EUR</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__options  js-select-options">
+                                          <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                            <div class="select__option  js-select-option" data-option="EUR">
+                                              <div class="select__left"><span>EUR</span>
+                                              </div>
+                                            </div>
+                                            <div class="select__option  js-select-option" data-option="GBP">
+                                              <div class="select__left"><span>GBP</span>
+                                              </div>
+                                            </div>
+                                            <div class="select__option  js-select-option" data-option="LVL">
+                                              <div class="select__left"><span>LVL</span>
+                                              </div>
+                                            </div>
+                                            <div class="select__option  js-select-option" data-option="LTL">
+                                              <div class="select__left"><span>LTL</span>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <input class="select__input js-select-input" type="hidden">
+                                      </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column-group__item">
+                      <div class="row">
+                        <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                  <div class="select js-select">
+                                    <div class="select__label js-select-label" data-selected="Lithianian">
+                                      <div class="select__left"><span>Lithianian</span>
+                                      </div>
+                                    </div>
+                                    <div class="select__options  js-select-options">
+                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                        <div class="select__option  js-select-option" data-option="Lithianian">
+                                          <div class="select__left"><span>Lithianian</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="English">
+                                          <div class="select__left"><span>English</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="German">
+                                          <div class="select__left"><span>German</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <input class="select__input js-select-input" type="hidden">
+                                  </div>
+                        </div>
+                        <div class="col-12 col-md-8">
+                          <div class="input-group">
+                            <div class="input-group__prepend">
+                              <p>Your prefered price per <span class="font-bold">1 word</span></p>
+                            </div>
                             <div class="input-group__input">
                                       <input class="input" type="number" placeholder="0.00">
                             </div>
@@ -252,223 +459,6 @@
               <div class="application-form__card-line">
                 <div class="form-group">
                   <div class="form-group__header">
-                    <h4>Standard proofreading</h4>
-                  </div>
-                  <div class="row-group">
-                    <div class="row-group__item">
-                              <label class="radio">
-                                <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="proofreading"><span class="radio__checkmark"></span>
-                                </div><span class="radio__name">Yes</span>
-                              </label>
-                    </div>
-                    <div class="row-group__item">
-                              <label class="radio">
-                                <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="proofreading"><span class="radio__checkmark"></span>
-                                </div><span class="radio__name">No</span>
-                              </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-5">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>How do you calculate the price?</p>
-                      </div>
-                              <div class="select js-select">
-                                <div class="select__label js-select-label" data-selected="Select">
-                                  <div class="select__left"><span>Select</span>
-                                  </div>
-                                </div>
-                                <div class="select__options  js-select-options">
-                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                    <div class="select__option  js-select-option" data-option="Select 1">
-                                      <div class="select__left"><span>Select 1</span>
-                                      </div>
-                                    </div>
-                                    <div class="select__option  js-select-option" data-option="Select 2">
-                                      <div class="select__left"><span>Select 2</span>
-                                      </div>
-                                    </div>
-                                    <div class="select__option  js-select-option" data-option="Select 3">
-                                      <div class="select__left"><span>Select 3</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <input class="select__input js-select-input" type="hidden">
-                              </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-md-10">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>What languages do you proofread?</p>
-                      </div>
-                      <div class="column-group column-group--sm">
-                        <div class="column-group__item">
-                          <div class="row">
-                            <div class="col-4">
-                                      <div class="select js-select">
-                                        <div class="select__label js-select-label" data-selected="Lithianian">
-                                          <div class="select__left"><span>Lithianian</span>
-                                          </div>
-                                        </div>
-                                        <div class="select__options  js-select-options">
-                                          <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                            <div class="select__option  js-select-option" data-option="Lithianian">
-                                              <div class="select__left"><span>Lithianian</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="English">
-                                              <div class="select__left"><span>English</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="German">
-                                              <div class="select__left"><span>German</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <input class="select__input js-select-input" type="hidden">
-                                      </div>
-                            </div>
-                            <div class="col-8">
-                              <div class="input-group">
-                                <div class="input-group__prepend">
-                                  <p>Your prefered price per <span class="font-bold">1 word</span></p>
-                                </div>
-                                <div class="input-group__input">
-                                          <input class="input" type="number" placeholder="0.00">
-                                </div>
-                                <div class="input-group__append input-group__append--p-0">
-                                          <div class="select js-select select--transparent">
-                                            <div class="select__label js-select-label" data-selected="EUR">
-                                              <div class="select__left"><span>EUR</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__options  js-select-options">
-                                              <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                <div class="select__option  js-select-option" data-option="EUR">
-                                                  <div class="select__left"><span>EUR</span>
-                                                  </div>
-                                                </div>
-                                                <div class="select__option  js-select-option" data-option="GBP">
-                                                  <div class="select__left"><span>GBP</span>
-                                                  </div>
-                                                </div>
-                                                <div class="select__option  js-select-option" data-option="LVL">
-                                                  <div class="select__left"><span>LVL</span>
-                                                  </div>
-                                                </div>
-                                                <div class="select__option  js-select-option" data-option="LTL">
-                                                  <div class="select__left"><span>LTL</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="column-group__item">
-                          <div class="row">
-                            <div class="col-4">
-                                      <div class="select js-select">
-                                        <div class="select__label js-select-label" data-selected="Lithianian">
-                                          <div class="select__left"><span>Lithianian</span>
-                                          </div>
-                                        </div>
-                                        <div class="select__options  js-select-options">
-                                          <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                            <div class="select__option  js-select-option" data-option="Lithianian">
-                                              <div class="select__left"><span>Lithianian</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="English">
-                                              <div class="select__left"><span>English</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="German">
-                                              <div class="select__left"><span>German</span>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <input class="select__input js-select-input" type="hidden">
-                                      </div>
-                            </div>
-                            <div class="col-8">
-                              <div class="input-group">
-                                <div class="input-group__prepend">
-                                  <p>Your prefered price per <span class="font-bold">1 word</span></p>
-                                </div>
-                                <div class="input-group__input">
-                                          <input class="input" type="number" placeholder="0.00">
-                                </div>
-                                <div class="input-group__append input-group__append--p-0">
-                                          <div class="select js-select select--transparent">
-                                            <div class="select__label js-select-label" data-selected="EUR">
-                                              <div class="select__left"><span>EUR</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__options  js-select-options">
-                                              <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                <div class="select__option  js-select-option" data-option="EUR">
-                                                  <div class="select__left"><span>EUR</span>
-                                                  </div>
-                                                </div>
-                                                <div class="select__option  js-select-option" data-option="GBP">
-                                                  <div class="select__left"><span>GBP</span>
-                                                  </div>
-                                                </div>
-                                                <div class="select__option  js-select-option" data-option="LVL">
-                                                  <div class="select__left"><span>LVL</span>
-                                                  </div>
-                                                </div>
-                                                <div class="select__option  js-select-option" data-option="LTL">
-                                                  <div class="select__left"><span>LTL</span>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
-              </div>
-            </div>
-          </div>
-          <div class="application-form__item">
-            <div class="application-form__card">
-              <div class="application-form__card-line">
-                <div class="form-group">
-                  <div class="form-group__header">
                     <h4>Creative proofreading</h4>
                   </div>
                   <div class="row-group">
@@ -491,13 +481,13 @@
               </div>
               <div class="application-form__card-line">
                 <div class="row">
-                  <div class="col-md-7">
+                  <div class="col-12 col-md-6 mb-6 mb-md-0">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>What combinations do you translate?</p>
                       </div>
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                                   <div class="select js-select">
                                     <div class="select__label js-select-label" data-selected="Lithianian">
                                       <div class="select__left"><span>Lithianian</span>
@@ -525,13 +515,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>Your prefered price per <span class="font-bold">1 word</span></p>
                       </div>
                       <div class="row">
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-lg-8">
                           <div class="input-group">
                             <div class="input-group__input">
                                       <input class="input" type="number" placeholder="0.00">
@@ -608,7 +598,7 @@
               </div>
               <div class="application-form__card-line">
                 <div class="row">
-                  <div class="col-md-7">
+                  <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
                     <div class="form-group">
                       <div class="form-group__header">
                                 <label class="checkbox">
@@ -618,7 +608,7 @@
                                 </label>
                       </div>
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                           <div class="input-group">
                             <div class="input-group__prepend">
                               <p>From</p>
@@ -650,7 +640,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                           <div class="input-group">
                             <div class="input-group__prepend">
                               <p>To</p>
@@ -685,47 +675,43 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-12 col-md-5 col-lg-5">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>Your prefered price per <span class="font-bold">1 hr</span></p>
                       </div>
-                      <div class="row">
-                        <div class="col-12 col-md-8">
-                          <div class="input-group">
-                            <div class="input-group__input">
-                                      <input class="input" type="number" placeholder="0.00">
-                            </div>
-                            <div class="input-group__append input-group__append--p-0">
-                                      <div class="select js-select select--transparent">
-                                        <div class="select__label js-select-label" data-selected="EUR">
+                      <div class="input-group">
+                        <div class="input-group__input">
+                                  <input class="input" type="number" placeholder="0.00">
+                        </div>
+                        <div class="input-group__append input-group__append--p-0">
+                                  <div class="select js-select select--transparent">
+                                    <div class="select__label js-select-label" data-selected="EUR">
+                                      <div class="select__left"><span>EUR</span>
+                                      </div>
+                                    </div>
+                                    <div class="select__options  js-select-options">
+                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                        <div class="select__option  js-select-option" data-option="EUR">
                                           <div class="select__left"><span>EUR</span>
                                           </div>
                                         </div>
-                                        <div class="select__options  js-select-options">
-                                          <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                            <div class="select__option  js-select-option" data-option="EUR">
-                                              <div class="select__left"><span>EUR</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="GBP">
-                                              <div class="select__left"><span>GBP</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="LVL">
-                                              <div class="select__left"><span>LVL</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="LTL">
-                                              <div class="select__left"><span>LTL</span>
-                                              </div>
-                                            </div>
+                                        <div class="select__option  js-select-option" data-option="GBP">
+                                          <div class="select__left"><span>GBP</span>
                                           </div>
                                         </div>
-                                        <input class="select__input js-select-input" type="hidden">
+                                        <div class="select__option  js-select-option" data-option="LVL">
+                                          <div class="select__left"><span>LVL</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="LTL">
+                                          <div class="select__left"><span>LTL</span>
+                                          </div>
+                                        </div>
                                       </div>
-                            </div>
-                          </div>
+                                    </div>
+                                    <input class="select__input js-select-input" type="hidden">
+                                  </div>
                         </div>
                       </div>
                     </div>
@@ -741,7 +727,7 @@
               </div>
               <div class="application-form__card-line">
                 <div class="row">
-                  <div class="col-md-7">
+                  <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
                     <div class="form-group">
                       <div class="form-group__header">
                                 <label class="checkbox">
@@ -751,7 +737,7 @@
                                 </label>
                       </div>
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
                           <div class="input-group">
                             <div class="input-group__prepend">
                               <p>From</p>
@@ -783,7 +769,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                           <div class="input-group">
                             <div class="input-group__prepend">
                               <p>To</p>
@@ -818,47 +804,43 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-12 col-md-5 col-lg-5">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>Your prefered price per <span class="font-bold">1 hr</span></p>
                       </div>
-                      <div class="row">
-                        <div class="col-12 col-md-8">
-                          <div class="input-group">
-                            <div class="input-group__input">
-                                      <input class="input" type="number" placeholder="0.00">
-                            </div>
-                            <div class="input-group__append input-group__append--p-0">
-                                      <div class="select js-select select--transparent">
-                                        <div class="select__label js-select-label" data-selected="EUR">
+                      <div class="input-group">
+                        <div class="input-group__input">
+                                  <input class="input" type="number" placeholder="0.00">
+                        </div>
+                        <div class="input-group__append input-group__append--p-0">
+                                  <div class="select js-select select--transparent">
+                                    <div class="select__label js-select-label" data-selected="EUR">
+                                      <div class="select__left"><span>EUR</span>
+                                      </div>
+                                    </div>
+                                    <div class="select__options  js-select-options">
+                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                        <div class="select__option  js-select-option" data-option="EUR">
                                           <div class="select__left"><span>EUR</span>
                                           </div>
                                         </div>
-                                        <div class="select__options  js-select-options">
-                                          <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                            <div class="select__option  js-select-option" data-option="EUR">
-                                              <div class="select__left"><span>EUR</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="GBP">
-                                              <div class="select__left"><span>GBP</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="LVL">
-                                              <div class="select__left"><span>LVL</span>
-                                              </div>
-                                            </div>
-                                            <div class="select__option  js-select-option" data-option="LTL">
-                                              <div class="select__left"><span>LTL</span>
-                                              </div>
-                                            </div>
+                                        <div class="select__option  js-select-option" data-option="GBP">
+                                          <div class="select__left"><span>GBP</span>
                                           </div>
                                         </div>
-                                        <input class="select__input js-select-input" type="hidden">
+                                        <div class="select__option  js-select-option" data-option="LVL">
+                                          <div class="select__left"><span>LVL</span>
+                                          </div>
+                                        </div>
+                                        <div class="select__option  js-select-option" data-option="LTL">
+                                          <div class="select__left"><span>LTL</span>
+                                          </div>
+                                        </div>
                                       </div>
-                            </div>
-                          </div>
+                                    </div>
+                                    <input class="select__input js-select-input" type="hidden">
+                                  </div>
                         </div>
                       </div>
                     </div>
@@ -901,13 +883,13 @@
               </div>
               <div class="application-form__card-line">
                 <div class="row">
-                  <div class="col-md-7">
+                  <div class="col-12 col-md-6 mb-6 mb-md-0">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>What combinations do you translate?</p>
                       </div>
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                                   <div class="select js-select">
                                     <div class="select__label js-select-label" data-selected="Lithianian">
                                       <div class="select__left"><span>Lithianian</span>
@@ -935,13 +917,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>Your prefered price per <span class="font-bold">1 word</span></p>
                       </div>
                       <div class="row">
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-lg-8">
                           <div class="input-group">
                             <div class="input-group__input">
                                       <input class="input" type="number" placeholder="0.00">
@@ -1018,13 +1000,13 @@
               </div>
               <div class="application-form__card-line">
                 <div class="row">
-                  <div class="col-md-7">
+                  <div class="col-12 col-md-6 mb-6 mb-md-0">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>What languages do you write?</p>
                       </div>
                       <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-lg-6">
                                   <div class="select js-select">
                                     <div class="select__label js-select-label" data-selected="Lithianian">
                                       <div class="select__left"><span>Lithianian</span>
@@ -1052,13 +1034,13 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-12 col-md-6">
                     <div class="form-group">
                       <div class="form-group__header">
                         <p>Your prefered price per <span class="font-bold">1 word</span></p>
                       </div>
                       <div class="row">
-                        <div class="col-12 col-md-8">
+                        <div class="col-12 col-lg-8">
                           <div class="input-group">
                             <div class="input-group__input">
                                       <input class="input" type="number" placeholder="0.00">
@@ -1116,7 +1098,7 @@
                             </label>
                   </div>
                   <div class="row">
-                    <div class="col-5">
+                    <div class="col-12 col-md-6">
                       <div class="input-group">
                         <div class="input-group__prepend">
                           <p>Your price per <span class="font-bold">1 hr</span></p>

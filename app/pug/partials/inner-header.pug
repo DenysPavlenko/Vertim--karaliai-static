@@ -3,9 +3,8 @@ include /partials/lang-select
 mixin inner-header(props = {})
 
   .inner-header
-    .container
-      .inner-header__wrap
-        a(href="#").inner-header__logo
-          img(src="images/logo.svg", alt="logo")
-        .inner-header__lang
-          +lang-select()
+    .inner-header__wrap
+      a(href="#").inner-header__logo
+        img(src="images/logo.svg", alt="logo")
+      .inner-header__lang
+        +lang-select()
