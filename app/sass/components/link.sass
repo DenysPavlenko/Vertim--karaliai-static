@@ -3,10 +3,13 @@
   font-weight: 600
   line-height: 1.4
   transition: 0.2s
-  &:hover
+  color: $c-surfie-green
+  &:hover,
+  &:focus
     opacity: 0.8
+    color: $c-surfie-green
   // Modifiers
   &--underline
     text-decoration: underline
-  &--surfie-green
-    color: $c-surfie-green
+    &:focus
+      text-decoration: underline

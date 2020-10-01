@@ -622,18 +622,21 @@ p,
   line-height: 1.4;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  color: #0E7D7D;
 }
 
-.link:hover {
+.link:hover,
+.link:focus {
   opacity: 0.8;
+  color: #0E7D7D;
 }
 
 .link--underline {
   text-decoration: underline;
 }
 
-.link--surfie-green {
-  color: #0E7D7D;
+.link--underline:focus {
+  text-decoration: underline;
 }
 
 .form__line:not(:last-child) {
