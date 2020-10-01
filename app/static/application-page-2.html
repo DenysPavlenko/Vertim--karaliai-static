@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Application page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./styles/vendor.css">
+    <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  </head>
+  <body>
+    <div class="application-page">
+      <div class="application-page__header">
+        <div class="inner-header">
+          <div class="inner-header__wrap"><a class="inner-header__logo" href="#"><img src="images/logo.svg" alt="logo"/></a>
+            <div class="inner-header__lang">
+              <div class="select js-select select--bordered select--auto">
+                <div class="select__label js-select-label" data-selected="English">
+                  <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/><span>English</span>
+                  </div>
+                </div>
+                <div class="select__options  js-select-options">
+                  <div class="custom-scroll select__options-scroll" data-select-simplebar="data-select-simplebar">
+                    <div class="select__option  js-select-option" data-option="English">
+                      <div class="select__left"><img class="select__thumbnail" src="images/flags/gb.svg" alt="icon"/><span>English</span>
+                      </div>
+                    </div>
+                    <div class="select__option  js-select-option" data-option="Lithuanian">
+                      <div class="select__left"><img class="select__thumbnail" src="images/flags/lt.svg" alt="icon"/><span>Lithuanian</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input class="select__input js-select-input" type="hidden"/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="application-page__form">
+        <form class="application-form">
+          <div class="application-form__title">
+            <h2>Application form <span class="text-surfie-green">1/3</span></h2>
+          </div>
+          <div class="application-form__item">
+                    <div class="form-steps">
+                      <div class="form-steps__step is-done"><span class="form-steps__title">1. Services &amp; Prices</span></div>
+                      <div class="form-steps__step is-active"><span class="form-steps__title">2. Education &amp; Legal</span></div>
+                      <div class="form-steps__step"><span class="form-steps__title">3. Contact information</span></div>
+                    </div>
+          </div>
+          <div class="application-form__item">
+            <div class="application-form__card application-form__card--sm">
+              <h4 class="text-surfie-green">What education do you have?</h4>
+            </div>
+          </div>
+          <div class="application-form__item">
+            <div class="application-form__card">
+              <div class="application-form__card-line">
+                <p class="text-brick-red font-semibold">*Choose Yes or No to continue</p>
+              </div>
+              <div class="application-form__card-line">
+                <div class="form-group">
+                  <div class="form-group__header">
+                    <h4>Do you have a diploma?</h4>
+                  </div>
+                  <div class="row-group">
+                    <div class="row-group__item">
+                              <label class="radio">
+                                <div class="radio__box">
+                                  <input class="radio__input" type="radio" checked value="yes" name="diploma"><span class="radio__checkmark"></span>
+                                </div><span class="radio__name">Yes</span>
+                              </label>
+                    </div>
+                    <div class="row-group__item">
+                              <label class="radio">
+                                <div class="radio__box">
+                                  <input class="radio__input" type="radio" value="no" name="diploma"><span class="radio__checkmark"></span>
+                                </div><span class="radio__name">No</span>
+                              </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="application-form__card-line">
+                <div class="row">
+                  <div class="col-12 col-lg-8">
+                    <div class="form-group">
+                      <div class="form-group__header">
+                        <p><span/ class="h3 text-surfie-green">#1</span> Do you have a diploma?</p>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-md-6 mb-5 mb-md-0">
+                                  <input class="input input--bordered" type="text" placeholder="Diploma type (ex. bacaular)">
+                        </div>
+                        <div class="col-12 col-md-6">
+                                  <div class="input-animation js-input-animation">
+                                    <label class="input-animation__label js-input-animation-label" for="category">Category:</label>
+                                            <input class="input input--bordered js-input-animation-field" type="text" value="Translator" id="category">
+                                  </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="application-form__card-line">
+                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                            </svg></span>
+                        </button>
+              </div>
+            </div>
+          </div>
+          <div class="application-form__item">
+            <div class="application-form__card application-form__card--danger">
+              <div class="application-form__card-line">
+                <p class="text-brick-red font-semibold">*Choose Yes or No to continue</p>
+              </div>
+              <div class="application-form__card-line">
+                <div class="form-group">
+                  <div class="form-group__header">
+                    <h4>Will you be able to issue the invoice for your services?</h4>
+                  </div>
+                  <div class="row-group">
+                    <div class="row-group__item">
+                              <label class="radio">
+                                <div class="radio__box">
+                                  <input class="radio__input" type="radio" checked value="yes" name="invoiceAbility"><span class="radio__checkmark"></span>
+                                </div><span class="radio__name">Yes</span>
+                              </label>
+                    </div>
+                    <div class="row-group__item">
+                              <label class="radio">
+                                <div class="radio__box">
+                                  <input class="radio__input" type="radio" value="no" name="invoiceAbility"><span class="radio__checkmark"></span>
+                                </div><span class="radio__name">No</span>
+                              </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="application-form__card-line">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="form-group">
+                      <div class="form-group__header">
+                        <p>Regarding what document you can issue the invoice?</p>
+                      </div>
+                              <textarea class="textarea" rows="5" placeholder="Type here"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="application-form__item">
+            <div class="application-form__card">
+              <div class="application-form__card-line">
+                <div class="column-group column-group--sm">
+                  <div class="column-group__item">
+                    <p class="font-semibold">Documents:</p>
+                  </div>
+                  <div class="column-group__item">
+                    <p>
+                      - Attach your Diplomas if avaliable<br/>
+                      - Attach your CV<br/>
+                      - Attach your document with that you can issue the invoice
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="application-form__card-line">
+                        <div class="documents-list">
+                          <div class="custom-scroll documents-list__scroll" data-simplebar>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                            <div class="documents-list__item">
+                                      <div class="document-list-item">
+                                        <div class="document-list-item__icon"><img src="images/icons/document-placeholder.svg" alt="placeholder"></div>
+                                        <div class="document-list-item__title">samplelongnameoffile.pdf</div>
+                                        <div class="document-list-item__delete">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                            </div>
+                          </div>
+                        </div>
+              </div>
+              <div class="application-form__card-line">
+                        <button class="button button--bordered" type="button"><span>Add more</span><span class="button__icon">
+                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                            </svg></span>
+                        </button>
+              </div>
+            </div>
+          </div>
+          <div class="application-form__item">
+            <div class="application-form__card">
+              <div class="application-form__card-line">
+                <div class="row">
+                  <div class="col-12 col-md-10 col-lg-7">
+                    <div class="form-group">
+                      <div class="form-group__header">
+                        <h4>Please select your strongest fileds:</h4>
+                      </div>
+                      <div class="row mb-4">
+                        <div class="col-12 col-xs-6 mb-3 mb-xs-0">
+                          <div class="column-group column-group--sm">
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Technical</span>
+                                      </label>
+                            </div>
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Financial</span>
+                                      </label>
+                            </div>
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Scientifics</span>
+                                      </label>
+                            </div>
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Travel</span>
+                                      </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-12 col-xs-6">
+                          <div class="column-group column-group--sm">
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Medicial</span>
+                                      </label>
+                            </div>
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Standard documents</span>
+                                      </label>
+                            </div>
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Automative</span>
+                                      </label>
+                            </div>
+                            <div class="column-group__item">
+                                      <label class="checkbox">
+                                        <div class="checkbox__box">
+                                          <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                                        </div><span class="checkbox__name">Education</span>
+                                      </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-md-6">
+                                  <input class="input input--bordered" type="text" placeholder="Custom">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="application-form__item">
+            <div class="application-form__card application-form__card--sm">
+              <div class="row-group row-group--align-center row-group--nowrap">
+                <div class="row-group__item">
+                          <div class="status-message">
+                            <div class="status-message__icon">
+                              <svg class="svg-icon svg-icon--brick-red" width="9" height="22">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#exclamation" x="0" y="0"></use>
+                              </svg>
+                            </div>
+                            <div class="status-message__info"><span class="status-message__title">Fill 2 nessesary fields.</span>
+                            </div>
+                          </div>
+                </div>
+                <div class="row-group__item">
+                          <button class="button button--bordered" type="button"><span>Up</span>
+                            <div class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="12" height="16">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#arrow-up" x="0" y="0"></use>
+                              </svg>
+                            </div>
+                          </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="application-form__item">
+            <div class="button-group">
+                      <a class="button button--white button-group__button" href="application-page-1.html">Back
+                      </a>
+                      <a class="button button-group__button" href="application-page-3.html">Next
+                      </a>
+                      <button class="button button--transparent button-group__button">Discard
+                      </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./scripts/vendor.js"></script>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

@@ -7,6 +7,11 @@ export default function () {
   $inputs.each(function () {
     var $input = $(this);
     var $inputField = $input.find('.js-input-animation-field');
+    $inputField.each(function () {
+      if ($(this).val() !== '') {
+        $input.addClass('is-active');
+      }
+    });
     $inputField.on('focus', function () {
       $input.addClass('is-active');
     });

@@ -2,4 +2,11 @@ mixin form-steps(steps = [])
 
   .form-steps
     each step in steps
-      div(class=`form-steps__step ${step.isActive ? 'is-active' : ''}`) #{step.title}
+      -
+        const classnames = classNames({
+          'form-steps__step': true,
+          'is-active': step.active,
+          'is-done': step.done,
+        })
+      div(class=classnames)
+        span.form-steps__title #{step.title}

@@ -1,5 +1,5 @@
 mixin input(props = {})
-  -const { classes, bordered, id } = props
+  -const { classes, bordered } = props
   -
     const classnames = classNames({
       'input': true,
@@ -7,4 +7,4 @@ mixin input(props = {})
       [classes]: classes,
     })
 
-  input(class=classnames id=id)&attributes(attributes)
+  input(class=classnames)&attributes(attributes)

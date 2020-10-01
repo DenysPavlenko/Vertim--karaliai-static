@@ -4,5 +4,5 @@ mixin input-animation(props = {})
   -const { label, name } = props
 
   .input-animation.js-input-animation
-    label.input-animation__label.js-input-animation-label(for=name) #{label}
-    +input({classes:'js-input-animation-field', bordered:true, id:name})&attributes(attributes)
+    label.input-animation__label.js-input-animation-label(for=attributes.id) #{label}
+    +input({classes:'js-input-animation-field', bordered:true})&attributes(attributes)

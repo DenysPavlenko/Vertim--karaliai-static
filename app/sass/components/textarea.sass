@@ -1,4 +1,4 @@
-.input
+.textarea
   width: 100%
   display: block
   padding: 12px 15px 12px
@@ -7,15 +7,12 @@
   font-weight: 400
   border-radius: $r-primary
   color: $c-tundora
-  background-color: $c-alabaster
+  background-color: $c-white
+  border: 1px solid $c-alto
   transition: 0.2s
+  resize: none
   &::placeholder
     color: $c-silver-chalice
     font-size: rem(14px)
-  // Modifiers
-  &--bordered
-    background-color: $c-white
-    border: 1px solid $c-alto
-    padding: 11px 15px 12px
-    &:focus
-      border-color: $c-surfie-green
+  &:focus
+    border-color: $c-surfie-green

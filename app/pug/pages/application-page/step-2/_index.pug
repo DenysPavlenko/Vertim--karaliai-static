@@ -2,8 +2,12 @@ include /partials/form-steps
 include /partials/select
 include /partials/radio
 include /partials/input
+include /partials/input-animation
 include /partials/button
 include /partials/checkbox
+include /partials/textarea
+include /partials/documents-list
+include /partials/status-message
 
 form.application-form
   .application-form__title
@@ -11,14 +15,14 @@ form.application-form
 
   .application-form__item
     +form-steps([
-      {title:'1. Services & Prices', active:true},
-      {title:'2. Education & Legal'},
+      {title:'1. Services & Prices', done:true},
+      {title:'2. Education & Legal', active:true},
       {title:'3. Contact information'},
     ])
 
   .application-form__item
-    .application-form__heading
-      h4.text-surfie-green What kind of services do you provide?
+    .application-form__card.application-form__card--sm
+      h4.text-surfie-green What education do you have?
   .application-form__item
     include ./card-1
   .application-form__item
@@ -30,9 +34,7 @@ form.application-form
   .application-form__item
     include ./card-5
   .application-form__item
-    include ./card-6
-  .application-form__item
     .button-group
       +button({classes:'button-group__button', type:'white'})(href="application-page-1.html")| Back
-      +button({classes:'button-group__button'})(href="application-page-2.html")| Next
+      +button({classes:'button-group__button'})(href="application-page-3.html")| Next
       +button({classes:'button-group__button', type:'transparent'})| Discard

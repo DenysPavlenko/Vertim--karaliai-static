@@ -1,0 +1,9 @@
+mixin document-list-item(props = {})
+  -const { title } = props
+
+  .document-list-item
+    .document-list-item__icon
+      img(src="images/icons/document-placeholder.svg", alt="placeholder")
+    .document-list-item__title #{title}
+    .document-list-item__delete
+      +icon({name:'close', fill:'brick-red', width:'10', height:'10'})

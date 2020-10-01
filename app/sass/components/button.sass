@@ -26,6 +26,7 @@
     &:after
       opacity: 0.8
   &:focus
+    color: $c-white
     &:after
       box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5);
   // Modifiers
@@ -57,12 +58,15 @@
       &:after
         opacity: 0.6
     &:focus
+      color: $c-surfie-green
       &:after
         box-shadow: 0 0 0 0.2rem rgba($c-white, .5);
   &--transparent
     color: $c-tundora
     &:after
       background-color: transparent
+    &:focus
+      color: $c-tundora
     &:hover
       color: $c-surfie-green
 

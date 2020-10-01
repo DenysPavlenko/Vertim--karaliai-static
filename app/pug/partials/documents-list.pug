@@ -1,0 +1,10 @@
+include /partials/document-list-item
+
+mixin documents-list(items = [])
+
+  .documents-list
+    div(data-simplebar class="custom-scroll documents-list__scroll")
+      +times(20)
+        .documents-list__item
+          +document-list-item({title:'samplelongnameoffile.pdf'})
+

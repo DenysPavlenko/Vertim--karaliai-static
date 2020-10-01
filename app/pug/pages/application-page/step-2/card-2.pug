@@ -1,0 +1,21 @@
+.application-form__card.application-form__card--danger
+
+  .application-form__card-line
+    p.text-brick-red.font-semibold *Choose Yes or No to continue
+  .application-form__card-line
+    .form-group
+      .form-group__header
+        h4 Will you be able to issue the invoice for your services?
+      .row-group
+        .row-group__item
+          +radio({label:'Yes', name:'invoiceAbility', value:'yes', checked:true})
+        .row-group__item
+          +radio({label:'No', name:'invoiceAbility', value:'no'})
+
+  .application-form__card-line
+    .row
+      .col-12.col-md-6
+        .form-group
+          .form-group__header
+            p Regarding what document you can issue the invoice?
+          +textarea()(placeholder="Type here")

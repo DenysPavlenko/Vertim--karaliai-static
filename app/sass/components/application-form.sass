@@ -5,17 +5,6 @@
   &__item
     &:not(:last-child)
       margin-bottom: 20px
-  &__heading
-    background-color: $c-white
-    border-radius: $r-primary
-    box-shadow: $s-primary
-    padding: 18px 60px
-    +media-max($bp-lg)
-      padding: 18px 30px
-    +media-max($bp-sm)
-      padding: 18px 20px
-    +media-max($bp-xs)
-      padding: 18px 15px
   &__card
     background-color: $c-white
     border-radius: $r-primary
@@ -27,6 +16,17 @@
       padding: 30px 20px
     +media-max($bp-xs)
       padding: 30px 15px
+    // Modifiers
+    &--danger
+      border: 2px solid $c-brick-red
+    &--sm
+      padding: 18px 60px
+      +media-max($bp-lg)
+        padding: 18px 30px
+      +media-max($bp-sm)
+        padding: 18px 20px
+      +media-max($bp-xs)
+        padding: 18px 15px
     &-line
       &:not(:last-child)
         margin-bottom: 25px

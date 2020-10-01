@@ -1,0 +1,10 @@
+mixin textarea(props = {})
+  -const { classes, rows } = props
+  -const taRows = rows ? rows : '5'
+  -
+    const classnames = classNames({
+      'textarea': true,
+      [classes]: classes,
+    })
+
+  textarea(class=classnames rows=taRows)&attributes(attributes)
