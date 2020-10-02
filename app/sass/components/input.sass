@@ -1,24 +1,24 @@
 .input
   width: 100%
   display: block
-  padding: 12px 15px 12px
+  padding: 11px 15px 12px
   font-size: rem(15px)
   line-height: 1
   font-weight: 400
   border-radius: $r-primary
   color: $c-tundora
   background-color: $c-alabaster
+  border: 1px solid transparent
   transition: 0.2s
+  &:focus
+    border-color: $c-surfie-green
   &::placeholder
     color: $c-silver-chalice
     font-size: rem(14px)
   // Modifiers
   &--bordered
     background-color: $c-white
-    border: 1px solid $c-alto
-    padding: 11px 15px 12px
-    &:focus
-      border-color: $c-surfie-green
+    border-color: $c-alto
   &--sm
     padding: 6px 10px 7px
     font-size: rem(13px)

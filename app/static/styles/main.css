@@ -969,15 +969,20 @@ p,
 .input {
   width: 100%;
   display: block;
-  padding: 12px 15px 12px;
+  padding: 11px 15px 12px;
   font-size: 0.9375rem;
   line-height: 1;
   font-weight: 400;
   border-radius: 3px;
   color: #444444;
   background-color: #F7F7F7;
+  border: 1px solid transparent;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.input:focus {
+  border-color: #0E7D7D;
 }
 
 .input::-webkit-input-placeholder {
@@ -1007,12 +1012,7 @@ p,
 
 .input--bordered {
   background-color: #FFFFFF;
-  border: 1px solid #DADADA;
-  padding: 11px 15px 12px;
-}
-
-.input--bordered:focus {
-  border-color: #0E7D7D;
+  border-color: #DADADA;
 }
 
 .input--sm {
@@ -1448,13 +1448,10 @@ p,
   position: relative;
   width: 100%;
   display: block;
-  border-radius: 3px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #F7F7F7;
-  cursor: pointer;
 }
 
 .select.is-expanded {
@@ -1466,8 +1463,8 @@ p,
   transform: rotate(180deg);
 }
 
-.select--bordered {
-  border: 1px solid #DADADA;
+.select--bordered .select__label {
+  border-color: #DADADA;
   background-color: transparent;
 }
 
@@ -1484,7 +1481,7 @@ p,
   display: inline-block;
 }
 
-.select--transparent {
+.select--transparent .select__label {
   background-color: transparent;
 }
 
@@ -1494,11 +1491,16 @@ p,
 
 .select__label {
   position: relative;
+  cursor: pointer;
   padding: 0 40px 0 15px;
   height: 45px;
+  background-color: #F7F7F7;
+  border: 1px solid transparent;
+  border-radius: 3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1507,6 +1509,10 @@ p,
   line-height: 1;
   color: #9D9D9D;
   white-space: nowrap;
+}
+
+.select__label:focus {
+  border-color: #0E7D7D;
 }
 
 .select__label > *:not(:last-child) {
@@ -1586,6 +1592,7 @@ p,
   font-size: 0.875rem;
   white-space: nowrap;
   font-weight: 400;
+  cursor: pointer;
   color: #9D9D9D;
 }
 
@@ -1605,6 +1612,10 @@ p,
 .select__option.is-selected {
   font-weight: 600;
   color: #444444;
+}
+
+.select__option.is-selected:hover {
+  background-color: transparent;
 }
 
 .status-message {

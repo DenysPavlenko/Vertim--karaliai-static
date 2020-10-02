@@ -4,10 +4,7 @@ $select-height: 45px
   position: relative
   width: 100%
   display: block
-  border-radius: $r-primary
   user-select: none
-  background-color: $c-alabaster
-  cursor: pointer
   &.is-expanded
     border-radius: $r-primary $r-primary 0 0
     .select__label
@@ -16,9 +13,9 @@ $select-height: 45px
 
   // Modifiers
   &--bordered
-    border: 1px solid $c-alto
-    background-color: transparent
     .select__label
+      border-color: $c-alto
+      background-color: transparent
       &:before
         background-color: transparent
       &:after
@@ -27,23 +24,30 @@ $select-height: 45px
     width: auto
     display: inline-block
   &--transparent
-    background-color: transparent
     .select__label
+      background-color: transparent
       &:before
         background-color: transparent
 
   // Elements
   &__label
     position: relative
+    cursor: pointer
     padding: 0 40px 0 15px
     height: $select-height
+    background-color: $c-alabaster
+    border: 1px solid transparent
+    border-radius: $r-primary
     display: flex
+    width: 100%
     align-items: center
     font-size: rem(14px)
     font-weight: 400
     line-height: 1
     color: $c-silver-chalice
     white-space: nowrap
+    &:focus
+      border-color: $c-surfie-green
     &>*:not(:last-child)
       margin-right: 5px
     img
@@ -91,6 +95,7 @@ $select-height: 45px
     font-size: rem(14px)
     white-space: nowrap
     font-weight: 400
+    cursor: pointer
     color: $c-silver-chalice
     img
       max-width: 18px
@@ -103,3 +108,5 @@ $select-height: 45px
     &.is-selected
       font-weight: 600
       color: $c-tundora
+      &:hover
+        background-color: transparent
