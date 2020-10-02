@@ -1,0 +1,23 @@
+extends /layouts/main
+include /partials/input-animation
+include /partials/lang-select
+include /partials/spinner
+
+block variables
+  - const title = 'Login page loading'
+
+block content
+  .login-page
+    .container
+      .login-page__lang
+        +lang-select()
+      .login-page__box
+        .form-box
+          .form-box__header
+            .form-box__icon
+              img(src="images/logo.svg", alt="logo")
+          .form-box__loading
+            .form-box__loading-spinner
+              +spinner()
+            .form-box__loading-text
+              p Signing in
