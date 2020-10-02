@@ -1,0 +1,29 @@
+.application-form__card
+  .application-form__card-line
+    .row
+      .col-12.col-md-6
+        .column-group.column-group--sm
+          .column-group__item
+            +input-animation({label:'Name, surname:', required:true})(type="text" id="name")
+          .column-group__item
+            .row-group.row-group--flex-1
+              .row-group__item
+                +input-animation({label:'Email:', required:true})(type="email" id="email")
+              .row-group__item
+                +input-animation({label:'Phone number:', required:true})(type="email" id="phone")
+          .column-group__item
+            +input-animation({label:'Address #1:', required:true})(type="text" id="address")
+          .column-group__item
+            .row-group.row-group--flex-1
+              .row-group__item
+                +input-animation({label:'Zip code:', required:true})(type="text" id="zip")
+              .row-group__item
+                +input-animation({label:'City:', required:true})(type="text" id="city")
+          .column-group__item
+            .row-group.row-group--flex-1
+              .row-group__item
+                +input-animation({label:'Your native language:', required:true})(type="text" id="language")
+              .row-group__item
+                +input-animation({label:'Birthday:', required:true})(type="text" id="birthday")
+          .column-group__item
+            +input-animation({label:'Additional info:'})(type="text" id="info")

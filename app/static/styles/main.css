@@ -1052,6 +1052,18 @@ p,
   color: #444444;
 }
 
+.input-animation--required:before {
+  position: absolute;
+  content: '*';
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: -12px;
+  font-size: 15px;
+  line-height: 0;
+  color: #CC2936;
+}
+
 .input-animation__label {
   position: absolute;
   padding: 0 5px;

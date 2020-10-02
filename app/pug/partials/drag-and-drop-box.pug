@@ -2,7 +2,7 @@ include /partials/button
 
 mixin drag-and-drop-box(props = {})
 
-  form(action="/" class="drag-and-drop-box js-drag-and-drop-box")
+  div(class="drag-and-drop-box js-drag-and-drop-box")
     .drag-and-drop-box__label.dz-message
       span.drag-and-drop-box__label-title Drag and drop files
       +button({bg:'alabaster', type:'squere'})(type="button" class="drag-and-drop-box__label-button")

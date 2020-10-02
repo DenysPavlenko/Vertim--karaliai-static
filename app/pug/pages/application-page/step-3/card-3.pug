@@ -1,0 +1,20 @@
+.application-form__card
+  .application-form__card-line
+    .form-group
+      .form-group__header
+        h4 Bank details for payout:
+      .row
+        .col-12.col-md-6
+          .column-group.column-group--sm
+            .column-group__item
+              +input-animation({label:'Account holder:', required:true})(type="text" id="holder")
+            .column-group__item
+              +input-animation({label:'Bank name:', required:true})(type="text" id="bankName")
+            .column-group__item
+              +input-animation({label:'Bank account no:', required:true})(type="number" id="bankAccount")
+            .column-group__item
+              +input-animation({label:'Swift Number:', required:true})(type="number" id="swiftNumber")
+            .column-group__item
+              +input-animation({label:'Bank code:', required:true})(type="number" id="bankCode")
+            .column-group__item
+              +input-animation({label:'Paypal email if avaliable:'})(type="number" id="paypalEmail")
