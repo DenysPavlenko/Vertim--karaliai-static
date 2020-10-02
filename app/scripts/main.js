@@ -6,6 +6,7 @@ import scrollUp from './modules/scroll-up';
 import radioToggleContent from './modules/radio-toggle-content';
 import dragAndDropBox from './modules/drag-and-drop-box';
 import modal from './modules/modal';
+import datepicker from './modules/datepicker';
 
 // On document ready
 $(function () {
@@ -16,6 +17,7 @@ $(function () {
   radioToggleContent();
   dragAndDropBox();
   modal();
+  datepicker();
 });
 
 // On window load

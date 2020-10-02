@@ -1,0 +1,14 @@
+.datepicker
+  position: relative
+  z-index: 1
+  &:after
+    position: absolute
+    content: ''
+    right: 15px
+    top: 50%
+    transform: translateY(-50%)
+    width: 22px
+    height: 22px
+    pointer-events: none
+    +bg-img('../images/icons/calendar.svg')
+    z-index: 2

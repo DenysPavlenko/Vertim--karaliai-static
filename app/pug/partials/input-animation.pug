@@ -1,13 +1,14 @@
 include /partials/input
 
 mixin input-animation(props = {})
-  -const { label, name, required } = props
+  -const { label, name, required, classes, inputClasses } = props
   -
     const classnames = classNames({
       'input-animation': true,
       'js-input-animation': true,
       'input-animation--required': required,
+      [classes]: classes,
     })
   div(class=classnames)
     label.input-animation__label.js-input-animation-label(for=attributes.id) #{label}
-    +input({classes:'js-input-animation-field', bordered:true})&attributes(attributes)
+    +input({classes:`js-input-animation-field ${inputClasses}`, bordered:true})&attributes(attributes)

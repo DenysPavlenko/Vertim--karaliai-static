@@ -1,0 +1,7 @@
+include /partials/input-animation
+
+mixin datepicker(props = {})
+  -const { label, id, required } = props
+
+  .datepicker
+    +input-animation({label:label, inputClasses:'datepicker__input js-datepicker-input', required:required})(type="text" id=id)

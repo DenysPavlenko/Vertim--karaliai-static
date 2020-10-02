@@ -853,6 +853,10 @@ p,
   fill: #0E7D7D;
 }
 
+.svg-icon--boston-blue {
+  fill: #3F88C5;
+}
+
 .link {
   font-size: 1rem;
   font-weight: 600;
@@ -1113,6 +1117,7 @@ p,
   cursor: text;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  z-index: 2;
 }
 
 .input-group {
@@ -1997,6 +2002,28 @@ p,
 
 .registration-success-modal__text {
   margin-bottom: 50px;
+}
+
+.datepicker {
+  position: relative;
+  z-index: 1;
+}
+
+.datepicker:after {
+  position: absolute;
+  content: '';
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+  background-image: url("../images/icons/calendar.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 2;
 }
 
 @media (min-width: 361px) {

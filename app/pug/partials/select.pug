@@ -2,7 +2,7 @@ include /partials/input
 include /partials/button
 
 mixin select(props = {})
-  -const { modifiers, label, options, auto, bordered, transparent, search } = props;
+  -const { classes, label, options, auto, bordered, transparent, search } = props;
   -
     const classnames = classNames({
       'select': true,
@@ -10,7 +10,7 @@ mixin select(props = {})
       'select--bordered': bordered,
       'select--auto': auto,
       'select--transparent': transparent,
-      [modifiers]: modifiers,
+      [classes]: classes,
     })
 
   div(class=classnames)
