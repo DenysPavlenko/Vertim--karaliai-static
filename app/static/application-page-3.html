@@ -11,6 +11,21 @@
   </head>
   <body>
     <div class="application-page">
+      <div class="modal registration-success-modal" data-modal="registration-success-modal">
+        <div class="registration-success-modal__wrap">
+          <div class="registration-success-modal__icon"><img src="images/icons/check-circle.svg" alt="check"/></div>
+          <div class="registration-success-modal__title">
+            <h3>Thank you, registration sucesfull.</h3>
+          </div>
+          <div class="registration-success-modal__text">
+            <p>You will be noticed by email when your account will be activated.</p>
+          </div>
+          <div class="registration-success-modal__button">
+            <button class="button button--bordered" type="button" data-modal-close="registration-success-modal">Back to home page
+            </button>
+          </div>
+        </div>
+      </div>
       <div class="application-page__header">
         <div class="inner-header">
           <div class="inner-header__wrap"><a class="inner-header__logo" href="#"><img src="images/logo.svg" alt="logo"/></a>
@@ -194,8 +209,8 @@
             </div>
           </div>
           <div class="application-form__item">
-                    <a class="button button--fluid" href="#">Complete application
-                    </a>
+                    <button class="button button--fluid" type="button" data-modal-open="registration-success-modal">Complete application
+                    </button>
           </div>
         </form>
       </div>

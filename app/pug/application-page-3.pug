@@ -1,11 +1,13 @@
 extends /layouts/main
 include /partials/inner-header
+include /partials/registration-success-modal
 
 block variables
   - const title = 'Application page'
 
 block content
   .application-page
+    +registration-success-modal()
     .application-page__header
       +inner-header()
     .application-page__form

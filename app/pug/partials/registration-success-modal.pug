@@ -1,0 +1,14 @@
+include /partials/button
+
+mixin registration-success-modal(props = {})
+
+  .modal.registration-success-modal(data-modal="registration-success-modal")
+    .registration-success-modal__wrap
+      .registration-success-modal__icon
+        img(src="images/icons/check-circle.svg", alt="check")
+      .registration-success-modal__title
+        h3 Thank you, registration sucesfull.
+      .registration-success-modal__text
+        p You will be noticed by email when your account will be activated.
+      .registration-success-modal__button
+        +button({type:'bordered'})(type="button" data-modal-close="registration-success-modal")| Back to home page

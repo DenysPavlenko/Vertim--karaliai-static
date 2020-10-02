@@ -10,14 +10,12 @@ include /partials/currency-select
 form.application-form
   .application-form__title
     h2 Application form <span class="text-surfie-green">1/3</span>
-
   .application-form__item
     +form-steps([
       {title:'1. Services & Prices', active:true},
       {title:'2. Education & Legal'},
       {title:'3. Contact information'},
     ])
-
   .application-form__item
     include ./card-1
   .application-form__item

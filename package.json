@@ -37,6 +37,7 @@
   "dependencies": {
     "dropzone": "^5.7.2",
     "jquery": "^3.5.1",
+    "jquery-modal": "^0.9.2",
     "simplebar": "^5.3.0",
     "svg4everybody": "^2.1.9"
   }
