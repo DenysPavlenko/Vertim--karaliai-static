@@ -2,52 +2,68 @@
   .application-form__card-line
     .form-group
       .form-group__header
-        h4 Writing
+        h4 Interpreting?
       .row-group
         .row-group__item
-          +radio({label:'Yes', name:'writing', value:'yes', checked:true})
+          +radio({label:'Yes', name:'interpreting', value:'yes', checked:true})
         .row-group__item
-          +radio({label:'No', name:'writing', value:'no'})
+          +radio({label:'No', name:'interpreting', value:'no'})
 
-  .application-form__card-line
-    .row
-      .col-12.col-md-6.mb-6.mb-md-0
-        .form-group
-          .form-group__header
-            p What combinations do you translate?
-          .row
-            .col-12.col-lg-6
-              +select({
-                label:{name:'Lithianian', selected:true},
-                options:[
-                  {name:'Lithianian'},
-                  {name:'English'},
-                  {name:'German'},
-                ]
-              })
-      .col-12.col-md-6
-        .form-group
-          .form-group__header
-            p Your prefered price per <span class="font-bold">1 word</span>
-          .row
-            .col-12.col-lg-8
-              .input-group
-                .input-group__input
-                  +input({})(type="number" placeholder="0.00")
-                .input-group__append.input-group__append--p-0
-                  +select({
-                    transparent:true,
-                    label:{name:'EUR', selected:true},
-                    options:[
-                      {name:'EUR'},
-                      {name:'GBP'},
-                      {name:'LVL'},
-                      {name:'LTL'},
-                    ]
-                 })
+  +times(2)
+    .application-form__card-line
+      .row
+        .col-12.col-md-6.col-lg-7.mb-6.mb-md-0
+          .form-group
+            .form-group__header
+              +checkbox({ label:'Simultaneous Interpretig?', checked:true })
+            .row
+              .col-12.col-lg-6.mb-4.mb-lg-0
+                .input-group
+                  .input-group__prepend
+                    p From
+                  .input-group__input
+                    +select({
+                      label:{name:'Lithianian', selected:true},
+                      options:[
+                        {name:'Lithianian'},
+                        {name:'English'},
+                        {name:'German'},
+                      ]
+                    })
+              .col-12.col-lg-6
+                .input-group
+                  .input-group__prepend
+                    p To
+                  .input-group__input
+                    +select({
+                      label:{name:'English', selected:true},
+                      options:[
+                        {name:'English'},
+                        {name:'Lithianian'},
+                        {name:'German'},
+                      ]
+                    })
+        .col-12.col-md-5.col-lg-5
+          .form-group
+            .form-group__header
+              p Your prefered price per <span class="font-bold">1 hr</span>
+            .input-group
+              .input-group__input
+                +input({})(type="number" placeholder="0.00")
+              .input-group__append.input-group__append--p-0
+                +select({
+                  transparent:true,
+                  label:{name:'EUR', selected:true},
+                  options:[
+                    {name:'EUR'},
+                    {name:'GBP'},
+                    {name:'LVL'},
+                    {name:'LTL'},
+                  ]
+                })
 
-  .application-form__card-line
-    +button({type:'bordered'})(type="button")
-      span Add combination
-      span.button__icon
-        +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+    .application-form__card-line
+      +button({type:'bordered'})(type="button")
+        span Add combination
+        span.button__icon
+          +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})

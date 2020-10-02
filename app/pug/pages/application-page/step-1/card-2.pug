@@ -1,13 +1,14 @@
 .application-form__card
+
   .application-form__card-line
     .form-group
       .form-group__header
-        h4 Standard proofreading
+        h4 Translation
       .row-group
         .row-group__item
-          +radio({label:'Yes', name:'proofreading', value:'yes', checked:true})
+          +radio({label:'Yes', name:'translation', value:'yes', checked:true})
         .row-group__item
-          +radio({label:'No', name:'proofreading', value:'no'})
+          +radio({label:'No', name:'translation', value:'no'})
 
   .application-form__card-line
     .row
@@ -25,39 +26,56 @@
           })
 
   .application-form__card-line
-    .form-group
-      .form-group__header
-        p What languages do you proofread?
-      .column-group.column-group--sm
-        +times(2)
-          .column-group__item
-            .row
-              .col-12.col-md-4.mb-3.mb-md-0
-                +select({
-                  label:{name:'Lithianian', selected:true},
-                  options:[
-                    {name:'Lithianian'},
-                    {name:'English'},
-                    {name:'German'},
-                  ]
-                })
-              .col-12.col-md-8
-                .input-group
-                  .input-group__prepend
-                    p Your prefered price per <span class="font-bold">1 word</span>
-                  .input-group__input
-                    +input({})(type="number" placeholder="0.00")
-                  .input-group__append.input-group__append--p-0
-                    +select({
-                      transparent:true,
-                      label:{name:'EUR', selected:true},
-                      options:[
-                        {name:'EUR'},
-                        {name:'GBP'},
-                        {name:'LVL'},
-                        {name:'LTL'},
-                      ]
-                    })
+    .row
+      .col-12.col-md-6.col-lg-7.mb-6.mb-md-0
+        .form-group
+          .form-group__header
+            p What combinations do you translate?
+          .row
+            .col-12.col-lg-6.mb-4.mb-lg-0
+              .input-group
+                .input-group__prepend
+                  p From
+                .input-group__input
+                  +select({
+                    label:{name:'Lithianian', selected:true},
+                    options:[
+                      {name:'Lithianian'},
+                      {name:'English'},
+                      {name:'German'},
+                    ]
+                  })
+            .col-12.col-lg-6
+              .input-group
+                .input-group__prepend
+                  p To
+                .input-group__input
+                  +select({
+                    label:{name:'English', selected:true},
+                    options:[
+                      {name:'English'},
+                      {name:'Lithianian'},
+                      {name:'German'},
+                    ]
+                  })
+      .col-12.col-md-6.col-lg-5
+        .form-group
+          .form-group__header
+            p Your prefered price per <span class="font-bold">1700 c.w.s.:</span>
+          .input-group
+            .input-group__input
+              +input()(type="number" placeholder="0.00")
+            .input-group__append.input-group__append--p-0
+              +select({
+                transparent:true,
+                label:{name:'EUR', selected:true},
+                options:[
+                  {name:'EUR'},
+                  {name:'GBP'},
+                  {name:'LVL'},
+                  {name:'LTL'},
+                ]
+              })
 
   .application-form__card-line
     +button({type:'bordered'})(type="button")

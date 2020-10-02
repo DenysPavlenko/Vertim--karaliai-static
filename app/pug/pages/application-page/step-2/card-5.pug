@@ -1,9 +1,32 @@
-.application-form__card.application-form__card--sm
-  .row-group.row-group--align-center.row-group--nowrap
-    .row-group__item
-      +status-message({title:'Fill 2 nessesary fields.', icon:{name:'exclamation', width:'9', height:'22'}, color:'brick-red'})
-    .row-group__item
-      +button({type:'bordered'})(type="button")
-        span Up
-        .button__icon
-          +icon({name:'arrow-up', fill:'surfie-green', width:'12', height:'16'})
+.application-form__card
+
+  .application-form__card-line
+    .row
+      .col-12.col-md-10.col-lg-7
+        .form-group
+          .form-group__header
+            h4 Please select your strongest fileds:
+          .row.mb-4
+            .col-12.col-xs-6.mb-3.mb-xs-0
+              .column-group.column-group--sm
+                .column-group__item
+                  +checkbox({ label:'Technical', checked:true })
+                .column-group__item
+                  +checkbox({ label:'Financial'})
+                .column-group__item
+                  +checkbox({ label:'Scientifics'})
+                .column-group__item
+                  +checkbox({ label:'Travel'})
+            .col-12.col-xs-6
+              .column-group.column-group--sm
+                .column-group__item
+                  +checkbox({ label:'Medicial', checked:true })
+                .column-group__item
+                  +checkbox({ label:'Standard documents'})
+                .column-group__item
+                  +checkbox({ label:'Automative'})
+                .column-group__item
+                  +checkbox({ label:'Education'})
+          .row
+            .col-12.col-md-6
+              +input({bordered:true})(type="text" placeholder="Custom")

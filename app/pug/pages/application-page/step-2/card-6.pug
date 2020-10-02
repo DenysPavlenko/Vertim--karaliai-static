@@ -1,0 +1,9 @@
+.application-form__card.application-form__card--sm
+  .row-group.row-group--align-center.row-group--nowrap
+    .row-group__item
+      +status-message({title:'Fill 2 nessesary fields.', icon:{name:'exclamation', width:'9', height:'22'}, color:'brick-red'})
+    .row-group__item
+      +button({type:'bordered'})(type="button")
+        span Up
+        .button__icon
+          +icon({name:'arrow-up', fill:'surfie-green', width:'12', height:'16'})

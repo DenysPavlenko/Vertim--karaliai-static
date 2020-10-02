@@ -1,21 +1,31 @@
-.application-form__card.application-form__card--danger
+.application-form__card
 
   .application-form__card-line
     p.text-brick-red.font-semibold *Choose Yes or No to continue
   .application-form__card-line
     .form-group
       .form-group__header
-        h4 Will you be able to issue the invoice for your services?
+        h4 Do you have a diploma?
       .row-group
         .row-group__item
-          +radio({label:'Yes', name:'invoiceAbility', value:'yes', checked:true})
+          +radio({label:'Yes', name:'diploma', value:'yes', checked:true})
         .row-group__item
-          +radio({label:'No', name:'invoiceAbility', value:'no'})
+          +radio({label:'No', name:'diploma', value:'no'})
 
   .application-form__card-line
     .row
-      .col-12.col-md-6
+      .col-12.col-lg-8
         .form-group
           .form-group__header
-            p Regarding what document you can issue the invoice?
-          +textarea()(placeholder="Type here")
+            p <span/ class="h3 text-surfie-green">#1</span> Do you have a diploma?
+          .row
+            .col-12.col-md-6.mb-5.mb-md-0
+              +input({bordered:true})(type="text" placeholder="Diploma type (ex. bacaular)")
+            .col-12.col-md-6
+              +input-animation({label:'Category:'})(type="text" value="Translator" id="category")
+
+  .application-form__card-line
+    +button({type:'bordered'})(type="button")
+      span Add combination
+      span.button__icon
+        +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})

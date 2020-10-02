@@ -1337,6 +1337,10 @@ p,
   border: 2px solid #0E7D7D;
 }
 
+.button--bordered:focus {
+  color: #0E7D7D;
+}
+
 .button--bordered:hover {
   color: #FFFFFF;
 }

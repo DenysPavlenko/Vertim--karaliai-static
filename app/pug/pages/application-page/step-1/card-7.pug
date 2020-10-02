@@ -2,19 +2,19 @@
   .application-form__card-line
     .form-group
       .form-group__header
-        h4 Writing
+        h4 Transcribing?
       .row-group
         .row-group__item
-          +radio({label:'Yes', name:'writing', value:'yes', checked:true})
+          +radio({label:'Yes', name:'transcribing', value:'yes', checked:true})
         .row-group__item
-          +radio({label:'No', name:'writing', value:'no'})
+          +radio({label:'No', name:'transcribing', value:'no'})
 
   .application-form__card-line
     .row
       .col-12.col-md-6.mb-6.mb-md-0
         .form-group
           .form-group__header
-            p What combinations do you translate?
+            p What languages do you write?
           .row
             .col-12.col-lg-6
               +select({
@@ -51,3 +51,26 @@
       span Add combination
       span.button__icon
         +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+
+  .application-form__card-line
+    .form-group
+      .form-group__header
+        +checkbox({ label:'Additional (custom) services:', checked:true })
+      .row
+        .col-12.col-md-6
+          .input-group
+            .input-group__prepend
+              p Your price per <span class="font-bold">1 hr</span>
+            .input-group__input
+              +input({})(type="number" placeholder="0.00")
+            .input-group__append.input-group__append--p-0
+              +select({
+                transparent:true,
+                label:{name:'EUR', selected:true},
+                options:[
+                  {name:'EUR'},
+                  {name:'GBP'},
+                  {name:'LVL'},
+                  {name:'LTL'},
+                ]
+              })
