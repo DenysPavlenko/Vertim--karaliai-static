@@ -1382,41 +1382,44 @@ p,
   background-color: #0E7D7D;
 }
 
-.button--white {
+.button--bg-white {
   color: #0E7D7D;
 }
 
-.button--white:after {
+.button--bg-white:after {
   background-color: #FFFFFF;
 }
 
-.button--white:hover:after {
+.button--bg-white:hover:after {
   opacity: 0.6;
 }
 
-.button--white:focus {
+.button--bg-white:focus {
   color: #0E7D7D;
 }
 
-.button--white:focus:after {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5);
-}
-
-.button--transparent {
+.button--bg-transparent {
   color: #444444;
 }
 
-.button--transparent:after {
+.button--bg-transparent:after {
   background-color: transparent;
 }
 
-.button--transparent:focus {
+.button--bg-transparent:focus {
   color: #444444;
 }
 
-.button--transparent:hover {
+.button--bg-transparent:hover {
   color: #0E7D7D;
+}
+
+.button--bg-alabaster:after {
+  background-color: #F7F7F7;
+}
+
+.button--squere {
+  padding: 23px;
 }
 
 .button__prepend,
@@ -1851,6 +1854,33 @@ p,
 .document-list-item__delete:hover {
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+.drag-and-drop-box {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 3px;
+  border: 1px solid #DADADA;
+  padding: 20px;
+}
+
+.drag-and-drop-box__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.drag-and-drop-box__label-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  color: #444444;
 }
 
 @media (min-width: 361px) {

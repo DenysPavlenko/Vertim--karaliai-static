@@ -52,7 +52,7 @@
       &:after
         opacity: 1
         background-color: $c-surfie-green
-  &--white
+  &--bg-white
     color: $c-surfie-green
     &:after
       background-color: $c-white
@@ -62,8 +62,8 @@
     &:focus
       color: $c-surfie-green
       &:after
-        box-shadow: 0 0 0 0.2rem rgba($c-white, .5);
-  &--transparent
+        // box-shadow: 0 0 0 0.2rem rgba($c-white, .5);
+  &--bg-transparent
     color: $c-tundora
     &:after
       background-color: transparent
@@ -71,6 +71,11 @@
       color: $c-tundora
     &:hover
       color: $c-surfie-green
+  &--bg-alabaster
+    &:after
+      background-color: $c-alabaster
+  &--squere
+    padding: 23px
 
   // Elements
   &__prepend,

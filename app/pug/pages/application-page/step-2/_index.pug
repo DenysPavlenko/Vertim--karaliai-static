@@ -8,6 +8,7 @@ include /partials/checkbox
 include /partials/textarea
 include /partials/documents-list
 include /partials/status-message
+include /partials/drag-and-drop-box
 
 form.application-form
   .application-form__title
@@ -34,6 +35,6 @@ form.application-form
     include ./card-6
   .application-form__item
     .button-group
-      +button({classes:'button-group__button', type:'white'})(href="application-page-1.html")| Back
+      +button({classes:'button-group__button', bg:'white'})(href="application-page-1.html")| Back
       +button({classes:'button-group__button'})(href="application-page-3.html")| Next
-      +button({classes:'button-group__button', type:'transparent'})| Discard
+      +button({classes:'button-group__button', bg:'transparent'})| Discard
