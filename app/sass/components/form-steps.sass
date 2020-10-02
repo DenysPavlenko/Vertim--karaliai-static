@@ -5,6 +5,8 @@ $c-text  : #9b9b9b
 .form-steps
   display: flex
   align-items: center
+  +media-max($bp-sm)
+    flex-wrap: wrap
   &__step
     position: relative
     flex: 1
@@ -12,6 +14,9 @@ $c-text  : #9b9b9b
     border-bottom: 3px solid transparent
     background-color: $c-white
     background-color: rgba($c-white, 1.3)
+    +media-max($bp-sm)
+      width: calc( 100% - 10px )
+      flex: unset
     &:after
       position: absolute
       content: ''
@@ -33,12 +38,16 @@ $c-text  : #9b9b9b
       left: -10px
       background-color: $c-step-2
       z-index: 2
+      +media-max($bp-sm)
+        left: 0
       &:after
         border-left-color: $c-step-2
     &:nth-child(3)
       left: -10px
       background-color: $c-step-1
       z-index: 1
+      +media-max($bp-sm)
+        left: 0
       &:after
         border-left-color: $c-step-1
     // State

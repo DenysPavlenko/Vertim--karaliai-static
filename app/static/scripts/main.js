@@ -227,7 +227,9 @@ function datepicker () {
 
   $datepickers.each(function () {
     var datepicker = this;
-    flatpickr(datepicker);
+    flatpickr(datepicker, {
+      disableMobile: true
+    });
   });
 }
 

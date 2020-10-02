@@ -5,6 +5,8 @@ export default function () {
 
   $datepickers.each(function () {
     var datepicker = this;
-    flatpickr(datepicker);
+    flatpickr(datepicker, {
+      disableMobile: true
+    });
   });
 }
