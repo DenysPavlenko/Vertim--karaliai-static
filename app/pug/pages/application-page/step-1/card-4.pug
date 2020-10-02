@@ -5,33 +5,34 @@
         h4 Creative proofreading
       .row-group
         .row-group__item
-          +radio({label:'Yes', name:'cProofreading', value:'yes', checked:true})
+          +radio({label:'Yes', name:'cProofreading', value:'yes'})(data-radio-toggle)
         .row-group__item
-          +radio({label:'No', name:'cProofreading', value:'no'})
+          +radio({label:'No', name:'cProofreading', value:'no', checked:true})
 
-  .application-form__card-line
-    .row
-      .col-12.col-md-6.mb-6.mb-md-0
-        .form-group
-          .form-group__header
-            p What combinations do you translate?
-          .row
-            .col-12.col-lg-6
-              +lang-alt-select()
-      .col-12.col-md-6
-        .form-group
-          .form-group__header
-            p Your prefered price per <span class="font-bold">1 word</span>
-          .row
-            .col-12.col-lg-8
-              .input-group
-                .input-group__input
-                  +input({})(type="number" placeholder="0.00")
-                .input-group__append.input-group__append--p-0
-                  +currency-select()
+  div(data-radio-toggle-content="cProofreading")
+    .application-form__card-line
+      .row
+        .col-12.col-md-6.mb-6.mb-md-0
+          .form-group
+            .form-group__header
+              p What combinations do you translate?
+            .row
+              .col-12.col-lg-6
+                +lang-alt-select()
+        .col-12.col-md-6
+          .form-group
+            .form-group__header
+              p Your prefered price per <span class="font-bold">1 word</span>
+            .row
+              .col-12.col-lg-8
+                .input-group
+                  .input-group__input
+                    +input({})(type="number" placeholder="0.00")
+                  .input-group__append.input-group__append--p-0
+                    +currency-select()
 
-  .application-form__card-line
-    +button({type:'bordered'})(type="button")
-      span Add combination
-      span.button__icon
-        +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+    .application-form__card-line
+      +button({type:'bordered'})(type="button")
+        span Add combination
+        span.button__icon
+          +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})

@@ -67,48 +67,50 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="diploma"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="diploma" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="diploma"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="diploma"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-lg-8">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p><span/ class="h3 text-surfie-green">#1</span> Do you have a diploma?</p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-md-6 mb-5 mb-md-0">
-                                  <input class="input input--bordered" type="text" placeholder="Diploma type (ex. bacaular)">
+              <div data-radio-toggle-content="diploma">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-lg-8">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p><span/ class="h3 text-surfie-green">#1</span> Do you have a diploma?</p>
                         </div>
-                        <div class="col-12 col-md-6">
-                                  <div class="input-animation js-input-animation">
-                                    <label class="input-animation__label js-input-animation-label" for="category">Category:</label>
-                                            <input class="input input--bordered js-input-animation-field" type="text" value="Translator" id="category">
-                                  </div>
+                        <div class="row">
+                          <div class="col-12 col-md-6 mb-5 mb-md-0">
+                                    <input class="input input--bordered" type="text" placeholder="Diploma type (ex. bacaular)">
+                          </div>
+                          <div class="col-12 col-md-6">
+                                    <div class="input-animation js-input-animation">
+                                      <label class="input-animation__label js-input-animation-label" for="category">Category:</label>
+                                              <input class="input input--bordered js-input-animation-field" type="text" value="Translator" id="category">
+                                    </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
               </div>
             </div>
           </div>
@@ -126,28 +128,30 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="invoiceAbility"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="invoiceAbility" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="invoiceAbility"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="invoiceAbility"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>Regarding what document you can issue the invoice?</p>
+              <div data-radio-toggle-content="invoiceAbility">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>Regarding what document you can issue the invoice?</p>
+                        </div>
+                                <textarea class="textarea" rows="5" placeholder="Type here"></textarea>
                       </div>
-                              <textarea class="textarea" rows="5" placeholder="Type here"></textarea>
                     </div>
                   </div>
                 </div>
@@ -482,7 +486,10 @@
                       </div>
                       <div class="row">
                         <div class="col-12 col-md-6">
-                                  <input class="input input--bordered" type="text" placeholder="Custom">
+                                  <div class="input-animation js-input-animation">
+                                    <label class="input-animation__label js-input-animation-label" for="custom">Custom:</label>
+                                            <input class="input input--bordered js-input-animation-field" type="text" id="custom">
+                                  </div>
                         </div>
                       </div>
                     </div>
@@ -506,7 +513,7 @@
                           </div>
                 </div>
                 <div class="row-group__item">
-                          <button class="button button--bordered" type="button"><span>Up</span>
+                          <button class="button button--bordered js-scroll-up" type="button"><span>Up</span>
                             <div class="button__icon">
                               <svg class="svg-icon svg-icon--surfie-green" width="12" height="16">
                                 <use href="images/svg/svg-sprite/symbol/sprite.svg#arrow-up" x="0" y="0"></use>

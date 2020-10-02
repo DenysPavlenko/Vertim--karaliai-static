@@ -118,11 +118,48 @@ function inputAnimation () {
   });
 }
 
+function scrollUp () {
+  var $button = $('.js-scroll-up');
+  var $html = $('html, body');
+
+  $button.on('click', function () {
+    $html.animate({ scrollTop: 0 });
+  });
+}
+
+function radioToggleContent () {
+  var $selectors = $('[data-radio-toggle]');
+  var $toggleContent = $('[data-radio-toggle-content]');
+
+  // Return if $selectors doesn't exist
+  if ($selectors.length === 0) { return; }
+
+  $toggleContent.hide();
+
+  $selectors.each(function () {
+    var $radio = $(this);
+    var name = $radio.attr('name');
+    var value = $radio.attr('value');
+    var $radios = $('input[name=' + name + ']');
+    var $content = $('[data-radio-toggle-content=' + name + ']');
+    $radios.on('click', function () {
+      var $this = $(this);
+      if ($this.is(":checked") && $this.attr('value') === value) {
+        $content.fadeIn();
+      } else {
+        $content.fadeOut();
+      }
+    });
+  });
+}
+
 // On document ready
 $(function () {
   svg4everybody();
   select();
   inputAnimation();
+  scrollUp();
+  radioToggleContent();
 });
 
 // On window load

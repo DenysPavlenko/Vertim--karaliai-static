@@ -64,144 +64,146 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="translation"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="translation" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="translation"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="translation"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>How do you calculate the price?</p>
-                      </div>
-                              <div class="select js-select">
-                                        <button class="select__label js-select-label" data-selected="select1" type="button"><span>Select 1</span>
-                                        </button>
-                                <div class="select__wrap js-select-wrap">
-                                  <div class="select__options js-select-options">
-                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                      <div class="select__option js-select-option" data-option="select1"><span>Select 1</span></div>
-                                      <div class="select__option js-select-option" data-option="select2"><span>Select 2</span></div>
-                                      <div class="select__option js-select-option" data-option="select3"><span>Select 3</span></div>
+              <div data-radio-toggle-content="translation">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>How do you calculate the price?</p>
+                        </div>
+                                <div class="select js-select">
+                                          <button class="select__label js-select-label" data-selected="select1" type="button"><span>Select 1</span>
+                                          </button>
+                                  <div class="select__wrap js-select-wrap">
+                                    <div class="select__options js-select-options">
+                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                        <div class="select__option js-select-option" data-option="select1"><span>Select 1</span></div>
+                                        <div class="select__option js-select-option" data-option="select2"><span>Select 2</span></div>
+                                        <div class="select__option js-select-option" data-option="select3"><span>Select 3</span></div>
+                                      </div>
                                     </div>
                                   </div>
+                                  <input class="select__input js-select-input" type="hidden">
                                 </div>
-                                <input class="select__input js-select-input" type="hidden">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>What combinations do you translate?</p>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>From</p>
                               </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>What combinations do you translate?</p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>From</p>
-                            </div>
-                            <div class="input-group__input">
-                                              <div class="select js-select">
-                                                        <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__search">
-                                                            <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                                  </div>
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                      <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                      <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                              <div class="input-group__input">
+                                                <div class="select js-select">
+                                                          <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__search">
+                                                              <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                    </div>
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                        <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                        <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>To</p>
-                            </div>
-                            <div class="input-group__input">
-                                              <div class="select js-select">
-                                                        <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__search">
-                                                            <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                                  </div>
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                      <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                      <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                          <div class="col-12 col-lg-6">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>To</p>
+                              </div>
+                              <div class="input-group__input">
+                                                <div class="select js-select">
+                                                          <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__search">
+                                                              <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                    </div>
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                        <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                        <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 col-md-6 col-lg-5">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>Your prefered price per <span class="font-bold">1700 c.w.s.:</span></p>
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group__input">
-                                  <input class="input" type="number" placeholder="0.00">
+                    <div class="col-12 col-md-6 col-lg-5">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>Your prefered price per <span class="font-bold">1700 c.w.s.:</span></p>
                         </div>
-                        <div class="input-group__append input-group__append--p-0">
-                                          <div class="select js-select select--transparent">
-                                                    <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                  <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                  <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                        <div class="input-group">
+                          <div class="input-group__input">
+                                    <input class="input" type="number" placeholder="0.00">
+                          </div>
+                          <div class="input-group__append input-group__append--p-0">
+                                            <div class="select js-select select--transparent">
+                                                      <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                    <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                    <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                  </div>
                                                 </div>
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
                                             </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
               </div>
             </div>
           </div>
@@ -216,144 +218,146 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="proofreading"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="proofreading" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="proofreading"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="proofreading"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>How do you calculate the price?</p>
-                      </div>
-                              <div class="select js-select">
-                                        <button class="select__label js-select-label" data-selected="select1" type="button"><span>Select 1</span>
-                                        </button>
-                                <div class="select__wrap js-select-wrap">
-                                  <div class="select__options js-select-options">
-                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                      <div class="select__option js-select-option" data-option="select1"><span>Select 1</span></div>
-                                      <div class="select__option js-select-option" data-option="select2"><span>Select 2</span></div>
-                                      <div class="select__option js-select-option" data-option="select3"><span>Select 3</span></div>
+              <div data-radio-toggle-content="proofreading">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>How do you calculate the price?</p>
+                        </div>
+                                <div class="select js-select">
+                                          <button class="select__label js-select-label" data-selected="select1" type="button"><span>Select 1</span>
+                                          </button>
+                                  <div class="select__wrap js-select-wrap">
+                                    <div class="select__options js-select-options">
+                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                        <div class="select__option js-select-option" data-option="select1"><span>Select 1</span></div>
+                                        <div class="select__option js-select-option" data-option="select2"><span>Select 2</span></div>
+                                        <div class="select__option js-select-option" data-option="select3"><span>Select 3</span></div>
+                                      </div>
                                     </div>
                                   </div>
+                                  <input class="select__input js-select-input" type="hidden">
                                 </div>
-                                <input class="select__input js-select-input" type="hidden">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="application-form__card-line">
+                  <div class="form-group">
+                    <div class="form-group__header">
+                      <p>What languages do you proofread?</p>
+                    </div>
+                    <div class="column-group column-group--sm">
+                      <div class="column-group__item">
+                        <div class="row">
+                          <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                            <div class="select js-select">
+                                                      <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__search">
+                                                          <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                </div>
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                    <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                    <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <input class="select__input js-select-input" type="hidden">
+                                            </div>
+                          </div>
+                          <div class="col-12 col-md-8">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>Your prefered price per <span class="font-bold">1 word</span></p>
                               </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="application-form__card-line">
-                <div class="form-group">
-                  <div class="form-group__header">
-                    <p>What languages do you proofread?</p>
-                  </div>
-                  <div class="column-group column-group--sm">
-                    <div class="column-group__item">
-                      <div class="row">
-                        <div class="col-12 col-md-4 mb-3 mb-md-0">
-                                          <div class="select js-select">
-                                                    <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__search">
-                                                        <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                              </div>
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                  <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                  <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
-                        </div>
-                        <div class="col-12 col-md-8">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>Your prefered price per <span class="font-bold">1 word</span></p>
-                            </div>
-                            <div class="input-group__input">
-                                      <input class="input" type="number" placeholder="0.00">
-                            </div>
-                            <div class="input-group__append input-group__append--p-0">
-                                              <div class="select js-select select--transparent">
-                                                        <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                      <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                      <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                              <div class="input-group__input">
+                                        <input class="input" type="number" placeholder="0.00">
+                              </div>
+                              <div class="input-group__append input-group__append--p-0">
+                                                <div class="select js-select select--transparent">
+                                                          <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                        <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                        <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="column-group__item">
-                      <div class="row">
-                        <div class="col-12 col-md-4 mb-3 mb-md-0">
-                                          <div class="select js-select">
-                                                    <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__search">
-                                                        <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                              </div>
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                  <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                  <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                      <div class="column-group__item">
+                        <div class="row">
+                          <div class="col-12 col-md-4 mb-3 mb-md-0">
+                                            <div class="select js-select">
+                                                      <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__search">
+                                                          <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
                                                 </div>
-                                              </div>
-                                            </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
-                        </div>
-                        <div class="col-12 col-md-8">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>Your prefered price per <span class="font-bold">1 word</span></p>
-                            </div>
-                            <div class="input-group__input">
-                                      <input class="input" type="number" placeholder="0.00">
-                            </div>
-                            <div class="input-group__append input-group__append--p-0">
-                                              <div class="select js-select select--transparent">
-                                                        <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                      <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                      <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
-                                                    </div>
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                    <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                    <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
                                                   </div>
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
+                                            </div>
+                          </div>
+                          <div class="col-12 col-md-8">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>Your prefered price per <span class="font-bold">1 word</span></p>
+                              </div>
+                              <div class="input-group__input">
+                                        <input class="input" type="number" placeholder="0.00">
+                              </div>
+                              <div class="input-group__append input-group__append--p-0">
+                                                <div class="select js-select select--transparent">
+                                                          <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                        <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                        <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <input class="select__input js-select-input" type="hidden">
+                                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -361,13 +365,13 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
               </div>
             </div>
           </div>
@@ -382,76 +386,78 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="cProofreading"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="cProofreading" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="cProofreading"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="cProofreading"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6 mb-6 mb-md-0">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>What combinations do you translate?</p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                                          <div class="select js-select">
-                                                    <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__search">
-                                                        <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                              </div>
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                  <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                  <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+              <div data-radio-toggle-content="cProofreading">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6 mb-6 mb-md-0">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>What combinations do you translate?</p>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                                            <div class="select js-select">
+                                                      <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__search">
+                                                          <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                </div>
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                    <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                    <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                  </div>
                                                 </div>
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
                                             </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>Your prefered price per <span class="font-bold">1 word</span></p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-8">
-                          <div class="input-group">
-                            <div class="input-group__input">
-                                      <input class="input" type="number" placeholder="0.00">
-                            </div>
-                            <div class="input-group__append input-group__append--p-0">
-                                              <div class="select js-select select--transparent">
-                                                        <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                      <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                      <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>Your prefered price per <span class="font-bold">1 word</span></p>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-8">
+                            <div class="input-group">
+                              <div class="input-group__input">
+                                        <input class="input" type="number" placeholder="0.00">
+                              </div>
+                              <div class="input-group__append input-group__append--p-0">
+                                                <div class="select js-select select--transparent">
+                                                          <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                        <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                        <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -459,13 +465,13 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
               </div>
             </div>
           </div>
@@ -480,227 +486,229 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="interpreting"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="interpreting" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="interpreting"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="interpreting"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                                <label class="checkbox">
-                                  <div class="checkbox__box">
-                                    <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
-                                  </div><span class="checkbox__name">Simultaneous Interpretig?</span>
-                                </label>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>From</p>
-                            </div>
-                            <div class="input-group__input">
-                                              <div class="select js-select">
-                                                        <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__search">
-                                                            <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                                  </div>
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                      <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                      <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+              <div data-radio-toggle-content="interpreting">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                                  <label class="checkbox">
+                                    <div class="checkbox__box">
+                                      <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                                    </div><span class="checkbox__name">Simultaneous Interpretig?</span>
+                                  </label>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>From</p>
+                              </div>
+                              <div class="input-group__input">
+                                                <div class="select js-select">
+                                                          <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__search">
+                                                              <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                    </div>
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                        <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                        <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>To</p>
-                            </div>
-                            <div class="input-group__input">
-                                              <div class="select js-select">
-                                                        <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__search">
-                                                            <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                                  </div>
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                      <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                      <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                          <div class="col-12 col-lg-6">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>To</p>
+                              </div>
+                              <div class="input-group__input">
+                                                <div class="select js-select">
+                                                          <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__search">
+                                                              <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                    </div>
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                        <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                        <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 col-md-5 col-lg-5">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>Your prefered price per <span class="font-bold">1 hr</span></p>
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group__input">
-                                  <input class="input" type="number" placeholder="0.00">
+                    <div class="col-12 col-md-5 col-lg-5">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>Your prefered price per <span class="font-bold">1 hr</span></p>
                         </div>
-                        <div class="input-group__append input-group__append--p-0">
-                                          <div class="select js-select select--transparent">
-                                                    <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                  <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                  <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                        <div class="input-group">
+                          <div class="input-group__input">
+                                    <input class="input" type="number" placeholder="0.00">
+                          </div>
+                          <div class="input-group__append input-group__append--p-0">
+                                            <div class="select js-select select--transparent">
+                                                      <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                    <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                    <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                  </div>
                                                 </div>
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
                                             </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
-              </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                                <label class="checkbox">
-                                  <div class="checkbox__box">
-                                    <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
-                                  </div><span class="checkbox__name">Simultaneous Interpretig?</span>
-                                </label>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>From</p>
-                            </div>
-                            <div class="input-group__input">
-                                              <div class="select js-select">
-                                                        <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__search">
-                                                            <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                                  </div>
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                      <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                      <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6 col-lg-7 mb-6 mb-md-0">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                                  <label class="checkbox">
+                                    <div class="checkbox__box">
+                                      <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                                    </div><span class="checkbox__name">Simultaneous Interpretig?</span>
+                                  </label>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>From</p>
+                              </div>
+                              <div class="input-group__input">
+                                                <div class="select js-select">
+                                                          <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__search">
+                                                              <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                    </div>
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                        <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                        <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
-                          <div class="input-group">
-                            <div class="input-group__prepend">
-                              <p>To</p>
-                            </div>
-                            <div class="input-group__input">
-                                              <div class="select js-select">
-                                                        <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__search">
-                                                            <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                                  </div>
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                      <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                      <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                          <div class="col-12 col-lg-6">
+                            <div class="input-group">
+                              <div class="input-group__prepend">
+                                <p>To</p>
+                              </div>
+                              <div class="input-group__input">
+                                                <div class="select js-select">
+                                                          <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__search">
+                                                              <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                    </div>
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                        <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                        <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 col-md-5 col-lg-5">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>Your prefered price per <span class="font-bold">1 hr</span></p>
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group__input">
-                                  <input class="input" type="number" placeholder="0.00">
+                    <div class="col-12 col-md-5 col-lg-5">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>Your prefered price per <span class="font-bold">1 hr</span></p>
                         </div>
-                        <div class="input-group__append input-group__append--p-0">
-                                          <div class="select js-select select--transparent">
-                                                    <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                  <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                  <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                        <div class="input-group">
+                          <div class="input-group__input">
+                                    <input class="input" type="number" placeholder="0.00">
+                          </div>
+                          <div class="input-group__append input-group__append--p-0">
+                                            <div class="select js-select select--transparent">
+                                                      <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                    <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                    <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                  </div>
                                                 </div>
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
                                             </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
               </div>
             </div>
           </div>
@@ -715,76 +723,78 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="writing"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="writing" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="writing"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="writing"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6 mb-6 mb-md-0">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>What combinations do you translate?</p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                                          <div class="select js-select">
-                                                    <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__search">
-                                                        <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                              </div>
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                  <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                  <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+              <div data-radio-toggle-content="writing">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6 mb-6 mb-md-0">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>What combinations do you translate?</p>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                                            <div class="select js-select">
+                                                      <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__search">
+                                                          <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                </div>
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                    <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                    <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                  </div>
                                                 </div>
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
                                             </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>Your prefered price per <span class="font-bold">1 word</span></p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-8">
-                          <div class="input-group">
-                            <div class="input-group__input">
-                                      <input class="input" type="number" placeholder="0.00">
-                            </div>
-                            <div class="input-group__append input-group__append--p-0">
-                                              <div class="select js-select select--transparent">
-                                                        <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                      <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                      <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>Your prefered price per <span class="font-bold">1 word</span></p>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-8">
+                            <div class="input-group">
+                              <div class="input-group__input">
+                                        <input class="input" type="number" placeholder="0.00">
+                              </div>
+                              <div class="input-group__append input-group__append--p-0">
+                                                <div class="select js-select select--transparent">
+                                                          <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                        <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                        <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -792,13 +802,13 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
               </div>
             </div>
           </div>
@@ -813,76 +823,78 @@
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" checked value="yes" name="transcribing"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" value="yes" name="transcribing" data-radio-toggle><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">Yes</span>
                               </label>
                     </div>
                     <div class="row-group__item">
                               <label class="radio">
                                 <div class="radio__box">
-                                  <input class="radio__input" type="radio" value="no" name="transcribing"><span class="radio__checkmark"></span>
+                                  <input class="radio__input" type="radio" checked value="no" name="transcribing"><span class="radio__checkmark"></span>
                                 </div><span class="radio__name">No</span>
                               </label>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="application-form__card-line">
-                <div class="row">
-                  <div class="col-12 col-md-6 mb-6 mb-md-0">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>What languages do you write?</p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-6">
-                                          <div class="select js-select">
-                                                    <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__search">
-                                                        <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
-                                              </div>
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
-                                                  <div class="select__option js-select-option" data-option="en"><span>English</span></div>
-                                                  <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+              <div data-radio-toggle-content="transcribing">
+                <div class="application-form__card-line">
+                  <div class="row">
+                    <div class="col-12 col-md-6 mb-6 mb-md-0">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>What languages do you write?</p>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-6">
+                                            <div class="select js-select">
+                                                      <button class="select__label js-select-label" data-selected="lt" type="button"><span>Lithianian</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__search">
+                                                          <input class="input input--bordered input--sm js-select-search" type="text" placeholder="Type something">
+                                                </div>
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="lt"><span>Lithianian</span></div>
+                                                    <div class="select__option js-select-option" data-option="en"><span>English</span></div>
+                                                    <div class="select__option js-select-option" data-option="fr"><span>French</span></div>
+                                                  </div>
                                                 </div>
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
                                             </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-12 col-md-6">
-                    <div class="form-group">
-                      <div class="form-group__header">
-                        <p>Your prefered price per <span class="font-bold">1 word</span></p>
-                      </div>
-                      <div class="row">
-                        <div class="col-12 col-lg-8">
-                          <div class="input-group">
-                            <div class="input-group__input">
-                                      <input class="input" type="number" placeholder="0.00">
-                            </div>
-                            <div class="input-group__append input-group__append--p-0">
-                                              <div class="select js-select select--transparent">
-                                                        <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                        </button>
-                                                <div class="select__wrap js-select-wrap">
-                                                  <div class="select__options js-select-options">
-                                                    <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                      <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                      <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                      <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                    <div class="col-12 col-md-6">
+                      <div class="form-group">
+                        <div class="form-group__header">
+                          <p>Your prefered price per <span class="font-bold">1 word</span></p>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-lg-8">
+                            <div class="input-group">
+                              <div class="input-group__input">
+                                        <input class="input" type="number" placeholder="0.00">
+                              </div>
+                              <div class="input-group__append input-group__append--p-0">
+                                                <div class="select js-select select--transparent">
+                                                          <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                          </button>
+                                                  <div class="select__wrap js-select-wrap">
+                                                    <div class="select__options js-select-options">
+                                                      <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                        <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                        <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                        <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                      </div>
                                                     </div>
                                                   </div>
+                                                  <input class="select__input js-select-input" type="hidden">
                                                 </div>
-                                                <input class="select__input js-select-input" type="hidden">
-                                              </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -890,47 +902,47 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="application-form__card-line">
-                        <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
-                            <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                              <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                            </svg></span>
-                        </button>
-              </div>
-              <div class="application-form__card-line">
-                <div class="form-group">
-                  <div class="form-group__header">
-                            <label class="checkbox">
-                              <div class="checkbox__box">
-                                <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
-                              </div><span class="checkbox__name">Additional (custom) services:</span>
-                            </label>
-                  </div>
-                  <div class="row">
-                    <div class="col-12 col-md-6">
-                      <div class="input-group">
-                        <div class="input-group__prepend">
-                          <p>Your price per <span class="font-bold">1 hr</span></p>
-                        </div>
-                        <div class="input-group__input">
-                                  <input class="input" type="number" placeholder="0.00">
-                        </div>
-                        <div class="input-group__append input-group__append--p-0">
-                                          <div class="select js-select select--transparent">
-                                                    <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
-                                                    </button>
-                                            <div class="select__wrap js-select-wrap">
-                                              <div class="select__options js-select-options">
-                                                <div class="custom-scroll select__options-scroll" data-select-simplebar>
-                                                  <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
-                                                  <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
-                                                  <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                <div class="application-form__card-line">
+                          <button class="button button--bordered" type="button"><span>Add combination</span><span class="button__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg></span>
+                          </button>
+                </div>
+                <div class="application-form__card-line">
+                  <div class="form-group">
+                    <div class="form-group__header">
+                              <label class="checkbox">
+                                <div class="checkbox__box">
+                                  <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                                </div><span class="checkbox__name">Additional (custom) services:</span>
+                              </label>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-md-6">
+                        <div class="input-group">
+                          <div class="input-group__prepend">
+                            <p>Your price per <span class="font-bold">1 hr</span></p>
+                          </div>
+                          <div class="input-group__input">
+                                    <input class="input" type="number" placeholder="0.00">
+                          </div>
+                          <div class="input-group__append input-group__append--p-0">
+                                            <div class="select js-select select--transparent">
+                                                      <button class="select__label js-select-label" data-selected="EUR" type="button"><span>EUR</span>
+                                                      </button>
+                                              <div class="select__wrap js-select-wrap">
+                                                <div class="select__options js-select-options">
+                                                  <div class="custom-scroll select__options-scroll" data-select-simplebar>
+                                                    <div class="select__option js-select-option" data-option="EUR"><span>EUR</span></div>
+                                                    <div class="select__option js-select-option" data-option="GBP"><span>GBP</span></div>
+                                                    <div class="select__option js-select-option" data-option="LVL"><span>LVL</span></div>
+                                                  </div>
                                                 </div>
                                               </div>
+                                              <input class="select__input js-select-input" type="hidden">
                                             </div>
-                                            <input class="select__input js-select-input" type="hidden">
-                                          </div>
+                          </div>
                         </div>
                       </div>
                     </div>
