@@ -1,13 +1,15 @@
 .custom-scroll
   height: 100%
-  .simplebar-vertical
-    background-color: $c-athens-gray
-    border-radius: $r-primary
-    width: 5px
   .simplebar-scrollbar:before
     border-radius: $r-primary
     background: $c-silver-chalice
     right: 0
     left: auto
     width: 5px
-    opacity: 1
+  &--scroll-visible
+    .simplebar-vertical
+      background-color: $c-athens-gray
+      border-radius: $r-primary
+      width: 5px
+    .simplebar-scrollbar:before
+      opacity: 1

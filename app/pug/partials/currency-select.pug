@@ -1,0 +1,13 @@
+include /partials/select
+
+mixin currency-select(props = {})
+
+  +select({
+    transparent:true,
+    label:{name:'EUR', content:`<span>EUR</span>`},
+    options:[
+      {name:'EUR', content:`<span>EUR</span>`},
+      {name:'GBP', content:`<span>GBP</span>`},
+      {name:'LVL', content:`<span>LVL</span>`},
+    ]
+  })

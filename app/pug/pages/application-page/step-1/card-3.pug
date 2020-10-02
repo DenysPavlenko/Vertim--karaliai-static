@@ -16,11 +16,11 @@
           .form-group__header
             p How do you calculate the price?
           +select({
-            label:{name:'Select', selected:true},
+            label:{name:'select1', content:`<span>Select 1</span>`},
             options:[
-              {name:'Select 1'},
-              {name:'Select 2'},
-              {name:'Select 3'},
+              {name:'select1', content:`<span>Select 1</span>`},
+              {name:'select2', content:`<span>Select 2</span>`},
+              {name:'select3', content:`<span>Select 3</span>`},
             ]
           })
 
@@ -33,14 +33,7 @@
           .column-group__item
             .row
               .col-12.col-md-4.mb-3.mb-md-0
-                +select({
-                  label:{name:'Lithianian', selected:true},
-                  options:[
-                    {name:'Lithianian'},
-                    {name:'English'},
-                    {name:'German'},
-                  ]
-                })
+                +lang-alt-select()
               .col-12.col-md-8
                 .input-group
                   .input-group__prepend
@@ -48,16 +41,7 @@
                   .input-group__input
                     +input({})(type="number" placeholder="0.00")
                   .input-group__append.input-group__append--p-0
-                    +select({
-                      transparent:true,
-                      label:{name:'EUR', selected:true},
-                      options:[
-                        {name:'EUR'},
-                        {name:'GBP'},
-                        {name:'LVL'},
-                        {name:'LTL'},
-                      ]
-                    })
+                    +currency-select()
 
   .application-form__card-line
     +button({type:'bordered'})(type="button")

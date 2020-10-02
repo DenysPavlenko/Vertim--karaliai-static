@@ -22,27 +22,13 @@
                   .input-group__prepend
                     p From
                   .input-group__input
-                    +select({
-                      label:{name:'Lithianian', selected:true},
-                      options:[
-                        {name:'Lithianian'},
-                        {name:'English'},
-                        {name:'German'},
-                      ]
-                    })
+                    +lang-alt-select()
               .col-12.col-lg-6
                 .input-group
                   .input-group__prepend
                     p To
                   .input-group__input
-                    +select({
-                      label:{name:'English', selected:true},
-                      options:[
-                        {name:'English'},
-                        {name:'Lithianian'},
-                        {name:'German'},
-                      ]
-                    })
+                    +lang-alt-select()
         .col-12.col-md-5.col-lg-5
           .form-group
             .form-group__header
@@ -51,16 +37,7 @@
               .input-group__input
                 +input({})(type="number" placeholder="0.00")
               .input-group__append.input-group__append--p-0
-                +select({
-                  transparent:true,
-                  label:{name:'EUR', selected:true},
-                  options:[
-                    {name:'EUR'},
-                    {name:'GBP'},
-                    {name:'LVL'},
-                    {name:'LTL'},
-                  ]
-                })
+                +currency-select()
 
     .application-form__card-line
       +button({type:'bordered'})(type="button")

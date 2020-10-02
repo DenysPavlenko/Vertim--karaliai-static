@@ -1,7 +1,7 @@
 include /partials/input
 
 mixin select(props = {})
-  -const { modifiers, label = {}, optionsClass, options, auto, bordered, transparent } = props;
+  -const { modifiers, label, options, auto, bordered, transparent, search } = props;
   -
     const classnames = classNames({
       'select': true,
@@ -13,28 +13,16 @@ mixin select(props = {})
     })
 
   div(class=classnames)
-    -const dataSelected = label.selected ? label.name : false
-    .select__label.js-select-label(data-selected=dataSelected)
-      .select__left
-        if(label.image)
-          img(src=label.image, class="select__thumbnail" alt="icon")
-        span #{label.name}
-      if(label.right)
-        .select__right
-          | !{label.right}
-
-    div(class=`select__options ${optionsClass ? optionsClass : ''} js-select-options`)
-      div(data-select-simplebar class="custom-scroll select__options-scroll")
-        each option in options
-          -const { name, link, optionClass, image, dataAttr, right } = option
-          -const tag = link ? 'a' : 'div'
-          #{tag}(href=link class=`select__option ${optionClass ? optionClass : ''} js-select-option` data-option=name)&attributes(dataAttr)
-            .select__left
-              if(image)
-                img(src=image, class="select__thumbnail" alt="icon")
-              span #{name}
-            if(right)
-              .select__right
-                | !{right}
+    .select__label.js-select-label(data-selected=label.name)
+      | !{label.content}
+    .select__wrap.js-select-wrap
+      if(search)
+        .select__search
+          +input({size:'sm', bordered:true, classes:'js-select-search'})(type="text" placeholder="Type something")
+      div(class="select__options js-select-options")
+        div(data-select-simplebar class="custom-scroll select__options-scroll")
+          each option in options
+            div(class="select__option js-select-option" data-option=option.name)
+              | !{option.content}
 
     input(type="hidden" class="select__input js-select-input")

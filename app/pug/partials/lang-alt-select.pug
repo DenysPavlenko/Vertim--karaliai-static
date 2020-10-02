@@ -1,0 +1,13 @@
+include /partials/select
+
+mixin lang-alt-select(props = {})
+
+  +select({
+    search:true,
+    label:{name:'lt', content:`<span>Lithianian</span>`},
+    options:[
+      {name:'lt', content:`<span>Lithianian</span>`},
+      {name:'en', content:`<span>English</span>`},
+      {name:'fr', content:`<span>French</span>`},
+    ]
+  })
