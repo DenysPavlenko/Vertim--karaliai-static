@@ -4,6 +4,7 @@ import select from './modules/select';
 import inputAnimation from './modules/input-animation';
 import scrollUp from './modules/scroll-up';
 import radioToggleContent from './modules/radio-toggle-content';
+import dragAndDropBox from './modules/drag-and-drop-box';
 
 // On document ready
 $(function () {
@@ -12,6 +13,7 @@ $(function () {
   inputAnimation();
   scrollUp();
   radioToggleContent();
+  dragAndDropBox();
 });
 
 // On window load

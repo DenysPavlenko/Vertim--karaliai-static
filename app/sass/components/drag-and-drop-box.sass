@@ -1,9 +1,13 @@
 .drag-and-drop-box
   width: 100%
   max-width: 350px
+  min-height: auto
   border-radius: $r-primary
   border: 1px solid $c-alto
   padding: 20px
+  &.dz-started
+    .drag-and-drop-box__label
+      margin-bottom: 20px
   &__label
     display: flex
     align-items: center
@@ -13,3 +17,14 @@
       font-weight: 600
       line-height: 1
       color: $c-tundora
+  &__tpl
+    display: none
+  &__preview
+    &-scroll
+      max-height: 160px
+    .simplebar-content
+      &>*:not(:last-child)
+        margin-bottom: 5px
+      .document-list-item
+        &:first-child
+          display: none

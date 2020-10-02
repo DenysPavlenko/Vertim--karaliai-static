@@ -2,7 +2,7 @@ export default function () {
   var $inputs = $('.js-input-animation');
 
   // Return if $inputs don't exist
-  if ($inputs.length <= 0) { return; }
+  if (!$inputs.length) { return; }
 
   $inputs.each(function () {
     var $input = $(this);

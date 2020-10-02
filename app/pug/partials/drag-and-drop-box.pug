@@ -2,8 +2,18 @@ include /partials/button
 
 mixin drag-and-drop-box(props = {})
 
-  .drag-and-drop-box
-    .drag-and-drop-box__label
+  form(action="/" class="drag-and-drop-box js-drag-and-drop-box")
+    .drag-and-drop-box__label.dz-message
       span.drag-and-drop-box__label-title Drag and drop files
       +button({bg:'alabaster', type:'squere'})(type="button" class="drag-and-drop-box__label-button")
         +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+    div(class="drag-and-drop-box__tpl")
+      .document-list-item
+        .document-list-item__icon
+          img(src="images/icons/document-placeholder.svg", alt="placeholder")
+        .document-list-item__title(data-dz-name)
+        .document-list-item__delete
+          +icon({name:'close', fill:'brick-red', width:'10', height:'10'})(data-dz-remove)
+
+    .drag-and-drop-box__preview
+      div(data-simplebar class="custom-scroll custom-scroll--scroll-visible drag-and-drop-box__preview-scroll")

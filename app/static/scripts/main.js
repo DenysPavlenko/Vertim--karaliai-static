@@ -95,7 +95,7 @@ function inputAnimation () {
   var $inputs = $('.js-input-animation');
 
   // Return if $inputs don't exist
-  if ($inputs.length <= 0) { return; }
+  if (!$inputs.length) { return; }
 
   $inputs.each(function () {
     var $input = $(this);
@@ -132,7 +132,7 @@ function radioToggleContent () {
   var $toggleContent = $('[data-radio-toggle-content]');
 
   // Return if $selectors doesn't exist
-  if ($selectors.length === 0) { return; }
+  if (!$selectors.length) { return; }
 
   $toggleContent.hide();
 
@@ -153,6 +153,28 @@ function radioToggleContent () {
   });
 }
 
+function dragAndDropBox () {
+  var $boxes = $('.js-drag-and-drop-box');
+  // Return if $boxes don't exist
+  if (!$boxes.length) { return; }
+
+  $boxes.each(function () {
+    var box = this;
+    new Dropzone(box, {
+      previewTemplate: document.querySelector('.drag-and-drop-box__tpl').innerHTML,
+      url: "/",
+      init: function () {
+        this.on('addedfile', function () {
+          var $box = $(this.element);
+          var element = $box.find('.document-list-item');
+          var wrapper = $box.find('.simplebar-content');
+          wrapper.append(element);
+        });
+      }
+    });
+  });
+}
+
 // On document ready
 $(function () {
   svg4everybody();
@@ -160,6 +182,7 @@ $(function () {
   inputAnimation();
   scrollUp();
   radioToggleContent();
+  dragAndDropBox();
 });
 
 // On window load

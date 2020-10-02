@@ -1859,9 +1859,14 @@ p,
 .drag-and-drop-box {
   width: 100%;
   max-width: 350px;
+  min-height: auto;
   border-radius: 3px;
   border: 1px solid #DADADA;
   padding: 20px;
+}
+
+.drag-and-drop-box.dz-started .drag-and-drop-box__label {
+  margin-bottom: 20px;
 }
 
 .drag-and-drop-box__label {
@@ -1881,6 +1886,22 @@ p,
   font-weight: 600;
   line-height: 1;
   color: #444444;
+}
+
+.drag-and-drop-box__tpl {
+  display: none;
+}
+
+.drag-and-drop-box__preview-scroll {
+  max-height: 160px;
+}
+
+.drag-and-drop-box__preview .simplebar-content > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.drag-and-drop-box__preview .simplebar-content .document-list-item:first-child {
+  display: none;
 }
 
 @media (min-width: 361px) {

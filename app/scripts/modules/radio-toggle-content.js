@@ -3,7 +3,7 @@ export default function () {
   var $toggleContent = $('[data-radio-toggle-content]');
 
   // Return if $selectors doesn't exist
-  if ($selectors.length === 0) { return; }
+  if (!$selectors.length) { return; }
 
   $toggleContent.hide();
 
