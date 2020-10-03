@@ -1,7 +1,7 @@
 mixin form-steps(steps = [])
 
   .form-steps
-    each step in steps
+    each step, i in steps
       -
         const classnames = classNames({
           'form-steps__step': true,
@@ -9,4 +9,6 @@ mixin form-steps(steps = [])
           'is-done': step.done,
         })
       div(class=classnames)
-        span.form-steps__title #{step.title}
+        .form-steps__title
+          <span class="form-steps__title-number">#{i+1}.&nbsp;</span>
+          <span class="form-steps__title-text">#{step.title}</span>

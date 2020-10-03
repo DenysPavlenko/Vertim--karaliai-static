@@ -1896,6 +1896,7 @@ p,
 }
 
 .form-steps__step:nth-child(2) {
+  padding-left: 10px;
   left: -10px;
   background-color: #f4f4f6;
   z-index: 2;
@@ -1906,6 +1907,7 @@ p,
 }
 
 .form-steps__step:nth-child(3) {
+  padding-left: 10px;
   left: -10px;
   background-color: #f0f0f1;
   z-index: 1;
@@ -3229,6 +3231,24 @@ p,
     right: 15px;
   }
 
+  .form-steps__step {
+    padding: 14px 0;
+  }
+
+  .form-steps__step.is-active {
+    -webkit-box-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+  }
+
+  .form-steps__step.is-active .form-steps__title-text {
+    display: block;
+  }
+
+  .form-steps__title-text {
+    display: none;
+  }
+
   .registration-success-modal {
     padding: 40px 15px 60px 15px;
   }
@@ -3253,26 +3273,6 @@ p,
 
   .application-form__card--sm {
     padding: 18px 20px;
-  }
-
-  .form-steps {
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .form-steps__step {
-    width: calc( 100% - 10px);
-    -webkit-box-flex: unset;
-    -ms-flex: unset;
-    flex: unset;
-  }
-
-  .form-steps__step:nth-child(2) {
-    left: 0;
-  }
-
-  .form-steps__step:nth-child(3) {
-    left: 0;
   }
 }
 
