@@ -28,16 +28,13 @@
   &:focus
     color: $c-white
     &:after
-      box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5);
+      box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5)
+
   // Modifiers
   &--fluid
     width: 100%
-  &--bg-cornflower-blue
-    &:after
-      background-color: $c-cornflower-blue
-    &:focus
-      &:after
-        box-shadow: 0 0 0 0.2rem rgba($c-cornflower-blue, .5);
+  &--squere
+    padding: 23px
   &--bordered
     color: $c-surfie-green
     &:after
@@ -50,8 +47,13 @@
       svg
         fill: $c-white
       &:after
-        opacity: 1
         background-color: $c-surfie-green
+  &--bg-cornflower-blue
+    &:after
+      background-color: $c-cornflower-blue
+    &:focus
+      &:after
+        box-shadow: 0 0 0 0.2rem rgba($c-cornflower-blue, .5)
   &--bg-white
     color: $c-surfie-green
     &:after
@@ -62,7 +64,6 @@
     &:focus
       color: $c-surfie-green
       &:after
-        // box-shadow: 0 0 0 0.2rem rgba($c-white, .5);
   &--bg-transparent
     color: $c-tundora
     &:after
@@ -74,8 +75,22 @@
   &--bg-alabaster
     &:after
       background-color: $c-alabaster
-  &--squere
-    padding: 23px
+  &--border-silver-chalice
+    color: $c-silver-chalice
+    &:after
+      background-color: transparent
+      border: 2px solid $c-silver-chalice
+    &:focus
+      color: $c-silver-chalice
+      &:after
+        box-shadow: 0 0 0 0.2rem rgba($c-silver-chalice, .5)
+    &:hover
+      color: $c-white
+      svg
+        fill: $c-white
+      &:after
+        opacity: 1
+        background-color: $c-silver-chalice
 
   // Elements
   &__prepend,

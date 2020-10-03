@@ -1,5 +1,5 @@
 mixin button(props = {})
-  -const { tag, classes, bg, fluid, type, stadard } = props
+  -const { tag, classes, bg, fluid, type, border, stadard } = props
   -const tagType = tag ? tag : (attributes.href ? 'a' : 'button')
   -
     const classnames = classNames({
@@ -7,6 +7,7 @@ mixin button(props = {})
       'button--fluid': fluid,
       [`button--${type}`]: type,
       [`button--bg-${bg}`]: bg,
+      [`button--border-${border}`]: border,
       [classes]: classes
     })
 
