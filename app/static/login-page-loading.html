@@ -1,56 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Login page loading</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="./styles/vendor.css">
-    <link rel="stylesheet" type="text/css" href="./styles/main.css">
-  </head>
-  <body>
-    <div class="login-page">
-      <div class="container">
-        <div class="login-page__lang">
-          <div class="select js-select select--bordered select--auto">
-            <button class="select__label js-select-label" data-selected="eng" type="button"><img src="images/flags/gb.svg"/><span>English</span>
-            </button>
-            <div class="select__wrap js-select-wrap">
-              <div class="select__options js-select-options">
-                <div class="custom-scroll select__options-scroll" data-select-simplebar="data-select-simplebar">
-                  <div class="select__option js-select-option" data-option="eng"><img src="images/flags/gb.svg"/><span>English</span></div>
-                  <div class="select__option js-select-option" data-option="lt"><img src="images/flags/lt.svg"/><span>Lithuanian</span></div>
-                  <div class="select__option js-select-option" data-option="ge"><img src="images/flags/fr.svg"/><span>French</span></div>
-                </div>
+
+<head>
+  <title>Login page loading</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./styles/vendor.css">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+
+<body>
+  <div class="login-page">
+    <div class="container">
+      <div class="login-page__lang">
+        <div class="select js-select select--bordered select--auto">
+          <button class="select__label js-select-label" data-selected="eng" type="button"><img src="images/flags/gb.svg" /><span>English</span>
+          </button>
+          <div class="select__wrap js-select-wrap">
+            <div class="select__options js-select-options">
+              <div class="custom-scroll select__options-scroll" data-select-simplebar="data-select-simplebar">
+                <div class="select__option js-select-option" data-option="eng"><img src="images/flags/gb.svg" /><span>English</span></div>
+                <div class="select__option js-select-option" data-option="lt"><img src="images/flags/lt.svg" /><span>Lithuanian</span></div>
+                <div class="select__option js-select-option" data-option="ge"><img src="images/flags/fr.svg" /><span>French</span></div>
               </div>
             </div>
-            <input class="select__input js-select-input" type="hidden"/>
           </div>
+          <input class="select__input js-select-input" type="hidden" />
         </div>
-        <div class="login-page__box">
-          <div class="form-box">
-            <div class="form-box__header">
-              <div class="form-box__icon"><img src="images/logo.svg" alt="logo"></div>
+      </div>
+      <div class="login-page__box">
+        <div class="form-box">
+          <div class="form-box__header">
+            <div class="form-box__icon"><img src="images/logo.svg" alt="logo"></div>
+          </div>
+          <div class="form-box__loading">
+            <div class="form-box__loading-spinner">
+              <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
             </div>
-            <div class="form-box__loading">
-              <div class="form-box__loading-spinner">
-                <div class="spinner">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="form-box__loading-text">
-                <p>Signing in</p>
-              </div>
+            <div class="form-box__loading-text">
+              <p>Signing in</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="./scripts/vendor.js"></script>
-    <script src="./scripts/main.js"></script>
-  </body>
+  </div>
+  <script src="./scripts/vendor.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+
 </html>

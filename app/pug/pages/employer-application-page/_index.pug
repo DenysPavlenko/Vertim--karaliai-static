@@ -1,0 +1,15 @@
+include /partials/form-steps
+include /partials/input-animation
+include /partials/button
+include /partials/checkbox
+include /partials/datepicker
+
+form.application-form
+  .application-form__title
+    h2.text-surfie-green.text-center Employer registration form
+  .application-form__item
+    include ./card-1
+  .application-form__item
+    include ./card-2
+  .application-form__item
+    +button({fluid:true})(type="button" data-modal-open="registration-success-modal")| Complete application

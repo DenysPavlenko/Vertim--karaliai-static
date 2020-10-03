@@ -750,6 +750,17 @@ p,
   padding: 0 15px;
 }
 
+.employer-application-page {
+  padding-bottom: 60px;
+}
+
+.employer-application-page__form {
+  margin: 0 auto;
+  margin-top: 35px;
+  max-width: 600px;
+  padding: 0 15px;
+}
+
 .spinner {
   position: relative;
   display: inline-block;

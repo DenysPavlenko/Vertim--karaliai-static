@@ -3,6 +3,7 @@ const pug = require('gulp-pug');
 const gulpif = require("gulp-if");
 const plumber = require('gulp-plumber');
 const browserSync = require('browser-sync');
+const prettyHtml = require('gulp-pretty-html');
 const emitty = require("@zoxon/emitty").setup("app/pug", "pug", {
   makeVinylFile: true,
   basedir: PATHS.templates.basedir
@@ -16,6 +17,9 @@ const templates = () => {
     .pipe(pug({
       basedir: PATHS.templates.basedir,
       pretty: true
+    }))
+    .pipe(prettyHtml({
+      indent_size: 2
     }))
     .pipe(dest(PATHS.templates.output))
     .on('end', browserSync.reload);

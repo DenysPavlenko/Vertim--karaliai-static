@@ -1,0 +1,14 @@
+extends /layouts/main
+include /partials/inner-header
+include /partials/registration-success-modal
+
+block variables
+  - const title = 'Employer application page'
+
+block content
+  .employer-application-page
+    .employer-application-page__header
+      +inner-header()
+    .employer-application-page__form
+      include /pages/employer-application-page/_index
+    +registration-success-modal()
