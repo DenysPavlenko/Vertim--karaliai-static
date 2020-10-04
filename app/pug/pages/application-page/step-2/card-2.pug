@@ -10,7 +10,7 @@
         .row-group__item
           +radio({label:'Yes', name:'diploma', value:'yes'})(data-radio-toggle)
         .row-group__item
-          +radio({label:'No', name:'diploma', value:'no', checked:true})
+          +radio({label:'No', name:'diploma', value:'no'})
 
   div(data-radio-toggle-content="diploma")
     .application-form__card-line
@@ -18,7 +18,7 @@
         .col-12.col-lg-8
           .form-group
             .form-group__header
-              p <span/ class="h3 text-surfie-green">#1</span> Do you have a diploma?
+              p <span/ class="h3 text-surfie-green">#1</span> Your diploma:
             .row
               .col-12.col-md-6.mb-5.mb-md-0
                 +input({bordered:true})(type="text" placeholder="Diploma type (ex. bacaular)")
@@ -27,6 +27,6 @@
 
     .application-form__card-line
       +button({type:'bordered'})(type="button")
-        span Add combination
+        span One more
         span.button__icon
           +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})

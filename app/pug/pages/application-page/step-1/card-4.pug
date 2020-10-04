@@ -7,9 +7,23 @@
         .row-group__item
           +radio({label:'Yes', name:'cProofreading', value:'yes'})(data-radio-toggle)
         .row-group__item
-          +radio({label:'No', name:'cProofreading', value:'no', checked:true})
+          +radio({label:'No', name:'cProofreading', value:'no'})
 
   div(data-radio-toggle-content="cProofreading")
+    .application-form__card-line
+      .row
+        .col-12.col-md-6
+          .form-group
+            .form-group__header
+              p How do you calculate the price?
+            +select({
+              label:{name:'select1', content:`<span>Select 1</span>`},
+              options:[
+                {name:'select1', content:`<span>Select 1</span>`},
+                {name:'select2', content:`<span>Select 2</span>`},
+                {name:'select3', content:`<span>Select 3</span>`},
+              ]
+            })
     .application-form__card-line
       .row
         .col-12.col-md-6.mb-6.mb-md-0
