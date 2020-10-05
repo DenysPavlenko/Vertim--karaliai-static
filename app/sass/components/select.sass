@@ -105,20 +105,22 @@ $select-height: 45px
     &>*:not(:last-child)
       margin-right: 5px
     &:hover
-      background-color: $c-athens-gray
+      color: $c-white
+      background-color: rgba($c-surfie-green, 0.8)
     // State
     &.is-selected
       font-weight: 600
       color: $c-tundora
-      background-color: $c-alto
+      background-color: $c-surfie-green
+      color: $c-white
     &-wave
       position: absolute
       display: block
-      background-color: $c-alto
+      background-color: $c-surfie-green
       border-radius: 100%
       transform: scale(0)
       z-index: -1
-      animation: ripple 0.5s linear
+      animation: ripple 0.8s linear
 
 @keyframes ripple
   100%

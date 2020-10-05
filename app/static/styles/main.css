@@ -1771,25 +1771,27 @@ p,
 }
 
 .select__option:hover {
-  background-color: #EBEBEF;
+  color: #FFFFFF;
+  background-color: rgba(14, 125, 125, 0.8);
 }
 
 .select__option.is-selected {
   font-weight: 600;
   color: #444444;
-  background-color: #DADADA;
+  background-color: #0E7D7D;
+  color: #FFFFFF;
 }
 
 .select__option-wave {
   position: absolute;
   display: block;
-  background-color: #DADADA;
+  background-color: #0E7D7D;
   border-radius: 100%;
   -webkit-transform: scale(0);
   transform: scale(0);
   z-index: -1;
-  -webkit-animation: ripple 0.5s linear;
-  animation: ripple 0.5s linear;
+  -webkit-animation: ripple 0.8s linear;
+  animation: ripple 0.8s linear;
 }
 
 @-webkit-keyframes ripple {
