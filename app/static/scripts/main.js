@@ -221,6 +221,13 @@ function dragAndDropBox () {
     new Dropzone(box, {
       previewTemplate: document.querySelector('.drag-and-drop-box__tpl').innerHTML,
       url: "/",
+      uploadprogress: function (file, progress) {
+        var $document = $(file.previewElement);
+        $document.find('[data-dz-uploadprogress]').css({
+          width: progress + 'px',
+          opacity: 1 - progress / 100
+        });
+      },
       init: function () {
         this.on('addedfile', function () {
           var $box = $(this.element);

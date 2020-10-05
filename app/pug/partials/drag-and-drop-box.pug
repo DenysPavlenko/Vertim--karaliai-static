@@ -9,6 +9,7 @@ mixin drag-and-drop-box(props = {})
         +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
     div(class="drag-and-drop-box__tpl")
       .document-list-item
+        .document-list-item__progress(data-dz-uploadprogress )
         .document-list-item__icon
           img(src="images/icons/document-placeholder.svg", alt="placeholder")
         .document-list-item__title(data-dz-name)

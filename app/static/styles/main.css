@@ -2155,12 +2155,25 @@ p,
 }
 
 .document-list-item {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.document-list-item__progress {
+  position: absolute;
+  background-color: #444444;
+  top: 50%;
+  left: calc( 50% - 40px);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  max-width: 80px;
+  height: 12px;
+  border-radius: 50px;
 }
 
 .document-list-item__icon {

@@ -1,6 +1,16 @@
 .document-list-item
+  position: relative
   display: flex
   align-items: center
+  &__progress
+    position: absolute
+    background-color: $c-tundora
+    top: 50%
+    left: calc( 50% - 40px )
+    transform: translateY(-50%)
+    max-width: 80px
+    height: 12px
+    border-radius: 50px
   &__icon
     margin-right: 15px
     +media-max($bp-sm)
