@@ -1306,11 +1306,33 @@ p,
   height: 100%;
   border-radius: 50%;
   border: 2px solid #0E7D7D;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   overflow: hidden;
 }
 
-.radio .radio__input:checked ~ .radio__checkmark {
+.radio__checkmark:before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  background-color: #0b6666;
+  border-radius: 50%;
+}
+
+.radio .radio__input:active ~ .radio__checkmark {
   background-color: #0E7D7D;
+}
+
+.radio .radio__input:checked ~ .radio__checkmark:before {
+  opacity: 1;
 }
 
 .checkbox {

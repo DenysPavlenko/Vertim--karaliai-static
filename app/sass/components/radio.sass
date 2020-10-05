@@ -31,6 +31,22 @@
     height: 100%
     border-radius: 50%
     border: 2px solid $c-surfie-green
+    transition: 0.2s
     overflow: hidden
-  .radio__input:checked ~ .radio__checkmark
+    &:before
+      position: absolute
+      content: ''
+      width: 10px
+      height: 10px
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      opacity: 0
+      transition: 0.2s
+      background-color: darken($c-surfie-green, 5%)
+      border-radius: 50%
+  .radio__input:active ~ .radio__checkmark
     background-color: $c-surfie-green
+  .radio__input:checked ~ .radio__checkmark
+    &:before
+      opacity: 1
