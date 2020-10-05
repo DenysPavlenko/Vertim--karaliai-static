@@ -24,13 +24,16 @@
     z-index: -1
   &:hover
     &:after
-      opacity: 0.8
+      background-color: darken($c-surfie-green, 8%)
   &:focus
     color: $c-white
     &:after
+      background-color: darken($c-surfie-green, 8%)
       box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5)
   &:active
-    transform: scale(0.8)
+    color: $c-white
+    &:after
+      background-color: darken($c-surfie-green, 10%)
 
   // Modifiers
   &--fluid
@@ -42,41 +45,86 @@
     &:after
       background-color: transparent
       border: 2px solid $c-surfie-green
-    &:focus
-      color: $c-surfie-green
     &:hover
       color: $c-white
-      svg
-        fill: $c-white
       &:after
         background-color: $c-surfie-green
+      svg
+        fill: $c-white
+    &:focus
+      color: $c-white
+      &:after
+        background-color: darken($c-surfie-green, 8%)
+        box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5)
+        border-color: darken($c-surfie-green, 8%)
+      svg
+        fill: $c-white
+    &:active
+      color: $c-white
+      &:after
+        background-color: darken($c-surfie-green, 10%)
+        border-color: darken($c-surfie-green, 10%)
+      svg
+        fill: $c-white
   &--bg-cornflower-blue
     &:after
       background-color: $c-cornflower-blue
-    &:focus
+    &:hover
       &:after
+        background-color: darken($c-cornflower-blue, 8%)
+    &:focus
+      color: $c-white
+      &:after
+        background-color: darken($c-cornflower-blue, 8%)
         box-shadow: 0 0 0 0.2rem rgba($c-cornflower-blue, .5)
+    &:active
+      &:after
+        background-color: darken($c-cornflower-blue, 10%)
   &--bg-white
     color: $c-surfie-green
     &:after
       background-color: $c-white
     &:hover
       &:after
-        opacity: 0.6
+        background-color: darken($c-white, 6%)
     &:focus
       color: $c-surfie-green
       &:after
+        background-color: darken($c-white, 6%)
+        box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5)
+    &:active
+      color: $c-surfie-green
+      &:after
+        background-color: darken($c-white, 8%)
   &--bg-transparent
     color: $c-tundora
     &:after
       background-color: transparent
-    &:focus
-      color: $c-tundora
     &:hover
       color: $c-surfie-green
+      &:after
+        background-color: transparent
+    &:focus
+      color: $c-tundora
+      &:after
+        background-color: transparent
+        box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5)
+    &:active
+      &:after
+        background-color: transparent
   &--bg-alabaster
     &:after
       background-color: $c-alabaster
+    &:hover
+      &:after
+        background-color: darken($c-alabaster, 8%)
+    &:focus
+      &:after
+        background-color: darken($c-alabaster, 8%)
+        box-shadow: 0 0 0 0.2rem rgba($c-alabaster, .5)
+    &:active
+      &:after
+        background-color: darken($c-alabaster, 10%)
   &--border-silver-chalice
     color: $c-silver-chalice
     &:after

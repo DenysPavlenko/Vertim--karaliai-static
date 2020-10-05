@@ -66,6 +66,7 @@ function select () {
         var $focusedOption = $optionsContainer.find('.js-select-option.is-focused');
         setOption($focusedOption);
         toggleSelect();
+        $focusedOption.addClass('is-selected');
       }
     });
     // Select search
