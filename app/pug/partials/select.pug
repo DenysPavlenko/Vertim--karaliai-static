@@ -16,12 +16,12 @@ mixin select(props = {})
   div(class=classnames)
     +button({classes:'select__label js-select-label', stadard:false})(data-selected=label.name type="button")
       | !{label.content}
-    .select__wrap.js-select-wrap
+    .select__dropdown.js-select-dropdown
       if(search)
         .select__search
           +input({size:'sm', bordered:true, classes:'js-select-search'})(type="text" placeholder="Type something")
-      div(class="select__options js-select-options")
-        div(data-select-simplebar class="custom-scroll select__options-scroll")
+      div(data-select-simplebar class="custom-scroll select__dropdown-scroll")
+        div(class="select__options js-select-options")
           each option in options
             div(class="select__option js-select-option" data-option=option.name)
               | !{option.content}
