@@ -2048,15 +2048,21 @@ p,
 }
 
 .document-list-item__icon {
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .document-list-item__title {
   font-size: 0.875rem;
   font-weight: 400;
-  line-height: 1;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 1.2;
   color: #9D9D9D;
-  margin-right: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
 }
 
 .document-list-item__delete {
@@ -2073,15 +2079,27 @@ p,
 
 .drag-and-drop-box {
   width: 100%;
-  max-width: 350px;
   min-height: auto;
   border-radius: 3px;
   border: 1px solid #DADADA;
   padding: 20px;
 }
 
+.drag-and-drop-box.dz-started {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .drag-and-drop-box.dz-started .drag-and-drop-box__label {
-  margin-bottom: 20px;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  padding-left: 20px;
+}
+
+.drag-and-drop-box.dz-started .drag-and-drop-box__label-title {
+  display: none;
 }
 
 .drag-and-drop-box__label {
@@ -2107,8 +2125,15 @@ p,
   display: none;
 }
 
+.drag-and-drop-box__preview {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .drag-and-drop-box__preview-scroll {
   max-height: 160px;
+  padding-right: 15px;
 }
 
 .drag-and-drop-box__preview .simplebar-content > *:not(:last-child) {
@@ -3336,6 +3361,22 @@ p,
 
   .application-form__card--sm {
     padding: 18px 20px;
+  }
+
+  .document-list-item__icon {
+    margin-right: 10px;
+  }
+
+  .drag-and-drop-box {
+    padding: 15px;
+  }
+
+  .drag-and-drop-box.dz-started .drag-and-drop-box__label {
+    padding-left: 15px;
+  }
+
+  .drag-and-drop-box__preview-scroll {
+    padding-right: 10px;
   }
 }
 
