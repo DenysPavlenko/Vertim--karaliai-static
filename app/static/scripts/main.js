@@ -44,10 +44,7 @@ function select () {
       $option.on('click', function (e) {
         e.stopPropagation();
         setOption($option);
-        addWaveAnimation($option, e);
-        collapseSelect(function () {
-          $option.addClass('is-selected');
-        });
+        collapseSelect();
       });
     });
     // Options arrow navigation
@@ -66,7 +63,6 @@ function select () {
         var $focusedOption = $optionsContainer.find('.js-select-option.is-focused');
         setOption($focusedOption);
         toggleSelect();
-        $focusedOption.addClass('is-selected');
       }
     });
     // Select search
@@ -101,7 +97,6 @@ function select () {
         }
         $options.each(function () {
           var $option = $(this);
-          stopWaveAnimation($option);
           $option.css('display') === 'none' && $option.show();
         });
       });
@@ -115,10 +110,11 @@ function select () {
       $selectLabel.html(optionHtml);
       $input.attr('value', optionData);
       $options.removeClass('is-selected');
+      option.addClass('is-selected');
     }
 
     // Collapse select
-    function collapseSelect(callback) {
+    function collapseSelect() {
       isOpened = false;
       $select.removeClass('is-expanded');
       $selectDropdown.fadeOut(300, function () {
@@ -127,13 +123,9 @@ function select () {
         }
         $options.each(function () {
           var $option = $(this);
-          stopWaveAnimation($option);
           $option.removeClass('is-focused');
           $option.css('display') === 'none' && $option.show();
         });
-        if (callback) {
-          callback();
-        }
       });
     }
 
@@ -152,30 +144,6 @@ function select () {
         }
       } else if (!$selectedOption.length && !$focusedOption.length) {
         $options.eq(0).addClass('is-focused');
-      }
-    }
-
-    // Wave animation
-    function addWaveAnimation(elem, e) {
-      var wave, d, x, y;
-      if (!elem.find(".select__option-wave").length) {
-        elem.prepend("<span class='select__option-wave'></span>");
-      }
-      var wave = elem.find(".select__option-wave");
-      d = Math.max(elem.outerWidth(), elem.outerHeight());
-      wave.css({ height: d, width: d });
-      x = e.pageX - elem.offset().left - wave.width() / 2;
-      y = e.pageY - elem.offset().top - wave.height() / 2;
-      wave.css({ top: y + 'px', left: x + 'px' });
-      wave.one('animationend', function () {
-        wave.remove();
-      });
-    }
-
-    // Force remove wave animation
-    function stopWaveAnimation(elem) {
-      if (elem.find(".select__option-wave").length) {
-        elem.find(".select__option-wave").remove();
       }
     }
   });
