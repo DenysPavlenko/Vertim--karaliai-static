@@ -1464,13 +1464,16 @@ p,
 
 .button:focus {
   color: #FFFFFF;
-  -webkit-transform: scale(0.8);
-  transform: scale(0.8);
 }
 
 .button:focus:after {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(14, 125, 125, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(14, 125, 125, 0.5);
+}
+
+.button:active {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
 }
 
 .button--fluid {
