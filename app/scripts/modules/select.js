@@ -36,8 +36,10 @@ export default function () {
         $selectLabel.html(optionContent);
         $input.attr('value', optionData);
         $options.removeClass('is-selected');
-        $option.addClass('is-selected');
-        collapseSelect();
+        addWave($option, e);
+        collapseSelect(function () {
+          $option.addClass('is-selected');
+        });
       });
     });
     // Select search
@@ -68,23 +70,50 @@ export default function () {
           $search.val('');
         }
         $options.each(function () {
-          var $option = $(this)
+          var $option = $(this);
+          removeWave($option);
           $option.css('display') === 'none' && $option.show();
         });
       });
     }
     // Collapse select
-    function collapseSelect() {
+    function collapseSelect(callback) {
       $select.removeClass('is-expanded');
-      $optionsWrap.fadeOut(100, function () {
+      $optionsWrap.fadeOut(300, function () {
         if ($search) {
           $search.val('');
         }
         $options.each(function () {
-          var $option = $(this)
+          var $option = $(this);
+          removeWave($option);
           $option.css('display') === 'none' && $option.show();
         });
+        if (callback) {
+          callback();
+        }
       });
+    }
+    // Wave animation
+    function addWave(elem, e) {
+      var wave, d, x, y;
+      if (!elem.find(".select__option-wave").length) {
+        elem.prepend("<span class='select__option-wave'></span>")
+      }
+      var wave = elem.find(".select__option-wave");
+      d = Math.max(elem.outerWidth(), elem.outerHeight());
+      wave.css({ height: d, width: d });
+      x = e.pageX - elem.offset().left - wave.width() / 2;
+      y = e.pageY - elem.offset().top - wave.height() / 2;
+      wave.css({ top: y + 'px', left: x + 'px' });
+      wave.one('animationend', function () {
+        wave.remove();
+      })
+    }
+    // Force remove wave animation
+    function removeWave(elem) {
+      if (elem.find(".select__option-wave").length) {
+        elem.find(".select__option-wave").remove();
+      }
     }
   });
 }
