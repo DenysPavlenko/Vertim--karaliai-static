@@ -1872,6 +1872,8 @@ p,
   cursor: pointer;
   color: #9D9D9D;
   z-index: 1;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .select__option img {
@@ -1885,18 +1887,6 @@ p,
 .select__option:hover {
   color: #FFFFFF;
   background-color: rgba(14, 125, 125, 0.8);
-}
-
-.select__option-wave {
-  position: absolute;
-  display: block;
-  background-color: #0E7D7D;
-  border-radius: 100%;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-  z-index: -1;
-  -webkit-animation: ripple 0.8s linear;
-  animation: ripple 0.8s linear;
 }
 
 .select__option.is-selected {
@@ -1913,20 +1903,8 @@ p,
   color: #FFFFFF;
 }
 
-@-webkit-keyframes ripple {
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(2.5);
-    transform: scale(2.5);
-  }
-}
-
-@keyframes ripple {
-  100% {
-    opacity: 0;
-    -webkit-transform: scale(2.5);
-    transform: scale(2.5);
-  }
+.select__option.is-focused:hover {
+  background-color: rgba(14, 125, 125, 0.8);
 }
 
 .status-message {
