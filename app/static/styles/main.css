@@ -1624,6 +1624,10 @@ p,
   border-radius: 3px 3px 0 0;
 }
 
+.select.is-expanded .select__label {
+  border-radius: 3px 3px 0 0;
+}
+
 .select.is-expanded .select__label:after {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -1726,21 +1730,18 @@ p,
   position: absolute;
   display: none;
   min-width: 100%;
-  top: calc(100% + 1px);
+  top: 100%;
   background-color: #FFFFFF;
   border-radius: 0 0 3px 3px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
   z-index: 200;
 }
 
 .select__search {
   padding: 10px;
   width: auto;
-}
-
-.select__options {
-  overflow: hidden;
 }
 
 .select__options-scroll {
