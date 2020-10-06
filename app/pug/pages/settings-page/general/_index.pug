@@ -1,0 +1,71 @@
+include /partials/avatar
+include /partials/button
+include /partials/inline-button
+include /partials/link
+-
+  var list1 = [
+    {left:'Accoun type:', right:'Employer'},
+    {left:'Name:', right:'Vaidotas Rimeikis'},
+    {left:'Email:', right:'lj.baranauskas@gmail.com'},
+    {left:'Phone:', right:'+3706891864'},
+    {left:'Native:', right:'Lithuanian'},
+    {left:'Address:', right:'Adres 5g.', rightAccent:true},
+    {left:'Zip code:', right:'LT-4421'},
+    {left:'City:', right:'Vilnius'},
+    {left:'Country:', right:'Lithuania'},
+    {left:'Birth day:', right:'2019-04-01'},
+    {left:'Additional:', right:'Sample sample sample sample sample sample'},
+  ]
+-
+  var list2 = [
+    {left:'Holder type:', right:'Lukas Baranauskas'},
+    {left:'Bank No:', right:'LT 99992192929219'},
+    {left:'Bank:', right:'AB “LUMINOR”'},
+    {left:'Swift:', right:'SW2122'},
+    {left:'Bank Co:', right:'12232'},
+    {left:'Paypal:', right:'info@irina.com '},
+  ]
+
+.settings-general
+  .settings-general__wrap
+    //- Column
+    .settings-general__avatar
+      .settings-general__avatar-wrap
+        +avatar({size:'xl', image:'images/user/avatar.jpg'})
+        .settings-general__avatar-button
+          +button({bg:'alabaster', type:'round'})(type="button")
+            +icon({name:'camera', fill:'boston-blue', width:'s18', height:'16'})
+      .settings-general__avatar-date
+        p.p-sm Member since: 2015-04-12
+      .settings-general__avatar-password
+        +link({link:'#'})| Change password
+    //- Column
+    .settings-general__list
+      .settings-general__heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h4 General information:
+          .row-group__item
+            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+      .info-list
+        each item in list1
+          .info-list__item
+            .info-list__left
+              p.font-semibold.text-silver-chalice #{item.left}
+            .info-list__right
+              p(class=`font-semibold ${item.rightAccent ? 'text-boston-blue' : ''}`) #{item.right}
+    //- Column
+    .settings-general__list
+      .settings-general__heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h4 Bank information:
+          .row-group__item
+            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+      .info-list
+        each item in list2
+          .info-list__item
+            .info-list__left
+              p.font-semibold.text-silver-chalice #{item.left}
+            .info-list__right
+              p(class=`font-semibold ${item.accent ? 'text-boston-blue' : ''}`) #{item.right}

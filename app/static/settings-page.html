@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Settings page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="./styles/vendor.css">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+
+<body>
+  <div class="settings-page">
+    <div class="settings-page__header">
+      <header class="header">
+        <div class="header__wrap">
+          <div class="header__left">
+            <div class="header__logo">
+              <div class="header__logo-icon"><img src="images/logo.svg" alt="logo" /></div><span class="header__logo-title">Crm Name</span>
+            </div>
+          </div>
+          <div class="header__right">
+            <div class="header__navigation">
+              <div class="navigation">
+                <div class="navigation__items">
+                  <div class="navigation__item"><a class="navigation__link " href="#">Employers</a></div>
+                  <div class="navigation__item"><a class="navigation__link is-active" href="#">Clients</a></div>
+                  <div class="navigation__item"><a class="navigation__link " href="#">Offices</a></div>
+                  <div class="navigation__item"><a class="navigation__link " href="#">Accounting</a></div>
+                  <div class="navigation__item"><a class="navigation__link " href="#">Statements</a></div>
+                  <div class="navigation__item"><a class="navigation__link " href="#">Statements</a></div>
+                  <div class="navigation__item"><a class="navigation__link " href="#">Messages
+                      <div class="navigation__link-unread"><span class="unread">253</span>
+                      </div>
+                    </a></div>
+                </div>
+              </div>
+            </div>
+            <div class="header__dropdowns">
+              <div class="header__dropdown">
+                <div class="dropdown notifications-dropdown js-dropdown" data-dropdown="notifications">
+                  <div class="dropdown__toggle notifications-dropdown__toggle" data-dropdown-toggle="notifications">
+                    <div class="notifications-dropdown__toggle-icon">
+                      <svg class="svg-icon svg-icon--surfie-green" width="24" height="25">
+                        <use href="images/svg/svg-sprite/symbol/sprite.svg#bell" x="0" y="0"></use>
+                      </svg>
+                    </div>
+                    <div class="notifications-dropdown__toggle-title">4 new</div>
+                  </div>
+                  <div class="dropdown__body notifications-dropdown__body js-dropdown-body">
+                    <div class="custom-scroll" data-dropdown-simplebar="data-dropdown-simplebar">
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="header__dropdown">
+                <div class="select js-select select--radius-secondary">
+                  <button class="select__label js-select-label" data-selected="lt" type="button"><img src="images/icons/planet.svg" /><span>LT</span>
+                  </button>
+                  <div class="select__dropdown js-select-dropdown">
+                    <div class="custom-scroll select__dropdown-scroll" data-select-simplebar="data-select-simplebar">
+                      <div class="select__options js-select-options">
+                        <div class="select__option js-select-option" data-option="lt"><img src="images/icons/planet.svg" /><span>LT</span></div>
+                        <div class="select__option js-select-option" data-option="en"><img src="images/icons/planet.svg" /><span>EN</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input class="select__input js-select-input" type="hidden" />
+                </div>
+              </div>
+              <div class="header__dropdown">
+                <div class="dropdown js-dropdown user-dropdown" data-dropdown="user">
+                  <div class="dropdown__toggle user-dropdown__toggle" data-dropdown-toggle="user">
+                    <div class="user-dropdown__toggle-avatar"></div>
+                    <div class="user-dropdown__toggle-name">Justas</div>
+                    <div class="user-dropdown__toggle-chevron">
+                      <svg class="svg-icon svg-icon--surfie-green" width="9" height="5">
+                        <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="dropdown__body js-dropdown-body user-dropdown__body">
+                    <div class="user-dropdown__content custom-scroll" data-simplebar="data-simplebar"></div>
+                  </div>
+                  <div class="dropdown__body user-dropdown__body js-dropdown-body">
+                    <div class="user-dropdown-menu">
+                      <div class="user-dropdown-menu__items">
+                        <div class="user-dropdown-menu__item"><a class="user-dropdown-menu__link" href="settings-page.html">
+                            <div class="user-dropdown-menu__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="18" height="18">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#cog" x="0" y="0"></use>
+                              </svg>
+                            </div>
+                            <div class="user-dropdown-menu__title">Settings</div>
+                          </a></div>
+                        <div class="user-dropdown-menu__item"><a class="user-dropdown-menu__link" href="#">
+                            <div class="user-dropdown-menu__icon">
+                              <svg class="svg-icon svg-icon--surfie-green" width="18" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#log-out" x="0" y="0"></use>
+                              </svg>
+                            </div>
+                            <div class="user-dropdown-menu__title">Log Out</div>
+                          </a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="container">
+      <div class="settings-page__wrap">
+        <div class="settings-page__title">
+          <h2 class="text-surfie-green">Settings</h2>
+        </div>
+        <div class="settings-page__status">
+          <h3>Account status: <span class="text-surfie-green">Approved</span><span class="icon-inline">
+                <svg class="svg-icon svg-icon--surfie-green" width="15" height="13">
+                  <use href="images/svg/svg-sprite/symbol/sprite.svg#check" x="0" y="0"></use>
+                </svg></span></h3>
+        </div>
+        <div class="settings-page__catalog">
+          <div class="catalog">
+            <div class="catalog__tabs tabs js-tabs">
+              <div class="catalog__tab js-tabs-tab " data-tab="general">
+                <div class="catalog__tab-title">General</div>
+              </div>
+              <div class="catalog__tab js-tabs-tab is-active" data-tab="education">
+                <div class="catalog__tab-title">Education &amp; Files</div>
+              </div>
+              <div class="catalog__tab js-tabs-tab " data-tab="prices">
+                <div class="catalog__tab-title">Prices</div>
+              </div>
+              <div class="catalog__tab js-tabs-tab " data-tab="payouts">
+                <div class="catalog__tab-title">Payouts &amp; Invoices</div>
+              </div>
+              <div class="catalog__tab js-tabs-tab " data-tab="notifications">
+                <div class="catalog__tab-title">Notifications</div>
+              </div>
+            </div>
+            <div class="catalog__content">
+              <div class="catalog__content-item tabs__content js-tabs-content" data-content="general">
+                <div class="settings-general">
+                  <div class="settings-general__wrap">
+                    <div class="settings-general__avatar">
+                      <div class="settings-general__avatar-wrap">
+                        <div class="avatar avatar--xl">
+                          <figure style="background-image:url('images/user/avatar.jpg')"></figure>
+                        </div>
+                        <div class="settings-general__avatar-button">
+                          <button class="button button--round button--bg-alabaster" type="button">
+                            <svg class="svg-icon svg-icon--boston-blue" width="s18" height="16">
+                              <use href="images/svg/svg-sprite/symbol/sprite.svg#camera" x="0" y="0"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="settings-general__avatar-date">
+                        <p class="p-sm">Member since: 2015-04-12</p>
+                      </div>
+                      <div class="settings-general__avatar-password"><a class="link" href="#">Change password</a>
+                      </div>
+                    </div>
+                    <div class="settings-general__list">
+                      <div class="settings-general__heading">
+                        <div class="row-group row-group--align-center">
+                          <div class="row-group__item">
+                            <h4>General information:</h4>
+                          </div>
+                          <div class="row-group__item"><a class="inline-button inline-button--boston-blue" href="#"><span class="inline-button__icon">
+                                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                                    </svg></span><span>Edit</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="info-list">
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Accoun type:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">Employer</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Name:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">Vaidotas Rimeikis</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Email:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">lj.baranauskas@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Phone:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">+3706891864</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Native:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">Lithuanian</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Address:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold text-boston-blue">Adres 5g.</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Zip code:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">LT-4421</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">City:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">Vilnius</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Country:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">Lithuania</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Birth day:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">2019-04-01</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Additional:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">Sample sample sample sample sample sample</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-general__list">
+                      <div class="settings-general__heading">
+                        <div class="row-group row-group--align-center">
+                          <div class="row-group__item">
+                            <h4>Bank information:</h4>
+                          </div>
+                          <div class="row-group__item"><a class="inline-button inline-button--boston-blue" href="#"><span class="inline-button__icon">
+                                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                                    </svg></span><span>Edit</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="info-list">
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Holder type:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">Lukas Baranauskas</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Bank No:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">LT 99992192929219</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Bank:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">AB “LUMINOR”</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Swift:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">SW2122</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Bank Co:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">12232</p>
+                          </div>
+                        </div>
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Paypal:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold ">info@irina.com </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__content-item tabs__content js-tab-content is-active" data-content="education">
+                <div class="settings-education">
+                  <div class="settings-education__wrap">
+                    <div class="settings-education__col">
+                      <div class="settings-education__heading">
+                        <div class="row-group row-group--align-center">
+                          <div class="row-group__item">
+                            <h4>General information:</h4>
+                          </div>
+                          <div class="row-group__item"><a class="inline-button inline-button--boston-blue" href="#"><span class="inline-button__icon">
+                                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                                    </svg></span><span>Edit</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="settings-education__line">
+                        <div class="info-list">
+                          <div class="info-list__item">
+                            <div class="info-list__left">
+                              <p class="font-semibold text-boston-blue">#1:</p>
+                            </div>
+                            <div class="info-list__right">
+                              <p class="font-semibold">2012-2017</p>
+                            </div>
+                          </div>
+                          <div class="info-list__item">
+                            <div class="info-list__left">
+                              <p class="font-semibold text-silver-chalice">Diploma type:</p>
+                            </div>
+                            <div class="info-list__right">
+                              <p class="font-semibold">Magister</p>
+                            </div>
+                          </div>
+                          <div class="info-list__item">
+                            <div class="info-list__left">
+                              <p class="font-semibold text-silver-chalice">Diploma category:</p>
+                            </div>
+                            <div class="info-list__right">
+                              <p class="font-semibold">Translation &amp; Interpreting</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="settings-education__line">
+                        <div class="info-list">
+                          <div class="info-list__items">
+                            <div class="info-list__item">
+                              <div class="info-list__left">
+                                <p class="font-semibold text-boston-blue">#2:</p>
+                              </div>
+                              <div class="info-list__right">
+                                <p class="font-semibold">2012-2017</p>
+                              </div>
+                            </div>
+                            <div class="info-list__item">
+                              <div class="info-list__left">
+                                <p class="font-semibold text-silver-chalice">Diploma type:</p>
+                              </div>
+                              <div class="info-list__right">
+                                <p class="font-semibold">Magister</p>
+                              </div>
+                            </div>
+                            <div class="info-list__item">
+                              <div class="info-list__left">
+                                <p class="font-semibold text-silver-chalice">Diploma category:</p>
+                              </div>
+                              <div class="info-list__right">
+                                <p class="font-semibold">Translation &amp; Interpreting</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-education__col">
+                      <div class="settings-education__heading">
+                        <div class="row-group row-group--align-center">
+                          <div class="row-group__item">
+                            <h4>Tax information:</h4>
+                          </div>
+                          <div class="row-group__item"><a class="inline-button inline-button--boston-blue" href="#"><span class="inline-button__icon">
+                                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                                    </svg></span><span>Edit</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="info-list">
+                        <div class="info-list__item">
+                          <div class="info-list__left">
+                            <p class="font-semibold text-silver-chalice">Issuing invoice:</p>
+                          </div>
+                          <div class="info-list__right">
+                            <p class="font-semibold">IVP</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-education__col">
+                      <div class="settings-education__heading">
+                        <div class="row-group row-group--align-center">
+                          <div class="row-group__item">
+                            <h4>Skills:</h4>
+                          </div>
+                          <div class="row-group__item">
+                            <button class="button button--bordered button--size-xs" type="button">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column-group">
+                        <div class="column-group__item">
+                          <div class="slill">
+                            <div class="slill__title">Adobe Acrobat Pro</div>
+                            <div class="slill__icon">
+                              <div class="close">
+                                <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="column-group__item">
+                          <div class="slill">
+                            <div class="slill__title">Illustrator</div>
+                            <div class="slill__icon">
+                              <div class="close">
+                                <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="column-group__item">
+                          <div class="slill">
+                            <div class="slill__title">Trados</div>
+                            <div class="slill__icon">
+                              <div class="close">
+                                <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-education__col">
+                      <div class="settings-education__heading">
+                        <div class="row-group row-group--align-center">
+                          <div class="row-group__item">
+                            <h4>Expertise:</h4>
+                          </div>
+                          <div class="row-group__item">
+                            <button class="button button--bordered button--size-xs" type="button">
+                              <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="column-group">
+                        <div class="column-group__item">
+                          <div class="slill">
+                            <div class="slill__title">Technical</div>
+                            <div class="slill__icon">
+                              <div class="close">
+                                <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="column-group__item">
+                          <div class="slill">
+                            <div class="slill__title">Legal</div>
+                            <div class="slill__icon">
+                              <div class="close">
+                                <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="column-group__item">
+                          <div class="slill">
+                            <div class="slill__title">Medical</div>
+                            <div class="slill__icon">
+                              <div class="close">
+                                <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-education__upload">
+                      <div class="uploaded-documents">
+                        <div class="uploaded-documents__header">
+                          <div class="uploaded-documents__header-title">
+                            <h4>Uploaded documents:</h4>
+                          </div>
+                          <div class="uploaded-documents__header-button">
+                            <button class="button button--bg-white button--shadow" type="button"><span>Download all</span><span class="button__icon">
+                                                                      <svg class="svg-icon" width="21" height="19">
+                                                                        <use href="images/svg/svg-sprite/symbol/sprite.svg#download" x="0" y="0"></use>
+                                                                      </svg></span>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="uploaded-documents__content">
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione excepturi omnis eveniet ut. Voluptatem esse exercitationem enim? Enim, obcaecati eius? Doloribus consequatur, officia dolores blanditiis distinctio perspiciatis optio a quos?</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog__content-item tabs__content js-tab-content" data-content="prices">
+                <h2>3</h2>
+              </div>
+              <div class="catalog__content-item tabs__content js-tab-content" data-content="payouts">
+                <h2>4</h2>
+              </div>
+              <div class="catalog__content-item tabs__content js-tab-content" data-content="notifications">
+                <h2>5</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/vendor.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>

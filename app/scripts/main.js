@@ -8,6 +8,7 @@ import dragAndDropBox from './modules/drag-and-drop-box';
 import modal from './modules/modal';
 import datepicker from './modules/datepicker';
 import dropdown from './modules/dropdown';
+import tabs from './modules/tabs';
 
 // On document ready
 $(function () {
@@ -20,6 +21,7 @@ $(function () {
   modal();
   datepicker();
   dropdown();
+  tabs();
 });
 
 // On window load

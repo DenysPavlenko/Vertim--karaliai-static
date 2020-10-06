@@ -1,0 +1,10 @@
+mixin close(props = {})
+  -const { classes } = props
+  -
+    const classnames = classNames({
+      'close' : true,
+      [classes]: classes,
+    })
+
+  div(class=classnames)&attributes(attributes)
+    +icon({name:'close', fill:'brick-red', width:'10', height:'10'})

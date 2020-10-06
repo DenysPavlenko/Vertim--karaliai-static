@@ -1,0 +1,9 @@
+include /partials/close
+
+mixin skill(props = {})
+  -const { title } = props
+
+  .slill
+    .slill__title #{title}
+    .slill__icon
+      +close()

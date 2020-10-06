@@ -40,6 +40,14 @@
     width: 100%
   &--squere
     padding: 23px
+  &--round
+    overflow: hidden
+    border-radius: 50%
+    width: 50px
+    height: 50px
+    padding: 4px
+  &--shadow
+    box-shadow: $s-primary
   &--bordered
     color: $c-surfie-green
     &:after
@@ -141,7 +149,8 @@
       &:after
         opacity: 1
         background-color: $c-silver-chalice
-
+  &--size-xs
+    padding: 7px
   // Elements
   &__prepend,
   &__append

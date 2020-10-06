@@ -1,0 +1,11 @@
+mixin avatar(props = {})
+  -const { image, size, classes } = props
+  -
+    const classnames = classNames({
+      'avatar': true,
+      [`avatar--${size}`]: size,
+      [classes]: classes,
+    })
+
+  div(class=classnames)
+    figure(style=`background-image:url('${image}')`)

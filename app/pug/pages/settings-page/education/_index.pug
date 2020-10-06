@@ -1,0 +1,97 @@
+include /partials/avatar
+include /partials/button
+include /partials/inline-button
+include /partials/uploaded-documents
+include /partials/link
+include /partials/skill
+-
+  var list1 = [
+    {left:'#1:', right:'2012-2017', leftAccent:true},
+    {left:'Diploma type:', right:'Magister'},
+    {left:'Diploma category:', right:'Translation & Interpreting'},
+  ]
+-
+  var list2 = [
+    {left:'#2:', right:'2012-2017', leftAccent:true},
+    {left:'Diploma type:', right:'Magister'},
+    {left:'Diploma category:', right:'Translation & Interpreting'},
+  ]
+
+.settings-education
+  .settings-education__wrap
+    //- Column
+    .settings-education__col
+      .settings-education__heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h4 General information:
+          .row-group__item
+            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+      .settings-education__line
+        .info-list
+          each item in list1
+            .info-list__item
+              .info-list__left
+                p(class=`font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
+              .info-list__right
+                p.font-semibold #{item.right}
+      .settings-education__line
+        .info-list
+          .info-list__items
+            each item in list2
+              .info-list__item
+                .info-list__left
+                  p(class=`font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
+                .info-list__right
+                  p.font-semibold #{item.right}
+    //- Column
+    .settings-education__col
+      .settings-education__heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h4 Tax information:
+          .row-group__item
+            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+      .info-list
+        .info-list__item
+          .info-list__left
+            p.font-semibold.text-silver-chalice Issuing invoice:
+          .info-list__right
+            p.font-semibold IVP
+    //- Column
+    .settings-education__col
+      .settings-education__heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h4 Skills:
+          .row-group__item
+            +button({type:'bordered', size:'xs'})(type="button")
+              +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+      .column-group
+        .column-group__item
+          +skill({title:'Adobe Acrobat Pro'})
+        .column-group__item
+          +skill({title:'Illustrator'})
+        .column-group__item
+          +skill({title:'Trados'})
+
+    //- Column
+    .settings-education__col
+      .settings-education__heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h4 Expertise:
+          .row-group__item
+            +button({type:'bordered', size:'xs'})(type="button")
+              +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+      .column-group
+        .column-group__item
+          +skill({title:'Technical'})
+        .column-group__item
+          +skill({title:'Legal'})
+        .column-group__item
+          +skill({title:'Medical'})
+
+    //- Upload
+    .settings-education__upload
+      +uploaded-documents()

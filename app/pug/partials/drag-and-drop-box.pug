@@ -5,7 +5,7 @@ mixin drag-and-drop-box(props = {})
   div(class="drag-and-drop-box js-drag-and-drop-box")
     .drag-and-drop-box__label.dz-message
       span.drag-and-drop-box__label-title Drag and drop files
-      +button({bg:'alabaster', type:'squere'})(type="button" class="drag-and-drop-box__label-button")
+      +button({bg:'alabaster', type:'squere', classes:'drag-and-drop-box__label-button'})(type="button")
         +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
     div(class="drag-and-drop-box__tpl")
       .document-list-item
