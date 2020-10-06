@@ -5,10 +5,10 @@ block variables
   - const title = 'Settings page'
   -
     const tabs = [
-      {title:'General', name:'general'},
+      {title:'General', name:'general', isActive:true},
       {title:'Education & Files', name:'education'},
       {title:'Services & prices', name:'services'},
-      {title:'Notifications', name:'notifications', isActive:true},
+      {title:'Notifications', name:'notifications'},
     ]
 
 block content
@@ -30,11 +30,11 @@ block content
                 div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
                   .catalog__tab-title #{tab.title}
             .catalog__content
-              .catalog__content-item.tabs__content.js-tabs-content(data-content="general")
+              .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
                 include /pages/settings-page/general/_index
               .catalog__content-item.tabs__content.js-tab-content(data-content="education")
                 include /pages/settings-page/education/_index
               .catalog__content-item.tabs__content.js-tab-content(data-content="services")
                 include /pages/settings-page/services/_index
-              .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="notifications")
+              .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
                 include /pages/settings-page/notifications/_index
