@@ -1,0 +1,23 @@
+include /partials/unread
+
+mixin navigation(props = {})
+  -const { navActive } = props
+  -
+    var items = [
+      {title:'Employers', name:'employers', link:'#'},
+      {title:'Clients', name:'clients', link:'#'},
+      {title:'Offices', name:'offices', link:'#'},
+      {title:'Accounting', name:'accounting', link:'#'},
+      {title:'Statements', name:'statements', link:'#'},
+      {title:'Statements', name:'statements', link:'#'},
+      {title:'Messages', name:'messages', link:'#', unread:'253'},
+    ]
+
+  .navigation
+    .navigation__items
+      each item in items
+        .navigation__item
+          a(href=item.link class=`navigation__link ${item.name === navActive ? 'is-active': ''}`) #{item.title}
+            if(item.unread)
+              .navigation__link-unread
+                +unread({cnt:item.unread})

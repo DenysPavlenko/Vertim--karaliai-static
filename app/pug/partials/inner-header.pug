@@ -1,10 +1,10 @@
-include /partials/lang-select
+include /partials/lang-select-alt
 
 mixin inner-header(props = {})
 
-  .inner-header
+  header.inner-header
     .inner-header__wrap
       a(href="#").inner-header__logo
         img(src="images/logo.svg", alt="logo")
       .inner-header__lang
-        +lang-select()
+        +lang-select-alt()

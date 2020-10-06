@@ -1,7 +1,7 @@
 extends /layouts/main
 include /partials/input-animation
 include /partials/button
-include /partials/lang-select
+include /partials/lang-select-alt
 include /partials/form-divider
 include /partials/status-message
 include /partials/link
@@ -13,7 +13,7 @@ block content
   .login-page
     .container
       .login-page__lang
-        +lang-select()
+        +lang-select-alt()
       .login-page__box
         .form-box
           .form-box__header

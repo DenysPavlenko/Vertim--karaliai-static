@@ -3,11 +3,10 @@ include /partials/select
 mixin lang-select(props = {})
 
   +select({
-    bordered:true, auto:true,
-    label:{name:'eng', content:`<img src="images/flags/gb.svg"/><span>English</span>`},
+    radius:'secondary',
+    label:{name:'lt', content:`<img src="images/icons/planet.svg"/><span>LT</span>`},
     options:[
-      {name:'eng', content:`<img src="images/flags/gb.svg"/><span>English</span>`},
-      {name:'lt', content:`<img src="images/flags/lt.svg"/><span>Lithuanian</span>`},
-      {name:'lt', content:`<img src="images/flags/lt.svg"/><span>Lithuanian</span>`},
+      {name:'lt', content:`<img src="images/icons/planet.svg"/><span>LT</span>`},
+      {name:'en', content:`<img src="images/icons/planet.svg"/><span>EN</span>`},
     ]
   })

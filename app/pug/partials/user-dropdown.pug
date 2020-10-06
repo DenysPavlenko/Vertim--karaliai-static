@@ -1,0 +1,14 @@
+include /partials/user-dropdown-menu
+
+mixin user-dropdown(props = {})
+
+  .dropdown.js-dropdown.user-dropdown(data-dropdown="user")
+    .dropdown__toggle.user-dropdown__toggle(data-dropdown-toggle="user")
+      .user-dropdown__toggle-avatar
+      .user-dropdown__toggle-name Justas
+      .user-dropdown__toggle-chevron
+        +icon({name:'chevron-down', fill:'surfie-green', width:'9', height:'5'})
+    .dropdown__body.js-dropdown-body.user-dropdown__body
+      div(data-simplebar class="user-dropdown__content custom-scroll")
+    .dropdown__body.user-dropdown__body.js-dropdown-body
+      +user-dropdown-menu()

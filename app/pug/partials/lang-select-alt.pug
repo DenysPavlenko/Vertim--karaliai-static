@@ -1,0 +1,13 @@
+include /partials/select
+
+mixin lang-select-alt(props = {})
+
+  +select({
+    bordered:true, auto:true,
+    label:{name:'eng', content:`<img src="images/flags/gb.svg"/><span>English</span>`},
+    options:[
+      {name:'eng', content:`<img src="images/flags/gb.svg"/><span>English</span>`},
+      {name:'lt', content:`<img src="images/flags/lt.svg"/><span>Lithuanian</span>`},
+      {name:'lt', content:`<img src="images/flags/lt.svg"/><span>Lithuanian</span>`},
+    ]
+  })

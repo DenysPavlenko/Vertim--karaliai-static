@@ -1,0 +1,25 @@
+include /partials/navigation
+include /partials/notifications-dropdown
+include /partials/lang-select
+include /partials/user-dropdown
+
+mixin header(props = {})
+
+  header.header
+    .header__wrap
+      .header__left
+        .header__logo
+          .header__logo-icon
+            img(src="images/logo.svg", alt="logo")
+          span.header__logo-title Crm Name
+
+      .header__right
+        .header__navigation
+          +navigation(props)
+        .header__dropdowns
+          .header__dropdown
+            +notifications-dropdown()
+          .header__dropdown
+            +lang-select()
+          .header__dropdown
+            +user-dropdown()

@@ -1,0 +1,41 @@
+.header
+  width: 100%
+  background-color: $c-white
+  box-shadow: $s-primary
+  border-radius: 0 0 $r-secondary $r-secondary
+  padding: 5px 15px
+  &__wrap
+    display: flex
+    max-width: $cnt-xxl
+    margin: 0 auto
+    align-items: center
+    justify-content: space-between
+  &__left
+    flex: 0.3
+    margin-right: 20px
+  &__logo
+    display: flex
+    align-items: center
+    &-icon
+      margin-right: 20px
+      max-width: 60px
+    &-title
+      font-family: 'Gilroy', sans-serif
+      font-weight: 500
+      font-size: rem(30px)
+      line-height: 1
+      color: $c-mine-shaft
+  &__right
+    flex: 1
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__navigation
+    flex: 0.9
+    margin-right: 20px
+  &__dropdowns
+    display: flex
+    align-items: center
+  &__dropdown
+    &:not(:last-child)
+      margin-right: 20px

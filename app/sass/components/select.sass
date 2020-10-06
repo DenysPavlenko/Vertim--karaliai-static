@@ -20,7 +20,7 @@ $select-height: 45px
       &:before
         background-color: transparent
       &:after
-        background-image: url('../images/icons/triangle-down.svg')
+        background-image: url('../images/icons/chevron-down.svg')
   &--auto
     width: auto
     display: inline-block
@@ -29,6 +29,15 @@ $select-height: 45px
       background-color: transparent
       &:before
         background-color: transparent
+  &--radius-secondary
+    .select__label
+      border-radius: $r-secondary
+    .select__dropdown
+      border-radius: 0 0 $r-secondary $r-secondary
+    &.is-expanded
+      border-radius: $r-secondary $r-secondary 0 0
+      .select__label
+        border-radius: $r-secondary $r-secondary 0 0
 
   // Elements
   &__label
@@ -47,6 +56,7 @@ $select-height: 45px
     line-height: 1
     color: $c-silver-chalice
     white-space: nowrap
+    overflow: hidden
     &:focus
       border-color: $c-surfie-green
     &>*:not(:last-child)
@@ -72,7 +82,7 @@ $select-height: 45px
       width: 11px
       height: 6px
       transform-origin: center
-      +bg-img('../images/icons/triangle-down-blue.svg', 11px 6px)
+      +bg-img('../images/icons/chevron-down.svg', 11px 6px)
   &__dropdown
     position: absolute
     display: none
