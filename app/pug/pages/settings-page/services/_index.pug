@@ -1,0 +1,97 @@
+include /partials/icon-title
+include /partials/button
+
+.settings-services
+  .settings-services__table
+    table.table
+      thead
+        tr
+          each heading in ['Services:', 'Language pair:', 'Matt:', 'Unit:', 'Rate:', '+ fee / -%', 'Repetitions:']
+            th
+              h4 #{heading}
+      tbody
+        //- ROW
+        tr
+          td
+            +icon-title({img:'images/icons/translation.svg', title:'Translation'})
+          td
+            p EN- LT, LT-EN
+          td
+            p C. W. S
+          td
+            p 1 =  1700
+          td
+            p 9.21 EUR
+          td
+            .row-group.row-group--sm.row-group--align-center
+              .row-group__item
+                p.text-silver-chalice Urgent (<span class="text-surfie-green">+15%</span>)
+              .row-group__item
+                +button({bg:'white', size:'30', shadow:true})(type="button")
+                  +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
+          td
+            .row-group.row-group--sm.row-group--align-center
+              .row-group__item
+                p.text-silver-chalice Rep (<span class="text-brick-red">-30%</span>)
+              .row-group__item
+                +button({bg:'white', size:'30', shadow:true})(type="button")
+                  +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
+        //- ROW
+        tr
+          td
+            +icon-title({img:'images/icons/proofreading.svg', title:'Proofreading'})
+          td
+            p EN- LT, LT-EN
+          td
+            p C. W. S
+          td
+            p 1 =  1700
+          td
+            p 9.21 EUR
+          td
+          td
+        //- ROW
+        tr
+          td
+            +icon-title({img:'images/icons/additional.svg', title:'Additional task'})
+          td
+            p --
+          td
+            p Hour
+          td
+            p 1 =  1
+          td
+            p 30 EUR
+          td
+          td
+        //- ROW
+        tr
+          td
+            +icon-title({img:'images/icons/interpreting.svg', title:'Interpreting - Constative'})
+          td
+            p EN-LT
+          td
+            p Hour
+          td
+            p 1 =  1
+          td
+            p 30 EUR
+          td
+          td
+        //- ROW
+        tr
+          td
+            +icon-title({img:'images/icons/transcription.svg', title:'Transcribing'})
+          td
+            p EN-LT
+          td
+            p Min
+          td
+            p 1 =  1
+          td
+            p 9.21 EUR
+          td
+          td
+
+  .settings-services__footer
+    span.settings-services__footer-text Have you learn to do new services?<br/> <a href="#" class="text-boston-blue">Contact<a/> the project manager to update your pricing & services list.

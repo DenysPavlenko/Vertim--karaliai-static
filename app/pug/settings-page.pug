@@ -6,10 +6,9 @@ block variables
   -
     const tabs = [
       {title:'General', name:'general'},
-      {title:'Education & Files', name:'education', isActive:true},
-      {title:'Prices', name:'prices'},
-      {title:'Payouts & Invoices', name:'payouts'},
-      {title:'Notifications', name:'notifications'},
+      {title:'Education & Files', name:'education'},
+      {title:'Services & prices', name:'services'},
+      {title:'Notifications', name:'notifications', isActive:true},
     ]
 
 block content
@@ -33,11 +32,9 @@ block content
             .catalog__content
               .catalog__content-item.tabs__content.js-tabs-content(data-content="general")
                 include /pages/settings-page/general/_index
-              .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="education")
+              .catalog__content-item.tabs__content.js-tab-content(data-content="education")
                 include /pages/settings-page/education/_index
-              .catalog__content-item.tabs__content.js-tab-content(data-content="prices")
-                h2 3
-              .catalog__content-item.tabs__content.js-tab-content(data-content="payouts")
-                h2 4
-              .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
-                h2 5
+              .catalog__content-item.tabs__content.js-tab-content(data-content="services")
+                include /pages/settings-page/services/_index
+              .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="notifications")
+                include /pages/settings-page/notifications/_index

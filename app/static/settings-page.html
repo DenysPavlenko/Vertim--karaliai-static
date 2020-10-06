@@ -131,16 +131,13 @@
               <div class="catalog__tab js-tabs-tab " data-tab="general">
                 <div class="catalog__tab-title">General</div>
               </div>
-              <div class="catalog__tab js-tabs-tab is-active" data-tab="education">
+              <div class="catalog__tab js-tabs-tab " data-tab="education">
                 <div class="catalog__tab-title">Education &amp; Files</div>
               </div>
-              <div class="catalog__tab js-tabs-tab " data-tab="prices">
-                <div class="catalog__tab-title">Prices</div>
+              <div class="catalog__tab js-tabs-tab " data-tab="services">
+                <div class="catalog__tab-title">Services &amp; prices</div>
               </div>
-              <div class="catalog__tab js-tabs-tab " data-tab="payouts">
-                <div class="catalog__tab-title">Payouts &amp; Invoices</div>
-              </div>
-              <div class="catalog__tab js-tabs-tab " data-tab="notifications">
+              <div class="catalog__tab js-tabs-tab is-active" data-tab="notifications">
                 <div class="catalog__tab-title">Notifications</div>
               </div>
             </div>
@@ -154,7 +151,7 @@
                           <figure style="background-image:url('images/user/avatar.jpg')"></figure>
                         </div>
                         <div class="settings-general__avatar-button">
-                          <button class="button button--round button--bg-alabaster" type="button">
+                          <button class="button button--round button--bg-alabaster button--size-50" type="button">
                             <svg class="svg-icon svg-icon--boston-blue" width="s18" height="16">
                               <use href="images/svg/svg-sprite/symbol/sprite.svg#camera" x="0" y="0"></use>
                             </svg>
@@ -338,7 +335,7 @@
                   </div>
                 </div>
               </div>
-              <div class="catalog__content-item tabs__content js-tab-content is-active" data-content="education">
+              <div class="catalog__content-item tabs__content js-tab-content" data-content="education">
                 <div class="settings-education">
                   <div class="settings-education__wrap">
                     <div class="settings-education__col">
@@ -444,7 +441,7 @@
                             <h4>Skills:</h4>
                           </div>
                           <div class="row-group__item">
-                            <button class="button button--bordered button--size-xs" type="button">
+                            <button class="button button--bordered button--size-30" type="button">
                               <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
                                 <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
                               </svg>
@@ -498,7 +495,7 @@
                             <h4>Expertise:</h4>
                           </div>
                           <div class="row-group__item">
-                            <button class="button button--bordered button--size-xs" type="button">
+                            <button class="button button--bordered button--size-30" type="button">
                               <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
                                 <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
                               </svg>
@@ -552,7 +549,7 @@
                             <h4>Uploaded documents:</h4>
                           </div>
                           <div class="uploaded-documents__header-button">
-                            <button class="button button--bg-white button--shadow" type="button"><span>Download all</span><span class="button__icon">
+                            <button class="button button--bg-white button--shadowed" type="button"><span>Download all</span><span class="button__icon">
                                                                       <svg class="svg-icon" width="21" height="19">
                                                                         <use href="images/svg/svg-sprite/symbol/sprite.svg#download" x="0" y="0"></use>
                                                                       </svg></span>
@@ -567,14 +564,275 @@
                   </div>
                 </div>
               </div>
-              <div class="catalog__content-item tabs__content js-tab-content" data-content="prices">
-                <h2>3</h2>
+              <div class="catalog__content-item tabs__content js-tab-content" data-content="services">
+                <div class="settings-services">
+                  <div class="settings-services__table">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>
+                            <h4>Services:</h4>
+                          </th>
+                          <th>
+                            <h4>Language pair:</h4>
+                          </th>
+                          <th>
+                            <h4>Matt:</h4>
+                          </th>
+                          <th>
+                            <h4>Unit:</h4>
+                          </th>
+                          <th>
+                            <h4>Rate:</h4>
+                          </th>
+                          <th>
+                            <h4>+ fee / -%</h4>
+                          </th>
+                          <th>
+                            <h4>Repetitions:</h4>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="icon-title">
+                              <div class="icon-title__icon"><img src="images/icons/translation.svg" alt="interpreting"></div>
+                              <div class="icon-title__title">
+                                <p>Translation</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p>EN- LT, LT-EN</p>
+                          </td>
+                          <td>
+                            <p>C. W. S</p>
+                          </td>
+                          <td>
+                            <p>1 = 1700</p>
+                          </td>
+                          <td>
+                            <p>9.21 EUR</p>
+                          </td>
+                          <td>
+                            <div class="row-group row-group--sm row-group--align-center">
+                              <div class="row-group__item">
+                                <p class="text-silver-chalice">Urgent (<span class="text-surfie-green">+15%</span>)</p>
+                              </div>
+                              <div class="row-group__item">
+                                <button class="button button--bg-white button--size-30 button--shadowed" type="button">
+                                  <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <div class="row-group row-group--sm row-group--align-center">
+                              <div class="row-group__item">
+                                <p class="text-silver-chalice">Rep (<span class="text-brick-red">-30%</span>)</p>
+                              </div>
+                              <div class="row-group__item">
+                                <button class="button button--bg-white button--size-30 button--shadowed" type="button">
+                                  <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="icon-title">
+                              <div class="icon-title__icon"><img src="images/icons/proofreading.svg" alt="interpreting"></div>
+                              <div class="icon-title__title">
+                                <p>Proofreading</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p>EN- LT, LT-EN</p>
+                          </td>
+                          <td>
+                            <p>C. W. S</p>
+                          </td>
+                          <td>
+                            <p>1 = 1700</p>
+                          </td>
+                          <td>
+                            <p>9.21 EUR</p>
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="icon-title">
+                              <div class="icon-title__icon"><img src="images/icons/additional.svg" alt="interpreting"></div>
+                              <div class="icon-title__title">
+                                <p>Additional task</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p>--</p>
+                          </td>
+                          <td>
+                            <p>Hour</p>
+                          </td>
+                          <td>
+                            <p>1 = 1</p>
+                          </td>
+                          <td>
+                            <p>30 EUR</p>
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="icon-title">
+                              <div class="icon-title__icon"><img src="images/icons/interpreting.svg" alt="interpreting"></div>
+                              <div class="icon-title__title">
+                                <p>Interpreting - Constative</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p>EN-LT</p>
+                          </td>
+                          <td>
+                            <p>Hour</p>
+                          </td>
+                          <td>
+                            <p>1 = 1</p>
+                          </td>
+                          <td>
+                            <p>30 EUR</p>
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="icon-title">
+                              <div class="icon-title__icon"><img src="images/icons/transcription.svg" alt="interpreting"></div>
+                              <div class="icon-title__title">
+                                <p>Transcribing</p>
+                              </div>
+                            </div>
+                          </td>
+                          <td>
+                            <p>EN-LT</p>
+                          </td>
+                          <td>
+                            <p>Min</p>
+                          </td>
+                          <td>
+                            <p>1 = 1</p>
+                          </td>
+                          <td>
+                            <p>9.21 EUR</p>
+                          </td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="settings-services__footer"><span class="settings-services__footer-text">Have you learn to do new services?<br/> <a href="#" class="text-boston-blue">Contact<a/> the project manager to update your pricing & services list.</span></div>
+                </div>
               </div>
-              <div class="catalog__content-item tabs__content js-tab-content" data-content="payouts">
-                <h2>4</h2>
-              </div>
-              <div class="catalog__content-item tabs__content js-tab-content" data-content="notifications">
-                <h2>5</h2>
+              <div class="catalog__content-item tabs__content js-tab-content is-active" data-content="notifications">
+                <div class="settings-notifications">
+                  <div class="settings-notifications__heading">
+                    <h3>Send email notification to <a href="#" class="text-boston-blue">info@vertimukaraliai.lt</a> when...</h3>
+                  </div>
+                  <div class="settings-notifications__content">
+                    <div class="column-group column-group--md">
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">A job is <span class="text-boston-blue">posted or modified</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">A job is <span class="text-boston-blue">assigned</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">A job is <span class="text-boston-blue">not assigned</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                      <div class="column-group__item">
+                        <label class="checkbox">
+                          <div class="checkbox__box">
+                            <input class="checkbox__input" type="checkbox" checked><span class="checkbox__checkmark"></span>
+                          </div><span class="checkbox__name">When deadline <span class="text-boston-blue">expiring soon</span></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

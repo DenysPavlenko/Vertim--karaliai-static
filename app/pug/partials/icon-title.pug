@@ -1,0 +1,8 @@
+mixin icon-title(props = {})
+  -const { img, title } = props
+
+  .icon-title
+    .icon-title__icon
+      img(src=img, alt="interpreting")
+    .icon-title__title
+      p #{title}
