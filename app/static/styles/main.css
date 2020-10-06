@@ -2740,6 +2740,10 @@ p,
   padding: 20px 30px;
   background-color: #F7F7F7;
   border-radius: 6px 6px 0 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
@@ -2884,6 +2888,10 @@ p,
   width: 50%;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.settings-services {
+  padding: 5px 0 20px;
 }
 
 .settings-services__footer {
