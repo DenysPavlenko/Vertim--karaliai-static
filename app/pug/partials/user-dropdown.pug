@@ -1,10 +1,12 @@
 include /partials/user-dropdown-menu
+include /partials/avatar
 
 mixin user-dropdown(props = {})
 
   .dropdown.js-dropdown.user-dropdown(data-dropdown="user")
     .dropdown__toggle.user-dropdown__toggle(data-dropdown-toggle="user")
       .user-dropdown__toggle-avatar
+        +avatar({})
       .user-dropdown__toggle-name Justas
       .user-dropdown__toggle-chevron
         +icon({name:'chevron-down', fill:'surfie-green', width:'9', height:'5'})

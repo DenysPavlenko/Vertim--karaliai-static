@@ -29,16 +29,21 @@ $select-height: 45px
       background-color: transparent
       &:before
         background-color: transparent
-  &--radius-secondary
+  &--inline
     .select__label
-      border-radius: $r-secondary
+      padding-left: 0
+      padding-right: 20px
+      background-color: transparent
+      height: auto
+      &:before
+        display: none
+      &:after
+        right: 0
+        padding: 0
+      &:focus
+        border-color: transparent
     .select__dropdown
-      border-radius: 0 0 $r-secondary $r-secondary
-    &.is-expanded
-      border-radius: $r-secondary $r-secondary 0 0
-      .select__label
-        border-radius: $r-secondary $r-secondary 0 0
-
+      margin-top: 6px
   // Elements
   &__label
     position: relative
