@@ -5,7 +5,7 @@ export default function () {
 
   // Open on widnow load
   if ($modalAuto.length > 0) {
-    $modalAuto.each((elem) => {
+    $modalAuto.each((i, elem) => {
       const $modal = $(elem);
       createScrollBar($modal);
       $modal.modal({

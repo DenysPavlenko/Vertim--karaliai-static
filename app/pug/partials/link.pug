@@ -1,5 +1,6 @@
 mixin link(props = {})
   -const { color, underline, link } = props
+  -const tag = link ? 'a' : 'div'
   -
     const classnames = classNames({
       'link': true,
@@ -8,5 +9,5 @@ mixin link(props = {})
       [classes]: classes,
     })
 
-  a(href=link class=classnames)
+  #{tag}(href=link class=classnames)&attributes(attributes)
     block

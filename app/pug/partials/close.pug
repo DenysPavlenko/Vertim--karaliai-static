@@ -1,5 +1,5 @@
 mixin close(props = {})
-  -const { classes } = props
+  -const { classes, color, size } = props
   -
     const classnames = classNames({
       'close' : true,
@@ -7,4 +7,4 @@ mixin close(props = {})
     })
 
   div(class=classnames)&attributes(attributes)
-    +icon({name:'close', fill:'brick-red', width:'10', height:'10'})
+    +icon({name:'close', fill:color, width:size, height:size})

@@ -134,10 +134,10 @@
         <div class="catalog">
           <div class="container">
             <div class="catalog__tabs tabs js-tabs">
-              <div class="catalog__tab js-tabs-tab " data-tab="general">
+              <div class="catalog__tab js-tabs-tab is-active" data-tab="general">
                 <div class="catalog__tab-title">General</div>
               </div>
-              <div class="catalog__tab js-tabs-tab is-active" data-tab="education">
+              <div class="catalog__tab js-tabs-tab " data-tab="education">
                 <div class="catalog__tab-title">Education &amp; Files</div>
               </div>
               <div class="catalog__tab js-tabs-tab " data-tab="services">
@@ -150,7 +150,7 @@
           </div>
           <div class="catalog__content">
             <div class="container">
-              <div class="catalog__content-item tabs__content js-tabs-content" data-content="general">
+              <div class="catalog__content-item tabs__content js-tabs-content is-active" data-content="general">
                 <div class="settings-general">
                   <div class="settings-general__wrap">
                     <div class="settings-general__avatar">
@@ -166,10 +166,12 @@
                           </button>
                         </div>
                       </div>
-                      <div class="ettings-general__avatar-date">
+                      <div class="settings-general__avatar-date">
                         <p class="p-sm">Member since: 2015-04-12</p>
                       </div>
-                      <div class="settings-general__avatar-password"><a class="link" href="#">Change password</a>
+                      <div class="settings-general__avatar-password">
+                        <div class="link" data-modal-open="password-change-modal">Change password
+                        </div>
                       </div>
                     </div>
                     <div class="settings-general__list">
@@ -851,6 +853,46 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal password-change-modal" data-modal="password-change-modal">
+      <div class="password-change-modal__wrap">
+        <div class="password-change-modal__title">
+          <h3>Change password</h3>
+        </div>
+        <div class="password-change-modal__text">
+          <p>Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="password-change-modal__form">
+          <form class="form">
+            <div class="form__line">
+              <div class="input-animation js-input-animation input-animation--required">
+                <label class="input-animation__label js-input-animation-label" for="oldPassword">Old password </label>
+                <input class="input input--bordered js-input-animation-field undefined" type="password" id="oldPassword">
+              </div>
+            </div>
+            <div class="form__line">
+              <div class="input-animation js-input-animation input-animation--required">
+                <label class="input-animation__label js-input-animation-label" for="newPassword">Email</label>
+                <input class="input input--bordered js-input-animation-field undefined" type="password" id="newPassword">
+              </div>
+            </div>
+            <div class="form__line">
+              <a class="link" href="#">Forgot password?
+              </a>
+            </div>
+            <div class="form__line">
+              <div class="password-change-modal__buttons">
+                <div class="button-group button-group--column">
+                  <button class="button button-group__button" type="submit" data-modal-open="password-change-success-modal">Confirm new password
+                  </button>
+                  <button class="button button--bg-transparent button-group__button" type="button" data-modal-close="password-change-modal">Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>

@@ -229,7 +229,7 @@ function modal () {
   var $modalClose = $('[data-modal-close]'); // Open on widnow load
 
   if ($modalAuto.length > 0) {
-    $modalAuto.each(function (elem) {
+    $modalAuto.each(function (i, elem) {
       var $modal = $(elem);
       createScrollBar($modal);
       $modal.modal({

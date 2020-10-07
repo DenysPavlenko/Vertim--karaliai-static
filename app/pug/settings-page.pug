@@ -1,12 +1,14 @@
 extends /layouts/main
 include /partials/header
+include /partials/password-change-modal
+include /partials/password-change-success-modal
 
 block variables
   - const title = 'Settings page'
   -
     const tabs = [
-      {title:'General', name:'general'},
-      {title:'Education & Files', name:'education', isActive:true},
+      {title:'General', name:'general', isActive:true},
+      {title:'Education & Files', name:'education'},
       {title:'Services & prices', name:'services'},
       {title:'Notifications', name:'notifications'},
     ]
@@ -32,7 +34,7 @@ block content
                   .catalog__tab-title #{tab.title}
           .catalog__content
             .container
-              .catalog__content-item.tabs__content.js-tabs-content(data-content="general")
+              .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
                 include /pages/settings-page/general/_index
               .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="education")
                 include /pages/settings-page/education/_index
@@ -40,3 +42,7 @@ block content
                 include /pages/settings-page/services/_index
               .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
                 include /pages/settings-page/notifications/_index
+    +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
+    //- +password-change-modal({type:'recover', title:'Recover password', text:'Recovering password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
+    //- +password-change-success-modal({title:'Your password has been changed sucsessfully'})
+    //- +password-change-success-modal({title:'Your password has been recovered sucsessfully'})

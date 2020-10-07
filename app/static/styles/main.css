@@ -689,11 +689,14 @@ p,
 .modal {
   position: relative;
   width: 100%;
+  max-width: 700px;
   margin: 10px auto;
   background-color: #FFFFFF;
   border-radius: 3px;
   padding: 0;
   padding-bottom: 20px;
+  -webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
 }
 
 .modal__close {
@@ -979,6 +982,10 @@ p,
   fill: #9D9D9D;
 }
 
+.svg-icon--alto {
+  fill: #DADADA;
+}
+
 .icon-inline {
   display: inline-block;
 }
@@ -1053,6 +1060,7 @@ p,
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #0E7D7D;
+  cursor: pointer;
 }
 
 .link:hover,
@@ -2092,6 +2100,39 @@ p,
   display: block;
 }
 
+.slill {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 13px 20px 14px;
+  border: 1px solid #0E7D7D;
+  border-radius: 3px;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #444444;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.slill__title {
+  margin-right: 10px;
+}
+
+.palette {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background-color: #F7F7F7;
+  border-radius: 3px;
+  padding: 20px 40px;
+}
+
 .status-message {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2117,27 +2158,6 @@ p,
   line-height: 1.2;
   color: #3F88C5;
   text-decoration: underline;
-}
-
-.modal-dialog {
-  position: relative;
-  width: 100%;
-  margin: 10px auto;
-  background-color: #FFFFFF;
-  border-radius: 3px;
-  padding: 0;
-  padding-bottom: 20px;
-}
-
-.modal-dialog__close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 20;
-}
-
-.modal-dialog__body {
-  padding: 20px;
 }
 
 .inner-header {
@@ -2375,8 +2395,7 @@ p,
 }
 
 .registration-success-modal {
-  max-width: 700px;
-  padding: 70px 15px 80px 15px;
+  padding: 60px 15px;
 }
 
 .registration-success-modal__wrap {
@@ -2391,6 +2410,8 @@ p,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .registration-success-modal__icon {
@@ -2909,30 +2930,6 @@ p,
   display: inline-block;
 }
 
-.slill {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 13px 20px 14px;
-  border: 1px solid #0E7D7D;
-  border-radius: 3px;
-  font-size: 1rem;
-  line-height: 1;
-  font-weight: 600;
-  color: #444444;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.slill__title {
-  margin-right: 10px;
-}
-
 .upload-documents {
   width: 100%;
   background-color: #F7F7F7;
@@ -3037,6 +3034,74 @@ p,
 
 .upload-documents-box__preview .simplebar-content .document-list-item:first-child {
   display: none;
+}
+
+.password-change-modal {
+  padding: 60px 15px;
+}
+
+.password-change-modal__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 410px;
+}
+
+.password-change-modal__title {
+  margin-bottom: 20px;
+}
+
+.password-change-modal__text {
+  margin-bottom: 30px;
+}
+
+.password-change-modal__buttons {
+  margin-top: 50px;
+}
+
+.password-change-success-modal {
+  padding: 60px 15px;
+}
+
+.password-change-success-modal__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 410px;
+}
+
+.password-change-success-modal__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.password-change-success-modal__title {
+  margin-bottom: 30px;
+}
+
+.password-change-success-modal__text {
+  margin-bottom: 30px;
+}
+
+.password-change-success-modal__password {
+  margin-bottom: 40px;
 }
 
 @media (min-width: 361px) {
@@ -4172,7 +4237,7 @@ p,
   }
 
   .registration-success-modal {
-    padding: 40px 15px 60px 15px;
+    padding: 40px 15px;
   }
 
   .upload-documents__header {
@@ -4198,6 +4263,14 @@ p,
     flex: auto;
     width: 100%;
     margin-left: 0;
+  }
+
+  .password-change-modal {
+    padding: 40px 15px;
+  }
+
+  .password-change-success-modal {
+    padding: 40px 15px;
   }
 }
 
