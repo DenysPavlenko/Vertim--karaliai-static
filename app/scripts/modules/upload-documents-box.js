@@ -25,22 +25,24 @@ export default function () {
           wrapper.append(element);
         });
       },
-      dragenter: function () {
-        console.log('$box:', $box)
-        var $box = $(this.element);
-        var $label = $box.find('.upload-documents-box__label');
-        $label.addClass('is-focused');
+      dragenter: function (props) {
+        var $srcElement = $(props.srcElement);
+        if ($srcElement.hasClass('upload-documents-box__label')) {
+          $srcElement.addClass('is-focused');
+        }
       },
-      // dragleave: function () {
-      //   var $box = $(this.element);
-      //   var $label = $box.find('.upload-documents-box__label');
-      //   $label.removeClass('is-focused');
-      // },
-      // drop: function () {
-      //   var $box = $(this.element);
-      //   var $label = $box.find('.upload-documents-box__label');
-      //   $label.removeClass('is-focused');
-      // }
+      dragleave: function (props) {
+        var $srcElement = $(props.srcElement);
+        if ($srcElement.hasClass('upload-documents-box__label')) {
+          $srcElement.removeClass('is-focused');
+        }
+      },
+      drop: function (props) {
+        var $srcElement = $(props.srcElement);
+        if ($srcElement.hasClass('upload-documents-box__label')) {
+          $srcElement.removeClass('is-focused');
+        }
+      }
     });
   });
 }

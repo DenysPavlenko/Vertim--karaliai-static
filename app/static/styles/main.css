@@ -2950,6 +2950,7 @@ p,
 }
 
 .upload-documents-box__label {
+  position: relative;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
@@ -2968,10 +2969,13 @@ p,
   -ms-flex-pack: justify;
   justify-content: space-between;
   cursor: pointer;
+  border: 2px dashed transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .upload-documents-box__label.is-focused {
-  border: 1px solid red;
+  border-color: #3F88C5;
 }
 
 .upload-documents-box__label-title {

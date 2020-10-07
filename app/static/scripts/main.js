@@ -211,35 +211,6 @@ function radioToggleContent () {
   });
 }
 
-function dragAndDropBox () {
-  var $boxes = $('.js-drag-and-drop-box');
-  // Return if $boxes don't exist
-  if (!$boxes.length) { return; }
-
-  $boxes.each(function () {
-    var box = this;
-    new Dropzone(box, {
-      previewTemplate: document.querySelector('.drag-and-drop-box__tpl').innerHTML,
-      url: "/",
-      uploadprogress: function (file, progress) {
-        var $document = $(file.previewElement);
-        $document.find('[data-dz-uploadprogress]').css({
-          width: progress + 'px',
-          opacity: 1 - progress / 100
-        });
-      },
-      init: function () {
-        this.on('addedfile', function () {
-          var $box = $(this.element);
-          var element = $box.find('.document-list-item');
-          var wrapper = $box.find('.simplebar-content');
-          wrapper.append(element);
-        });
-      }
-    });
-  });
-}
-
 function modal () {
   var $modalAuto = $('[data-modal-auto]');
   var $modalOpen = $('[data-modal-open]');
@@ -365,7 +336,7 @@ function tabs () {
   });
 }
 
-function uploadDocuments () {
+function uploadDocumentsBox () {
   var $boxes = $('.js-upload-documents-box');
 
   // Return if $boxes don't exist
@@ -392,22 +363,24 @@ function uploadDocuments () {
           wrapper.append(element);
         });
       },
-      dragenter: function () {
-        console.log('$box:', $box);
-        var $box = $(this.element);
-        var $label = $box.find('.upload-documents-box__label');
-        $label.addClass('is-focused');
+      dragenter: function (props) {
+        var $srcElement = $(props.srcElement);
+        if ($srcElement.hasClass('upload-documents-box__label')) {
+          $srcElement.addClass('is-focused');
+        }
       },
-      // dragleave: function () {
-      //   var $box = $(this.element);
-      //   var $label = $box.find('.upload-documents-box__label');
-      //   $label.removeClass('is-focused');
-      // },
-      // drop: function () {
-      //   var $box = $(this.element);
-      //   var $label = $box.find('.upload-documents-box__label');
-      //   $label.removeClass('is-focused');
-      // }
+      dragleave: function (props) {
+        var $srcElement = $(props.srcElement);
+        if ($srcElement.hasClass('upload-documents-box__label')) {
+          $srcElement.removeClass('is-focused');
+        }
+      },
+      drop: function (props) {
+        var $srcElement = $(props.srcElement);
+        if ($srcElement.hasClass('upload-documents-box__label')) {
+          $srcElement.removeClass('is-focused');
+        }
+      }
     });
   });
 }
@@ -419,12 +392,11 @@ $(function () {
   inputAnimation();
   scrollUp();
   radioToggleContent();
-  dragAndDropBox();
   modal();
   datepicker();
   dropdown();
   tabs();
-  uploadDocuments();
+  uploadDocumentsBox();
 });
 
 // On window load
