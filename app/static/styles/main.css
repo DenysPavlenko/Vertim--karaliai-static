@@ -97,14 +97,14 @@ svg {
   margin: 0 auto;
   width: 100%;
   padding: 0 15px;
-  max-width: 1720px;
+  max-width: 1440px;
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
   padding: 0 15px;
-  max-width: 1720px;
+  max-width: 1440px;
 }
 
 .container-fluid {
@@ -2121,7 +2121,7 @@ p,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1720px;
+  max-width: 1440px;
   margin: 0 auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2408,7 +2408,7 @@ p,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1720px;
+  max-width: 1440px;
   margin: 0 auto;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -2680,7 +2680,7 @@ p,
 }
 
 .catalog__tab {
-  padding: 20px 30px;
+  padding: 18px 30px;
   background-color: #F7F7F7;
   border-radius: 6px 6px 0 0;
   -webkit-user-select: none;
@@ -2701,7 +2701,7 @@ p,
 
 .catalog__tab-title {
   font-weight: 600;
-  font-size: 1.25rem;
+  font-size: 0.875rem;
   line-height: 1;
   color: #9D9D9D;
 }
@@ -2798,7 +2798,7 @@ p,
 }
 
 .settings-education {
-  padding: 60px 40px;
+  padding: 60px 0;
 }
 
 .settings-education__wrap {
@@ -2811,11 +2811,28 @@ p,
   margin-right: -15px;
 }
 
-.settings-education__col {
+.settings-education__col-1 {
   width: 25%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-bottom: 40px;
+}
+
+.settings-education__col-2 {
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.settings-education__col-3 {
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.settings-education__col-4 {
+  width: 25%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .settings-education__line:not(:last-child) {
@@ -2833,6 +2850,7 @@ p,
 }
 
 .settings-education__upload {
+  margin-top: 40px;
   width: 50%;
   padding-left: 15px;
   padding-right: 15px;
@@ -3872,7 +3890,7 @@ p,
   }
 }
 
-@media (min-width: 1361px) {
+@media (min-width: 1461px) {
   .col-xxl-1 {
     width: 8.33333%;
   }
@@ -4048,15 +4066,9 @@ p,
   }
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1460px) {
   .container {
     max-width: 1140px;
-  }
-
-  .settings-education__col {
-    width: 50%;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -4078,12 +4090,6 @@ p,
     -ms-flex-pack: end;
     justify-content: flex-end;
     margin-bottom: 20px;
-  }
-
-  .settings-education__upload {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -4146,12 +4152,6 @@ p,
 
   .registration-success-modal {
     padding: 40px 15px 60px 15px;
-  }
-
-  .settings-education__col {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 
   .upload-documents__header {

@@ -1,14 +1,15 @@
 .settings-education
-  padding: 60px 40px
+  padding: 60px 0
   &__wrap
     +row()
-  &__col
+  &__col-1
     +col(3)
-    margin-bottom: 40px
-    +media-max($bp-xxl)
-      +col(6)
-    +media-max($bp-md)
-      +col(12)
+  &__col-2
+    +col(3)
+  &__col-3
+    +col(3)
+  &__col-4
+    +col(3)
   &__line
     &:not(:last-child)
       margin-bottom: 20px
@@ -19,6 +20,5 @@
     &--alt
       padding-bottom: 12px
   &__upload
+    margin-top: 40px
     +col(6)
-    +media-max($bp-xl)
-      +col(12)

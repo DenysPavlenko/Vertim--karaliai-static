@@ -15,21 +15,23 @@ block content
   .settings-page
     .settings-page__header
       +header({navActive:'clients'})
-    .wrapper
-      .settings-page__wrap
+    .settings-page__wrap
+      .container
         .settings-page__title
           h2.text-surfie-green Settings
         .settings-page__status
           h3 Account status: <span class="text-surfie-green">Approved</span>
             span.icon-inline
               +icon({name:'check', fill:'surfie-green', width:'15', height:'13'})
-        .settings-page__catalog
-          .catalog
+      .settings-page__catalog
+        .catalog
+          .container
             .catalog__tabs.tabs.js-tabs
               each tab in tabs
                 div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
                   .catalog__tab-title #{tab.title}
-            .catalog__content
+          .catalog__content
+            .container
               .catalog__content-item.tabs__content.js-tabs-content(data-content="general")
                 include /pages/settings-page/general/_index
               .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="education")

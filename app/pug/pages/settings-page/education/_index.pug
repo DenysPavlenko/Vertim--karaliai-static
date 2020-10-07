@@ -20,46 +20,39 @@ include /partials/skill
 .settings-education
   .settings-education__wrap
     //- Column
-    .settings-education__col
+    .settings-education__col-1
       .settings-education__heading
         .row-group.row-group--align-center
-          .row-group__item
-            h4 Education:
-          .row-group__item
-            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+          h4 Education:
       .settings-education__line
         .info-list
           each item in list1
             .info-list__item
               .info-list__left
-                p(class=`font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
+                p(class=`p-sm font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
               .info-list__right
-                p.font-semibold #{item.right}
+                p.p-sm.font-semibold #{item.right}
       .settings-education__line
         .info-list
           .info-list__items
             each item in list2
               .info-list__item
                 .info-list__left
-                  p(class=`font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
+                  p(class=`p-sm font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
                 .info-list__right
-                  p.font-semibold #{item.right}
+                  p.p-sm.font-semibold #{item.right}
     //- Column
-    .settings-education__col
+    .settings-education__col-2
       .settings-education__heading
-        .row-group.row-group--align-center
-          .row-group__item
-            h4 Tax information:
-          .row-group__item
-            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+        h4 Tax information:
       .info-list
         .info-list__item
           .info-list__left
-            p.font-semibold.text-silver-chalice Issuing invoice:
+            p.p-sm.font-semibold.text-silver-chalice Issuing invoice:
           .info-list__right
-            p.font-semibold IVP
+            p.p-sm.font-semibold IVP
     //- Column
-    .settings-education__col
+    .settings-education__col-3
       .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item
@@ -74,9 +67,8 @@ include /partials/skill
           +skill({title:'Illustrator'})
         .column-group__item
           +skill({title:'Trados'})
-
     //- Column
-    .settings-education__col
+    .settings-education__col-4
       .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item
