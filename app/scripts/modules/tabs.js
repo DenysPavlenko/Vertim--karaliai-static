@@ -10,6 +10,7 @@ export default function () {
 
     $tabs.on('click', function () {
       var $tab = $(this);
+      if ($tab.hasClass('is-active')) { return; }
       var tabName = $tab.attr('data-tab');
       var $content = $('[data-content="' + tabName + '"]');
       var $activeTab = $tabsContainer.find('.js-tabs-tab.is-active');

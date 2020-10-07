@@ -1,7 +1,7 @@
 include /partials/avatar
 include /partials/button
 include /partials/inline-button
-include /partials/uploaded-documents
+include /partials/upload-documents
 include /partials/link
 include /partials/skill
 -
@@ -24,7 +24,7 @@ include /partials/skill
       .settings-education__heading
         .row-group.row-group--align-center
           .row-group__item
-            h4 General information:
+            h4 Education:
           .row-group__item
             +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
       .settings-education__line
@@ -60,7 +60,7 @@ include /partials/skill
             p.font-semibold IVP
     //- Column
     .settings-education__col
-      .settings-education__heading
+      .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item
             h4 Skills:
@@ -77,7 +77,7 @@ include /partials/skill
 
     //- Column
     .settings-education__col
-      .settings-education__heading
+      .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item
             h4 Expertise:
@@ -94,4 +94,4 @@ include /partials/skill
 
     //- Upload
     .settings-education__upload
-      +uploaded-documents()
+      +upload-documents()

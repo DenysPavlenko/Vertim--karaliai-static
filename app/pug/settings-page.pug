@@ -5,8 +5,8 @@ block variables
   - const title = 'Settings page'
   -
     const tabs = [
-      {title:'General', name:'general', isActive:true},
-      {title:'Education & Files', name:'education'},
+      {title:'General', name:'general'},
+      {title:'Education & Files', name:'education', isActive:true},
       {title:'Services & prices', name:'services'},
       {title:'Notifications', name:'notifications'},
     ]
@@ -15,7 +15,7 @@ block content
   .settings-page
     .settings-page__header
       +header({navActive:'clients'})
-    .container
+    .wrapper
       .settings-page__wrap
         .settings-page__title
           h2.text-surfie-green Settings
@@ -30,9 +30,9 @@ block content
                 div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
                   .catalog__tab-title #{tab.title}
             .catalog__content
-              .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
+              .catalog__content-item.tabs__content.js-tabs-content(data-content="general")
                 include /pages/settings-page/general/_index
-              .catalog__content-item.tabs__content.js-tab-content(data-content="education")
+              .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="education")
                 include /pages/settings-page/education/_index
               .catalog__content-item.tabs__content.js-tab-content(data-content="services")
                 include /pages/settings-page/services/_index

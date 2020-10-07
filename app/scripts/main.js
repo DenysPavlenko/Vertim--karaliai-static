@@ -9,6 +9,7 @@ import modal from './modules/modal';
 import datepicker from './modules/datepicker';
 import dropdown from './modules/dropdown';
 import tabs from './modules/tabs';
+import uploadDocuments from './modules/upload-documents';
 
 // On document ready
 $(function () {
@@ -22,6 +23,7 @@ $(function () {
   datepicker();
   dropdown();
   tabs();
+  uploadDocuments();
 });
 
 // On window load
