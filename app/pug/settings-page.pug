@@ -36,12 +36,13 @@ block content
             .container
               .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
                 include /pages/settings-page/general/_index
-              .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="education")
+              .catalog__content-item.tabs__content.js-tab-content(data-content="education")
                 include /pages/settings-page/education/_index
               .catalog__content-item.tabs__content.js-tab-content(data-content="services")
                 include /pages/settings-page/services/_index
               .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
                 include /pages/settings-page/notifications/_index
+
     +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
     //- +password-change-modal({type:'recover', title:'Recover password', text:'Recovering password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
     +password-change-success-modal({title:'Your password has been changed sucsessfully'})

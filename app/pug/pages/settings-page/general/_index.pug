@@ -34,7 +34,7 @@ include /partials/link
         +avatar({size:'xl', image:'images/user/avatar.jpg'})
         .settings-general__avatar-button
           +button({bg:'alabaster', type:'round', size:'50'})(type="button")
-            +icon({name:'camera', fill:'boston-blue', width:'18', height:'16'})
+            +icon({name:'camera', fill:'surfie-green', width:'18', height:'16'})
       .settings-general__avatar-date
         p.p-sm Member since: 2015-04-12
       .settings-general__avatar-password
@@ -46,14 +46,14 @@ include /partials/link
           .row-group__item
             h4 General information:
           .row-group__item
-            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+            +inline-button({title:'Edit', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'surfie-green'}})
       .info-list
         each item in list1
           .info-list__item
             .info-list__left
               .font-semibold.text-silver-chalice #{item.left}
             .info-list__right
-              p(class=`font-semibold ${item.rightAccent ? 'text-boston-blue' : ''}`) #{item.right}
+              p(class=`font-semibold ${item.rightAccent ? 'text-surfie-green' : ''}`) #{item.right}
     //- Column
     .settings-general__list
       .settings-general__heading
@@ -61,11 +61,11 @@ include /partials/link
           .row-group__item
             h4 Bank information:
           .row-group__item
-            +inline-button({title:'Edit', color:'boston-blue', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'boston-blue'}})
+            +inline-button({title:'Edit', link:'#', icon:{name:'pencil', width:'12', height:'12', fill:'surfie-green'}})
       .info-list
         each item in list2
           .info-list__item
             .info-list__left
               p.font-semibold.text-silver-chalice #{item.left}
             .info-list__right
-              p(class=`font-semibold ${item.accent ? 'text-boston-blue' : ''}`) #{item.right}
+              p(class=`font-semibold ${item.accent ? 'text-surfie-green' : ''}`) #{item.right}

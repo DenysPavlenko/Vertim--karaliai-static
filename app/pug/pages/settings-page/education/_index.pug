@@ -20,7 +20,7 @@ include /partials/skill
 .settings-education
   .settings-education__wrap
     //- Column
-    .settings-education__col-1
+    .settings-education__col
       .settings-education__heading
         .row-group.row-group--align-center
           h4 Education:
@@ -29,7 +29,7 @@ include /partials/skill
           each item in list1
             .info-list__item
               .info-list__left
-                p(class=`p-sm font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
+                p(class=`p-sm font-semibold ${item.leftAccent ? 'text-surfie-green' : 'text-silver-chalice'}`) #{item.left}
               .info-list__right
                 p.p-sm.font-semibold #{item.right}
       .settings-education__line
@@ -38,11 +38,11 @@ include /partials/skill
             each item in list2
               .info-list__item
                 .info-list__left
-                  p(class=`p-sm font-semibold ${item.leftAccent ? 'text-boston-blue' : 'text-silver-chalice'}`) #{item.left}
+                  p(class=`p-sm font-semibold ${item.leftAccent ? 'text-surfie-green' : 'text-silver-chalice'}`) #{item.left}
                 .info-list__right
                   p.p-sm.font-semibold #{item.right}
     //- Column
-    .settings-education__col-2
+    .settings-education__col
       .settings-education__heading
         h4 Tax information:
       .info-list
@@ -52,7 +52,7 @@ include /partials/skill
           .info-list__right
             p.p-sm.font-semibold IVP
     //- Column
-    .settings-education__col-3
+    .settings-education__col
       .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item
@@ -68,7 +68,7 @@ include /partials/skill
         .column-group__item
           +skill({title:'Trados'})
     //- Column
-    .settings-education__col-4
+    .settings-education__col
       .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item

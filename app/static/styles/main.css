@@ -1814,15 +1814,11 @@ p,
   align-items: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  color: #0E7D7D;
 }
 
 .inline-button:hover {
   opacity: 0.8;
-}
-
-.inline-button--boston-blue,
-.inline-button--boston-blue:focus {
-  color: #3F88C5;
 }
 
 .inline-button__icon:first-child {
@@ -2787,7 +2783,7 @@ p,
 }
 
 .settings-general {
-  padding: 60px 15px;
+  padding: 60px 0;
 }
 
 .settings-general__wrap {
@@ -2832,7 +2828,7 @@ p,
 }
 
 .settings-general__list {
-  width: 25%;
+  width: 33.33333%;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -2857,25 +2853,7 @@ p,
   margin-right: -15px;
 }
 
-.settings-education__col-1 {
-  width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.settings-education__col-2 {
-  width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.settings-education__col-3 {
-  width: 25%;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.settings-education__col-4 {
+.settings-education__col {
   width: 25%;
   padding-left: 15px;
   padding-right: 15px;
