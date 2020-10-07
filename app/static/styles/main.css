@@ -1617,6 +1617,7 @@ p,
   color: #0E7D7D;
   background-color: transparent;
   border: 2px solid #0E7D7D;
+  padding: 12px 30px 13px;
 }
 
 .button--bordered:hover {
@@ -1682,6 +1683,19 @@ p,
   background-color: #ebebeb;
 }
 
+.button--bg-white.button--disabled {
+  background-color: transparent;
+  border: 1px solid #9D9D9D;
+  padding: 13px 30px 14px;
+  color: #9D9D9D;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.button--bg-white.button--disabled svg {
+  fill: #9D9D9D;
+}
+
 .button--bg-transparent {
   color: #444444;
   background-color: transparent;
@@ -1745,6 +1759,14 @@ p,
   padding: 0;
 }
 
+.button--disabled {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .button__prepend,
 .button__append {
   position: absolute;
@@ -1756,10 +1778,12 @@ p,
 
 .button__prepend {
   left: 30px;
+  left: 15px;
 }
 
 .button__append {
   right: 30px;
+  right: 15px;
 }
 
 .button__icon:first-child {
@@ -4127,14 +4151,6 @@ p,
 
   .form-box {
     padding: 40px 55px 60px;
-  }
-
-  .button__prepend {
-    left: 15px;
-  }
-
-  .button__append {
-    right: 15px;
   }
 
   .form-steps__step {
