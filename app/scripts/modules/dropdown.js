@@ -1,33 +1,30 @@
-import checkWindowSize from '../common/check-window-size';
-import bp from '../common/breakpoints';
-
-export default function () {
-  var $dropdowns = $('.js-dropdown');
-  var fadeDuration = 100;
-  var $body = $('body');
+export default () => {
+  const $dropdowns = $('.js-dropdown');
+  const fadeDuration = 100;
+  const $body = $('body');
 
   // Return if $dropdowns doesn't exist
   if ($dropdowns.length === 0) { return; }
 
-  $dropdowns.each(function () {
-    var $dropdown = $(this);
-    var $dropdownBody = $dropdown.find('.js-dropdown-body');
-    var $dropdownToggle = $dropdown.find('[data-dropdown-toggle]')
-    var $scrollbar = $dropdown.find('[data-dropdown-simplebar]');
-    var isOpened = false;
+  $dropdowns.each((i, elem) => {
+    const $dropdown = $(elem);
+    const $dropdownBody = $dropdown.find('.js-dropdown-body');
+    const $dropdownToggle = $dropdown.find('[data-dropdown-toggle]')
+    const $scrollbar = $dropdown.find('[data-dropdown-simplebar]');
+    let isOpened = false;
 
-    $dropdownToggle.on('click', function () {
+    $dropdownToggle.on('click', () => {
       $dropdownToggle.toggleClass('is-active');
       $dropdownBody.fadeToggle(fadeDuration);
       isOpened = !isOpened;
       if ($scrollbar.length > 0) {
-        setTimeout(function () {
+        setTimeout(() => {
           new SimpleBar($scrollbar[0]);
         }, 0);
       }
     });
 
-    $(document).on('click', function (e) {
+    $(document).on('click', (e) => {
       if ($(e.target).parents('[data-dropdown]')[0] !== $dropdown[0] && isOpened) {
         isOpened = false;
         $dropdownBody.fadeOut(fadeDuration);

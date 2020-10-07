@@ -11,7 +11,7 @@ import tabs from './modules/tabs';
 import uploadDocumentsBox from './modules/upload-documents-box';
 
 // On document ready
-$(function () {
+$(() => {
   svg4everybody();
   select();
   inputAnimation();
@@ -25,4 +25,4 @@ $(function () {
 });
 
 // On window load
-$(window).on('load', function () { });
+$(window).on('load', () => { });

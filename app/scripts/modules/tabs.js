@@ -1,25 +1,25 @@
 export default function () {
-  var $tabsContainers = $('.js-tabs');
+  const $tabsContainers = $('.js-tabs');
 
   // Return if $tabsContainers doesn't exist
   if ($tabsContainers.length === 0) { return; }
 
-  $tabsContainers.each(function () {
-    var $tabsContainer = $(this);
-    var $tabs = $tabsContainer.find('.js-tabs-tab');
+  $tabsContainers.each((i, elem) => {
+    const $tabsContainer = $(elem);
+    const $tabs = $tabsContainer.find('.js-tabs-tab');
 
     $tabs.on('click', function () {
-      var $tab = $(this);
+      const $tab = $(this);
       if ($tab.hasClass('is-active')) { return; }
-      var tabName = $tab.attr('data-tab');
-      var $content = $('[data-content="' + tabName + '"]');
-      var $activeTab = $tabsContainer.find('.js-tabs-tab.is-active');
-      var activeTabName = $activeTab.attr('data-tab');
-      var $activeContent = $('[data-content="' + activeTabName + '"]');
+      const tabName = $tab.attr('data-tab');
+      const $content = $('[data-content="' + tabName + '"]');
+      const $activeTab = $tabsContainer.find('.js-tabs-tab.is-active');
+      const activeTabName = $activeTab.attr('data-tab');
+      const $activeContent = $('[data-content="' + activeTabName + '"]');
 
       $tabs.removeClass('is-active');
       $tab.addClass('is-active');
-      $activeContent.fadeOut(150, function () {
+      $activeContent.fadeOut(150, () => {
         $content.fadeIn(150);
       });
     });

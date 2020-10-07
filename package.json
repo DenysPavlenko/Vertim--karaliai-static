@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
     "@zoxon/emitty": "^1.4.2",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",
@@ -32,10 +33,12 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^3.0.0",
     "rollup": "^2.26.5",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.11.5",
     "dropzone": "^5.7.2",
     "flatpickr": "^4.6.6",
     "jquery": "^3.5.1",

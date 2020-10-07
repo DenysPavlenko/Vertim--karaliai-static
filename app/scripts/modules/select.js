@@ -1,52 +1,52 @@
 export default function () {
   var $selects = $('.js-select');
 
-  $selects.each(function () {
-    var isOpened = false;
-    var $select = $(this);
-    var $selectLabel = $select.find('.js-select-label');
-    var $selectDropdown = $select.find('.js-select-dropdown');
-    var $selectScrollbar = $select.find('[data-select-simplebar]');
-    var $optionsContainer = $select.find('.js-select-options');
-    var $options = $select.find('.js-select-option');
-    var $input = $select.find('.js-select-input');
-    var $search = $select.find('.js-select-search');
-    var selectedOption = $selectLabel.attr('data-selected') && $selectLabel.attr('data-selected').toLowerCase();
-    var selectDropdownWidth;
+  $selects.each((i, elem) => {
+    let isOpened = false;
+    const $select = $(elem);
+    const $selectLabel = $select.find('.js-select-label');
+    const $selectDropdown = $select.find('.js-select-dropdown');
+    const $selectScrollbar = $select.find('[data-select-simplebar]');
+    const $optionsContainer = $select.find('.js-select-options');
+    const $options = $select.find('.js-select-option');
+    const $input = $select.find('.js-select-input');
+    const $search = $select.find('.js-select-search');
+    const selectedOption = $selectLabel.attr('data-selected') && $selectLabel.attr('data-selected').toLowerCase();
+    let selectDropdownWidth;
     // Set a default value to the input if there is a default option
     if (selectedOption) {
       $input.val(selectedOption);
     }
     // Toggle select on label click
-    $selectLabel.on('click', function () {
+    $selectLabel.on('click', () => {
       toggleSelect();
       // Set fixed width to select dropdown
       selectDropdownWidth = selectDropdownWidth ? selectDropdownWidth : $selectDropdown.width();
       $selectDropdown.css('width', selectDropdownWidth);
       // Initialize SimpleBar scroll
       if ($selectScrollbar.length > 0) {
-        setTimeout(function () {
+        setTimeout(() => {
           new SimpleBar($selectScrollbar[0]);
         }, 0);
       }
     });
     // Select option click logic
-    $options.each(function () {
-      var $option = $(this);
+    $options.each((i, elem) => {
+      var $option = $(elem);
       // Set is-selected class if the option is selected by default
       var optionData = $option.attr('data-option').toLowerCase();
       if (selectedOption === optionData) {
         $option.addClass('is-selected');
       }
       // Set option by the option click
-      $option.on('click', function (e) {
+      $option.on('click', (e) => {
         e.stopPropagation();
         setOption($option);
         collapseSelect();
       });
     });
     // Options arrow navigation
-    $select.on('keydown', function (e) {
+    $select.on('keydown', (e) => {
       if (!isOpened) { return; }
       if (e.keyCode === 40) {
         e.preventDefault();
@@ -64,11 +64,11 @@ export default function () {
       }
     })
     // Select search
-    $search.on('input', function (e) {
-      var value = e.target.value.toLowerCase();
-      $options.each(function () {
-        var $option = $(this);
-        var $optionText = $option.find('span').text().toLowerCase();
+    $search.on('input', (e) => {
+      const value = e.target.value.toLowerCase();
+      $options.each((i, elem) => {
+        const $option = $(elem);
+        const $optionText = $option.find('span').text().toLowerCase();
         if ($optionText.indexOf(value) == -1) {
           $option.hide();
         } else {
@@ -77,7 +77,7 @@ export default function () {
       });
     });
     // Collapse select on document click
-    $(document).on('click', function (e) {
+    $(document).on('click', (e) => {
       if ($(e.target).parents('.js-select')[0] !== $select[0]) {
         collapseSelect();
       }
@@ -102,8 +102,8 @@ export default function () {
 
     // Set option
     function setOption(option) {
-      var optionHtml = option.html();
-      var optionData = option.attr('data-option');
+      const optionHtml = option.html();
+      const optionData = option.attr('data-option');
       $selectLabel.attr('data-selected', optionData);
       $selectLabel.html(optionHtml);
       $input.attr('value', optionData);
@@ -115,12 +115,12 @@ export default function () {
     function collapseSelect() {
       isOpened = false;
       $select.removeClass('is-expanded');
-      $selectDropdown.fadeOut(300, function () {
+      $selectDropdown.fadeOut(300, () => {
         if ($search) {
           $search.val('');
         }
-        $options.each(function () {
-          var $option = $(this);
+        $options.each((i, elem) => {
+          var $option = $(elem);
           $option.removeClass('is-focused');
           $option.css('display') === 'none' && $option.show();
         });
@@ -129,8 +129,8 @@ export default function () {
 
     // Navigat through options by arrows. Direction can be next() or prev()
     function optionsNavigation(direction) {
-      var $selectedOption = $optionsContainer.find('.js-select-option.is-selected');
-      var $focusedOption = $optionsContainer.find('.js-select-option.is-focused');
+      const $selectedOption = $optionsContainer.find('.js-select-option.is-selected');
+      const $focusedOption = $optionsContainer.find('.js-select-option.is-focused');
       if ($selectedOption.length && !$focusedOption.length) {
         if ($selectedOption[direction]().length > 0) {
           $selectedOption[direction]().addClass('is-focused');

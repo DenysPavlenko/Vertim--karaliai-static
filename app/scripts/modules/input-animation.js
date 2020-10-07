@@ -1,21 +1,21 @@
 export default function () {
-  var $inputs = $('.js-input-animation');
+  const $inputs = $('.js-input-animation');
 
   // Return if $inputs don't exist
   if (!$inputs.length) { return; }
 
-  $inputs.each(function () {
-    var $input = $(this);
+  $inputs.each(function (i, elem) {
+    var $input = $(elem);
     var $inputField = $input.find('.js-input-animation-field');
-    $inputField.each(function () {
-      if ($(this).val() !== '') {
+    $inputField.each(() => {
+      if ($input.val() !== '') {
         $input.addClass('is-active');
       }
     });
-    $inputField.on('focus', function () {
+    $inputField.on('focus', () => {
       $input.addClass('is-active');
     });
-    $inputField.on('focusout', function () {
+    $inputField.on('focusout', () => {
       if ($inputField.val() === '') {
         $input.removeClass('is-active');
       } else {

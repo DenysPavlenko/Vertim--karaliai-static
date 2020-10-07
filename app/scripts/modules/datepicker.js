@@ -1,10 +1,10 @@
-export default function () {
-  var $datepickers = $('.js-datepicker-input');
+export default () => {
+  const $datepickers = $('.js-datepicker-input');
   // Return if $datepickers don't exist
   if (!$datepickers.length) { return; }
 
-  $datepickers.each(function () {
-    var datepicker = this;
+  $datepickers.each((i, elem) => {
+    const datepicker = elem;
     flatpickr(datepicker, {
       disableMobile: true
     });

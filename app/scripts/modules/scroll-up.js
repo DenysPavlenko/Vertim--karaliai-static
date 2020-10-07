@@ -1,8 +1,8 @@
 export default function () {
-  var $button = $('.js-scroll-up');
-  var $html = $('html, body');
+  const $button = $('.js-scroll-up');
+  const $html = $('html, body');
 
-  $button.on('click', function () {
+  $button.on('click', () => {
     $html.animate({ scrollTop: 0 });
   });
 }

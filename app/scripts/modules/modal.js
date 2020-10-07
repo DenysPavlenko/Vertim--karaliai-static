@@ -1,12 +1,12 @@
 export default function () {
-  var $modalAuto = $('[data-modal-auto]');
-  var $modalOpen = $('[data-modal-open]');
-  var $modalClose = $('[data-modal-close]');
+  const $modalAuto = $('[data-modal-auto]');
+  const $modalOpen = $('[data-modal-open]');
+  const $modalClose = $('[data-modal-close]');
 
   // Open on widnow load
   if ($modalAuto.length > 0) {
-    $modalAuto.each(function () {
-      var $modal = $(this);
+    $modalAuto.each((elem) => {
+      const $modal = $(elem);
       createScrollBar($modal);
       $modal.modal({
         closeExisting: false,
@@ -15,7 +15,7 @@ export default function () {
     });
   }
 
-  $modalClose.on('click', function () {
+  $modalClose.on('click', () => {
     $.modal.close();
   });
 
@@ -23,9 +23,9 @@ export default function () {
   if ($modalOpen.length === 0) { return; }
 
   $modalOpen.on('click', function () {
-    var $this = $(this);
-    var modalName = $this.attr('data-modal-open');
-    var $modal = $('[data-modal="' + modalName + '"]');
+    const $this = $(this);
+    const modalName = $this.attr('data-modal-open');
+    const $modal = $(`[data-modal="${modalName}"]`);
     createScrollBar($modal);
     $modal.modal({
       closeExisting: false,
@@ -34,9 +34,9 @@ export default function () {
   });
 
   function createScrollBar(modal) {
-    var $scrollBar = modal.find('[data-modal-simplebar]');
+    const $scrollBar = modal.find('[data-modal-simplebar]');
     if ($scrollBar.length > 0) {
-      setTimeout(function () {
+      setTimeout(() => {
         new SimpleBar($scrollBar[0])
       }, 0);
     }
