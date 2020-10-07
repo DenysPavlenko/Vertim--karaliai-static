@@ -233,7 +233,7 @@ function modal () {
       var $modal = $(elem);
       createScrollBar($modal);
       $modal.modal({
-        closeExisting: false,
+        closeExisting: true,
         showClose: false
       });
     });
@@ -253,7 +253,7 @@ function modal () {
     var $modal = $("[data-modal=\"".concat(modalName, "\"]"));
     createScrollBar($modal);
     $modal.modal({
-      closeExisting: false,
+      closeExisting: true,
       showClose: false
     });
   });

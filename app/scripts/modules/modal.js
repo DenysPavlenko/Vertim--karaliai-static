@@ -9,7 +9,7 @@ export default function () {
       const $modal = $(elem);
       createScrollBar($modal);
       $modal.modal({
-        closeExisting: false,
+        closeExisting: true,
         showClose: false
       });
     });
@@ -28,7 +28,7 @@ export default function () {
     const $modal = $(`[data-modal="${modalName}"]`);
     createScrollBar($modal);
     $modal.modal({
-      closeExisting: false,
+      closeExisting: true,
       showClose: false
     });
   });
