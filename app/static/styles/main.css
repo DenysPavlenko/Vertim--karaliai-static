@@ -2714,7 +2714,7 @@ p,
   background-color: #e3e3e3;
 }
 
-.notifications-dropdown__toggle {
+.notifications-dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2722,6 +2722,15 @@ p,
   -ms-flex-align: center;
   align-items: center;
   height: 100%;
+}
+
+.notifications-dropdown__toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .notifications-dropdown__toggle-icon {
@@ -2745,8 +2754,17 @@ p,
   margin-top: 1px;
 }
 
-.user-dropdown__toggle {
+.user-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 100%;
+}
+
+.user-dropdown__toggle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
