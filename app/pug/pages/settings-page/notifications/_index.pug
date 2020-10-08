@@ -1,16 +1,18 @@
 include /partials/checkbox
 
 .settings-notifications
-  .settings-notifications__heading
-    h3 Send email notification to <a href="#" class="text-boston-blue">info@vertimukaraliai.lt</a> when...
-  .settings-notifications__content
-    .column-group.column-group--md
-      .column-group__item
-        +checkbox({ label:`A job is <span class="text-boston-blue">posted or modified</span>`, checked:true })
-      .column-group__item
-        +checkbox({ label:`A job is <span class="text-boston-blue">assigned</span>`, checked:true })
-      .column-group__item
-        +checkbox({ label:`A job is <span class="text-boston-blue">not assigned</span>`, checked:true })
-      +times(8)
-        .column-group__item
-          +checkbox({ label:`When deadline <span class="text-boston-blue">expiring soon</span>`, checked:true })
+  .settings-notifications__row
+    .settings-notifications__heading
+      h3 Send email notification to <a href="#" class="text-boston-blue">info@vertimukaraliai.lt</a> when...
+    .settings-notifications__content
+      .settings-notifications__wrap
+        .column-group.column-group--md
+          .column-group__item
+            +checkbox({ label:`A job is <span class="text-boston-blue">posted or modified</span>`, checked:true })
+          .column-group__item
+            +checkbox({ label:`A job is <span class="text-boston-blue">assigned</span>`, checked:true })
+          .column-group__item
+            +checkbox({ label:`A job is <span class="text-boston-blue">not assigned</span>`, checked:true })
+          +times(8)
+            .column-group__item
+              +checkbox({ label:`When deadline <span class="text-boston-blue">expiring soon</span>`, checked:true })

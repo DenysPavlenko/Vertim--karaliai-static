@@ -6,24 +6,24 @@ include /partials/link
 include /partials/skill
 -
   var list1 = [
-    {left:'#1:', right:'2012-2017', leftAccent:true},
+    {left:'#1:', right:'', leftAccent:true},
     {left:'Diploma type:', right:'Magister'},
     {left:'Diploma category:', right:'Translation & Interpreting'},
   ]
 -
   var list2 = [
-    {left:'#2:', right:'2012-2017', leftAccent:true},
+    {left:'#2:', right:'', leftAccent:true},
     {left:'Diploma type:', right:'Magister'},
     {left:'Diploma category:', right:'Translation & Interpreting'},
   ]
 
 .settings-education
-  .settings-education__wrap
+  .settings-education__row
     //- Column
     .settings-education__col
       .settings-education__heading
         .row-group.row-group--align-center
-          h4 Education:
+          h5 Education:
       .settings-education__line
         .info-list
           each item in list1
@@ -44,22 +44,22 @@ include /partials/skill
     //- Column
     .settings-education__col
       .settings-education__heading
-        h4 Tax information:
+        h5 Tax information:
       .info-list
         .info-list__item
           .info-list__left
             p.p-sm.font-semibold.text-silver-chalice Issuing invoice:
           .info-list__right
-            p.p-sm.font-semibold IVP
+            p.p-sm.font-semibold.text-surfie-green IVP
     //- Column
     .settings-education__col
       .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item
-            h4 Skills:
+            h5 Skills:
           .row-group__item
-            +button({type:'bordered', size:'30'})(type="button")
-              +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+            +button({type:'bordered', size:'20'})(type="button")
+              +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
       .column-group
         .column-group__item
           +skill({title:'Adobe Acrobat Pro'})
@@ -72,10 +72,10 @@ include /partials/skill
       .settings-education__heading.settings-education__heading--alt
         .row-group.row-group--align-center
           .row-group__item
-            h4 Expertise:
+            h5 Expertise:
           .row-group__item
-            +button({type:'bordered', size:'30'})(type="button")
-              +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})
+            +button({type:'bordered', size:'20'})(type="button")
+              +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
       .column-group
         .column-group__item
           +skill({title:'Technical'})

@@ -3,15 +3,16 @@
   display: inline-flex
   justify-content: center
   align-items: center
-  padding: 14px 30px 15px
+  padding: 12px 15px
   color: $c-white
-  font-size: rem(16px)
+  font-size: rem(14px)
   line-height: 1
   font-weight: 600
   z-index: 1
   border-radius: $r-primary
   transition: 0.2s
   background-color: $c-surfie-green
+  border: 1px solid transparent
   transition: 0.2s
   &:hover
     background-color: darken($c-surfie-green, 8%)
@@ -32,8 +33,7 @@
   &--bordered
     color: $c-surfie-green
     background-color: transparent
-    border: 2px solid $c-surfie-green
-    padding: 12px 30px 13px
+    border-color: $c-surfie-green
     &:hover
       color: $c-white
       border-color: darken($c-surfie-green, 8%)
@@ -72,8 +72,7 @@
       background-color: darken($c-white, 8%)
     &.button--disabled
       background-color: transparent
-      border: 1px solid $c-silver-chalice
-      padding: 13px 30px 14px
+      border-color: $c-silver-chalice
       color: $c-silver-chalice
       box-shadow: none
       svg
@@ -100,7 +99,7 @@
     &:active
       background-color: darken($c-alabaster, 10%)
   // Sizes
-  @each $size in ['30', '40', '50', '60']
+  @each $size in ['20', '30', '40', '50', '60']
     &--size-#{$size}
       width: #{$size}px
       height: #{$size}px

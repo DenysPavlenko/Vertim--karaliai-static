@@ -5,11 +5,11 @@ mixin upload-documents(props = {})
   .upload-documents
     .upload-documents__header
       .upload-documents__header-title
-        h4 Uploaded documents: <span class="p-sm font-semibold upload-documents__header-empty text-silver-chalice">No files yet</span>
+        h6 Uploaded documents: <span class="p-sm font-semibold upload-documents__header-empty text-silver-chalice">No files yet</span>
       .upload-documents__header-button
         +button({bg:'white', shadow:true, disabled:true})(type="button")
           span Download all
           span.button__icon
-            +icon({name:'download', width:'21', height:'19'})
+            +icon({name:'download', width:'15', height:'13'})
     .upload-documents__content
       +upload-documents-box()

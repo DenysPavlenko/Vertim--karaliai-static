@@ -16,24 +16,22 @@ block variables
 block content
   .settings-page
     .settings-page__header
-      +header({navActive:'clients'})
+      //- +header({navActive:'clients'})
     .settings-page__wrap
       .container
         .settings-page__title
           h2.text-surfie-green Settings
         .settings-page__status
-          h3 Account status: <span class="text-surfie-green">Approved</span>
+          h3 Account status: <span class="text-caribbean-green">Approved</span>
             span.icon-inline
-              +icon({name:'check', fill:'surfie-green', width:'15', height:'13'})
-      .settings-page__catalog
-        .catalog
-          .container
+              +icon({name:'check', fill:'caribbean-green', width:'15', height:'13'})
+        .settings-page__catalog
+          .catalog
             .catalog__tabs.tabs.js-tabs
               each tab in tabs
                 div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
                   .catalog__tab-title #{tab.title}
-          .catalog__content
-            .container
+            .catalog__content
               .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
                 include /pages/settings-page/general/_index
               .catalog__content-item.tabs__content.js-tab-content(data-content="education")
@@ -44,6 +42,4 @@ block content
                 include /pages/settings-page/notifications/_index
 
     +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
-    //- +password-change-modal({type:'recover', title:'Recover password', text:'Recovering password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
     +password-change-success-modal({title:'Your password has been changed sucsessfully'})
-    //- +password-change-success-modal({title:'Your password has been recovered sucsessfully'})

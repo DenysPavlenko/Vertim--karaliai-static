@@ -1,9 +1,45 @@
 .settings-education
   padding: 60px 0
-  &__wrap
+  +media-max($bp-xxl)
+    padding: 60px 30px
+  +media-max($bp-sm)
+    padding: 60px 15px
+  &__row
     +row()
   &__col
-    +col(3)
+    margin-bottom: 40px
+    &:nth-child(1)
+      +col(4, 1)
+      +media-max($bp-xxl)
+        +col(4, 0)
+      +media-max($bp-xl)
+        +col(6)
+      +media-max($bp-md)
+        +col(12)
+    &:nth-child(2)
+      +col(2)
+      +media-max($bp-xxl)
+        +col(2)
+      +media-max($bp-xl)
+        +col(6)
+      +media-max($bp-md)
+        +col(12)
+    &:nth-child(3)
+      +col(2)
+      +media-max($bp-xxl)
+        +col(3)
+      +media-max($bp-xl)
+        +col(6)
+      +media-max($bp-md)
+        +col(12)
+    &:nth-child(4)
+      +col(2)
+      +media-max($bp-xxl)
+        +col(3)
+      +media-max($bp-xl)
+        +col(6)
+      +media-max($bp-md)
+        +col(12)
   &__line
     &:not(:last-child)
       margin-bottom: 20px
@@ -12,7 +48,10 @@
     margin-bottom: 20px
     border-bottom: 1px solid $c-alto
     &--alt
-      padding-bottom: 12px
+      padding-bottom: 19px
   &__upload
-    margin-top: 40px
-    +col(6)
+    +col(6,1)
+    +media-max($bp-xxl)
+      +col(6, 0)
+    +media-max($bp-lg)
+      +col(12)
