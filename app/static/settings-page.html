@@ -77,7 +77,7 @@
                     <div class="dropdown__toggle user-dropdown__toggle" data-dropdown-toggle="user">
                       <div class="user-dropdown__toggle-avatar">
                         <div class="avatar">
-                          <figure style="background-image:url('undefined')"></figure>
+                          <figure></figure>
                         </div>
                       </div>
                       <div class="user-dropdown__toggle-name">Justas</div>
@@ -941,15 +941,15 @@
           <h3>Renew profile image:</h3>
         </div>
         <div class="edit-avatar-modal__box">
-          <div class="edit-avatar-box js-edit-avatar-box">
-            <div class="edit-avatar-box__image"><img src="images/user/avatar.jpg" alt="avatar" /></div>
-            <div class="edit-avatar-box__tip">
+          <div class="edit-avatar-tool js-edit-avatar-tool">
+            <div class="edit-avatar-tool__image-box"><img class="edit-avatar-tool__image" src="images/user/avatar.jpg" alt="avatar" /></div>
+            <div class="edit-avatar-tool__tip">
               <p class="p-sm font-style-italic">*will change up to x3 as on linkedin</p>
             </div>
-            <div class="edit-avatar-box__title">
-              <h5>Change size <span class="text-surfie-green edit-avatar-box__number">1</span></h5>
+            <div class="edit-avatar-tool__title">
+              <h5>Change size <span class="text-surfie-green edit-avatar-tool__number">1</span></h5>
             </div>
-            <div class="edit-avatar-box__range">
+            <div class="edit-avatar-tool__range">
               <div class="input-range js-input-range">
                 <div class="input-range__minus">
                   <svg class="svg-icon svg-icon--surfie-green" width="14" height="2">
@@ -957,7 +957,7 @@
                   </svg>
                 </div>
                 <div class="input-range__wrap">
-                  <input class="input input-range__input edit-avatar-box__range-input" type="range" min="0" max="4" value="1">
+                  <input class="input input-range__input edit-avatar-tool__range-input" type="range" value="0">
                   <div class="input-range__line"></div>
                 </div>
                 <div class="input-range__plus">

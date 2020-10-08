@@ -1,4 +1,4 @@
-include /partials/edit-avatar-box
+include /partials/edit-avatar-tool
 
 mixin edit-avatar-modal(props = {})
 
@@ -9,7 +9,7 @@ mixin edit-avatar-modal(props = {})
       .edit-avatar-modal__title
         h3 Renew profile image:
       .edit-avatar-modal__box
-        +edit-avatar-box()
+        +edit-avatar-tool()
       .edit-avatar-modal__buttons
         +button({bg:'transparent'})(type="button")| Delete current photo
         .button-group

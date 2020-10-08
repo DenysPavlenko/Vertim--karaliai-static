@@ -1469,6 +1469,10 @@ p,
   background: transparent;
 }
 
+.input-range__input:focus {
+  border: transparent;
+}
+
 .input-range__input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -3396,7 +3400,8 @@ p,
   justify-content: space-between;
 }
 
-.edit-avatar-box__image {
+.edit-avatar-tool__image-box {
+  margin: 0 auto;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3404,13 +3409,16 @@ p,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  height: 340px;
+  width: 260px;
 }
 
-.edit-avatar-box__tip {
+.edit-avatar-tool__tip {
   text-align: right;
+  margin-bottom: 10px;
 }
 
-.edit-avatar-box__title {
+.edit-avatar-tool__title {
   margin-bottom: 10px;
 }
 

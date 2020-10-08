@@ -11,7 +11,7 @@ import tabs from './modules/tabs';
 import uploadDocumentsBox from './modules/upload-documents-box';
 import headerNavigation from './modules/header-navigation';
 import inputRange from './modules/input-range';
-import editAvatarBox from './modules/edit-avatar-box';
+import editAvatarTool from './modules/edit-avatar-tool';
 
 // On document ready
 $(() => {
@@ -27,7 +27,7 @@ $(() => {
   uploadDocumentsBox();
   headerNavigation();
   inputRange();
-  editAvatarBox();
+  editAvatarTool();
 });
 
 // On window load

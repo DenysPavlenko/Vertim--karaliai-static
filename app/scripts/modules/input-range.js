@@ -1,3 +1,5 @@
+import calcRange from '../common/calc-range';
+
 export default () => {
   const $ranges = $('.js-input-range');
 
@@ -8,18 +10,16 @@ export default () => {
     const $range = $(elem);
     const $input = $range.find('.input-range__input');
     const $rangeLine = $range.find('.input-range__line');
-    const currentRange = $input.val();
-    const maxRange = $input.attr('max');
+    // Set default range
+    setLineWidth($rangeLine, $input);
 
-    setLineWidth($rangeLine, currentRange, maxRange);
-
+    // Set range on input
     $input.on('input', () => {
-      const range = $input.val();
-      setLineWidth($rangeLine, range, maxRange);
+      setLineWidth($rangeLine, $input);
     });
   });
 
-  function setLineWidth(rangeLine, range, maxRange) {
-    rangeLine.css('width', range / maxRange * 100 + '%');
+  function setLineWidth(rangeLine, input) {
+    rangeLine.css('width', calcRange(input) + '%');
   }
 }

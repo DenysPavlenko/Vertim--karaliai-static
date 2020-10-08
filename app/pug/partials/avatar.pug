@@ -8,4 +8,4 @@ mixin avatar(props = {})
     })
 
   div(class=classnames)
-    figure(style=`background-image:url('${image}')`)
+    figure(style=`${image ? `background-image:url('${image}')` : ''}`)

@@ -490,6 +490,13 @@ var headerNavigation = (function () {
   });
 });
 
+var calcRange = (function (input) {
+  var val = input.val();
+  var min = input.attr('min');
+  var max = input.attr('max');
+  return parseInt((val - min) * 100 / (max - min));
+});
+
 var inputRange = (function () {
   var $ranges = $('.js-input-range'); // Return if $ranges doesn't exist
 
@@ -500,40 +507,78 @@ var inputRange = (function () {
   $ranges.each(function (i, elem) {
     var $range = $(elem);
     var $input = $range.find('.input-range__input');
-    var $rangeLine = $range.find('.input-range__line');
-    var currentRange = $input.val();
-    var maxRange = $input.attr('max');
-    setLineWidth($rangeLine, currentRange, maxRange);
+    var $rangeLine = $range.find('.input-range__line'); // Set default range
+
+    setLineWidth($rangeLine, $input); // Set range on input
+
     $input.on('input', function () {
-      var range = $input.val();
-      setLineWidth($rangeLine, range, maxRange);
+      setLineWidth($rangeLine, $input);
     });
   });
 
-  function setLineWidth(rangeLine, range, maxRange) {
-    rangeLine.css('width', range / maxRange * 100 + '%');
+  function setLineWidth(rangeLine, input) {
+    rangeLine.css('width', calcRange(input) + '%');
   }
 });
 
-function editAvatarBox () {
-  var $avatarBox = $('.js-edit-avatar-box'); // Return if $avatarBox doesn't exist
+function editAvatarTool () {
+  var $avatarBox = $('.js-edit-avatar-tool'); // Return if $avatarBox doesn't exist
 
   if (!$avatarBox.length) {
     return;
   }
 
-  var $input = $avatarBox.find('.edit-avatar-box__range-input');
-  var $number = $avatarBox.find('.edit-avatar-box__number'); // Set current value to the number
+  var $input = $avatarBox.find('.edit-avatar-tool__range-input');
+  var $number = $avatarBox.find('.edit-avatar-tool__number');
+  var $image = $avatarBox.find('.edit-avatar-tool__image'); // Initialize croppie
 
-  setInputRangeValue();
+  var zomm, $slider, min, max, step;
+  var cropper = $image.croppie({
+    viewport: {
+      width: 200,
+      height: 200,
+      type: 'circle'
+    },
+    showZoomer: false,
+    enableOrientation: true,
+    update: function update(params) {
+      if (zomm !== params.zoom) {
+        if (!$slider) {
+          $slider = $('.cr-slider');
+          min = $slider.attr('min');
+          max = $slider.attr('max');
+          step = $slider.attr('step');
+        }
+
+        $input.attr({
+          value: params.zoom,
+          min: min,
+          max: max,
+          step: step
+        });
+        setInputRangeValue($input);
+        zomm = params.zoom;
+      }
+    }
+  });
+  cropper.croppie('bind', {
+    url: $image.attr('src'),
+    zoom: 0,
+    orientation: 1
+  }); // Set current value to the number
+
+  setInputRangeValue($input); // Change input value
+
   $input.on('input', function () {
-    // Set current value to the number
-    setInputRangeValue();
+    $input.val(); // Set crop zoom
+
+    cropper.croppie('setZoom', $input.val()); // Set current value to the number
+
+    setInputRangeValue($input);
   });
 
   function setInputRangeValue(input) {
-    var range = $input.val();
-    $number.html(range);
+    $number.html(calcRange(input));
   }
 }
 
@@ -550,7 +595,7 @@ $(function () {
   uploadDocumentsBox();
   headerNavigation();
   inputRange();
-  editAvatarBox();
+  editAvatarTool();
 }); // On window load
 
 $(window).on('load', function () {});
