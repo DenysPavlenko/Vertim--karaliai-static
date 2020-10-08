@@ -42,7 +42,6 @@ $header-height: 80px
   &__navigation
     max-width: 90%
     margin-right: 10px
-    // height: 100%
     +media-max($bp-xl)
       position: fixed
       padding: 80px 40px
@@ -53,15 +52,14 @@ $header-height: 80px
       max-width: 50%
       min-width: 240px
       height: 100%
+      overflow-y: auto
       background-color: $c-white
       transition: 0.3s
       transform: translateX(100%)
-      z-index: 2
+      z-index: 20
       &.is-active
         box-shadow: $s-secondary
         transform: translateX(0)
-    +media-max($bp-sm)
-      padding: 80px 20px
   &__dropdowns
     display: flex
     align-items: center
@@ -80,6 +78,6 @@ $header-height: 80px
   &__burger
     display: none
     +media-max($bp-xl)
-      z-index: 3
+      z-index: 30
       display: block
       margin-left: 10px

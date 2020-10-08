@@ -422,18 +422,71 @@ function uploadDocumentsBox () {
   });
 }
 
+var bp = {
+  xxl: '1461',
+  xl: '1200',
+  lg: '992',
+  md: '768',
+  sm: '577',
+  xs: '361'
+};
+
+function checkWindowSize (media, callback) {
+  var jsMediaQuery = window.matchMedia(media);
+  jsMediaQuery.addListener(callback);
+  callback(jsMediaQuery);
+}
+
 var headerNavigation = (function () {
   var $navigation = $('.js-header-navigation');
-  var $burger = $('.js-header-navigation-burger'); // Return if $burger doesn't exist
+  var $burger = $('.js-header-navigation-burger');
+  var $document = $(document);
+  var $body = $('body');
+  var isOpened = false; // Return if $burger doesn't exist
 
   if (!$burger.length) {
     return;
   }
 
-  $burger.on('click', function (e) {
-    var $this = $(e.currentTarget);
-    $this.toggleClass('is-active');
+  $burger.on('click', function () {
+    $burger.toggleClass('is-active');
     $navigation.toggleClass('is-active');
+
+    if ($navigation.hasClass('is-active')) {
+      $body.css('overflow-y', 'hidden');
+    } else {
+      $body.css('overflow-y', 'auto');
+    }
+
+    $navigation.one('transitionend', function () {
+      isOpened = !isOpened;
+    });
+  });
+  $document.on('click', function (e) {
+    var $target = $(e.target);
+
+    if ($target[0] !== $navigation[0] && $target.parents('.js-header-navigation')[0] !== $navigation[0] && isOpened) {
+      $navigation.removeClass('is-active');
+      $burger.removeClass('is-active');
+      $body.css('overflow-y', 'auto');
+      isOpened = false;
+    }
+  }); // Show scrollbar if the screen size > bp.xl
+
+  checkWindowSize("(min-width:".concat(bp.xl, "px)"), function (e) {
+    if (e.matches) {
+      if ($body.css('overflow-y') === 'hidden') {
+        $body.css('overflow-y', 'auto');
+      }
+    }
+  }); // Hide scrollbar if the screen size < bp.xl and navigation is opened
+
+  checkWindowSize("(max-width:".concat(bp.xl, "px)"), function (e) {
+    if (e.matches) {
+      if ($body.css('overflow-y') === 'auto' && isOpened) {
+        $body.css('overflow-y', 'hidden');
+      }
+    }
   });
 });
 

@@ -4443,12 +4443,13 @@ p,
     max-width: 50%;
     min-width: 240px;
     height: 100%;
+    overflow-y: auto;
     background-color: #FFFFFF;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
-    z-index: 2;
+    z-index: 20;
   }
 
   .header__navigation.is-active {
@@ -4459,7 +4460,7 @@ p,
   }
 
   .header__burger {
-    z-index: 3;
+    z-index: 30;
     display: block;
     margin-left: 10px;
   }
@@ -4676,10 +4677,6 @@ p,
 
   .header__logo-title {
     display: none;
-  }
-
-  .header__navigation {
-    padding: 80px 20px;
   }
 
   .header__dropdown:not(:last-child) {
