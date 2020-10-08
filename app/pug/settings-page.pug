@@ -2,6 +2,7 @@ extends /layouts/main
 include /partials/header
 include /partials/password-change-modal
 include /partials/password-change-success-modal
+include /partials/edit-avatar-modal
 
 block variables
   - const title = 'Settings page'
@@ -33,13 +34,14 @@ block content
                   .catalog__tab-title #{tab.title}
             .catalog__content
               .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
-                include /pages/settings-page/general/_index
+                include /pages/settings-page/general
               .catalog__content-item.tabs__content.js-tab-content(data-content="education")
-                include /pages/settings-page/education/_index
+                include /pages/settings-page/education
               .catalog__content-item.tabs__content.js-tab-content(data-content="services")
-                include /pages/settings-page/services/_index
+                include /pages/settings-page/services
               .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
-                include /pages/settings-page/notifications/_index
+                include /pages/settings-page/notifications
 
     +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
     +password-change-success-modal({title:'Your password has been changed sucsessfully'})
+    +edit-avatar-modal()

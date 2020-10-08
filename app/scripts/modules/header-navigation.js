@@ -2,11 +2,11 @@ import bp from '../common/breakpoints';
 import checkWindowSize from '../common/check-window-size';
 
 export default () => {
-  var $navigation = $('.js-header-navigation');
-  var $burger = $('.js-header-navigation-burger');
-  var $document = $(document);
-  var $body = $('body');
-  var isOpened = false;
+  const $navigation = $('.js-header-navigation');
+  const $burger = $('.js-header-navigation-burger');
+  const $document = $(document);
+  const $body = $('body');
+  let isOpened = false;
 
   // Return if $burger doesn't exist
   if (!$burger.length) { return; }
@@ -25,7 +25,7 @@ export default () => {
   });
 
   $document.on('click', (e) => {
-    var $target = $(e.target);
+    const $target = $(e.target);
     if ($target[0] !== $navigation[0] && $target.parents('.js-header-navigation')[0] !== $navigation[0] && isOpened) {
       $navigation.removeClass('is-active');
       $burger.removeClass('is-active');

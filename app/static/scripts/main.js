@@ -490,6 +490,53 @@ var headerNavigation = (function () {
   });
 });
 
+var inputRange = (function () {
+  var $ranges = $('.js-input-range'); // Return if $ranges doesn't exist
+
+  if ($ranges.length === 0) {
+    return;
+  }
+
+  $ranges.each(function (i, elem) {
+    var $range = $(elem);
+    var $input = $range.find('.input-range__input');
+    var $rangeLine = $range.find('.input-range__line');
+    var currentRange = $input.val();
+    var maxRange = $input.attr('max');
+    setLineWidth($rangeLine, currentRange, maxRange);
+    $input.on('input', function () {
+      var range = $input.val();
+      setLineWidth($rangeLine, range, maxRange);
+    });
+  });
+
+  function setLineWidth(rangeLine, range, maxRange) {
+    rangeLine.css('width', range / maxRange * 100 + '%');
+  }
+});
+
+function editAvatarBox () {
+  var $avatarBox = $('.js-edit-avatar-box'); // Return if $avatarBox doesn't exist
+
+  if (!$avatarBox.length) {
+    return;
+  }
+
+  var $input = $avatarBox.find('.edit-avatar-box__range-input');
+  var $number = $avatarBox.find('.edit-avatar-box__number'); // Set current value to the number
+
+  setInputRangeValue();
+  $input.on('input', function () {
+    // Set current value to the number
+    setInputRangeValue();
+  });
+
+  function setInputRangeValue(input) {
+    var range = $input.val();
+    $number.html(range);
+  }
+}
+
 $(function () {
   svg4everybody();
   select();
@@ -502,6 +549,8 @@ $(function () {
   tabs();
   uploadDocumentsBox();
   headerNavigation();
+  inputRange();
+  editAvatarBox();
 }); // On window load
 
 $(window).on('load', function () {});

@@ -160,7 +160,7 @@
                           <figure style="background-image:url('images/user/avatar.jpg')"></figure>
                         </div>
                         <div class="settings-general__avatar-button">
-                          <button class="button button--round button--bg-alabaster button--size-50" type="button">
+                          <button class="button button--round button--bg-alabaster button--size-50" type="button" data-modal-open="edit-avatar-modal">
                             <svg class="svg-icon svg-icon--surfie-green" width="18" height="16">
                               <use href="images/svg/svg-sprite/symbol/sprite.svg#camera" x="0" y="0"></use>
                             </svg>
@@ -925,6 +925,62 @@
         <div class="password-change-success-modal__button">
           <button class="button button--bordered" type="button" data-modal-close="password-change-success-modal">OK !
           </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal edit-avatar-modal" data-modal="edit-avatar-modal">
+      <div class="modal__close" data-modal-close="edit-avatar-modal">
+        <div class="close">
+          <svg class="svg-icon svg-icon--alto" width="20" height="20">
+            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="edit-avatar-modal__wrap">
+        <div class="edit-avatar-modal__title">
+          <h3>Renew profile image:</h3>
+        </div>
+        <div class="edit-avatar-modal__box">
+          <div class="edit-avatar-box js-edit-avatar-box">
+            <div class="edit-avatar-box__image"><img src="images/user/avatar.jpg" alt="avatar" /></div>
+            <div class="edit-avatar-box__tip">
+              <p class="p-sm font-style-italic">*will change up to x3 as on linkedin</p>
+            </div>
+            <div class="edit-avatar-box__title">
+              <h5>Change size <span class="text-surfie-green edit-avatar-box__number">1</span></h5>
+            </div>
+            <div class="edit-avatar-box__range">
+              <div class="input-range js-input-range">
+                <div class="input-range__minus">
+                  <svg class="svg-icon svg-icon--surfie-green" width="14" height="2">
+                    <use href="images/svg/svg-sprite/symbol/sprite.svg#minus" x="0" y="0"></use>
+                  </svg>
+                </div>
+                <div class="input-range__wrap">
+                  <input class="input input-range__input edit-avatar-box__range-input" type="range" min="0" max="4" value="1">
+                  <div class="input-range__line"></div>
+                </div>
+                <div class="input-range__plus">
+                  <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="edit-avatar-modal__buttons">
+          <button class="button button--bg-transparent" type="button">Delete current photo
+          </button>
+          <div class="button-group">
+            <button class="button button--bg-alabaster button-group__button" type="button"><span>Upload new</span><span class="button__icon">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                    </svg></span>
+            </button>
+            <button class="button button-group__button" type="button">Apply
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,13 @@
+include /partials/input-range
+
+mixin edit-avatar-box(props = {})
+
+  .edit-avatar-box.js-edit-avatar-box
+    .edit-avatar-box__image
+      img(src="images/user/avatar.jpg", alt="avatar")
+    .edit-avatar-box__tip
+      p.p-sm.font-style-italic *will change up to x3 as on linkedin
+    .edit-avatar-box__title
+      h5 Change size <span class="text-surfie-green edit-avatar-box__number">1</span>
+    .edit-avatar-box__range
+      +input-range({classes:'edit-avatar-box__range-input', min:'0', max:'4', value:'1'})
