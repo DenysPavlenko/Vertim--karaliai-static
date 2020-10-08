@@ -582,6 +582,22 @@ function editAvatarTool () {
   }
 }
 
+var editAvatarModal = (function () {
+  var $modal = $('.js-edit-avatar-modal'); // Return if $modal doesn't exist
+
+  if ($modal.length === 0) {
+    return;
+  }
+
+  var isInitialized;
+  $modal.on($.modal.OPEN, function () {
+    if (!isInitialized) {
+      editAvatarTool();
+      isInitialized = true;
+    }
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -595,7 +611,7 @@ $(function () {
   uploadDocumentsBox();
   headerNavigation();
   inputRange();
-  editAvatarTool();
+  editAvatarModal();
 }); // On window load
 
 $(window).on('load', function () {});
