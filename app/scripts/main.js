@@ -9,6 +9,7 @@ import datepicker from './modules/datepicker';
 import dropdown from './modules/dropdown';
 import tabs from './modules/tabs';
 import uploadDocumentsBox from './modules/upload-documents-box';
+import headerNavigation from './modules/header-navigation';
 
 // On document ready
 $(() => {
@@ -22,6 +23,7 @@ $(() => {
   dropdown();
   tabs();
   uploadDocumentsBox();
+  headerNavigation();
 });
 
 // On window load

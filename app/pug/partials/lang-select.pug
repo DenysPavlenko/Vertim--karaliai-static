@@ -3,10 +3,10 @@ include /partials/select
 mixin lang-select(props = {})
 
   +select({
-    inline:true,
+    inline:true, h100: true,
     label:{name:'lt', content:`<img src="images/icons/planet.svg"/><span>LT</span>`},
     options:[
-      {name:'lt', content:`<img src="images/icons/planet.svg"/><span>LT</span>`},
       {name:'en', content:`<img src="images/icons/planet.svg"/><span>EN</span>`},
+      {name:'lt', content:`<img src="images/icons/planet.svg"/><span>LT</span>`},
     ]
   })

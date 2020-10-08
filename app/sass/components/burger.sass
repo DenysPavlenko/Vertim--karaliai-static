@@ -1,0 +1,47 @@
+.burger
+  position: relative
+  height: 18px
+  width: 25px
+  display: block
+  span
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    display: block
+    width: 25px
+    height: 2px
+    background-color: $c-surfie-green
+    border-radius: 4px
+    transition: 0.2s
+    transition-delay: 0.2s
+    &:before,
+    &:after,
+      border-radius: 4px
+      position: absolute
+      content: ''
+      left: 0
+      width: 25px
+      height: 2px
+      background-color: $c-surfie-green
+    &:before
+      top: -7px
+      transform: rotate(0)
+      transition: transform 0.2s, top 0.2s
+      transition-delay: 0s, 0.2s
+    &:after
+      bottom: -7px
+      transform: rotate(0)
+      transition: transform 0.2s, bottom 0.2s
+      transition-delay: 0s, 0.2s
+  &.is-active
+    span
+      background-color: transparent
+      transition-delay: 0s
+    span:before
+      top: 0
+      transition-delay: 0.2s, 0s
+      transform: rotate(45deg)
+    span:after
+      bottom: 0
+      transition-delay: 0.2s, 0s
+      transform: rotate(-45deg)

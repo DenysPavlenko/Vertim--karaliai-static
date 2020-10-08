@@ -5,37 +5,79 @@
   border-radius: 0 0 $r-secondary $r-secondary
   &__wrap
     display: flex
-    max-width: $cnt-xxl
+    width: 100%
+    height: 80px
     margin: 0 auto
-    padding: 10px 15px
     align-items: center
     justify-content: space-between
   &__left
     flex: 0.3
-    margin-right: 20px
+    +media-max($bp-xl)
+      flex: 1
+      margin-right: 20px
   &__logo
     display: flex
     align-items: center
     &-icon
       margin-right: 10px
       max-width: 50px
+      +media-max($bp-sm)
+        margin-right: 0
     &-title
       font-family: 'Gilroy', sans-serif
       font-size: rem(22px)
       font-weight: 500
       line-height: 1
       color: $c-mine-shaft
+      +media-max($bp-sm)
+        display: none
   &__right
+    height: 100%
     flex: 1
     display: flex
     align-items: center
     justify-content: space-between
   &__navigation
-    flex: 0.9
-    margin-right: 20px
+    max-width: 90%
+    margin-right: 10px
+    // height: 100%
+    +media-max($bp-xl)
+      position: fixed
+      padding: 80px 40px
+      top: 0
+      right: 0
+      margin: 0
+      width: 100%
+      max-width: 50%
+      min-width: 240px
+      height: 100%
+      background-color: $c-white
+      transition: 0.3s
+      transform: translateX(100%)
+      z-index: 2
+      &.is-active
+        box-shadow: $s-secondary
+        transform: translateX(0)
+    +media-max($bp-sm)
+      padding: 80px 20px
   &__dropdowns
     display: flex
     align-items: center
+    margin-left: auto
+    height: 100%
   &__dropdown
+    height: 100%
+    display: flex
+    align-items: center
     &:not(:last-child)
       margin-right: 20px
+      +media-max($bp-xxl)
+        margin-right: 15px
+      +media-max($bp-sm)
+        margin-right: 10px
+  &__burger
+    display: none
+    +media-max($bp-xl)
+      z-index: 3
+      display: block
+      margin-left: 10px

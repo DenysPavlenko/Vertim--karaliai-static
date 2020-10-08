@@ -422,6 +422,21 @@ function uploadDocumentsBox () {
   });
 }
 
+var headerNavigation = (function () {
+  var $navigation = $('.js-header-navigation');
+  var $burger = $('.js-header-navigation-burger'); // Return if $burger doesn't exist
+
+  if (!$burger.length) {
+    return;
+  }
+
+  $burger.on('click', function (e) {
+    var $this = $(e.currentTarget);
+    $this.toggleClass('is-active');
+    $navigation.toggleClass('is-active');
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -433,6 +448,7 @@ $(function () {
   dropdown();
   tabs();
   uploadDocumentsBox();
+  headerNavigation();
 }); // On window load
 
 $(window).on('load', function () {});
