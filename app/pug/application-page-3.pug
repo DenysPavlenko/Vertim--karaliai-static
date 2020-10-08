@@ -9,6 +9,9 @@ block content
   .application-page
     .application-page__header
       +inner-header()
-    .application-page__form
-      include /pages/application-page/step-3/_index
+    .container
+      .application-page__row
+        .application-page__form
+          include /pages/application-page/step-3/_index
+
     +registration-success-modal()

@@ -781,22 +781,32 @@ p,
 }
 
 .login-page__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  margin: 0 auto;
+  max-width: 560px;
 }
 
 .application-page {
   padding-bottom: 60px;
 }
 
+.application-page__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
 .application-page__form {
-  margin: 0 auto;
+  width: 66.66667%;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-top: 35px;
-  max-width: 1030px;
   padding: 0 15px;
 }
 
@@ -1103,7 +1113,6 @@ p,
 
 .form-box {
   width: 100%;
-  max-width: 560px;
   border: 1px solid #DADADA;
   border-radius: 3px;
   background-color: #FFFFFF;
@@ -2277,15 +2286,14 @@ p,
   -webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
   border-radius: 0 0 10px 10px;
-  padding: 20px 15px;
 }
 
 .inner-header__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1440px;
   margin: 0 auto;
+  height: 80px;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -2293,6 +2301,7 @@ p,
 
 .inner-header__logo {
   margin-right: 20px;
+  max-width: 50px;
 }
 
 .application-form {
@@ -2586,6 +2595,9 @@ p,
   -webkit-box-flex: 0.3;
   -ms-flex: 0.3;
   flex: 0.3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header__logo {
@@ -4330,6 +4342,12 @@ p,
     max-width: 1200px;
   }
 
+  .application-page__form {
+    width: 75%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .header__dropdown:not(:last-child) {
     margin-right: 15px;
   }
@@ -4424,6 +4442,12 @@ p,
     -ms-flex-pack: end;
     justify-content: flex-end;
     margin-bottom: 20px;
+  }
+
+  .application-page__form {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .header__left {
