@@ -636,9 +636,14 @@ var editAvatarModal = (function () {
   if ($modal.length === 0) {
     return;
   }
+
+  var isInitialized;
   $modal.on($.modal.OPEN, function () {
+    if (!isInitialized) {
+      editAvatarTool();
+      isInitialized = true;
+    }
   });
-  editAvatarTool();
 });
 
 $(function () {

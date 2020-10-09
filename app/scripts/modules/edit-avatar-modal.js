@@ -8,8 +8,8 @@ export default () => {
   var isInitialized;
   $modal.on($.modal.OPEN, function () {
     if (!isInitialized) {
+      editAvatarTool();
       isInitialized = true;
     }
   });
-  editAvatarTool();
 }
