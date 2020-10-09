@@ -1254,7 +1254,7 @@
         </div>
       </div>
     </div>
-    <div class="modal edit-avatar-modal js-edit-avatar-modal" data-modal="edit-avatar-modal">
+    <div class="modal edit-avatar-modal js-edit-avatar-modal" data-modal="edit-avatar-modal" data-modal-auto="data-modal-auto">
       <div class="modal__close" data-modal-close="edit-avatar-modal">
         <div class="close">
           <svg class="svg-icon svg-icon--alto" width="20" height="20">
@@ -1267,6 +1267,12 @@
           <div class="edit-avatar-tool__title">
             <h3>Renew profile image:</h3>
           </div>
+          <label class="edit-avatar-tool__placeholder">
+            <div class="edit-avatar-tool__placeholder-wrap">
+              <input class="input input--hidden" type="file" accept="image/*">
+              <h4 class="font-semibold text-alto">Upload a new image</h4>
+            </div>
+          </label>
           <div class="edit-avatar-tool__image-box"><img class="edit-avatar-tool__image" src="images/user/avatar.jpg" alt="avatar" /></div>
           <div class="edit-avatar-tool__change">
             <h5>Change size <span class="text-surfie-green edit-avatar-tool__number">1</span></h5>
@@ -1290,7 +1296,7 @@
             </div>
           </div>
           <div class="edit-avatar-tool__buttons">
-            <button class="button button--bg-transparent" type="button">Delete current photo
+            <button class="button button--bg-transparent edit-avatar-tool__delete" type="button">Delete current photo
             </button>
             <div class="button-group">
               <label class="button button--bg-alabaster button-group__button edit-avatar-tool__upload">

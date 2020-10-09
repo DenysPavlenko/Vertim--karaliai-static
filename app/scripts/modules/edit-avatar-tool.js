@@ -7,8 +7,12 @@ export default function () {
   if (!$avatarBox.length) { return; }
   const $range = $avatarBox.find('.edit-avatar-tool__range-input');
   const $number = $avatarBox.find('.edit-avatar-tool__number');
+  const $imageBox = $avatarBox.find('.edit-avatar-tool__image-box');
   const $image = $avatarBox.find('.edit-avatar-tool__image');
+  const $placeholder = $avatarBox.find('.edit-avatar-tool__placeholder');
+  const $placeholderInput = $avatarBox.find('.edit-avatar-tool__placeholder input');
   const $uploadBtn = $avatarBox.find('.edit-avatar-tool__upload input');
+  const $deleteBtn = $avatarBox.find('.edit-avatar-tool__delete');
 
   // Initialize croppie
   let zoom, $slider, min, max, step;
@@ -54,6 +58,23 @@ export default function () {
   // Upload photo
   $uploadBtn.on('change', (e) => {
     readFile(e.currentTarget);
+    if ($imageBox.is(':hidden')) {
+      $imageBox.show();
+      $placeholder.hide();
+    }
+  });
+
+  // Delete photo
+  $deleteBtn.on('click', function () {
+    $imageBox.hide();
+    $placeholder.show();
+  });
+
+  // Upload photo from placeholder
+  $placeholderInput.on('change', (e) => {
+    readFile(e.currentTarget);
+    $imageBox.show();
+    $placeholder.hide();
   });
 
   function setRangeValue(input) {
@@ -71,9 +92,12 @@ export default function () {
         });
       }
       reader.readAsDataURL(input.files[0]);
+      input.value = '';
     }
     else {
       alert("Sorry - you're browser doesn't support the FileReader API");
     }
   }
+
+
 }

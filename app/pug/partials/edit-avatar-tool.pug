@@ -8,6 +8,10 @@ mixin edit-avatar-tool(props = {})
   .edit-avatar-tool.js-edit-avatar-tool
     .edit-avatar-tool__title
       h3 Renew profile image:
+    label.edit-avatar-tool__placeholder
+      .edit-avatar-tool__placeholder-wrap
+        +input({standard:false, hidden:true})(type="file" accept="image/*")
+        h4.font-semibold.text-alto Upload a new image
     .edit-avatar-tool__image-box
       img(src="images/user/avatar.jpg", class="edit-avatar-tool__image" alt="avatar")
     .edit-avatar-tool__change
@@ -15,7 +19,7 @@ mixin edit-avatar-tool(props = {})
     .edit-avatar-tool__range
       +input-range({classes:'edit-avatar-tool__range-input'})(value="0")
     .edit-avatar-tool__buttons
-      +button({bg:'transparent'})(type="button")| Delete current photo
+      +button({bg:'transparent', classes:'edit-avatar-tool__delete'})(type="button")| Delete current photo
       .button-group
         +button({bg:'alabaster', classes:'button-group__button edit-avatar-tool__upload', tag:'label'})
           +input({standard:false, hidden:true})(type="file" accept="image/*")

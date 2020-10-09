@@ -606,6 +606,10 @@ p,
   color: #FFFFFF;
 }
 
+.text-alto {
+  color: #DADADA;
+}
+
 .text-mine-shaft {
   color: #3D3D3D;
 }
@@ -3535,6 +3539,30 @@ p,
   justify-content: center;
   height: 340px;
   width: 260px;
+}
+
+.edit-avatar-tool__placeholder {
+  cursor: pointer;
+  display: none;
+}
+
+.edit-avatar-tool__placeholder-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: 260px;
+  height: 340px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  border: 1px solid #DADADA;
 }
 
 .edit-avatar-tool__change {

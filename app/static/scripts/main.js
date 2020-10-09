@@ -530,8 +530,12 @@ function editAvatarTool () {
 
   var $range = $avatarBox.find('.edit-avatar-tool__range-input');
   var $number = $avatarBox.find('.edit-avatar-tool__number');
+  var $imageBox = $avatarBox.find('.edit-avatar-tool__image-box');
   var $image = $avatarBox.find('.edit-avatar-tool__image');
-  var $uploadBtn = $avatarBox.find('.edit-avatar-tool__upload input'); // Initialize croppie
+  var $placeholder = $avatarBox.find('.edit-avatar-tool__placeholder');
+  var $placeholderInput = $avatarBox.find('.edit-avatar-tool__placeholder input');
+  var $uploadBtn = $avatarBox.find('.edit-avatar-tool__upload input');
+  var $deleteBtn = $avatarBox.find('.edit-avatar-tool__delete'); // Initialize croppie
 
   var zoom, $slider, min, max, step;
   var cropper = $image.croppie({
@@ -584,6 +588,22 @@ function editAvatarTool () {
 
   $uploadBtn.on('change', function (e) {
     readFile(e.currentTarget);
+
+    if ($imageBox.is(':hidden')) {
+      $imageBox.show();
+      $placeholder.hide();
+    }
+  }); // Delete photo
+
+  $deleteBtn.on('click', function () {
+    $imageBox.hide();
+    $placeholder.show();
+  }); // Upload photo from placeholder
+
+  $placeholderInput.on('change', function (e) {
+    readFile(e.currentTarget);
+    $imageBox.show();
+    $placeholder.hide();
   });
 
   function setRangeValue(input) {
@@ -603,6 +623,7 @@ function editAvatarTool () {
       };
 
       reader.readAsDataURL(input.files[0]);
+      input.value = '';
     } else {
       alert("Sorry - you're browser doesn't support the FileReader API");
     }
@@ -615,14 +636,9 @@ var editAvatarModal = (function () {
   if ($modal.length === 0) {
     return;
   }
-
-  var isInitialized;
   $modal.on($.modal.OPEN, function () {
-    if (!isInitialized) {
-      editAvatarTool();
-      isInitialized = true;
-    }
   });
+  editAvatarTool();
 });
 
 $(function () {
