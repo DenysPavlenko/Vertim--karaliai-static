@@ -1,6 +1,7 @@
 .catalog
   &__tabs
     display: flex
+    overflow-x: auto
   &__tab
     padding: 18px 30px
     background-color: $c-alabaster
@@ -17,7 +18,9 @@
       font-weight: 600
       line-height: 1
       color: $c-silver-chalice
+      white-space: nowrap
   &__content
+    width: 100%
     background-color: $c-white
     box-shadow: $s-primary
     border-radius: 0 $r-primary $r-primary $r-primary

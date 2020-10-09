@@ -5,7 +5,13 @@
     tr:nth-child(odd)
       background-color: $c-alabaster
   td, th
-    padding: 15px
+    white-space: nowrap
+    padding: 10px 15px
     vertical-align: middle
     &:first-child
       padding-left: 40px
+      +media-max($bp-sm)
+        padding-left: 15px
+  td *
+    +media-max($bp-sm)
+      font-size: rem(12px) !important
