@@ -3533,7 +3533,7 @@ p,
 
 .edit-avatar-tool__image-box {
   margin: 0 auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3542,11 +3542,6 @@ p,
   justify-content: center;
   height: 340px;
   width: 260px;
-}
-
-.edit-avatar-tool__tip {
-  text-align: right;
-  margin-bottom: 10px;
 }
 
 .edit-avatar-tool__title {
