@@ -50,8 +50,11 @@
                       </div>
                       <div class="notifications-dropdown__toggle-title">4</div>
                     </div>
-                    <div class="dropdown__body notifications-dropdown__body js-dropdown-body">
-                      <div class="custom-scroll" data-dropdown-simplebar="data-dropdown-simplebar">
+                    <div class="dropdown__body notifications-dropdown__body">
+                      <div class="custom-scroll notifications-dropdown__scroll" data-dropdown-simplebar="data-dropdown-simplebar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.</p>
                       </div>
                     </div>
@@ -73,7 +76,7 @@
                   </div>
                 </div>
                 <div class="header__dropdown">
-                  <div class="dropdown js-dropdown user-dropdown" data-dropdown="user">
+                  <div class="dropdown user-dropdown js-dropdown" data-dropdown="user">
                     <div class="dropdown__toggle user-dropdown__toggle" data-dropdown-toggle="user">
                       <div class="user-dropdown__toggle-avatar">
                         <div class="avatar">
@@ -87,10 +90,7 @@
                         </svg>
                       </div>
                     </div>
-                    <div class="dropdown__body js-dropdown-body user-dropdown__body">
-                      <div class="user-dropdown__content custom-scroll" data-simplebar="data-simplebar"></div>
-                    </div>
-                    <div class="dropdown__body user-dropdown__body js-dropdown-body">
+                    <div class="dropdown__body user-dropdown__body">
                       <div class="user-dropdown-menu">
                         <div class="user-dropdown-menu__items">
                           <div class="user-dropdown-menu__item"><a class="user-dropdown-menu__link" href="settings-page.html">
@@ -137,10 +137,10 @@
         <div class="settings-page__catalog">
           <div class="catalog">
             <div class="catalog__tabs tabs js-tabs">
-              <div class="catalog__tab js-tabs-tab is-active" data-tab="general">
+              <div class="catalog__tab js-tabs-tab " data-tab="general">
                 <div class="catalog__tab-title">General</div>
               </div>
-              <div class="catalog__tab js-tabs-tab " data-tab="education">
+              <div class="catalog__tab js-tabs-tab is-active" data-tab="education">
                 <div class="catalog__tab-title">Education &amp; Files</div>
               </div>
               <div class="catalog__tab js-tabs-tab " data-tab="services">
@@ -151,7 +151,7 @@
               </div>
             </div>
             <div class="catalog__content">
-              <div class="catalog__content-item tabs__content js-tabs-content is-active" data-content="general">
+              <div class="catalog__content-item tabs__content js-tabs-content" data-content="general">
                 <div class="settings-general">
                   <div class="settings-general__row">
                     <div class="settings-general__avatar">
@@ -346,7 +346,7 @@
                   </div>
                 </div>
               </div>
-              <div class="catalog__content-item tabs__content js-tab-content" data-content="education">
+              <div class="catalog__content-item tabs__content js-tab-content is-active" data-content="education">
                 <div class="settings-education">
                   <div class="settings-education__row">
                     <div class="settings-education__col">
@@ -436,11 +436,174 @@
                             <h5>Skills:</h5>
                           </div>
                           <div class="row-group__item">
-                            <button class="button button--bordered button--size-20" type="button">
-                              <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
-                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                              </svg>
-                            </button>
+                            <div class="dropdown js-dropdown skills-dropdown" data-dropdown="skills">
+                              <div class="dropdown__toggle skills-dropdown__toggle" data-dropdown-toggle="skills">
+                                <button class="button button--bordered button--size-20" type="button">
+                                  <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
+                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="dropdown__body skills-dropdown__body">
+                                <div class="skills-dropdown__header">
+                                  <p class="font-semibold">Skills</p>
+                                  <p class="font-semibold text-silver-chalice">5234 skills</p>
+                                </div>
+                                <form class="form skills-dropdown__search">
+                                  <div class="skills-dropdown__search-input">
+                                    <div class="input-group input-group--absolute">
+                                      <input class="input input--bordered input-group__input" type="text">
+                                      <div class="input-group__append-absolute">
+                                        <svg class="svg-icon svg-icon--silver-chalice" width="12" height="12">
+                                          <use href="images/svg/svg-sprite/symbol/sprite.svg#search" x="0" y="0"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button class="button button--bg-white button--shadowed" type="button">Confirm
+                                  </button>
+                                </form>
+                                <div class="skills-dropdown__variants">
+                                  <div class="skills-dropdown__variants-title">
+                                    <h5>Chose skill from the list and confirm</h5>
+                                  </div>
+                                  <div class="custom-scroll skills-dropdown__variants-container" data-dropdown-simplebar>
+                                    <div class="column-group column-group--sm">
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Trados</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Localise</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Trados</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Localise</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -490,11 +653,174 @@
                             <h5>Expertise:</h5>
                           </div>
                           <div class="row-group__item">
-                            <button class="button button--bordered button--size-20" type="button">
-                              <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
-                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                              </svg>
-                            </button>
+                            <div class="dropdown js-dropdown skills-dropdown" data-dropdown="skills">
+                              <div class="dropdown__toggle skills-dropdown__toggle" data-dropdown-toggle="skills">
+                                <button class="button button--bordered button--size-20" type="button">
+                                  <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
+                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                  </svg>
+                                </button>
+                              </div>
+                              <div class="dropdown__body skills-dropdown__body">
+                                <div class="skills-dropdown__header">
+                                  <p class="font-semibold">Skills</p>
+                                  <p class="font-semibold text-silver-chalice">5234 skills</p>
+                                </div>
+                                <form class="form skills-dropdown__search">
+                                  <div class="skills-dropdown__search-input">
+                                    <div class="input-group input-group--absolute">
+                                      <input class="input input--bordered input-group__input" type="text">
+                                      <div class="input-group__append-absolute">
+                                        <svg class="svg-icon svg-icon--silver-chalice" width="12" height="12">
+                                          <use href="images/svg/svg-sprite/symbol/sprite.svg#search" x="0" y="0"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button class="button button--bg-white button--shadowed" type="button">Confirm
+                                  </button>
+                                </form>
+                                <div class="skills-dropdown__variants">
+                                  <div class="skills-dropdown__variants-title">
+                                    <h5>Chose skill from the list and confirm</h5>
+                                  </div>
+                                  <div class="custom-scroll skills-dropdown__variants-container" data-dropdown-simplebar>
+                                    <div class="column-group column-group--sm">
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Trados</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Localise</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Trados</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Localise</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                      <div class="column-group__item">
+                                        <label class="skill-checkbox">
+                                          <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                          <div class="skill-checkbox__wrap">
+                                            <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                            <div class="skill-checkbox__wrap-icon">
+                                              <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                              </svg>
+                                            </div>
+                                          </div>
+                                        </label>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>

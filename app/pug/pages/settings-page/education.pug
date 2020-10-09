@@ -3,6 +3,7 @@ include /partials/button
 include /partials/inline-button
 include /partials/upload-documents
 include /partials/link
+include /partials/skills-dropdown
 include /partials/skill
 -
   var list1 = [
@@ -58,8 +59,7 @@ include /partials/skill
           .row-group__item
             h5 Skills:
           .row-group__item
-            +button({type:'bordered', size:'20'})(type="button")
-              +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
+            +skills-dropdown
       .column-group
         .column-group__item
           +skill({title:'Adobe Acrobat Pro'})
@@ -74,8 +74,7 @@ include /partials/skill
           .row-group__item
             h5 Expertise:
           .row-group__item
-            +button({type:'bordered', size:'20'})(type="button")
-              +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
+            +skills-dropdown
       .column-group
         .column-group__item
           +skill({title:'Technical'})

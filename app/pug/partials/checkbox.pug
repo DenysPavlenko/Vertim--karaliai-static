@@ -10,6 +10,6 @@ mixin checkbox(props = {})
 
   label(class=classnames)
     .checkbox__box
-      input(class="checkbox__input" type="checkbox" checked=checked)
+      +input({stadard:false, classes:'checkbox__input'})(type="checkbox" checked=checked)
       span.checkbox__checkmark
     span.checkbox__name !{label}

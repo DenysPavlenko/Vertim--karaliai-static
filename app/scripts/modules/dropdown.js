@@ -8,7 +8,7 @@ export default () => {
 
   $dropdowns.each((i, elem) => {
     const $dropdown = $(elem);
-    const $dropdownBody = $dropdown.find('.js-dropdown-body');
+    const $dropdownBody = $dropdown.find('.dropdown__body');
     const $dropdownToggle = $dropdown.find('[data-dropdown-toggle]')
     const $scrollbar = $dropdown.find('[data-dropdown-simplebar]');
     let isOpened = false;

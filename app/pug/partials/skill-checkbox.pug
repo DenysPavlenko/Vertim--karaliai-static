@@ -1,0 +1,11 @@
+include /partials/input
+
+mixin skill-checkbox(props = {})
+  -const { title, checked } = props
+
+  label.skill-checkbox
+    +input({stadard:false, classes:'skill-checkbox__input'})(type="checkbox" name="tag-checkbox" id="tag-checkbox1" checked=checked)
+    .skill-checkbox__wrap
+      .skill-checkbox__wrap-title #{title}
+      .skill-checkbox__wrap-icon
+        +icon({name:'plus', fill:'white', width:'12', height:'12'})

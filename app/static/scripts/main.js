@@ -295,7 +295,7 @@ var dropdown = (function () {
 
   $dropdowns.each(function (i, elem) {
     var $dropdown = $(elem);
-    var $dropdownBody = $dropdown.find('.js-dropdown-body');
+    var $dropdownBody = $dropdown.find('.dropdown__body');
     var $dropdownToggle = $dropdown.find('[data-dropdown-toggle]');
     var $scrollbar = $dropdown.find('[data-dropdown-simplebar]');
     var isOpened = false;

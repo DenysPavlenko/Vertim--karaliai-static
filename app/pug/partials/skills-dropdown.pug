@@ -1,0 +1,29 @@
+include /partials/input
+include /partials/button
+include /partials/skill-checkbox
+
+mixin skills-dropdown(props = {})
+
+  .dropdown.js-dropdown.skills-dropdown(data-dropdown="skills")
+    .dropdown__toggle.skills-dropdown__toggle(data-dropdown-toggle="skills")
+      +button({type:'bordered', size:'20'})(type="button")
+        +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
+    .dropdown__body.skills-dropdown__body
+      .skills-dropdown__header
+        p.font-semibold Skills
+        p.font-semibold.text-silver-chalice 5234 skills
+      form.form.skills-dropdown__search
+        .skills-dropdown__search-input
+          .input-group.input-group--absolute
+            +input({bordered:true, classes:'input-group__input'})(type="text")
+            .input-group__append-absolute
+              +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
+        +button({bg:'white', shadow:true})(type="button")| Confirm
+      .skills-dropdown__variants
+        .skills-dropdown__variants-title
+          h5 Chose skill from the list and confirm
+        div(data-dropdown-simplebar class="custom-scroll skills-dropdown__variants-container")
+          .column-group.column-group--sm
+            each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
+              .column-group__item
+                +skill-checkbox({title:item})
