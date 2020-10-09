@@ -1262,47 +1262,46 @@
           </svg>
         </div>
       </div>
-      <div class="edit-avatar-modal__wrap">
-        <div class="edit-avatar-modal__title">
-          <h3>Renew profile image:</h3>
-        </div>
-        <div class="edit-avatar-modal__box">
-          <div class="edit-avatar-tool js-edit-avatar-tool">
-            <div class="edit-avatar-tool__image-box"><img class="edit-avatar-tool__image" src="images/user/avatar.jpg" alt="avatar" /></div>
-            <div class="edit-avatar-tool__title">
-              <h5>Change size <span class="text-surfie-green edit-avatar-tool__number">1</span></h5>
-            </div>
-            <div class="edit-avatar-tool__range">
-              <div class="input-range js-input-range">
-                <div class="input-range__minus">
-                  <svg class="svg-icon svg-icon--surfie-green" width="14" height="2">
-                    <use href="images/svg/svg-sprite/symbol/sprite.svg#minus" x="0" y="0"></use>
-                  </svg>
-                </div>
-                <div class="input-range__wrap">
-                  <input class="input input-range__input edit-avatar-tool__range-input" type="range" value="0">
-                  <div class="input-range__line"></div>
-                </div>
-                <div class="input-range__plus">
-                  <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
-                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                  </svg>
-                </div>
+      <div class="edit-avatar-modal__body">
+        <div class="edit-avatar-tool js-edit-avatar-tool">
+          <div class="edit-avatar-tool__title">
+            <h3>Renew profile image:</h3>
+          </div>
+          <div class="edit-avatar-tool__image-box"><img class="edit-avatar-tool__image" src="images/user/avatar.jpg" alt="avatar" /></div>
+          <div class="edit-avatar-tool__change">
+            <h5>Change size <span class="text-surfie-green edit-avatar-tool__number">1</span></h5>
+          </div>
+          <div class="edit-avatar-tool__range">
+            <div class="input-range js-input-range">
+              <div class="input-range__minus">
+                <svg class="svg-icon svg-icon--surfie-green" width="14" height="2">
+                  <use href="images/svg/svg-sprite/symbol/sprite.svg#minus" x="0" y="0"></use>
+                </svg>
+              </div>
+              <div class="input-range__wrap">
+                <input class="input input-range__input edit-avatar-tool__range-input" type="range" value="0">
+                <div class="input-range__line"></div>
+              </div>
+              <div class="input-range__plus">
+                <svg class="svg-icon svg-icon--surfie-green" width="14" height="14">
+                  <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                </svg>
               </div>
             </div>
           </div>
-        </div>
-        <div class="edit-avatar-modal__buttons">
-          <button class="button button--bg-transparent" type="button">Delete current photo
-          </button>
-          <div class="button-group">
-            <button class="button button--bg-alabaster button-group__button" type="button"><span>Upload new</span><span class="button__icon">
-                                    <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
-                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                                    </svg></span>
+          <div class="edit-avatar-tool__buttons">
+            <button class="button button--bg-transparent" type="button">Delete current photo
             </button>
-            <button class="button button-group__button" type="button">Apply
-            </button>
+            <div class="button-group">
+              <label class="button button--bg-alabaster button-group__button edit-avatar-tool__upload">
+                <input class="input input--hidden" type="file" accept="image/*"><span>Upload new</span><span class="button__icon">
+                                      <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
+                                        <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                      </svg></span>
+              </label>
+              <button class="button button-group__button" type="button" data-modal-close="edit-avatar-modal">Apply
+              </button>
+            </div>
           </div>
         </div>
       </div>

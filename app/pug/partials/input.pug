@@ -1,9 +1,10 @@
 mixin input(props = {})
-  -const { classes, bordered, size, stadard } = props
+  -const { classes, bordered, size, stadard, hidden } = props
   -
     const classnames = classNames({
       'input': stadard !== false,
       'input--bordered': bordered,
+      'input--hidden': hidden,
       [`input--${size}`]: size,
       [classes]: classes,
     })

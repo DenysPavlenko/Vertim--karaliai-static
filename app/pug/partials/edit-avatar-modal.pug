@@ -5,16 +5,5 @@ mixin edit-avatar-modal(props = {})
   .modal.edit-avatar-modal.js-edit-avatar-modal(data-modal="edit-avatar-modal")
     .modal__close(data-modal-close="edit-avatar-modal")
       +close({color:'alto', size:'20'})
-    .edit-avatar-modal__wrap
-      .edit-avatar-modal__title
-        h3 Renew profile image:
-      .edit-avatar-modal__box
-        +edit-avatar-tool()
-      .edit-avatar-modal__buttons
-        +button({bg:'transparent'})(type="button")| Delete current photo
-        .button-group
-          +button({bg:'alabaster', classes:'button-group__button'})(type="button")
-            span Upload new
-            span.button__icon
-              +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
-          +button({classes:'button-group__button'})(type="button")| Apply
+    .edit-avatar-modal__body
+      +edit-avatar-tool()

@@ -528,11 +528,12 @@ function editAvatarTool () {
     return;
   }
 
-  var $input = $avatarBox.find('.edit-avatar-tool__range-input');
+  var $range = $avatarBox.find('.edit-avatar-tool__range-input');
   var $number = $avatarBox.find('.edit-avatar-tool__number');
-  var $image = $avatarBox.find('.edit-avatar-tool__image'); // Initialize croppie
+  var $image = $avatarBox.find('.edit-avatar-tool__image');
+  var $uploadBtn = $avatarBox.find('.edit-avatar-tool__upload input'); // Initialize croppie
 
-  var zomm, $slider, min, max, step;
+  var zoom, $slider, min, max, step;
   var cropper = $image.croppie({
     viewport: {
       width: 200,
@@ -541,23 +542,32 @@ function editAvatarTool () {
     },
     showZoomer: false,
     enableOrientation: true,
+    enableExif: true,
     update: function update(params) {
-      if (zomm !== params.zoom) {
+      if (zoom !== params.zoom) {
         if (!$slider) {
           $slider = $('.cr-slider');
+        } // Get values from the default slider and apply them to the custom one
+
+
+        if (min !== $slider.attr('min') || max !== $slider.attr('max') || step !== $slider.attr('step')) {
           min = $slider.attr('min');
           max = $slider.attr('max');
           step = $slider.attr('step');
-        }
+          $range.attr({
+            min: min,
+            max: max,
+            step: step
+          });
+        } // Set current value to the custom range
 
-        $input.attr({
-          value: params.zoom,
-          min: min,
-          max: max,
-          step: step
-        });
-        setInputRangeValue($input);
-        zomm = params.zoom;
+
+        $range.val(params.zoom); // Set current value to the number
+
+        setRangeValue($range);
+        zoom = params.zoom; // Fire input event on value change
+
+        $range[0].dispatchEvent(new Event('input'));
       }
     }
   });
@@ -565,20 +575,37 @@ function editAvatarTool () {
     url: $image.attr('src'),
     zoom: 0,
     orientation: 1
-  }); // Set current value to the number
+  }); // Set crop zoom on custom range change
 
-  setInputRangeValue($input); // Change input value
+  $range.on('input', function () {
+    $range.val();
+    cropper.croppie('setZoom', $range.val());
+  }); // Upload photo
 
-  $input.on('input', function () {
-    $input.val(); // Set crop zoom
-
-    cropper.croppie('setZoom', $input.val()); // Set current value to the number
-
-    setInputRangeValue($input);
+  $uploadBtn.on('change', function (e) {
+    readFile(e.currentTarget);
   });
 
-  function setInputRangeValue(input) {
+  function setRangeValue(input) {
     $number.html(calcRange(input));
+  }
+
+  function readFile(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        cropper.croppie('bind', {
+          url: e.target.result,
+          zoom: 0,
+          orientation: 1
+        });
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    } else {
+      alert("Sorry - you're browser doesn't support the FileReader API");
+    }
   }
 }
 

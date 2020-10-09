@@ -1326,6 +1326,10 @@ p,
   font-size: 0.85714rem;
 }
 
+.input--hidden {
+  display: none;
+}
+
 .input-animation {
   position: relative;
 }
@@ -1718,6 +1722,7 @@ p,
   background-color: #0E7D7D;
   border: 1px solid transparent;
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -3498,7 +3503,7 @@ p,
   padding: 60px 15px;
 }
 
-.edit-avatar-modal__wrap {
+.edit-avatar-modal__body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3511,24 +3516,12 @@ p,
   max-width: 550px;
 }
 
-.edit-avatar-modal__title {
+.edit-avatar-tool {
+  text-align: center;
+}
+
+.edit-avatar-tool__title {
   margin-bottom: 30px;
-}
-
-.edit-avatar-modal__box {
-  margin-bottom: 40px;
-}
-
-.edit-avatar-modal__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 }
 
 .edit-avatar-tool__image-box {
@@ -3544,8 +3537,24 @@ p,
   width: 260px;
 }
 
-.edit-avatar-tool__title {
+.edit-avatar-tool__change {
   margin-bottom: 10px;
+}
+
+.edit-avatar-tool__range {
+  margin-bottom: 20px;
+}
+
+.edit-avatar-tool__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 @media (min-width: 361px) {

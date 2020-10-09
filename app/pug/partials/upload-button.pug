@@ -1,0 +1,9 @@
+include /partials/button
+
+mixin upload-button(props = {})
+
+  +button({bg:'alabaster', classes:'button-group__button edit-avatar-tool__upload', tag:'label'})
+    input(type="file" class="upload-button__input" accept="image/*")
+    block
+
+  //- +button({bg:'alabaster', classes:'button-group__button edit-avatar-tool__upload'})()
