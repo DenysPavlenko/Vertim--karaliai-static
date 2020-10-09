@@ -16,7 +16,7 @@ mixin select(props = {})
     })
 
   div(class=classnames)
-    +button({classes:'select__label js-select-label', stadard:false})(data-selected=label.name type="button")
+    +button({classes:'select__label js-select-label', standard:false})(data-selected=label.name type="button")
       | !{label.content}
     .select__dropdown.js-select-dropdown
       if(search)

@@ -1733,6 +1733,10 @@ p,
   background-color: #0E7D7D;
   border: 1px solid transparent;
   transition: 0.2s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   cursor: pointer;
 }
 
