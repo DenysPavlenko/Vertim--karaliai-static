@@ -287,7 +287,8 @@ var datepicker = (function () {
 var dropdown = (function () {
   var $dropdowns = $('.js-dropdown');
   var fadeDuration = 100;
-  var $body = $('body'); // Return if $dropdowns doesn't exist
+  var $document = $(document);
+  var $window = $(window); // Return if $dropdowns doesn't exist
 
   if ($dropdowns.length === 0) {
     return;
@@ -302,6 +303,13 @@ var dropdown = (function () {
     $dropdownToggle.on('click', function () {
       $dropdownToggle.toggleClass('is-active');
       $dropdownBody.fadeToggle(fadeDuration);
+
+      if ($dropdownBody.is(':visible')) {
+        setTimeout(function () {
+          setPosition($dropdownBody);
+        }, 0);
+      }
+
       isOpened = !isOpened;
 
       if ($scrollbar.length > 0) {
@@ -310,17 +318,30 @@ var dropdown = (function () {
         }, 0);
       }
     });
-    $(document).on('click', function (e) {
+    $document.on('click', function (e) {
       if ($(e.target).parents('[data-dropdown]')[0] !== $dropdown[0] && isOpened) {
         isOpened = false;
         $dropdownBody.fadeOut(fadeDuration);
         $dropdownToggle.removeClass('is-active');
-
-        if ($dropdownBody.css('position') === 'fixed') {
-          $body.css('overflow-y', 'visible');
-        }
       }
     });
+
+    function setPosition(elem) {
+      var leftOffset = elem.offset().left;
+      var rightOffst = $window.width() - (leftOffset + elem.outerWidth());
+
+      if (rightOffst < 15) {
+        elem.css({
+          'left': 'auto',
+          'right': 0
+        });
+      } else if (leftOffset < 15) {
+        elem.css({
+          'right': 'auto',
+          'left': 0
+        });
+      }
+    }
   });
 });
 

@@ -1,7 +1,8 @@
 export default () => {
   const $dropdowns = $('.js-dropdown');
   const fadeDuration = 100;
-  const $body = $('body');
+  const $document = $(document);
+  const $window = $(window);
 
   // Return if $dropdowns doesn't exist
   if ($dropdowns.length === 0) { return; }
@@ -16,6 +17,11 @@ export default () => {
     $dropdownToggle.on('click', () => {
       $dropdownToggle.toggleClass('is-active');
       $dropdownBody.fadeToggle(fadeDuration);
+      if ($dropdownBody.is(':visible')) {
+        setTimeout(() => {
+          setPosition($dropdownBody);
+        }, 0);
+      }
       isOpened = !isOpened;
       if ($scrollbar.length > 0) {
         setTimeout(() => {
@@ -24,15 +30,23 @@ export default () => {
       }
     });
 
-    $(document).on('click', (e) => {
+    $document.on('click', (e) => {
       if ($(e.target).parents('[data-dropdown]')[0] !== $dropdown[0] && isOpened) {
         isOpened = false;
         $dropdownBody.fadeOut(fadeDuration);
         $dropdownToggle.removeClass('is-active');
-        if ($dropdownBody.css('position') === 'fixed') {
-          $body.css('overflow-y', 'visible');
-        }
       }
     });
+
+
+    function setPosition(elem) {
+      const leftOffset = elem.offset().left;
+      const rightOffst = $window.width() - (leftOffset + elem.outerWidth());
+      if (rightOffst < 15) {
+        elem.css({ 'left': 'auto', 'right': 0 });
+      } else if (leftOffset < 15) {
+        elem.css({ 'right': 'auto', 'left': 0 });
+      }
+    }
   });
 }
