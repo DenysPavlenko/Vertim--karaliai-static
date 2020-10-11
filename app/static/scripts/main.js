@@ -167,12 +167,12 @@ function inputAnimation () {
 
   $inputs.each(function (i, elem) {
     var $input = $(elem);
-    var $inputField = $input.find('.js-input-animation-field');
-    $inputField.each(function () {
-      if ($input.val() !== '') {
-        $input.addClass('is-active');
-      }
-    });
+    var $inputField = $input.find('.js-input-animation input');
+
+    if ($inputField.val() !== '') {
+      $input.addClass('is-active');
+    }
+
     $inputField.on('focus', function () {
       $input.addClass('is-active');
     });

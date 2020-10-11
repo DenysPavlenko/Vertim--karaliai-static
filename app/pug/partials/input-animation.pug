@@ -10,5 +10,5 @@ mixin input-animation(props = {})
       [classes]: classes,
     })
   div(class=classnames)
-    label.input-animation__label.js-input-animation-label(for=attributes.id) #{label}
-    +input({classes:`js-input-animation-field ${inputClasses}`, bordered:true})&attributes(attributes)
+    label.input-animation__label(for=attributes.id) #{label}
+    +input({classes:`${inputClasses}`, bordered:true})&attributes(attributes)
