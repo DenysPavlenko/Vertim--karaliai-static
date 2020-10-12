@@ -1,0 +1,14 @@
+include /partials/button
+
+mixin lang-combinations-dropdown(props = {})
+
+  .dropdown.lang-combinations-dropdown.js-dropdown(data-dropdown="notifications")
+    .dropdown__toggle.lang-combinations-dropdown__toggle(data-dropdown-toggle="notifications")
+      +button({type:'bordered', size:'20'})(type="button")
+        +icon({name:'chevron-down', fill:'surfie-green', width:'9', height:'6'})
+    .dropdown__body.lang-combinations-dropdown__body
+      .column-group.column-group--xs
+        .column-group__item
+          p.font-semibold All combinations:
+        .column-group__item
+          p EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU

@@ -134,11 +134,9 @@
               <a class="button button--bordered button-group__button" href="#">Permissions
               </a>
               <button class="button button-group__button" type="button"><span>Invite employee</span>
-                <div class="button__icon">
-                  <svg class="svg-icon svg-icon--white" width="20" height="13">
-                    <use href="images/svg/svg-sprite/symbol/sprite.svg#add-person" x="0" y="0"></use>
-                  </svg>
-                </div>
+                <svg class="svg-icon svg-icon--white button__icon" width="20" height="13">
+                  <use href="images/svg/svg-sprite/symbol/sprite.svg#add-person" x="0" y="0"></use>
+                </svg>
               </button>
             </div>
           </div>
@@ -146,9 +144,9 @@
         <div class="employers-page__catalog">
           <div class="catalog">
             <div class="catalog__header">
-              <div class="catalog__search">
+              <div class="catalog__left">
                 <div class="input-group input-group--absolute">
-                  <input class="input input--bordered input-group__input" type="text" />
+                  <input class="input input--bg-white input-group__input" type="text" placeholder="Search" />
                   <div class="input-group__append-absolute">
                     <svg class="svg-icon svg-icon--silver-chalice" width="12" height="12">
                       <use href="images/svg/svg-sprite/symbol/sprite.svg#search" x="0" y="0"></use>
@@ -170,11 +168,464 @@
                   </div>
                 </div>
               </div>
+              <div class="catalog__right catalog__right--ml-auto">
+                <button class="button button--bg-white" type="button"><span>Filter</span>
+                  <svg class="svg-icon svg-icon--surfie-green button__icon" width="14" height="14">
+                    <use href="images/svg/svg-sprite/symbol/sprite.svg#filter" x="0" y="0"></use>
+                  </svg>
+                </button>
+              </div>
             </div>
             <div class="catalog__content">
               <div class="catalog__content-item tabs__content js-tabs-content is-active" data-content="employees">
-                <div class="catalog__content-wrap">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui obcaecati, officiis, facilis, molestiae excepturi sint pariatur ad corporis rerum distinctio et impedit mollitia alias repudiandae reiciendis exercitationem temporibus dolore.</p>
+                <div class="table-holder">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>
+                          <h5>ID:</h5>
+                        </th>
+                        <th>
+                          <h5>Name:</h5>
+                        </th>
+                        <th>
+                          <h5>Acc type:</h5>
+                        </th>
+                        <th>
+                          <h5>Services:</h5>
+                        </th>
+                        <th>
+                          <h5>Languages:</h5>
+                        </th>
+                        <th>
+                          <h5>Status:</h5>
+                        </th>
+                        <th>
+                          <h5>Actions:</h5>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p>12879452</p>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item">
+                              <div class="avatar">
+                                <figure style="background-image:url('images/user/avatar.jpg')"></figure>
+                              </div>
+                            </div>
+                            <div class="row-group__item">
+                              <p class="font-bold">Lukas Baranauskas</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button button--no-events button--bordered button--border-caribbean-green" type="button">Freelance
+                          </button>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item"><img src="images/icons/proofreading.svg" alt="proofreading"></div>
+                            <div class="row-group__item"><img src="images/icons/translation.svg" alt="translation"></div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item">
+                              <p>EN-LT, LT, RU,</p>
+                            </div>
+                            <div class="row-group__item">
+                              <div class="dropdown lang-combinations-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle lang-combinations-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--bordered button--size-20" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="9" height="6">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body lang-combinations-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p class="font-semibold">All combinations:</p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="font-semibold text-whating-yellow">Wating for approval</p>
+                        </td>
+                        <td>
+                          <div class="dropdown choose-actions-dropdown js-dropdown" data-dropdown="notifications">
+                            <div class="dropdown__toggle choose-actions-dropdown__toggle" data-dropdown-toggle="notifications">
+                              <div class="choose-actions-dropdown__toggle-title">
+                                <p class="text-boston-blue">Choose</p>
+                              </div>
+                              <div class="choose-actions-dropdown__toggle-icon">
+                                <svg class="svg-icon svg-icon--boston-blue" width="9" height="6">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="dropdown__body choose-actions-dropdown__body">
+                              <div class="column-group column-group--sm">
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-silver-chalice button--color-mine-shaft" type="button">
+                                    <svg class="svg-icon svg-icon--silver-chalice button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#archive" x="0" y="0"></use>
+                                    </svg><span>Archive</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-boston-blue" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#clock" x="0" y="0"></use>
+                                    </svg><span>Temporrary  Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bg-caribbean-green" type="button">
+                                    <svg class="svg-icon svg-icon--white button__icon" width="11" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#check" x="0" y="0"></use>
+                                    </svg><span>Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg><span>Edit permissions</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-brick-red" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg><span>Reject</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>12879452</p>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item">
+                              <div class="avatar">
+                                <figure style="background-image:url('images/user/avatar.jpg')"></figure>
+                              </div>
+                            </div>
+                            <div class="row-group__item">
+                              <p class="font-bold">Marija Juodijenė</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button button--no-events button--bordered" type="button">Full time
+                          </button>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item"><img src="images/icons/proofreading.svg" alt="proofreading"></div>
+                            <div class="row-group__item"><img src="images/icons/translation.svg" alt="translation"></div>
+                            <div class="row-group__item"><img src="images/icons/interpreting.svg" alt="interpreting"></div>
+                            <div class="row-group__item"><img src="images/icons/creative-editing.svg" alt="creative-editing"></div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item">
+                              <p>EN-LT, LT, RU,</p>
+                            </div>
+                            <div class="row-group__item">
+                              <div class="dropdown lang-combinations-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle lang-combinations-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--bordered button--size-20" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="9" height="6">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body lang-combinations-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p class="font-semibold">All combinations:</p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="font-semibold text-whating-yellow">Wating for approval</p>
+                        </td>
+                        <td>
+                          <div class="dropdown choose-actions-dropdown js-dropdown" data-dropdown="notifications">
+                            <div class="dropdown__toggle choose-actions-dropdown__toggle" data-dropdown-toggle="notifications">
+                              <div class="choose-actions-dropdown__toggle-title">
+                                <p class="text-boston-blue">Choose</p>
+                              </div>
+                              <div class="choose-actions-dropdown__toggle-icon">
+                                <svg class="svg-icon svg-icon--boston-blue" width="9" height="6">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="dropdown__body choose-actions-dropdown__body">
+                              <div class="column-group column-group--sm">
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-silver-chalice button--color-mine-shaft" type="button">
+                                    <svg class="svg-icon svg-icon--silver-chalice button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#archive" x="0" y="0"></use>
+                                    </svg><span>Archive</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-boston-blue" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#clock" x="0" y="0"></use>
+                                    </svg><span>Temporrary  Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bg-caribbean-green" type="button">
+                                    <svg class="svg-icon svg-icon--white button__icon" width="11" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#check" x="0" y="0"></use>
+                                    </svg><span>Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg><span>Edit permissions</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-brick-red" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg><span>Reject</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>12879452</p>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item">
+                              <div class="avatar">
+                                <figure style="background-image:url('images/user/avatar.jpg')"></figure>
+                              </div>
+                            </div>
+                            <div class="row-group__item">
+                              <p class="font-bold">Marija Juodijenė</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button button--no-events button--bordered" type="button">Full time
+                          </button>
+                        </td>
+                        <td></td>
+                        <td>
+                          <p>--</p>
+                        </td>
+                        <td>
+                          <p class="font-semibold text-whating-yellow">Wating for approval</p>
+                        </td>
+                        <td>
+                          <div class="dropdown choose-actions-dropdown js-dropdown" data-dropdown="notifications">
+                            <div class="dropdown__toggle choose-actions-dropdown__toggle" data-dropdown-toggle="notifications">
+                              <div class="choose-actions-dropdown__toggle-title">
+                                <p class="text-boston-blue">Choose</p>
+                              </div>
+                              <div class="choose-actions-dropdown__toggle-icon">
+                                <svg class="svg-icon svg-icon--boston-blue" width="9" height="6">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="dropdown__body choose-actions-dropdown__body">
+                              <div class="column-group column-group--sm">
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-silver-chalice button--color-mine-shaft" type="button">
+                                    <svg class="svg-icon svg-icon--silver-chalice button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#archive" x="0" y="0"></use>
+                                    </svg><span>Archive</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-boston-blue" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#clock" x="0" y="0"></use>
+                                    </svg><span>Temporrary  Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bg-caribbean-green" type="button">
+                                    <svg class="svg-icon svg-icon--white button__icon" width="11" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#check" x="0" y="0"></use>
+                                    </svg><span>Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg><span>Edit permissions</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-brick-red" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg><span>Reject</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <p>12879452</p>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item">
+                              <div class="avatar">
+                                <figure style="background-image:url('images/user/avatar.jpg')"></figure>
+                              </div>
+                            </div>
+                            <div class="row-group__item">
+                              <p class="font-bold">Marija Juodijenė</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <button class="button button--no-events button--bordered" type="button">Full time
+                          </button>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item"><img src="images/icons/proofreading.svg" alt="proofreading"></div>
+                            <div class="row-group__item"><img src="images/icons/translation.svg" alt="translation"></div>
+                            <div class="row-group__item"><img src="images/icons/interpreting.svg" alt="interpreting"></div>
+                            <div class="row-group__item"><img src="images/icons/creative-editing.svg" alt="creative-editing"></div>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="row-group row-group--sm row-group--nowrap row-group--align-center">
+                            <div class="row-group__item">
+                              <p>EN-LT, LT, RU,</p>
+                            </div>
+                            <div class="row-group__item">
+                              <div class="dropdown lang-combinations-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle lang-combinations-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--bordered button--size-20" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="9" height="6">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body lang-combinations-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p class="font-semibold">All combinations:</p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU, EN-LT, LT, RU</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="font-semibold text-whating-yellow">Wating for approval</p>
+                        </td>
+                        <td>
+                          <div class="dropdown choose-actions-dropdown js-dropdown" data-dropdown="notifications">
+                            <div class="dropdown__toggle choose-actions-dropdown__toggle" data-dropdown-toggle="notifications">
+                              <div class="choose-actions-dropdown__toggle-title">
+                                <p class="text-boston-blue">Choose</p>
+                              </div>
+                              <div class="choose-actions-dropdown__toggle-icon">
+                                <svg class="svg-icon svg-icon--boston-blue" width="9" height="6">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div class="dropdown__body choose-actions-dropdown__body">
+                              <div class="column-group column-group--sm">
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-silver-chalice button--color-mine-shaft" type="button">
+                                    <svg class="svg-icon svg-icon--silver-chalice button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#archive" x="0" y="0"></use>
+                                    </svg><span>Archive</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-boston-blue" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue button__icon" width="14" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#clock" x="0" y="0"></use>
+                                    </svg><span>Temporrary  Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bg-caribbean-green" type="button">
+                                    <svg class="svg-icon svg-icon--white button__icon" width="11" height="14">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#check" x="0" y="0"></use>
+                                    </svg><span>Approve</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg><span>Edit permissions</span>
+                                  </button>
+                                </div>
+                                <div class="column-group__item">
+                                  <button class="button button--fluid button--start button--bordered button--border-brick-red" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red button__icon" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg><span>Reject</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>

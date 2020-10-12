@@ -302,13 +302,11 @@ var dropdown = (function () {
     var isOpened = false;
     $dropdownToggle.on('click', function () {
       $dropdownToggle.toggleClass('is-active');
-      $dropdownBody.fadeToggle(fadeDuration);
-
-      if ($dropdownBody.is(':visible')) {
-        setTimeout(function () {
-          setPosition($dropdownBody);
-        }, 0);
-      }
+      $dropdownBody.fadeToggle(fadeDuration); // if ($dropdownBody.is(':visible')) {
+      //   setTimeout(() => {
+      //     setPosition($dropdownBody);
+      //   }, 0);
+      // }
 
       isOpened = !isOpened;
 
@@ -324,24 +322,15 @@ var dropdown = (function () {
         $dropdownBody.fadeOut(fadeDuration);
         $dropdownToggle.removeClass('is-active');
       }
-    });
-
-    function setPosition(elem) {
-      var leftOffset = elem.offset().left;
-      var rightOffst = $window.width() - (leftOffset + elem.outerWidth());
-
-      if (rightOffst < 15) {
-        elem.css({
-          'left': 'auto',
-          'right': 0
-        });
-      } else if (leftOffset < 15) {
-        elem.css({
-          'right': 'auto',
-          'left': 0
-        });
-      }
-    }
+    }); // function setPosition(elem) {
+    //   const leftOffset = elem.offset().left;
+    //   const rightOffst = $window.width() - (leftOffset + elem.outerWidth());
+    //   if (rightOffst < 15) {
+    //     elem.css({ 'left': 'auto', 'right': 0 });
+    //   } else if (leftOffset < 15) {
+    //     elem.css({ 'right': 'auto', 'left': 0 });
+    //   }
+    // }
   });
 });
 

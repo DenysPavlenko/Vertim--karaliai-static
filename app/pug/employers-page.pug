@@ -27,14 +27,13 @@ block content
               +button({type:'bordered', classes:'button-group__button'})(href="#")| Permissions
               +button({classes:'button-group__button', })(type="button")
                 span Invite employee
-                .button__icon
-                  +icon({name:'add-person', fill:'white', width:'20', height:'13'})
+                +icon({name:'add-person', fill:'white', width:'20', height:'13', classes:'button__icon'})
         .employers-page__catalog
           .catalog
             .catalog__header
-              .catalog__search
+              .catalog__left
                 .input-group.input-group--absolute
-                  +input({bordered:true, classes:'input-group__input'})(type="text")
+                  +input({bg:'white', classes:'input-group__input'})(type="text" placeholder="Search")
                   .input-group__append-absolute
                     +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
               .catalog__tabs.tabs.js-tabs
@@ -42,6 +41,10 @@ block content
                   div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
                     .catalog__tab-title #{tab.title}
                       +unread({cnt:tab.unread, classes:'catalog__tab-unread'})
+              .catalog__right.catalog__right--ml-auto
+                +button({bg:'white'})(type="button")
+                  span Filter
+                  +icon({name:'filter', fill:'surfie-green', width:'14', height:'14', classes:'button__icon'})
             .catalog__content
               .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="employees")
                 include /pages/employers-page/employees

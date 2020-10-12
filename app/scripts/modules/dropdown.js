@@ -17,11 +17,11 @@ export default () => {
     $dropdownToggle.on('click', () => {
       $dropdownToggle.toggleClass('is-active');
       $dropdownBody.fadeToggle(fadeDuration);
-      if ($dropdownBody.is(':visible')) {
-        setTimeout(() => {
-          setPosition($dropdownBody);
-        }, 0);
-      }
+      // if ($dropdownBody.is(':visible')) {
+      //   setTimeout(() => {
+      //     setPosition($dropdownBody);
+      //   }, 0);
+      // }
       isOpened = !isOpened;
       if ($scrollbar.length > 0) {
         setTimeout(() => {
@@ -39,14 +39,14 @@ export default () => {
     });
 
 
-    function setPosition(elem) {
-      const leftOffset = elem.offset().left;
-      const rightOffst = $window.width() - (leftOffset + elem.outerWidth());
-      if (rightOffst < 15) {
-        elem.css({ 'left': 'auto', 'right': 0 });
-      } else if (leftOffset < 15) {
-        elem.css({ 'right': 'auto', 'left': 0 });
-      }
-    }
+    // function setPosition(elem) {
+    //   const leftOffset = elem.offset().left;
+    //   const rightOffst = $window.width() - (leftOffset + elem.outerWidth());
+    //   if (rightOffst < 15) {
+    //     elem.css({ 'left': 'auto', 'right': 0 });
+    //   } else if (leftOffset < 15) {
+    //     elem.css({ 'right': 'auto', 'left': 0 });
+    //   }
+    // }
   });
 }

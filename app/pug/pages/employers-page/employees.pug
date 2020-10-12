@@ -1,2 +1,114 @@
-.catalog__content-wrap
-  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet qui obcaecati, officiis, facilis, molestiae excepturi sint pariatur ad corporis rerum distinctio et impedit mollitia alias repudiandae reiciendis exercitationem temporibus dolore.
+include /partials/icon-title
+include /partials/avatar
+include /partials/button
+include /partials/lang-combinations-dropdown
+include /partials/choose-actions-dropdown
+
+.table-holder
+  table.table
+    thead
+      tr
+        each heading in ['ID:', 'Name:', 'Acc type:', 'Services:', 'Languages:', 'Status:', 'Actions:']
+          th
+            h5 #{heading}
+    tbody
+      //- ROW
+      tr
+        td
+          p 12879452
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            .row-group__item
+              +avatar({image:'images/user/avatar.jpg'})
+            .row-group__item
+              p.font-bold Lukas Baranauskas
+        td
+          +button({type:'bordered', border:'caribbean-green', noEvents:true})(type="button")| Freelance
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            each icon in ['proofreading', 'translation']
+              .row-group__item
+                img(src=`images/icons/${icon}.svg`, alt=`${icon}`)
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            .row-group__item
+              p EN-LT, LT, RU,
+            .row-group__item
+              +lang-combinations-dropdown()
+        td
+          p.font-semibold.text-whating-yellow Wating for approval
+        td
+          +choose-actions-dropdown()
+      //- ROW
+      tr
+        td
+          p 12879452
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            .row-group__item
+              +avatar({image:'images/user/avatar.jpg'})
+            .row-group__item
+              p.font-bold Marija Juodijenė
+        td
+          +button({type:'bordered', noEvents:true})(type="button")| Full time
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            each icon in ['proofreading', 'translation', 'interpreting', 'creative-editing']
+              .row-group__item
+                img(src=`images/icons/${icon}.svg`, alt=`${icon}`)
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            .row-group__item
+              p EN-LT, LT, RU,
+            .row-group__item
+              +lang-combinations-dropdown()
+        td
+          p.font-semibold.text-whating-yellow Wating for approval
+        td
+          +choose-actions-dropdown()
+      //- ROW
+      tr
+        td
+          p 12879452
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            .row-group__item
+              +avatar({image:'images/user/avatar.jpg'})
+            .row-group__item
+              p.font-bold Marija Juodijenė
+        td
+          +button({type:'bordered', noEvents:true})(type="button")| Full time
+        td
+        td
+          p --
+        td
+          p.font-semibold.text-whating-yellow Wating for approval
+        td
+          +choose-actions-dropdown()
+      //- ROW
+      tr
+        td
+          p 12879452
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            .row-group__item
+              +avatar({image:'images/user/avatar.jpg'})
+            .row-group__item
+              p.font-bold Marija Juodijenė
+        td
+          +button({type:'bordered', noEvents:true})(type="button")| Full time
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            each icon in ['proofreading', 'translation', 'interpreting', 'creative-editing']
+              .row-group__item
+                img(src=`images/icons/${icon}.svg`, alt=`${icon}`)
+        td
+          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            .row-group__item
+              p EN-LT, LT, RU,
+            .row-group__item
+              +lang-combinations-dropdown()
+        td
+          p.font-semibold.text-whating-yellow Wating for approval
+        td
+          +choose-actions-dropdown()

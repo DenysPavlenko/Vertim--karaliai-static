@@ -1,0 +1,18 @@
+.choose-actions-dropdown
+  display: inline-block
+  &__toggle
+    display: flex
+    align-items: center
+    &-title
+      margin-right: 10px
+    &-icon
+      transition: 0.2s
+    &.is-active
+      .choose-actions-dropdown__toggle-icon
+        transform: rotate(180deg)
+  &__body
+    right: 0
+    min-width: 260px
+    margin-top: 5px
+    padding: 20px
+    white-space: normal
