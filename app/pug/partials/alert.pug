@@ -1,0 +1,17 @@
+include /partials/close
+
+mixin alert(props = {})
+  -const { title, color, icon = {} } = props
+  -
+    const classnames = classNames({
+      'alert': true,
+      [`avatar--${color}`]: color,
+      [classes]: classes,
+    })
+
+  div(class=classnames)
+    .alert__icon
+      img(src=icon, alt="icon")
+    .alert__title #{title}
+    .alert__close
+      +close({color:color, size:'15'})

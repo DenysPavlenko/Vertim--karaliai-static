@@ -2,7 +2,22 @@
   padding-bottom: 60px
   &__wrap
     margin-top: 40px
-  &__title
-    margin-bottom: 15px
-  &__status
+  &__heading
+    position: relative
     margin-bottom: 35px
+    z-index: 1
+    &-title
+      margin-bottom: 15px
+    &-alert
+      position: absolute
+      top: 0
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      z-index: -1
+      +media-max($bp-xl)
+        position: static
+        justify-content: flex-start
+        margin-top: 20px

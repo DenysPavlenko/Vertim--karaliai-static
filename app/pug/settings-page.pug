@@ -1,5 +1,6 @@
 extends /layouts/main
 include /partials/header
+include /partials/alert
 include /partials/password-change-modal
 include /partials/password-change-success-modal
 include /partials/edit-avatar-modal
@@ -20,12 +21,15 @@ block content
       +header({navActive:'clients'})
     .settings-page__wrap
       .container
-        .settings-page__title
-          h2.text-surfie-green Settings
-        .settings-page__status
-          h3 Account status: <span class="text-caribbean-green">Approved</span>
-            span.icon-inline
-              +icon({name:'check', fill:'caribbean-green', width:'15', height:'13'})
+        .settings-page__heading
+          .settings-page__heading-title
+            h2.text-surfie-green Settings
+          .settings-page__heading-status
+            h3 Account status: <span class="text-caribbean-green">Approved</span>
+              span.icon-inline
+                +icon({name:'check', fill:'caribbean-green', width:'15', height:'13'})
+          .settings-page__heading-alert
+            +alert({icon:'images/icons/check-circle.svg', title:'Changes was saved successfuly', color:'surfie-green'})
         .settings-page__catalog
           .catalog
             .catalog__tabs.tabs.js-tabs

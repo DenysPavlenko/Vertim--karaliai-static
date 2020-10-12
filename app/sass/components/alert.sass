@@ -1,0 +1,21 @@
+.alert
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  background-color: rgba($c-surfie-green, 0.1)
+  border-radius: $r-secondary
+  padding: 15px 25px
+  +media-max($bp-xs)
+    padding: 10px 20px
+  &__icon
+    max-width: 25px
+    margin-right: 25px
+    +media-max($bp-xs)
+      margin-right: 10px
+  &__title
+    margin-right: 25px
+    font-size: rem(14px)
+    line-height: 1
+    font-weight: 400
+    +media-max($bp-xs)
+      margin-right: 10px
