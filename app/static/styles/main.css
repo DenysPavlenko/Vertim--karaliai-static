@@ -835,8 +835,24 @@ p,
   color: #FFFFFF;
 }
 
+.text-alabaster {
+  color: #F7F7F7;
+}
+
+.text-athens-gray {
+  color: #EBEBEF;
+}
+
 .text-alto {
   color: #DADADA;
+}
+
+.text-silver-chalice {
+  color: #9D9D9D;
+}
+
+.text-tundora {
+  color: #444444;
 }
 
 .text-mine-shaft {
@@ -847,20 +863,20 @@ p,
   color: #0E7D7D;
 }
 
-.text-brick-red {
-  color: #CC2936;
+.text-caribbean-green {
+  color: #00D06C;
 }
 
 .text-boston-blue {
   color: #3F88C5;
 }
 
-.text-silver-chalice {
-  color: #9D9D9D;
+.text-cornflower-blue {
+  color: #518EF8;
 }
 
-.text-caribbean-green {
-  color: #00D06C;
+.text-brick-red {
+  color: #CC2936;
 }
 
 .text-whating-yellow {
@@ -880,15 +896,15 @@ p,
 }
 
 .text-left {
-  text-align: left;
+  text-align: "left";
 }
 
 .text-center {
-  text-align: center;
+  text-align: "center";
 }
 
 .text-right {
-  text-align: right;
+  text-align: "right";
 }
 
 .text-uppercase {

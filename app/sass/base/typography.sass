@@ -9,18 +9,9 @@ html, body
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
   line-height: 1.2
   font-weight: 700
-h1, .h1
-  font-size: rem(40px)
-h2, .h2
-  font-size: rem(30px)
-h3, .h3
-  font-size: rem(20px)
-h4, .h4
-  font-size: rem(18px)
-h5, .h5
-  font-size: rem(16px)
-h6, .h6
-  font-size: rem(14px)
+@each $name, $fs in ('h1':40px, 'h2':30px, 'h3':20px, 'h4':18px, 'h5':16px, 'h6':14px)
+  #{$name}, .#{$name}
+    font-size: rem($fs)
 
 p, .p, .p-sm, .p-xs
   line-height: 1.4
@@ -33,40 +24,19 @@ p, .p
   font-size: rem(12px)
 
 // Colors
-.text-white
-  color: $c-white
-.text-alto
-  color: $c-alto
-.text-mine-shaft
-  color: $c-mine-shaft
-.text-surfie-green
-  color: $c-surfie-green
-.text-brick-red
-  color: $c-brick-red
-.text-boston-blue
-  color: $c-boston-blue
-.text-silver-chalice
-  color: $c-silver-chalice
-.text-caribbean-green
-  color: $c-caribbean-green
-.text-whating-yellow
-  color: $c-whating-yellow
+@each $name, $color in $colors
+  .text-#{$name}
+    color: $color
 
 // Font weights
-.font-regular
-  font-weight: 400
-.font-semibold
-  font-weight: 600
-.font-bold
-  font-weight: 700
+@each $name, $weight in ('regular':400, 'semibold':600, 'bold':700)
+  .font-#{$name}
+    font-weight: $weight
 
 // Text alignings
-.text-left
-  text-align: left
-.text-center
-  text-align: center
-.text-right
-  text-align: right
+@each $align in ['left', 'center', 'right']
+  .text-#{$align}
+    text-align: $align
 
 // Text transforms
 .text-uppercase
