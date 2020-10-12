@@ -1,9 +1,9 @@
 mixin textarea(props = {})
-  -const { classes, rows } = props
+  -const { classes, rows, standard } = props
   -const taRows = rows ? rows : '5'
   -
     const classnames = classNames({
-      'textarea': true,
+      'textarea': standard !== false,
       [classes]: classes,
     })
 

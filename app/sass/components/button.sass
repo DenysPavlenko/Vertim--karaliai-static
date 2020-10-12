@@ -26,6 +26,16 @@
     background-color: darken($c-surfie-green, 10%)
 
   // Types
+  &--inline
+    padding: 0
+    background-color: transparent
+    &:hover,
+    &:focus,
+    &:active
+      background-color: transparent
+      box-shadow: none
+    &:hover
+      opacity: 0.8
   &--fluid
     width: 100%
   &--round
@@ -102,6 +112,12 @@
       box-shadow: 0 0 0 0.2rem rgba($c-alabaster, .5)
     &:active
       background-color: darken($c-alabaster, 10%)
+  // Colors
+  &--color-surfie-green
+    color: $c-surfie-green
+    &:hover, &:focus, &:active
+      color: $c-surfie-green
+
   // Sizes
   @each $size in ['20', '30', '40', '50', '60']
     &--size-#{$size}

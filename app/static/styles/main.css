@@ -1980,6 +1980,23 @@ p,
   background-color: #094f4f;
 }
 
+.button--inline {
+  padding: 0;
+  background-color: transparent;
+}
+
+.button--inline:hover,
+.button--inline:focus,
+.button--inline:active {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.button--inline:hover {
+  opacity: 0.8;
+}
+
 .button--fluid {
   width: 100%;
 }
@@ -2113,6 +2130,16 @@ p,
 
 .button--bg-alabaster:active {
   background-color: #dedede;
+}
+
+.button--color-surfie-green {
+  color: #0E7D7D;
+}
+
+.button--color-surfie-green:hover,
+.button--color-surfie-green:focus,
+.button--color-surfie-green:active {
+  color: #0E7D7D;
 }
 
 .button--size-20 {
@@ -3328,6 +3355,7 @@ p,
 
 .info-list__right {
   display: table-cell;
+  width: 100%;
   vertical-align: top;
   word-break: break-word;
 }
@@ -3675,6 +3703,69 @@ p,
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.editable-text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 100%;
+  min-width: 100px;
+  margin-left: -10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 2px 10px;
+  outline: 0px solid transparent;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.editable-text:hover {
+  border-color: #DADADA;
+}
+
+.editable-text:hover .editable-text__title {
+  color: #DADADA;
+}
+
+.editable-text:hover .editable-text__append {
+  opacity: 1;
+}
+
+.editable-text:focus {
+  border-color: #0E7D7D;
+}
+
+.editable-text:focus .editable-text__title {
+  color: #3D3D3D;
+}
+
+.editable-text:focus .editable-text__append {
+  opacity: 1;
+}
+
+.editable-text__title {
+  margin-right: 10px;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 600;
+  color: #3D3D3D;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.editable-text__append {
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.editable-text__append-button {
+  display: none;
+  white-space: nowrap;
 }
 
 @media (min-width: 361px) {

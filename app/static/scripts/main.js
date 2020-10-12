@@ -667,6 +667,28 @@ var editAvatarModal = (function () {
   });
 });
 
+var editableText = (function () {
+  var $editableTexts = $('.js-editable-text'); // Return if $editableTexts don't exist
+
+  if (!$editableTexts.length) {
+    return;
+  }
+
+  $editableTexts.each(function (i, elem) {
+    var $editableText = $(elem);
+    var $icon = $editableText.find('.editable-text__append-icon');
+    var $button = $editableText.find('.editable-text__append-button');
+    $editableText.on('focus', function () {
+      $icon.hide();
+      $button.show();
+    });
+    $editableText.on('focusout', function () {
+      $icon.show();
+      $button.hide();
+    });
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -681,6 +703,7 @@ $(function () {
   headerNavigation();
   inputRange();
   editAvatarModal();
+  editableText();
 }); // On window load
 
 $(window).on('load', function () {});

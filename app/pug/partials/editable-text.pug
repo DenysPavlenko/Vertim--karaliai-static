@@ -1,0 +1,13 @@
+include /partials/textarea
+include /partials/button
+
+mixin editable-text(props = {})
+  -const { text } = props
+
+  .editable-text.js-editable-text(contenteditable="true")
+    .editable-text__title #{text}
+    .editable-text__append
+      .editable-text__append-icon
+        +icon({name:'pencil', fill:'alto', width:'12', height:'12'})
+      .editable-text__append-button
+        +button({inline:true, color:'surfie-green'})(type="button")| Save

@@ -12,6 +12,7 @@ import uploadDocumentsBox from './modules/upload-documents-box';
 import headerNavigation from './modules/header-navigation';
 import inputRange from './modules/input-range';
 import editAvatarModal from './modules/edit-avatar-modal';
+import editableText from './modules/editable-text';
 
 // On document ready
 $(() => {
@@ -28,6 +29,7 @@ $(() => {
   headerNavigation();
   inputRange();
   editAvatarModal();
+  editableText();
 });
 
 // On window load

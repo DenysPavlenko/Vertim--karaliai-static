@@ -1,19 +1,20 @@
 include /partials/avatar
 include /partials/button
 include /partials/link
+include /partials/editable-text
 -
   var list1 = [
     {left:'Accoun type:', right:'Employer'},
-    {left:'Name:', right:'Vaidotas Rimeikis'},
-    {left:'Email:', right:'lj.baranauskas@gmail.com'},
-    {left:'Phone:', right:'+3706891864'},
-    {left:'Native:', right:'Lithuanian'},
-    {left:'Address:', right:'Adres 5g.', rightAccent:true},
-    {left:'Zip code:', right:'LT-4421'},
-    {left:'City:', right:'Vilnius'},
-    {left:'Country:', right:'Lithuania'},
+    {left:'Name:', right:{partial:'editable-text', params:{text:'Vaidotas Rimeikis'}}},
+    {left:'Email:', right:{partial:'editable-text', params:{text:'lj.baranauskas@gmail.com'}}},
+    {left:'Phone:', right:{partial:'editable-text', params:{text:'+3706891864'}}},
+    {left:'Native:', right:{partial:'editable-text', params:{text:'Lithuanian'}}},
+    {left:'Address:', right:{partial:'editable-text', params:{text:'Adres 5g.'}}},
+    {left:'Zip code:', right:{partial:'editable-text', params:{text:'LT-4421'}}},
+    {left:'City:', right:{partial:'editable-text', params:{text:'Vilnius'}}},
+    {left:'Country:', right:{partial:'editable-text', params:{text:'Lithuania'}}},
     {left:'Birth day:', right:'2019-04-01'},
-    {left:'Additional:', right:'Sample sample sample sample sample sample'},
+    {left:'Additional:', right:{partial:'editable-text', params:{text:'Sample sample sample sample sample sample'}}},
   ]
 -
   var list2 = [
@@ -22,7 +23,7 @@ include /partials/link
     {left:'Bank:', right:'AB “LUMINOR”'},
     {left:'Swift:', right:'SW2122'},
     {left:'Bank Co:', right:'12232'},
-    {left:'Paypal:', right:'info@irina.com '},
+    {left:'Paypal:', right:{partial:'editable-text', params:{text:'info@irina.com'}}},
   ]
 
 .catalog__content-wrap
@@ -48,7 +49,10 @@ include /partials/link
             .info-list__left
               .font-semibold.text-silver-chalice #{item.left}
             .info-list__right
-              p(class=`font-semibold ${item.rightAccent ? 'text-surfie-green' : ''}`) #{item.right}
+              if(typeof item.right === 'object')
+                +#{item.right.partial}(item.right.params)
+              else
+                p.font-semibold #{item.right}
     .col-12.col-md-6.col-xl-4
       .column-heading
         h5 Bank information:
@@ -58,4 +62,7 @@ include /partials/link
             .info-list__left
               p.font-semibold.text-silver-chalice #{item.left}
             .info-list__right
-              p(class=`font-semibold ${item.accent ? 'text-surfie-green' : ''}`) #{item.right}
+              if(typeof item.right === 'object')
+                +#{item.right.partial}(item.right.params)
+              else
+                p.font-semibold #{item.right}

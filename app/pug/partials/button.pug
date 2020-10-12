@@ -1,12 +1,14 @@
 mixin button(props = {})
-  -const { tag, classes, bg, fluid, type, size, border, standard, shadow, disabled } = props
+  -const { tag, classes, bg, fluid, type, size, border, standard, shadow, disabled, inline, color } = props
   -const tagType = tag ? tag : (attributes.href ? 'a' : 'button')
   -
     const classnames = classNames({
       'button': standard !== false,
       'button--fluid': fluid,
+      'button--inline': inline,
       [`button--${type}`]: type,
       [`button--bg-${bg}`]: bg,
+      [`button--color-${color}`]: color,
       [`button--border-${border}`]: border,
       [`button--size-${size}`]: size,
       'button--disabled': disabled,
