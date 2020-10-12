@@ -1,4 +1,9 @@
 mixin unread(props = {})
-  -const { cnt } = props
+  -const { cnt, classes } = props
+  -
+    const classnames = classNames({
+      'unread': standard !== false,
+      [classes]: classes,
+    })
 
-  span.unread #{cnt}
+  span(class=classnames) #{cnt}

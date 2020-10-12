@@ -676,15 +676,25 @@ var editableText = (function () {
 
   $editableTexts.each(function (i, elem) {
     var $editableText = $(elem);
+    var $input = $editableText.find('.editable-text__input');
+    var $editableTitle = $editableText.find('.editable-text__title');
     var $icon = $editableText.find('.editable-text__append-icon');
     var $button = $editableText.find('.editable-text__append-button');
-    $editableText.on('focus', function () {
+    $editableTitle.on('focus', function () {
       $icon.hide();
       $button.show();
     });
-    $editableText.on('focusout', function () {
+    $editableTitle.on('focusout', function () {
       $icon.show();
       $button.hide();
+    });
+    $editableTitle.on('input', function () {
+      var value = $editableTitle.text();
+      var regex = new RegExp(/\s{2}/, 'g');
+
+      if (regex.test(value)) {
+        $editableTitle.text(value.replace(regex, ''));
+      }
     });
   });
 });

@@ -1,36 +1,43 @@
 .editable-text
   display: inline-flex
-  align-items: center
-  max-width: 100%
-  min-width: 100px
   margin-left: -10px
-  border: 1px solid transparent
-  border-radius: $r-primary
-  padding: 2px 10px
-  outline: 0px solid transparent
-  transition: 0.2s
-  &:hover
-    border-color: $c-alto
-    .editable-text__title
-      color: $c-alto
-    .editable-text__append
-      opacity: 1
-  &:focus
-    border-color: $c-surfie-green
-    .editable-text__title
-      color: $c-mine-shaft
-    .editable-text__append
-      opacity: 1
   &__title
-    margin-right: 10px
     font-size: rem(14px)
     line-height: 1
     font-weight: 600
     color: $c-mine-shaft
     transition: 0.2s
-  &__append
-    opacity: 0
+    display: inline-flex
+    align-items: center
+    max-width: 100%
+    min-width: 50px
+    border: 1px solid transparent
+    border-right: 0
+    border-radius: $r-primary 0 0 $r-primary
+    padding: 3px 10px
+    outline: 0px solid transparent
     transition: 0.2s
+    &:hover
+      border-color: $c-alto
+      color: $c-alto
+      ~ .editable-text__append
+        border-color: $c-alto
+        opacity: 1
+    &:focus
+      border-color: $c-surfie-green
+      color: $c-mine-shaft
+      ~ .editable-text__append
+        border-color: $c-surfie-green
+        opacity: 1
+  &__append
+    border-radius: 0 $r-primary $r-primary 0
+    display: flex
+    align-items: center
+    padding-right: 10px
+    border: 1px solid transparent
+    border-left: 0
+    transition: 0.2s
+    opacity: 0
     &-button
       display: none
       white-space: nowrap

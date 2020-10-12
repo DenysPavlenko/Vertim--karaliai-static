@@ -1,11 +1,12 @@
-include /partials/textarea
+include /partials/input
 include /partials/button
 
 mixin editable-text(props = {})
   -const { text } = props
 
-  .editable-text.js-editable-text(contenteditable="true")
-    .editable-text__title #{text}
+  .editable-text.js-editable-text
+    +input({hidden:true, classes:'editable-text__input'})(value=text)
+    .editable-text__title(contenteditable="true") #{text}
     .editable-text__append
       .editable-text__append-icon
         +icon({name:'pencil', fill:'alto', width:'12', height:'12'})

@@ -1,9 +1,17 @@
 .catalog
+  &__header
+    display: flex
+  &__search
+    // flex: 1
   &__tabs
     display: flex
     overflow-x: auto
   &__tab
-    padding: 18px 30px
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 0 30px
     background-color: $c-alabaster
     border-radius: 6px 6px 0 0
     user-select: none
@@ -13,12 +21,19 @@
       .catalog__tab-title
         font-weight: 700
         color: $c-surfie-green
+      .catalog__tab-unread
+        background-color: $c-surfie-green
+        color: $c-white
     &-title
       font-size: rem(14px)
       font-weight: 600
       line-height: 1
       color: $c-silver-chalice
       white-space: nowrap
+    &-unread
+      margin-left: 10px
+      background-color: $c-white
+      color: $c-silver-chalice
   &__content
     width: 100%
     padding: 60px 0
