@@ -21,6 +21,12 @@
       white-space: nowrap
   &__content
     width: 100%
+    padding: 60px 0
     background-color: $c-white
     box-shadow: $s-primary
     border-radius: 0 $r-primary $r-primary $r-primary
+    &-item
+      +media-max($bp-xxl)
+        padding: 0 30px
+      +media-max($bp-sm)
+        padding: 0 15px

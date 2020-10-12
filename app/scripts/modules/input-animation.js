@@ -6,7 +6,7 @@ export default function () {
 
   $inputs.each(function (i, elem) {
     var $input = $(elem);
-    var $inputField = $input.find('.js-input-animation input');
+    var $inputField = $input.find('input');
     if ($inputField.val() !== '') {
       $input.addClass('is-active');
     }

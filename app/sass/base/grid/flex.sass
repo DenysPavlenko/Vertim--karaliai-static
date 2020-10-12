@@ -1,3 +1,8 @@
+.flex-row
+  flex-direction: row
+.flex-column
+  flex-direction: column
+
 .align-items-start
   align-items: flex-start
 .align-items-center
@@ -19,6 +24,11 @@
 // Responsive margins
 @each $bp, $name in $breakpoints
   +media-min($bp)
+    .flex-#{$name}-row
+      flex-direction: row
+    .flex-#{$name}-column
+      flex-direction: column
+
     .align-items-#{$name}-start
       align-items: flex-start
     .align-items-#{$name}-center

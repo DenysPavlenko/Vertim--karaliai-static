@@ -41,3 +41,9 @@ $col-width  : (100% / $columns)
   @else
     margin-left: $gutter-half
   margin-right: $gutter-half
+
+// Offset
+@function offset($offset: 0)
+  @return #{$col-width * $offset}
+@mixin offset($offset: 0)
+  margin-left: offset($offset)

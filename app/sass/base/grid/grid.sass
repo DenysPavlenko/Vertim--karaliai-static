@@ -28,3 +28,15 @@
     @for $i from 1 through $columns
       .col-#{$name}-#{$i}
         +col($i, false, false)
+
+// Static offsets
+@for $i from 1 through $columns
+  .offset-#{$i}
+    +offset($i)
+
+// Responsive offsets
+@each $bp, $name in $breakpoints
+  +media-min($bp)
+    @for $i from 1 through $columns
+      .offset-#{$name}-#{$i}
+        +offset($i)
