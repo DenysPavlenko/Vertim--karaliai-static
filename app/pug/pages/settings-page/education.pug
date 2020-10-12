@@ -17,69 +17,70 @@ include /partials/skill
     {left:'Diploma category:', right:'Translation & Interpreting'},
   ]
 
-.row
-  .col-12.col-md-6.col-xl-4.offset-0.offset-xxl-1.mb-40
-    .column-heading
-      h5 Education:
-    .column-group
-      .column-group__item
-        .info-list
-          each item in list1
-            .info-list__item
-              .info-list__left
-                p(class=`p-sm font-semibold ${item.leftAccent ? 'text-surfie-green' : 'text-silver-chalice'}`) #{item.left}
-              .info-list__right
-                p.p-sm.font-semibold #{item.right}
-      .column-group__item
-        .info-list
-          .info-list__items
-            each item in list2
+.catalog__content-wrap
+  .row
+    .col-12.col-md-6.col-xl-4.offset-0.offset-xxl-1.mb-40
+      .column-heading
+        h5 Education:
+      .column-group
+        .column-group__item
+          .info-list
+            each item in list1
               .info-list__item
                 .info-list__left
                   p(class=`p-sm font-semibold ${item.leftAccent ? 'text-surfie-green' : 'text-silver-chalice'}`) #{item.left}
                 .info-list__right
                   p.p-sm.font-semibold #{item.right}
-  //- Column
-  .col-12.col-md-6.col-xl-2.mb-40
-    .column-heading
-      h5 Tax information:
-    .info-list
-      .info-list__item
-        .info-list__left
-          p.p-sm.font-semibold.text-silver-chalice Issuing invoice:
-        .info-list__right
-          p.p-sm.font-semibold.text-surfie-green IVP
-  //- Column
-  .col-12.col-md-6.col-xl-3.col-xxl-2.mb-40
-    .column-heading
-      .row-group.row-group--align-center
-        .row-group__item
-          h5 Skills:
-        .row-group__item
-          +skills-dropdown()
-    .column-group
-      .column-group__item
-        +skill({title:'Adobe Acrobat Pro'})
-      .column-group__item
-        +skill({title:'Illustrator'})
-      .column-group__item
-        +skill({title:'Trados'})
-  //- Column
-  .col-12.col-md-6.col-xl-3.col-xxl-2.mb-40
-    .column-heading
-      .row-group.row-group--align-center
-        .row-group__item
-          h5 Expertise:
-        .row-group__item
-          +skills-dropdown()
-    .column-group
-      .column-group__item
-        +skill({title:'Technical'})
-      .column-group__item
-        +skill({title:'Legal'})
-      .column-group__item
-        +skill({title:'Medical'})
+        .column-group__item
+          .info-list
+            .info-list__items
+              each item in list2
+                .info-list__item
+                  .info-list__left
+                    p(class=`p-sm font-semibold ${item.leftAccent ? 'text-surfie-green' : 'text-silver-chalice'}`) #{item.left}
+                  .info-list__right
+                    p.p-sm.font-semibold #{item.right}
+    //- Column
+    .col-12.col-md-6.col-xl-2.mb-40
+      .column-heading
+        h5 Tax information:
+      .info-list
+        .info-list__item
+          .info-list__left
+            p.p-sm.font-semibold.text-silver-chalice Issuing invoice:
+          .info-list__right
+            p.p-sm.font-semibold.text-surfie-green IVP
+    //- Column
+    .col-12.col-md-6.col-xl-3.col-xxl-2.mb-40
+      .column-heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h5 Skills:
+          .row-group__item
+            +skills-dropdown()
+      .column-group
+        .column-group__item
+          +skill({title:'Adobe Acrobat Pro'})
+        .column-group__item
+          +skill({title:'Illustrator'})
+        .column-group__item
+          +skill({title:'Trados'})
+    //- Column
+    .col-12.col-md-6.col-xl-3.col-xxl-2.mb-40
+      .column-heading
+        .row-group.row-group--align-center
+          .row-group__item
+            h5 Expertise:
+          .row-group__item
+            +skills-dropdown()
+      .column-group
+        .column-group__item
+          +skill({title:'Technical'})
+        .column-group__item
+          +skill({title:'Legal'})
+        .column-group__item
+          +skill({title:'Medical'})
 
-  //- Upload
-  .col-12.col-xl-6.offset-0.offset-xxl-1
-    +upload-documents()
+    //- Upload
+    .col-12.col-xl-6.offset-0.offset-xxl-1
+      +upload-documents()

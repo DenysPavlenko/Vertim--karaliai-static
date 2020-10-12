@@ -25,36 +25,37 @@ include /partials/link
     {left:'Paypal:', right:'info@irina.com '},
   ]
 
-.row
-  .col-12.col-xl-3.col-xxl-2.offset-0.offset-xxl-1.mb-40.mb-xl-0
-    .column-group.column-group--sm.column-group--justify-items-center
-      .column-group__item
-        .edit-avatar
-          +avatar({size:'xl', image:'images/user/avatar.jpg'})
-          .edit-avatar__button
-            +button({bg:'alabaster', type:'round', size:'50'})(type="button" data-modal-open="edit-avatar-modal")
-              +icon({name:'camera', fill:'surfie-green', width:'18', height:'16'})
-      .column-group__item
-        p.p-sm Member since: 2015-04-12
-      .column-group__item
-        +link()(data-modal-open="password-change-modal")| Change password
-  .col-12.col-md-6.col-xl-4.mb-40.mb-md-0
-    .column-heading
-      h5 General information:
-    .info-list
-      each item in list1
-        .info-list__item
-          .info-list__left
-            .font-semibold.text-silver-chalice #{item.left}
-          .info-list__right
-            p(class=`font-semibold ${item.rightAccent ? 'text-surfie-green' : ''}`) #{item.right}
-  .col-12.col-md-6.col-xl-4
-    .column-heading
-      h5 Bank information:
-    .info-list
-      each item in list2
-        .info-list__item
-          .info-list__left
-            p.font-semibold.text-silver-chalice #{item.left}
-          .info-list__right
-            p(class=`font-semibold ${item.accent ? 'text-surfie-green' : ''}`) #{item.right}
+.catalog__content-wrap
+  .row
+    .col-12.col-xl-3.col-xxl-2.offset-0.offset-xxl-1.mb-40.mb-xl-0
+      .column-group.column-group--sm.column-group--justify-items-center
+        .column-group__item
+          .edit-avatar
+            +avatar({size:'xl', image:'images/user/avatar.jpg'})
+            .edit-avatar__button
+              +button({bg:'alabaster', type:'round', size:'50'})(type="button" data-modal-open="edit-avatar-modal")
+                +icon({name:'camera', fill:'surfie-green', width:'18', height:'16'})
+        .column-group__item
+          p.p-sm Member since: 2015-04-12
+        .column-group__item
+          +link()(data-modal-open="password-change-modal")| Change password
+    .col-12.col-md-6.col-xl-4.mb-40.mb-md-0
+      .column-heading
+        h5 General information:
+      .info-list
+        each item in list1
+          .info-list__item
+            .info-list__left
+              .font-semibold.text-silver-chalice #{item.left}
+            .info-list__right
+              p(class=`font-semibold ${item.rightAccent ? 'text-surfie-green' : ''}`) #{item.right}
+    .col-12.col-md-6.col-xl-4
+      .column-heading
+        h5 Bank information:
+      .info-list
+        each item in list2
+          .info-list__item
+            .info-list__left
+              p.font-semibold.text-silver-chalice #{item.left}
+            .info-list__right
+              p(class=`font-semibold ${item.accent ? 'text-surfie-green' : ''}`) #{item.right}

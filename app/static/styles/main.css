@@ -2527,17 +2527,12 @@ p,
   white-space: nowrap;
   padding: 10px 15px;
   vertical-align: middle;
-  width: 1%;
+  width: auto;
 }
 
 .table td:first-child,
 .table th:first-child {
   padding-left: 8.33333%;
-}
-
-.table td:last-child,
-.table th:last-child {
-  padding-right: 8.33333%;
 }
 
 .table th {
@@ -6063,11 +6058,16 @@ p,
     padding-right: 15px;
   }
 
+  .table td:first-child,
+  .table th:first-child {
+    padding-left: 30px;
+  }
+
   .header__dropdown:not(:last-child) {
     margin-right: 15px;
   }
 
-  .catalog__content-item {
+  .catalog__content-wrap {
     padding: 0 30px;
   }
 }
@@ -6263,11 +6263,6 @@ p,
     padding-left: 15px;
   }
 
-  .table td:last-child,
-  .table th:last-child {
-    padding-right: 15px;
-  }
-
   .application-form__card {
     padding: 30px 20px;
   }
@@ -6296,7 +6291,7 @@ p,
     display: none;
   }
 
-  .catalog__content-item {
+  .catalog__content-wrap {
     padding: 0 15px;
   }
 

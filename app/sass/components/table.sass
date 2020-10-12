@@ -8,14 +8,12 @@
     white-space: nowrap
     padding: 10px 15px
     vertical-align: middle
-    width: 1%
+    width: auto
     &:first-child
       padding-left: offset(1)
+      +media-max($bp-xxl)
+        padding-left: 30px
       +media-max($bp-sm)
         padding-left: 15px
-    &:last-child
-      padding-right: offset(1)
-      +media-max($bp-sm)
-        padding-right: 15px
   th
     padding-top: 0
