@@ -1,0 +1,16 @@
+mixin actions(props = {})
+  -
+    const actions = [
+      {icon:'archive', title:'Archive'},
+      {icon:'clock-boston-blue', title:'Temporrary  Approve'},
+      {icon:'check-caribbean-green', title:'Approve'},
+      {icon:'pencil-surfie-green', title:'Edit permissions'},
+      {icon:'close-brick-red', title:'Reject'},
+    ]
+
+  .actions
+    each action in actions
+      .actions__action
+        .actions__action-icon
+          img(src=`images/icons/${action.icon}.svg`, alt=`${action.icon}`)
+        .actions__action-title #{action.title}

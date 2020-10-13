@@ -1,4 +1,4 @@
-include /partials/button
+include /partials/actions
 
 mixin choose-actions-dropdown(props = {})
 
@@ -7,26 +7,6 @@ mixin choose-actions-dropdown(props = {})
       .choose-actions-dropdown__toggle-title
         p.text-boston-blue Choose
       .choose-actions-dropdown__toggle-icon
-        +icon({name:'chevron-down', fill:'boston-blue', width:'9', height:'6'})
+        +icon({name:'chevron-down', fill:'boston-blue', width:'8', height:'6'})
     .dropdown__body.choose-actions-dropdown__body
-      .column-group.column-group--sm
-        .column-group__item
-          +button({fluid:true, start:true, type:'bordered', border:'silver-chalice', color:'mine-shaft'})(type="button")
-            +icon({name:'archive', fill:'silver-chalice', width:'14', height:'14', classes:'button__icon'})
-            span Archive
-        .column-group__item
-          +button({fluid:true, start:true, type:'bordered', border:'boston-blue'})(type="button")
-            +icon({name:'clock', fill:'boston-blue', width:'14', height:'14', classes:'button__icon'})
-            span Temporrary  Approve
-        .column-group__item
-          +button({fluid:true, start:true, bg:'caribbean-green'})(type="button")
-            +icon({name:'check', fill:'white', width:'11', height:'14', classes:'button__icon'})
-            span Approve
-        .column-group__item
-          +button({fluid:true, start:true, type:'bordered'})(type="button")
-            +icon({name:'pencil', fill:'surfie-green', width:'12', height:'12', classes:'button__icon'})
-            span Edit permissions
-        .column-group__item
-          +button({fluid:true, start:true, type:'bordered', border:'brick-red'})(type="button")
-            +icon({name:'close', fill:'brick-red', width:'12', height:'12', classes:'button__icon'})
-            span Reject
+      +actions()

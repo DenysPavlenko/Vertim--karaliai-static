@@ -3,6 +3,8 @@ include /partials/avatar
 include /partials/button
 include /partials/lang-combinations-dropdown
 include /partials/choose-actions-dropdown
+include /partials/massive-actions-dropdown
+include /partials/view-select
 
 .table-holder
   table.table
@@ -112,3 +114,7 @@ include /partials/choose-actions-dropdown
           p.font-semibold.text-whating-yellow Wating for approval
         td
           +choose-actions-dropdown()
+
+.catalog__content-footer
+  +view-select()
+  +massive-actions-dropdown()

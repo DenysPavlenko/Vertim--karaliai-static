@@ -1,17 +1,22 @@
-.choose-actions-dropdown
+.massive-actions-dropdown
   display: inline-block
   &__toggle
     display: flex
     align-items: center
+    background-color: $c-alabaster
+    padding: 15px 20px
+    border-radius: $r-primary
     &-title
       margin-right: 10px
     &-icon
       transition: 0.2s
     &.is-active
-      .choose-actions-dropdown__toggle-icon
+      .massive-actions-dropdown__toggle-icon
         transform: rotate(180deg)
   &__body
     right: 0
+    top: auto
+    bottom: 100%
+    margin-bottom: 5px
     min-width: 230px
-    margin-top: 5px
     white-space: normal

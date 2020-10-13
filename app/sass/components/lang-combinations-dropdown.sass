@@ -1,4 +1,19 @@
 .lang-combinations-dropdown
+  &__toggle
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 20px
+    width: 20px
+    border: 2px solid $c-surfie-green
+    border-radius: $r-primary
+    &-icon
+      transition: transform 0.2s
+    &.is-active
+      background-color: $c-surfie-green
+      .lang-combinations-dropdown__toggle-icon
+        transform: rotate(180deg)
+        fill: $c-white
   &__body
     margin-top: 5px
     min-width: 215px

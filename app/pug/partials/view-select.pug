@@ -1,0 +1,19 @@
+include /partials/select
+
+mixin view-select(props = {})
+
+  .row-group.row-group--sm.row-group--align-center
+    .row-group__item
+      p.font-semibold View
+    .row-group__item
+      +select({
+        label:{name:'25', content:`<span>25</span>`},
+        options:[
+          {name:'25', content:`<span>25</span>`},
+          {name:'30', content:`<span>30</span>`},
+          {name:'35', content:`<span>35</span>`},
+          {name:'40', content:`<span>40</span>`},
+          {name:'45', content:`<span>45</span>`},
+          {name:'50', content:`<span>50</span>`},
+        ]
+      })
