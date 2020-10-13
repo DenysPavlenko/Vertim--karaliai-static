@@ -1,0 +1,62 @@
+.button
+  @each $name, $color in ('surfie-green': $c-surfie-green, 'cornflower-blue': $c-cornflower-blue, 'caribbean-green': $c-caribbean-green )
+    &--#{$name}
+      color: $c-white
+      background-color: $color
+      &:hover
+        background-color: darken($color, 8%)
+      &:focus
+        color: $c-white
+        background-color: darken($color, 8%)
+        box-shadow: 0 0 0 0.2rem rgba($color, .5)
+      &:active
+        color: $c-white
+        background-color: darken($color, 10%)
+
+  // White
+  &--white
+    color: $c-surfie-green
+    background-color: $c-white
+    &:hover
+      background-color: darken($c-white, 5%)
+    &:focus
+      color: $c-surfie-green
+      background-color: darken($c-white, 5%)
+      box-shadow: 0 0 0 0.2rem rgba($c-alto, .5)
+    &:active
+      background-color: darken($c-white, 8%)
+    &.button--disabled
+      background-color: transparent
+      border-color: $c-silver-chalice
+      color: $c-silver-chalice
+      box-shadow: none
+      svg
+        fill: $c-silver-chalice
+
+  // Transparent
+  &--transparent
+    color: $c-tundora
+    background-color: transparent
+    &:hover
+      color: $c-surfie-green
+      background-color: transparent
+    &:focus
+      color: $c-surfie-green
+      background-color: transparent
+      box-shadow: 0 0 0 0.2rem rgba($c-surfie-green, .5)
+    &:active
+      color: $c-surfie-green
+      background-color: transparent
+
+  // Alabaster
+  &--alabaster
+    color: $c-surfie-green
+    background-color: $c-alabaster
+    &:hover
+      background-color: darken($c-alabaster, 8%)
+    &:focus
+      color: $c-surfie-green
+      background-color: darken($c-alabaster, 8%)
+      box-shadow: 0 0 0 0.2rem rgba($c-alabaster, .5)
+    &:active
+      background-color: darken($c-alabaster, 10%)

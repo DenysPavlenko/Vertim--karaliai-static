@@ -2,15 +2,15 @@
   &__header
     display: flex
     align-items: center
+    overflow-x: auto
   &__left
-    margin-right: 5px
+    padding-right: 5px
   &__right
-    margin-left: 5px
+    padding-left: 5px
     &--ml-auto
       margin-left: auto
   &__tabs
     display: flex
-    overflow-x: auto
   &__tab
     height: 50px
     display: flex
@@ -55,3 +55,13 @@
       padding: 0 50px
       display: flex
       justify-content: space-between
+      +media-max($bp-xxl)
+        padding: 0 30px
+      +media-max($bp-sm)
+        padding: 0 15px
+  &__footer
+    margin-top: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap

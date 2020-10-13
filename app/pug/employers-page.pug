@@ -3,6 +3,7 @@ include /partials/header
 include /partials/button
 include /partials/unread
 include /partials/input
+include /partials/catalog-navigation
 
 block variables
   - const title = 'Employers page'
@@ -24,8 +25,8 @@ block content
             h2.text-surfie-green Employers
           .employers-page__heading-buttons
             .button-group
-              +button({type:'bordered', classes:'button-group__button'})(href="#")| Permissions
-              +button({classes:'button-group__button', })(type="button")
+              +button({border:'surfie-green', classes:'button-group__button'})(href="#")| Permissions
+              +button({bg:'surfie-green', classes:'button-group__button'})(type="button")
                 span Invite employee
                 +icon({name:'add-person', fill:'white', width:'20', height:'13', classes:'button__icon'})
         .employers-page__catalog
@@ -51,3 +52,5 @@ block content
               //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="registrations")
               //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="archieved")
                 //- include /pages/employers-page/general
+            .catalog__footer
+              +catalog-navigation()

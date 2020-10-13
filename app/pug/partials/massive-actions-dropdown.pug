@@ -1,12 +1,10 @@
 include /partials/actions
 
 mixin massive-actions-dropdown(props = {})
-
   .dropdown.massive-actions-dropdown.js-dropdown(data-dropdown="notifications")
     .dropdown__toggle.massive-actions-dropdown__toggle(data-dropdown-toggle="notifications")
-      .massive-actions-dropdown__toggle-title
-        p.font-semibold Massive Actions
-      .massive-actions-dropdown__toggle-icon
-        +icon({name:'chevron-down', fill:'boston-blue', width:'8', height:'6'})
+      +button({bg:'alabaster'})()
+        span Massive Actions
+        +icon({name:'chevron-down', fill:'boston-blue', width:'8', height:'6', classes:'button__icon'})
     .dropdown__body.massive-actions-dropdown__body
       +actions()

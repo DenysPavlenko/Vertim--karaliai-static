@@ -1,0 +1,44 @@
+.button
+  position: relative
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  padding: 11px 15px
+  font-size: rem(14px)
+  line-height: 1
+  font-weight: 600
+  z-index: 1
+  border-radius: $r-primary
+  border: 2px solid transparent
+  transition: 0.2s
+  user-select: none
+  cursor: pointer
+  // Elements
+  &__prepend,
+  &__append
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+  &__prepend
+    left: 30px
+    +media-max($bp-md)
+    left: 15px
+  &__append
+    right: 30px
+    +media-max($bp-md)
+    right: 15px
+  &__icon
+    transition: 0.2s
+    &:first-child
+      margin-right: 10px
+    &:last-child
+      margin-left: 10px
+
+@import ./button-backgrounds
+@import ./button-borders
+@import ./button-colors
+@import ./button-radiuses
+@import ./button-sizes
+@import ./button-states
+@import ./button-types

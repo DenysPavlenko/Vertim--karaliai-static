@@ -8,3 +8,12 @@
     display: flex
     justify-content: space-between
     align-items: center
+    flex-wrap: wrap
+    &-title
+      margin-right: 20px
+      +media-max($bp-md)
+        margin-right: 0
+    &-buttons
+      +media-max($bp-md)
+        width: 100%
+        margin-top: 20px

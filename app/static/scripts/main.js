@@ -198,7 +198,7 @@ function scrollUp () {
 
 function radioToggleContent () {
   var $selectors = $('[data-radio-toggle]');
-  var $toggleContent = $('[data-radio-toggle-content]'); // Return if $selectors doesn't exist
+  var $toggleContent = $('[data-radio-toggle-contents]'); // Return if $selectors doesn't exist
 
   if (!$selectors.length) {
     return;

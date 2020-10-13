@@ -1,0 +1,25 @@
+.button
+  @each $name, $color in ('surfie-green':$c-surfie-green, 'caribbean-green':$c-caribbean-green,'silver-chalice':$c-silver-chalice,'boston-blue':$c-boston-blue,'brick-red':red)
+    &--border-#{$name}
+      color: $color
+      border-color: $color
+      background-color: transparent
+      &:hover
+        color: $c-white
+        border-color: darken($color, 8%)
+        background-color: darken($color, 8%)
+        .button__icon
+          fill: $c-white
+      &:focus
+        color: $c-white
+        border-color: darken($color, 8%)
+        background-color: darken($color, 8%)
+        box-shadow: 0 0 0 0.2rem rgba($color, .5)
+        svg
+          fill: $c-white
+      &:active
+        color: $c-white
+        border-color: darken($color, 10%)
+        background-color: darken($color, 10%)
+        svg
+          fill: $c-white

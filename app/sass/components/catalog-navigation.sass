@@ -1,0 +1,36 @@
+$size: 60px
+
+.catalog-navigation
+  display: flex
+  align-items: center
+  &__count
+    display: flex
+    align-items: center
+    height: $size
+    padding: 0 20px
+    background-color: $c-white
+    border-radius: $r-secondary
+    box-shadow: $s-primary
+    font-size: rem(16px)
+    line-height: 1
+    font-weight: 400
+    color: $c-mine-shaft
+    margin-right: 10px
+    &-title
+      margin-right: 5px
+    &-input
+      max-width: 50px
+      height: 30px
+      display: flex
+      border: 1px solid $c-alto
+      border-radius: $r-secondary
+      text-align: center
+      color: $c-mine-shaft
+      margin-right: 5px
+      font-size: rem(16px)
+      line-height: 1
+      font-weight: 400
+      padding: 0 10px
+  &__button
+    &:not(:last-child)
+      margin-right: 10px

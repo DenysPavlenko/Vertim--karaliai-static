@@ -1,0 +1,7 @@
+.button
+  // Colors
+  @each $name, $color in ('surfie-green':$c-surfie-green,'mine-shaft':$c-mine-shaft)
+    &--color-#{$name}
+      color: $color
+      &:hover, &:focus, &:active
+        color: $color
