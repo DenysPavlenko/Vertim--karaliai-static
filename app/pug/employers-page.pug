@@ -53,8 +53,9 @@ block content
               .catalog__content
                 .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="employees")
                   include /pages/employers-page/employees
-                //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="registrations")
-                //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="archieved")
-                  //- include /pages/employers-page/general
+                .catalog__content-item.tabs__content.js-tabs-content(data-content="registrations")
+                  include /pages/employers-page/employees
+                .catalog__content-item.tabs__content.js-tabs-content(data-content="archieved")
+                  include /pages/employers-page/employees
             .catalog__footer
               +catalog-navigation()

@@ -55,7 +55,7 @@
       +media-max($bp-sm)
         padding: 0 15px
   &__content
-    padding: 60px 0
+    padding: 40px 0 60px
     &-wrap
       +media-max($bp-xxl)
         padding: 0 30px
@@ -66,6 +66,11 @@
       padding: 0 50px
       display: flex
       justify-content: space-between
+      flex-wrap: wrap
+      &>*
+        margin-top: 20px
+        &:not(:last-child)
+          margin-right: 20px
       +media-max($bp-xxl)
         padding: 0 30px
       +media-max($bp-sm)
