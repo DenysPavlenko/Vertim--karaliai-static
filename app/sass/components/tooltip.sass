@@ -1,0 +1,18 @@
+.tooltip
+  position: relative
+  &:hover
+    .tooltip__text
+      visibility: visible
+      opacity: 1
+  &__text
+    position: absolute
+    top: 100%
+    right: 2px
+    visibility: hidden
+    background-color: $c-white
+    padding: 10px 25px
+    border-radius: $r-primary
+    z-index: 1
+    box-shadow: $s-alt
+    opacity: 0
+    transition: 0.2s

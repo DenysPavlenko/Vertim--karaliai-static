@@ -2,6 +2,7 @@ include /partials/icon-title
 include /partials/avatar
 include /partials/button
 include /partials/lang-combinations-dropdown
+include /partials/lang-combinations-list
 include /partials/choose-actions-dropdown
 include /partials/massive-actions-dropdown
 include /partials/view-select
@@ -34,7 +35,7 @@ include /partials/view-select
         td
           .row-group.row-group--sm.row-group--nowrap.row-group--align-center
             .row-group__item
-              p EN-LT, LT, RU,
+              +lang-combinations-list()
             .row-group__item
               +lang-combinations-dropdown()
         td
@@ -61,7 +62,7 @@ include /partials/view-select
         td
           .row-group.row-group--sm.row-group--nowrap.row-group--align-center
             .row-group__item
-              p EN-LT, LT, RU,
+              +lang-combinations-list()
             .row-group__item
               +lang-combinations-dropdown()
         td
@@ -107,7 +108,7 @@ include /partials/view-select
         td
           .row-group.row-group--sm.row-group--nowrap.row-group--align-center
             .row-group__item
-              p EN-LT, LT, RU,
+              +lang-combinations-list()
             .row-group__item
               +lang-combinations-dropdown()
         td
