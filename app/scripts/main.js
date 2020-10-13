@@ -13,6 +13,8 @@ import headerNavigation from './modules/header-navigation';
 import inputRange from './modules/input-range';
 import editAvatarModal from './modules/edit-avatar-modal';
 import editableText from './modules/editable-text';
+import contentToggle from './modules/content-toggle';
+import catalogFilters from './modules/catalog-filters';
 
 // On document ready
 $(() => {
@@ -30,6 +32,8 @@ $(() => {
   inputRange();
   editAvatarModal();
   editableText();
+  contentToggle();
+  catalogFilters();
 });
 
 // On window load

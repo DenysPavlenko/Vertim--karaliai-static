@@ -1,0 +1,18 @@
+// Flex column
+.col
+  +col(0, false, false)
+@each $bp, $name in $breakpoints
+  +media-min($bp)
+    @for $i from 1 through $columns
+      .col-#{$name}
+        +col(0, false, false)
+
+// Regular columns
+@for $i from 1 through $columns
+  .col-#{$i}
+    +col($i, false, false)
+@each $bp, $name in $breakpoints
+  +media-min($bp)
+    @for $i from 1 through $columns
+      .col-#{$name}-#{$i}
+        +col($i, false, false)

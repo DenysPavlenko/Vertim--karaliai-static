@@ -1,0 +1,7 @@
+.container
+  +container($cnt-xxl)
+  @each $bp, $width in $containers
+    +media-max($bp)
+      +container($width, false)
+.container-fluid
+  +container(100%, false, true)

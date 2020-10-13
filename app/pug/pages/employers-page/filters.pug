@@ -1,0 +1,73 @@
+include /partials/checkbox
+include /partials/translation-select
+include /partials/button
+
+.row
+  //- Column
+  div(class="col-12 col-xs-6 col-lg-4 col-xl col-xxl-2 offset-0 offset-xxl-1 mb-40")
+    .column-group.column-group--sm
+      .column-group__item
+        h5 Acc type:
+      .column-group__item
+        +checkbox({label:'Freelance', checked:true})
+      .column-group__item
+        +checkbox({label:'Full time', checked:true})
+  //- Column
+  div(class="col-12 col-xs-6 col-lg-4 col-xl col-xxl-2 mb-40")
+    .column-group.column-group--sm
+      .column-group__item
+        h5 By permissions:
+      .column-group__item
+        +checkbox({label:'Freelance', checked:true})
+      .column-group__item
+        +checkbox({label:'Full time', checked:true})
+      .column-group__item
+        +checkbox({label:'Admin', checked:true})
+  //- Column
+  div(class="col-12 col-xs-6 col-lg-4 col-xl col-xxl-2 mb-40")
+    .column-group.column-group--sm
+      .column-group__item
+        h5 By services:
+      .column-group__item
+        +checkbox({label:'Traansaltion', checked:true})
+      .column-group__item
+        +checkbox({label:'Transcription', checked:true})
+      .column-group__item
+        +checkbox({label:'Interpreting'})
+      .column-group__item
+        +checkbox({label:'Writing'})
+      .column-group__item
+        +checkbox({label:'Proofreading'})
+      .column-group__item
+        +checkbox({label:'Editting'})
+  //- Column
+  div(class="col-12 col-xs-6 col-lg-4 col-xl col-xxl-2 mb-40")
+    .column-group.column-group--sm
+      .column-group__item
+        h5 By status:
+      .column-group__item
+        +checkbox({label:'Waiting for approval', checked:true})
+      .column-group__item
+        +checkbox({label:'Temporary approved', checked:true})
+      .column-group__item
+        +checkbox({label:'Suspended'})
+      .column-group__item
+        +checkbox({label:'Approved'})
+  //- Column
+  div(class="col-12 col-lg-4 col-xl col-xxl-2 mb-40")
+    .column-group.column-group--sm
+      .column-group__item
+        h5 Language combination:
+      .column-group__item
+        .form-group
+          .form-group__header
+            p From
+          +translation-select()
+      .column-group__item
+        .form-group
+          .form-group__header
+            p To
+          +translation-select()
+
+  div(class="col-12 col-xxl-11 offset-0 offset-xxl-1")
+    +button({border:'surfie-green', classes:'catalog__filter-reset'})(type="button")| Clear filters

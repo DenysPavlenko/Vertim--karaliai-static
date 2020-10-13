@@ -1,3 +1,4 @@
+// Default flex styles
 .flex-row
   flex-direction: row
 .flex-column
@@ -21,7 +22,7 @@
 .justify-content-end
   justify-content: flex-end
 
-// Responsive margins
+// Responsive flex styles
 @each $bp, $name in $breakpoints
   +media-min($bp)
     .flex-#{$name}-row

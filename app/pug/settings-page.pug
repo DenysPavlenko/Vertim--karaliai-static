@@ -37,15 +37,16 @@ block content
                 each tab in tabs
                   div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
                     .catalog__tab-title #{tab.title}
-            .catalog__content
-              .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
-                include /pages/settings-page/general
-              .catalog__content-item.tabs__content.js-tab-content(data-content="education")
-                include /pages/settings-page/education
-              .catalog__content-item.tabs__content.js-tab-content(data-content="services")
-                include /pages/settings-page/services
-              .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
-                include /pages/settings-page/notifications
+            .catalog__box
+              .catalog__content
+                .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
+                  include /pages/settings-page/general
+                .catalog__content-item.tabs__content.js-tab-content(data-content="education")
+                  include /pages/settings-page/education
+                .catalog__content-item.tabs__content.js-tab-content(data-content="services")
+                  include /pages/settings-page/services
+                .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
+                  include /pages/settings-page/notifications
 
     +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
     +password-change-success-modal({title:'Your password has been changed sucsessfully'})

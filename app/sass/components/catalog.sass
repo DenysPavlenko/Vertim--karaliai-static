@@ -2,7 +2,8 @@
   &__header
     display: flex
     align-items: center
-    overflow-x: auto
+    +media-max($bp-xl)
+      overflow-x: auto
   &__left
     padding-right: 5px
   &__right
@@ -18,7 +19,7 @@
     justify-content: center
     padding: 0 30px
     background-color: $c-alabaster
-    border-radius: 6px 6px 0 0
+    border-radius: $r-primary $r-primary 0 0
     user-select: none
     cursor: pointer
     &.is-active
@@ -39,12 +40,22 @@
       margin-left: 10px
       background-color: $c-white
       color: $c-silver-chalice
-  &__content
-    width: 100%
-    padding: 60px 0
+  &__box
     background-color: $c-white
     box-shadow: $s-primary
     border-radius: 0 $r-primary $r-primary $r-primary
+    width: 100%
+  &__filters
+    padding: 40px 0
+    border-bottom: 1px solid $c-silver-chalice
+    display: none
+    &-wrap
+      +media-max($bp-xxl)
+        padding: 0 30px
+      +media-max($bp-sm)
+        padding: 0 15px
+  &__content
+    padding: 60px 0
     &-wrap
       +media-max($bp-xxl)
         padding: 0 30px

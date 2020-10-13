@@ -12,19 +12,19 @@
   div(data-radio-toggle-content="writing")
     .application-form__card-line
       .row
-        .col-12.col-md-6.mb-25.mb-md-0
+        div(class="col-12 col-md-6 mb-25 mb-md-0")
           .form-group
             .form-group__header
               p What combinations do you translate?
             .row
-              .col-12.col-lg-6
+              div(class="col-12 col-lg-6")
                 +translation-select()
-        .col-12.col-md-6
+        div(class="col-12 col-md-6")
           .form-group
             .form-group__header
               p Your prefered price per <span class="font-bold">1 word</span>
             .row
-              .col-12.col-lg-8
+              div(class="col-12 col-lg-8")
                 .input-group
                   .input-group__input
                     +input({bg:'alabaster'})(type="number" placeholder="0.00")

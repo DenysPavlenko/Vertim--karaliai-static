@@ -1,0 +1,10 @@
+// Default offsets styles
+@for $i from 1 through $columns
+  .offset-#{$i}
+    +offset($i)
+// Responsive offsets styles
+@each $bp, $name in $breakpoints
+  +media-min($bp)
+    @for $i from 1 through $columns
+      .offset-#{$name}-#{$i}
+        +offset($i)

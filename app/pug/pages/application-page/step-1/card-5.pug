@@ -13,12 +13,12 @@
     +times(2)
       .application-form__card-line
         .row
-          .col-12.col-md-6.col-lg-7.mb-25.mb-md-0
+          div(class="col-12 col-md-6 col-lg-7 mb-25 mb-md-0")
             .form-group
               .form-group__header
                 +checkbox({ label:'Simultaneous Interpretig?', checked:true })
               .row
-                .col-12.col-lg-6.mb-15.mb-lg-0
+                div(class="col-12 col-lg-6 mb-15 mb-lg-0")
                   .input-group
                     .input-group__prepend
                       p From
@@ -30,7 +30,7 @@
                       p To
                     .input-group__input
                       +translation-select()
-          .col-12.col-md-6.col-lg-5
+          div(class="col-12 col-md-6 col-lg-5")
             .form-group
               .form-group__header
                 p Your prefered price per <span class="font-bold">1 hr</span>

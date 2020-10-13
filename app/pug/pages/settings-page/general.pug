@@ -28,7 +28,8 @@ include /partials/editable-text
 
 .catalog__content-wrap
   .row
-    .col-12.col-xl-3.col-xxl-2.offset-0.offset-xxl-1.mb-40.mb-xl-0
+    //- Column
+    div(class="col-12 col-xl-3 col-xxl-2 offset-0 offset-xxl-1 mb-40 mb-xl-0")
       .column-group.column-group--sm.column-group--justify-items-center
         .column-group__item
           .edit-avatar
@@ -40,7 +41,8 @@ include /partials/editable-text
           p.p-sm Member since: 2015-04-12
         .column-group__item
           +link()(data-modal-open="password-change-modal")| Change password
-    .col-12.col-md-6.col-xl-4.mb-40.mb-md-0
+    //- Column
+    div(class="col-12 col-md-6 col-xl-4 mb-40 mb-md-0")
       .column-heading
         h5 General information:
       .info-list
@@ -53,7 +55,8 @@ include /partials/editable-text
                 +#{item.right.partial}(item.right.params)
               else
                 p.font-semibold #{item.right}
-    .col-12.col-md-6.col-xl-4
+    //- Column
+    div(class="col-12 col-md-6 col-xl-4")
       .column-heading
         h5 Bank information:
       .info-list

@@ -23,7 +23,8 @@ $col-width  : (100% / $columns)
 // Col with paddings
 @mixin col($col: 0, $offset-col: false, $paddings: true)
   @if $col > 0
-    width: #{$col-width * $col}
+    flex: 0 0 #{$col-width * $col}
+    max-width: #{$col-width * $col}
   @else
     flex: 1 0 0
   @if $offset-col
@@ -35,7 +36,8 @@ $col-width  : (100% / $columns)
 // Col with margins
 @mixin col-mx($col: 0, $offset-col: false)
   @if $col > 0
-    width: calc(#{$col-width * $col} - #{$gutter})
+    flex: 0 0 calc(#{$col-width * $col} - #{$gutter})
+    max-width: calc(#{$col-width * $col} - #{$gutter})
   @if $offset-col
     margin-left: calc(#{$col-width * $offset-col} + #{$gutter-half})
   @else

@@ -688,6 +688,40 @@ var editableText = (function () {
   });
 });
 
+var contentToggle = (function () {
+  var $buttons = $('[data-content-toggle-button]'); // Return if $buttons don't exist
+
+  if (!$buttons.length) {
+    return;
+  }
+
+  $buttons.each(function (i, elem) {
+    var $button = $(elem);
+    $button.on('click', function () {
+      var contentName = $button.attr('data-content-toggle-button');
+      var content = $("[data-content-toggle-content=\"".concat(contentName, "\"]"));
+      content.fadeToggle();
+    });
+  });
+});
+
+var catalogFilters = (function () {
+  var $catalogFilters = $('.js-catalog-filters'); // Return if $catalogFilters don't exist
+
+  if (!$catalogFilters.length) {
+    return;
+  }
+
+  $catalogFilters.each(function (i, elem) {
+    var $this = $(elem);
+    var $resetButton = $this.find('.catalog__filter-reset');
+    $resetButton.on('click', function () {
+      $this.find('.checkbox__input').prop('checked', false);
+      console.log(1);
+    });
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -703,6 +737,8 @@ $(function () {
   inputRange();
   editAvatarModal();
   editableText();
+  contentToggle();
+  catalogFilters();
 }); // On window load
 
 $(window).on('load', function () {});

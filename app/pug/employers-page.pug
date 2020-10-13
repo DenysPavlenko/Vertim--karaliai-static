@@ -34,7 +34,7 @@ block content
             .catalog__header
               .catalog__left
                 .input-group.input-group--absolute
-                  +input({bg:'white', classes:'input-group__input'})(type="text" placeholder="Search")
+                  +input({bg:'white', classes:'input-group__input'})(type="text" placeholder="Search" style="min-width:180px;")
                   .input-group__append-absolute
                     +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
               .catalog__tabs.tabs.js-tabs
@@ -43,14 +43,18 @@ block content
                     .catalog__tab-title #{tab.title}
                       +unread({cnt:tab.unread, classes:'catalog__tab-unread'})
               .catalog__right.catalog__right--ml-auto
-                +button({bg:'white'})(type="button")
+                +button({bg:'white'})(type="button" data-content-toggle-button="filters")
                   span Filter
                   +icon({name:'filter', fill:'surfie-green', width:'14', height:'14', classes:'button__icon'})
-            .catalog__content
-              .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="employees")
-                include /pages/employers-page/employees
-              //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="registrations")
-              //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="archieved")
-                //- include /pages/employers-page/general
+            .catalog__box
+              div(class="catalog__filters js-catalog-filters" data-content-toggle-content="filters")
+                .catalog__filters-wrap
+                  include /pages/employers-page/filters
+              .catalog__content
+                .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="employees")
+                  include /pages/employers-page/employees
+                //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="registrations")
+                //- .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="archieved")
+                  //- include /pages/employers-page/general
             .catalog__footer
               +catalog-navigation()
