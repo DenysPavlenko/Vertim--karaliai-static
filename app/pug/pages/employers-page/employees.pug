@@ -8,10 +8,10 @@ include /partials/massive-actions-dropdown
 include /partials/view-select
 -
   var users = [
-    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Lukas Baranauskas'}, accType:'Freelance', services:['proofreading', 'translation'], languages:true, status:'Wating for approval', actions:true },
-    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:['proofreading', 'translation', 'interpreting', 'creative-editing'], languages:true, status:'Wating for approval', actions:true },
-    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:[], languages:true, status:'Wating for approval', actions:true },
-    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:false, services:[], languages:true, status:'Wating for approval', actions:true },
+    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Lukas Baranauskas'}, accType:'Freelance', services:['proofreading', 'translation'], languages:true, status:'Wating for approval', actions:true },
+    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:['proofreading', 'translation', 'interpreting', 'creative-editing'], languages:true, status:'Wating for approval', actions:true },
+    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:[], languages:true, status:'Wating for approval', actions:true },
+    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:false, services:[], languages:true, status:'Wating for approval', actions:true },
   ]
 
 .table-holder
@@ -27,7 +27,7 @@ include /partials/view-select
           td
             p #{user.id}
           td
-            .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+            a(href=user.name.link class="row-group row-group--sm row-group--align-center row-group--nowrap")
               .row-group__item
                 +avatar({image:user.name.image})
               .row-group__item

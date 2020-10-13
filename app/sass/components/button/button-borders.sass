@@ -3,12 +3,12 @@
     &--border-#{$name}
       color: $color
       border-color: $color
-      background-color: transparent
+      background-color: $c-white
       &:hover
         color: $c-white
         border-color: darken($color, 8%)
         background-color: darken($color, 8%)
-        .button__icon
+        svg
           fill: $c-white
       &:focus
         color: $c-white
@@ -23,3 +23,9 @@
         background-color: darken($color, 10%)
         svg
           fill: $c-white
+      &.button--disabled
+        border-color: $c-silver-chalice
+        background-color: transparent
+        color: $c-silver-chalice
+        svg
+          fill: $c-silver-chalice

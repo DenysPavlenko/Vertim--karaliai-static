@@ -1,0 +1,51 @@
+extends /layouts/main
+include /partials/header
+include /partials/alert
+include /partials/password-change-modal
+include /partials/password-change-success-modal
+include /partials/edit-avatar-modal
+
+block variables
+  - const title = 'Settings page'
+  -
+    const tabs = [
+      {title:'General', name:'general', isActive:true},
+      {title:'Education & Files', name:'education'},
+      {title:'Services & prices', name:'services'},
+      {title:'Notifications', name:'notifications'},
+    ]
+
+block content
+  .settings-page
+    .settings-page__header
+      +header()
+    .settings-page__wrap
+      .container
+        .settings-page__heading
+          .settings-page__heading-title
+            h2.text-surfie-green Lukas Baranauskas #221
+          .settings-page__heading-status
+            h3 Account status: <span class="text-caribbean-green">Approved</span>
+              span.icon-inline
+                +icon({name:'check', fill:'caribbean-green', width:'15', height:'13'})
+          .settings-page__heading-alert
+            +alert({icon:'images/icons/check-circle.svg', title:'Changes was saved successfuly', color:'surfie-green'})
+        .settings-page__catalog
+          .catalog
+            .catalog__header
+              .catalog__tabs.tabs.js-tabs
+                each tab in tabs
+                  div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
+                    .catalog__tab-title #{tab.title}
+            .catalog__box
+              .catalog__content
+                .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
+                  include /pages/employee-settings/general
+                .catalog__content-item.tabs__content.js-tab-content(data-content="education")
+                  include /pages/employee-settings/education
+                .catalog__content-item.tabs__content.js-tab-content(data-content="services")
+                .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
+
+    +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
+    +password-change-success-modal({title:'Your password has been changed sucsessfully'})
+    +edit-avatar-modal()

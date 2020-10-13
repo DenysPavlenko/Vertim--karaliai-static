@@ -7,7 +7,7 @@ mixin upload-documents(props = {})
       .upload-documents__header-title
         h6 Uploaded documents: <span class="p-sm font-semibold upload-documents__header-empty text-silver-chalice">No files yet</span>
       .upload-documents__header-button
-        +button({bg:'white', shadow:true, disabled:true})(type="button")
+        +button({border:'surfie-green', disabled:true})(type="button")
           span Download all
           +icon({name:'download', width:'15', height:'13', classes:'button__icon'})
     .upload-documents__content

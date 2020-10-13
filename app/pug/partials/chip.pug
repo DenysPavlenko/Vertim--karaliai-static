@@ -1,0 +1,19 @@
+include /partials/close
+
+mixin chip(props = {})
+  -const { title, button, close, icon } = props
+  -
+    const classnames = classNames({
+      'chip': true,
+      'chip--button': button,
+      [classes]: classes,
+    })
+
+  div(class=classnames)
+    .chip__title #{title}
+    if(icon)
+      .chip__icon
+        +icon({name:icon.name, fill:icon.fill, width:icon.width, height:icon.height})
+    if(close)
+      .chip__icon
+        +close({color:'brick-red', size:'10'})
