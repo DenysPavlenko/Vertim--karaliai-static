@@ -6,6 +6,13 @@ include /partials/lang-combinations-list
 include /partials/choose-actions-dropdown
 include /partials/massive-actions-dropdown
 include /partials/view-select
+-
+  var users = [
+    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Lukas Baranauskas'}, accType:'Freelance', services:['proofreading', 'translation'], languages:true, status:'Wating for approval', actions:true },
+    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:['proofreading', 'translation', 'interpreting', 'creative-editing'], languages:true, status:'Wating for approval', actions:true },
+    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:[], languages:true, status:'Wating for approval', actions:true },
+    { id:'12879452', name:{'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:false, services:[], languages:true, status:'Wating for approval', actions:true },
+  ]
 
 .table-holder
   table.table
@@ -15,106 +22,40 @@ include /partials/view-select
           th
             h5 #{heading}
     tbody
-      //- ROW
-      tr
-        td
-          p 12879452
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            .row-group__item
-              +avatar({image:'images/user/avatar.jpg'})
-            .row-group__item
-              p.font-bold Lukas Baranauskas
-        td
-          +button({border:'caribbean-green', noEvents:true})(type="button")| Freelance
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            each icon in ['proofreading', 'translation']
+      each user in users
+        tr
+          td
+            p #{user.id}
+          td
+            .row-group.row-group--sm.row-group--nowrap.row-group--align-center
               .row-group__item
-                img(src=`images/icons/${icon}.svg`, alt=`${icon}`)
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            .row-group__item
-              +lang-combinations-list()
-            .row-group__item
-              +lang-combinations-dropdown()
-        td
-          p.font-semibold.text-whating-yellow Wating for approval
-        td
-          +choose-actions-dropdown()
-      //- ROW
-      tr
-        td
-          p 12879452
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            .row-group__item
-              +avatar({image:'images/user/avatar.jpg'})
-            .row-group__item
-              p.font-bold Marija Juodijenė
-        td
-          +button({border:'surfie-green', noEvents:true})(type="button")| Full time
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            each icon in ['proofreading', 'translation', 'interpreting', 'creative-editing']
+                +avatar({image:user.name.image})
               .row-group__item
-                img(src=`images/icons/${icon}.svg`, alt=`${icon}`)
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            .row-group__item
-              +lang-combinations-list()
-            .row-group__item
-              +lang-combinations-dropdown()
-        td
-          p.font-semibold.text-whating-yellow Wating for approval
-        td
-          +choose-actions-dropdown()
-      //- ROW
-      tr
-        td
-          p 12879452
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            .row-group__item
-              +avatar({image:'images/user/avatar.jpg'})
-            .row-group__item
-              p.font-bold Marija Juodijenė
-        td
-          +button({border:'surfie-green', noEvents:true})(type="button")| Full time
-        td
-        td
-          p --
-        td
-          p.font-semibold.text-whating-yellow Wating for approval
-        td
-          +choose-actions-dropdown()
-      //- ROW
-      tr
-        td
-          p 12879452
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            .row-group__item
-              +avatar({image:'images/user/avatar.jpg'})
-            .row-group__item
-              p.font-bold Marija Juodijenė
-        td
-          +button({border:'surfie-green', noEvents:true})(type="button")| Full time
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            each icon in ['proofreading', 'translation', 'interpreting', 'creative-editing']
-              .row-group__item
-                img(src=`images/icons/${icon}.svg`, alt=`${icon}`)
-        td
-          .row-group.row-group--sm.row-group--nowrap.row-group--align-center
-            .row-group__item
-              +lang-combinations-list()
-            .row-group__item
-              +lang-combinations-dropdown()
-        td
-          p.font-semibold.text-whating-yellow Wating for approval
-        td
-          +choose-actions-dropdown()
+                p.font-bold #{user.name.name}
+          td
+            if(user.accType)
+              if(user.accType === 'Freelance')
+                +button({border:'caribbean-green', noEvents:true})(type="button")| #{user.accType}
+              if(user.accType === 'Full time')
+                +button({border:'surfie-green', noEvents:true})(type="button")| #{user.accType}
+          td
+            if(user.services.length)
+              .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+                each service in user.services
+                  .row-group__item
+                    img(src=`images/icons/${service}.svg`, alt=`${service}`)
+          td
+            if(user.languages)
+              .row-group.row-group--sm.row-group--nowrap.row-group--align-center
+                .row-group__item
+                  +lang-combinations-list()
+                .row-group__item
+                  +lang-combinations-dropdown()
+          td
+            p.font-semibold.text-whating-yellow #{user.status}
+          td
+            if(user.actions)
+              +choose-actions-dropdown()
 
 .catalog__content-footer
   +view-select()
