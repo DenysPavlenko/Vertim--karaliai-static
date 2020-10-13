@@ -1,5 +1,6 @@
 include /partials/button
 include /partials/input
+include /partials/close
 
 mixin invite-employee-dropdown(props = {})
 
@@ -9,11 +10,18 @@ mixin invite-employee-dropdown(props = {})
         span Invite employee
         +icon({name:'add-person', fill:'white', width:'20', height:'13', classes:'button__icon'})
     .dropdown__body.invite-employee-dropdown__body
-      .invite-employee-dropdown__links
-        .invite-employee-dropdown__link
-          .invite-employee-dropdown__link-title Name of this link
-          .invite-employee-dropdown__link-input-wrap
-            .input-group.input-group--absolute
-              +input({bg:'alabaster', classes:'input-group__input invite-employee-dropdown__link-input'})(value="vertimukaraliai.lt/officeworker-registration")
-              .input-group__append
-                p Copy
+      .invite-employee-dropdown__items
+        +times(2)
+          .invite-employee-dropdown__item
+            +input({bg:'white', classes:'invite-employee-dropdown__item-name'})(value="Name of this link")
+            .invite-employee-dropdown__item-input-wrap
+              .input-group.input-group--absolute
+                +input({border:'alto', classes:'input-group__input invite-employee-dropdown__link-input'})(value="vertimukaraliai.lt/officeworker-registration")
+                .input-group__append-absolute
+                  +button({type:'inline', color:'surfie-green'})(type="button")| Copy
+            .invite-employee-dropdown__item-remove
+              +close({color:'brick-red', size:'14'})
+      .invite-employee-dropdown__button
+        +button({bg:'surfie-green'})(type="button")
+          span Add new link
+          +icon({name:'plus', fill:'white', width:'10', height:'10', classes:'button__icon'})

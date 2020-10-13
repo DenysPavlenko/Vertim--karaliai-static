@@ -1607,38 +1607,63 @@ p,
   color: #9D9D9D;
 }
 
-.input--bg-white {
+.input--white {
   color: #444444;
   background-color: #FFFFFF;
 }
 
-.input--bg-white:focus {
-  border-color: #FFFFFF;
+.input--white:focus {
+  border-color: #0E7D7D;
 }
 
-.input--bg-white::-webkit-input-placeholder {
+.input--white::-webkit-input-placeholder {
   color: #9D9D9D;
 }
 
-.input--bg-white::-moz-placeholder {
+.input--white::-moz-placeholder {
   color: #9D9D9D;
 }
 
-.input--bg-white:-ms-input-placeholder {
+.input--white:-ms-input-placeholder {
   color: #9D9D9D;
 }
 
-.input--bg-white::-ms-input-placeholder {
+.input--white::-ms-input-placeholder {
   color: #9D9D9D;
 }
 
-.input--bg-white::placeholder {
+.input--white::placeholder {
   color: #9D9D9D;
 }
 
 .input--border-alto {
+  color: #444444;
   background-color: #FFFFFF;
   border-color: #DADADA;
+}
+
+.input--border-alto:focus {
+  border-color: #0E7D7D;
+}
+
+.input--border-alto::-webkit-input-placeholder {
+  color: #9D9D9D;
+}
+
+.input--border-alto::-moz-placeholder {
+  color: #9D9D9D;
+}
+
+.input--border-alto:-ms-input-placeholder {
+  color: #9D9D9D;
+}
+
+.input--border-alto::-ms-input-placeholder {
+  color: #9D9D9D;
+}
+
+.input--border-alto::placeholder {
+  color: #9D9D9D;
 }
 
 .input--sm {
@@ -4449,8 +4474,60 @@ p,
   right: 0;
   min-width: 650px;
   margin-top: 5px;
-  padding: 10px 20px;
+  padding: 20px 50px 20px 10px;
   white-space: normal;
+}
+
+.invite-employee-dropdown__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.invite-employee-dropdown__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 10px;
+}
+
+.invite-employee-dropdown__item-name {
+  margin-right: 10px;
+  max-width: 160px;
+}
+
+.invite-employee-dropdown__item-input-wrap {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.invite-employee-dropdown__item-remove {
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.invite-employee-dropdown__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 @media (min-width: 361px) {
