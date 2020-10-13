@@ -21,7 +21,7 @@ mixin select(props = {})
     .select__dropdown.js-select-dropdown
       if(search)
         .select__search
-          +input({size:'sm', bordered:true, classes:'js-select-search'})(type="text" placeholder="Type something")
+          +input({size:'sm', border:'alto', classes:'js-select-search'})(type="text" placeholder="Type something")
       div(data-select-simplebar class="custom-scroll select__dropdown-scroll")
         div(class="select__options js-select-options")
           each option in options

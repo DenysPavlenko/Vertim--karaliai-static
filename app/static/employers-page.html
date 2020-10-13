@@ -133,11 +133,32 @@
             <div class="button-group">
               <a class="button button--border-surfie-green button-group__button" href="#">Permissions
               </a>
-              <button class="button button--surfie-green button-group__button" type="button"><span>Invite employee</span>
-                <svg class="svg-icon svg-icon--white button__icon" width="20" height="13">
-                  <use href="images/svg/svg-sprite/symbol/sprite.svg#add-person" x="0" y="0"></use>
-                </svg>
-              </button>
+              <div class="button-group__button">
+                <div class="dropdown invite-employee-dropdown js-dropdown" data-dropdown="notifications">
+                  <div class="dropdown__toggle invite-employee-dropdown__toggle" data-dropdown-toggle="notifications">
+                    <button class="button button--surfie-green" type="button"><span>Invite employee</span>
+                      <svg class="svg-icon svg-icon--white button__icon" width="20" height="13">
+                        <use href="images/svg/svg-sprite/symbol/sprite.svg#add-person" x="0" y="0"></use>
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="dropdown__body invite-employee-dropdown__body">
+                    <div class="invite-employee-dropdown__links">
+                      <div class="invite-employee-dropdown__link">
+                        <div class="invite-employee-dropdown__link-title">Name of this link</div>
+                        <div class="invite-employee-dropdown__link-input-wrap">
+                          <div class="input-group input-group--absolute">
+                            <input class="input input--alabaster input-group__input invite-employee-dropdown__link-input" value="vertimukaraliai.lt/officeworker-registration" />
+                            <div class="input-group__append">
+                              <p>Copy</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -146,7 +167,7 @@
             <div class="catalog__header">
               <div class="catalog__left">
                 <div class="input-group input-group--absolute">
-                  <input class="input input--bg-white input-group__input" type="text" placeholder="Search" />
+                  <input class="input input--white input-group__input" type="text" placeholder="Search" />
                   <div class="input-group__append-absolute">
                     <svg class="svg-icon svg-icon--silver-chalice" width="12" height="12">
                       <use href="images/svg/svg-sprite/symbol/sprite.svg#search" x="0" y="0"></use>
@@ -645,15 +666,15 @@
                   <div class="catalog-navigation__count-total">/145</div>
                 </div>
                 <div class="catalog-navigation__button">
-                  <button class="button button--white button--size-60 button--radius-secondary" type="button">
-                    <svg class="svg-icon svg-icon--surfie-green catalog-navigation__button-icon" width="14" height="14">
+                  <button class="button button--white button--size-50 button--radius-secondary" type="button">
+                    <svg class="svg-icon svg-icon--surfie-green catalog-navigation__button-icon" width="12" height="12">
                       <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-left" x="0" y="0"></use>
                     </svg>
                   </button>
                 </div>
                 <div class="catalog-navigation__button">
-                  <button class="button button--white button--size-60 button--radius-secondary" type="button">
-                    <svg class="svg-icon svg-icon--surfie-green catalog-navigation__button-icon" width="14" height="14">
+                  <button class="button button--white button--size-50 button--radius-secondary" type="button">
+                    <svg class="svg-icon svg-icon--surfie-green catalog-navigation__button-icon" width="12" height="12">
                       <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-right" x="0" y="0"></use>
                     </svg>
                   </button>

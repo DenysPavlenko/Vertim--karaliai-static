@@ -1,5 +1,6 @@
 extends /layouts/main
 include /partials/header
+include /partials/invite-employee-dropdown
 include /partials/button
 include /partials/unread
 include /partials/input
@@ -26,9 +27,8 @@ block content
           .employers-page__heading-buttons
             .button-group
               +button({border:'surfie-green', classes:'button-group__button'})(href="#")| Permissions
-              +button({bg:'surfie-green', classes:'button-group__button'})(type="button")
-                span Invite employee
-                +icon({name:'add-person', fill:'white', width:'20', height:'13', classes:'button__icon'})
+              .button-group__button
+                +invite-employee-dropdown()
         .employers-page__catalog
           .catalog
             .catalog__header

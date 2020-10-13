@@ -1,12 +1,12 @@
 mixin input(props = {})
-  -const { classes, bordered, bg, size, standard, hidden } = props
+  -const { classes, border, bg, size, standard, hidden } = props
   -
     const classnames = classNames({
       'input': standard !== false,
-      'input--bordered': bordered,
-      'input--hidden': hidden,
+      [`input--${bg}`]: bg,
+      [`input--border-${border}`]: border,
       [`input--${size}`]: size,
-      [`input--bg-${bg}`]: bg,
+      'input--hidden': hidden,
       [classes]: classes,
     })
 

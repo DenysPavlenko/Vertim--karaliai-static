@@ -7,7 +7,7 @@ mixin input-range(props = {})
     .input-range__minus
       +icon({name:'minus', fill:'surfie-green', width:'14', height:'2'})
     .input-range__wrap
-      +input({classes:`input-range__input ${classes ? classes : ''}`})(type="range")&attributes(attributes)
+      +input({bg:'alabaster', classes:`input-range__input ${classes ? classes : ''}`})(type="range")&attributes(attributes)
       .input-range__line
     .input-range__plus
       +icon({name:'plus', fill:'surfie-green', width:'14', height:'14'})

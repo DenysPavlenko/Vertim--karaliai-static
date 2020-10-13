@@ -5,7 +5,7 @@ mixin editable-text(props = {})
   -const { text } = props
 
   .editable-text.js-editable-text
-    +input({hidden:true, classes:'editable-text__input'})(value=text)
+    +input({hidden:true, bg:'alabaster', classes:'editable-text__input'})(value=text)
     .editable-text__title(contenteditable="true") #{text}
     .editable-text__append
       .editable-text__append-icon

@@ -15,7 +15,7 @@ mixin skills-dropdown(props = {})
       form.form.skills-dropdown__search
         .skills-dropdown__search-input
           .input-group.input-group--absolute
-            +input({bordered:true, classes:'input-group__input'})(type="text")
+            +input({border:'alto', classes:'input-group__input'})(type="text")
             .input-group__append-absolute
               +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
         +button({bg:'white', shadow:true})(type="button")| Confirm
