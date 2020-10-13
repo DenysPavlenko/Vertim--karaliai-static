@@ -1,0 +1,15 @@
+include /partials/button
+
+mixin repetitions-dropdown(props = {})
+  -const { text, perc, negative } = props
+
+  .dropdown.repetitions-dropdown.js-dropdown(data-dropdown="notifications")
+    .dropdown__toggle.repetitions-dropdown__toggle(data-dropdown-toggle="notifications")
+      +button({bg:'white', size:'30', shadow:true})(type="button")
+        +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
+    .dropdown__body.repetitions-dropdown__body
+      .column-group.column-group--xs
+        +times(3)
+          .column-group__item
+            p #{text}&nbsp;
+              span(class=`${negative ? 'text-brick-red': 'text-surfie-green'}`) #{perc}

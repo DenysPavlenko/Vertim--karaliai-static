@@ -9,9 +9,9 @@ block variables
   - const title = 'Settings page'
   -
     const tabs = [
-      {title:'General', name:'general', isActive:true},
+      {title:'General', name:'general'},
       {title:'Education & Files', name:'education'},
-      {title:'Services & prices', name:'services'},
+      {title:'Services & prices', name:'services', isActive:true},
       {title:'Notifications', name:'notifications'},
     ]
 
@@ -39,11 +39,12 @@ block content
                     .catalog__tab-title #{tab.title}
             .catalog__box
               .catalog__content
-                .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
+                .catalog__content-item.tabs__content.js-tabs-content(data-content="general")
                   include /pages/employee-settings/general
                 .catalog__content-item.tabs__content.js-tab-content(data-content="education")
                   include /pages/employee-settings/education
-                .catalog__content-item.tabs__content.js-tab-content(data-content="services")
+                .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="services")
+                  include /pages/employee-settings/services
                 .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
 
     +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})

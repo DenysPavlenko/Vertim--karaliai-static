@@ -153,13 +153,13 @@
           <div class="catalog">
             <div class="catalog__header">
               <div class="catalog__tabs tabs js-tabs">
-                <div class="catalog__tab js-tabs-tab is-active" data-tab="general">
+                <div class="catalog__tab js-tabs-tab " data-tab="general">
                   <div class="catalog__tab-title">General</div>
                 </div>
                 <div class="catalog__tab js-tabs-tab " data-tab="education">
                   <div class="catalog__tab-title">Education &amp; Files</div>
                 </div>
-                <div class="catalog__tab js-tabs-tab " data-tab="services">
+                <div class="catalog__tab js-tabs-tab is-active" data-tab="services">
                   <div class="catalog__tab-title">Services &amp; prices</div>
                 </div>
                 <div class="catalog__tab js-tabs-tab " data-tab="notifications">
@@ -169,7 +169,7 @@
             </div>
             <div class="catalog__box">
               <div class="catalog__content">
-                <div class="catalog__content-item tabs__content js-tabs-content is-active" data-content="general">
+                <div class="catalog__content-item tabs__content js-tabs-content" data-content="general">
                   <div class="catalog__content-wrap">
                     <div class="row">
                       <div class="col-12 col-xl-3 col-xxl-2 offset-0 offset-xxl-1 mb-40 mb-xxl-0">
@@ -733,7 +733,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <button class="button button--shadowed button--white" type="button">Confirm
+                                    <button class="button button--shadow button--white" type="button">Confirm
                                     </button>
                                   </form>
                                   <div class="skills-dropdown__variants">
@@ -952,7 +952,7 @@
                                         </div>
                                       </div>
                                     </div>
-                                    <button class="button button--shadowed button--white" type="button">Confirm
+                                    <button class="button button--shadow button--white" type="button">Confirm
                                     </button>
                                   </form>
                                   <div class="skills-dropdown__variants">
@@ -1185,7 +1185,529 @@
                     </div>
                   </div>
                 </div>
-                <div class="catalog__content-item tabs__content js-tab-content" data-content="services"></div>
+                <div class="catalog__content-item tabs__content js-tab-content is-active" data-content="services">
+                  <div class="mb-40">
+                    <div class="table-holder">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>
+                              <button class="button button--shadow button--white button--size-30" type="button">
+                                <svg class="svg-icon svg-icon--surfie-green" width="8" height="4">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                </svg>
+                              </button>
+                            </th>
+                            <th>
+                              <h5>Services:</h5>
+                            </th>
+                            <th>
+                              <h5>Language pair:</h5>
+                            </th>
+                            <th>
+                              <h5>Matt:</h5>
+                            </th>
+                            <th>
+                              <h5>Unit:</h5>
+                            </th>
+                            <th>
+                              <h5>Rate:</h5>
+                            </th>
+                            <th>
+                              <h5>+ fee / -%</h5>
+                            </th>
+                            <th>
+                              <h5>Repetitions:</h5>
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <div class="row-group row-group--align-center row-group--sm">
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#copy" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="font-semibold">Translation</p>
+                            </td>
+                            <td>
+                              <div class="tooltip">
+                                <div class="tooltip__text">
+                                  <p>Creative editing</p>
+                                </div>
+                                <p>EN- LT, LT-EN</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>C. W. S</p>
+                            </td>
+                            <td>
+                              <p>1 = 1700</p>
+                            </td>
+                            <td>
+                              <p>9.21 EUR</p>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="row-group row-group--align-center row-group--sm">
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#copy" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="font-semibold">Proofreading</p>
+                            </td>
+                            <td>
+                              <div class="tooltip">
+                                <div class="tooltip__text">
+                                  <p>Creative editing</p>
+                                </div>
+                                <p>EN- LT, LT-EN</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>C. W. S</p>
+                            </td>
+                            <td>
+                              <p>1 = 1700</p>
+                            </td>
+                            <td>
+                              <p>9.21 EUR</p>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="row-group row-group--align-center row-group--sm">
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#copy" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="font-semibold">Translation</p>
+                            </td>
+                            <td>
+                              <p>--</p>
+                            </td>
+                            <td>
+                              <p>Hour</p>
+                            </td>
+                            <td>
+                              <p>1 = 1</p>
+                            </td>
+                            <td>
+                              <p>30 EUR</p>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="row-group row-group--align-center row-group--sm">
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#copy" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="font-semibold">Translation</p>
+                            </td>
+                            <td>
+                              <div class="tooltip">
+                                <div class="tooltip__text">
+                                  <p>Creative editing</p>
+                                </div>
+                                <p>EN- LT, LT-EN</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>Hour</p>
+                            </td>
+                            <td>
+                              <p>1 = 1</p>
+                            </td>
+                            <td>
+                              <p>30 EUR</p>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <div class="row-group row-group--align-center row-group--sm">
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#copy" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--boston-blue" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="row-group__item">
+                                  <button class="button button--inline" type="button">
+                                    <svg class="svg-icon svg-icon--brick-red" width="12" height="12">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="font-semibold">Translation</p>
+                            </td>
+                            <td>
+                              <div class="tooltip">
+                                <div class="tooltip__text">
+                                  <p>Creative editing</p>
+                                </div>
+                                <p>EN- LT, LT-EN</p>
+                              </div>
+                            </td>
+                            <td>
+                              <p>Min</p>
+                            </td>
+                            <td>
+                              <p>1 = 1</p>
+                            </td>
+                            <td>
+                              <p>9.21 EUR</p>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Urgent&nbsp;<span class="text-surfie-green">(+15%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <div class="dropdown repetitions-dropdown js-dropdown" data-dropdown="notifications">
+                                <div class="dropdown__toggle repetitions-dropdown__toggle" data-dropdown-toggle="notifications">
+                                  <button class="button button--shadow button--white button--size-30" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="15" height="9">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#eye" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body repetitions-dropdown__body">
+                                  <div class="column-group column-group--xs">
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                    <div class="column-group__item">
+                                      <p>Rep&nbsp;<span class="text-brick-red">(-30%)</span></p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="catalog__content-wrap">
+                    <div class="row">
+                      <div class="col-12 col-xxl-11 offset-0 offset-xxl-1">
+                        <button class="button button--border-surfie-green" type="button"><span>Service</span>
+                          <svg class="svg-icon svg-icon--surfie-green button__icon" width="10" height="10">
+                            <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="catalog__content-item tabs__content js-tab-content" data-content="notifications"></div>
               </div>
             </div>

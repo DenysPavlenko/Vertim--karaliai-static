@@ -1,0 +1,62 @@
+include /partials/icon-title
+include /partials/button
+include /partials/lang-pairs-list
+include /partials/repetitions-dropdown
+-
+  var services = [
+    {service:'Translation', langPair:true, matt:'C. W. S', unit:'1 = 1700', rate:'9.21 EUR', fee:true, repetitions:true},
+    {service:'Proofreading', langPair:true, matt:'C. W. S', unit:'1 = 1700', rate:'9.21 EUR', fee:true, repetitions:true},
+    {service:'Translation', langPair:false, matt:'Hour', unit:'1 = 1', rate:'30 EUR', fee:true, repetitions:true},
+    {service:'Translation', langPair:true, matt:'Hour', unit:'1 = 1', rate:'30 EUR', fee:true, repetitions:true},
+    {service:'Translation', langPair:true, matt:'Min', unit:'1 = 1', rate:'9.21 EUR', fee:true, repetitions:true},
+  ]
+
+.mb-40
+  .table-holder
+    table.table
+      thead
+        tr
+          th
+            +button({bg:'white', size:'30', shadow:true})(type="button")
+              +icon({name:'chevron-down', fill:'surfie-green', width:'8', height:'4'})
+          each heading in ['Services:', 'Language pair:', 'Matt:', 'Unit:', 'Rate:', '+ fee / -%', 'Repetitions:']
+            th
+              h5 #{heading}
+      tbody
+        each service in services
+          tr
+            td
+              .row-group.row-group--align-center.row-group--sm
+                .row-group__item
+                  +button({type:'inline'})(type="button")
+                    +icon({name:'copy', fill:'surfie-green', width:'12', height:'12'})
+                .row-group__item
+                  +button({type:'inline'})(type="button")
+                    +icon({name:'pencil', fill:'boston-blue', width:'12', height:'12'})
+                .row-group__item
+                  +button({type:'inline'})(type="button")
+                    +icon({name:'close', fill:'brick-red', width:'12', height:'12'})
+            td
+              p.font-semibold #{service.service}
+            td
+              if(service.langPair)
+                +lang-pairs-list()
+              else
+                p --
+            td
+              p #{service.matt}
+            td
+              p #{service.unit}
+            td
+              p #{service.rate}
+            td
+              +repetitions-dropdown({text:'Urgent', perc:'(+15%)'})
+            td
+              +repetitions-dropdown({text:'Rep', perc:'(-30%)', negative:true})
+
+.catalog__content-wrap
+  .row
+    div(class="col-12 col-xxl-11 offset-0 offset-xxl-1")
+      +button({border:'surfie-green'})(type="button")
+        span Service
+        +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
