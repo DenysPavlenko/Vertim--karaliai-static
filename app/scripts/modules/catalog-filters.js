@@ -8,7 +8,6 @@ export default () => {
     const $resetButton = $this.find('.catalog__filter-reset');
     $resetButton.on('click', () => {
       $this.find('.checkbox__input').prop('checked', false);
-      console.log(1);
     });
   });
 }
