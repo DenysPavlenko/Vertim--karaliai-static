@@ -8,8 +8,8 @@ mixin catalog-navigation(props = {})
       +input({standard:false, classes:'catalog-navigation__count-input'})(value="36" type="number")
       .catalog-navigation__count-total /145
     .catalog-navigation__button
-      +button({size:'50', bg:'white', radius:'secondary'})(type="button")
+      +button({size:'50', bg:'white', shadow:true, radius:'secondary'})(type="button")
         +icon({name:'chevron-left', fill:'surfie-green', width:'12', height:'12', classes:'catalog-navigation__button-icon'})
     .catalog-navigation__button
-      +button({size:'50', bg:'white', radius:'secondary'})(type="button")
+      +button({size:'50', bg:'white', shadow:true, radius:'secondary'})(type="button")
         +icon({name:'chevron-right', fill:'surfie-green', width:'12', height:'12', classes:'catalog-navigation__button-icon'})
