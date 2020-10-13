@@ -1,4 +1,5 @@
 mixin actions(props = {})
+  -const { skip } = props
   -
     const actions = [
       {icon:'archive', title:'Archive'},
@@ -10,7 +11,10 @@ mixin actions(props = {})
 
   .actions
     each action in actions
-      .actions__action
-        .actions__action-icon
-          img(src=`images/icons/${action.icon}.svg`, alt=`${action.icon}`)
-        .actions__action-title #{action.title}
+      if(skip === action.title)
+        - continue
+      else
+        .actions__action
+          .actions__action-icon
+            img(src=`images/icons/${action.icon}.svg`, alt=`${action.icon}`)
+          .actions__action-title #{action.title}
