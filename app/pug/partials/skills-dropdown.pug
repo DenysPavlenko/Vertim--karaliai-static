@@ -1,5 +1,6 @@
 include /partials/input
 include /partials/button
+include /partials/skill-checkbox
 
 mixin skills-dropdown(props = {})
 
@@ -13,7 +14,7 @@ mixin skills-dropdown(props = {})
         p.font-semibold.text-silver-chalice 5234 skills
       .skills-dropdown__search
         .input-group
-          +input({border:'alto', classes:'input-group__input'})(type="text")
+          +input({border:'alto', classes:'input-group__input'})(type="text" placeholder="Search")
           .input-group__append
             +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
       .skills-dropdown__variants
@@ -23,6 +24,6 @@ mixin skills-dropdown(props = {})
           .column-group.column-group--sm
             each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
               .column-group__item
-                +input({border:'alto', disabled:true})(value=item)
+                +skill-checkbox({title:item, classes:'skills-dropdown__skill'})
       .skills-dropdown__footer
         +button({border:'surfie-green', shadow:true})(type="button")| Confirm

@@ -1,9 +1,14 @@
 include /partials/input
 
 mixin skill-checkbox(props = {})
-  -const { title, checked } = props
+  -const { title, checked, classes } = props
+  -
+    const classnames = classNames({
+      'skill-checkbox': true,
+      [classes]: classes,
+    })
 
-  label.skill-checkbox
+  label(class=classnames)
     +input({standard:false, classes:'skill-checkbox__input'})(type="checkbox" name="tag-checkbox" id="tag-checkbox1" checked=checked)
     .skill-checkbox__wrap
       .skill-checkbox__wrap-title #{title}
