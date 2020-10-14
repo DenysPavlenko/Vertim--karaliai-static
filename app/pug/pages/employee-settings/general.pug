@@ -48,9 +48,13 @@ include /partials/change-position-dropdown
             +link()(data-modal-open="password-change-modal")| Change password
       .column-group.column-group--sm.column-group--justify-items-center
         .column-group__item
-          +button({bg:'white', shadow:true})(type="button")
-            +icon({name:'triangle-right', fill:'surfie-green', width:'11', height:'14', classes:'button__icon'})
-            span Unsuspend
+          .js-suspend-buttons
+            +button({bg:'white', shadow:true, color:'tundora'})(type="button")
+              +icon({name:'pause', fill:'tundora', width:'11', height:'14', classes:'button__icon'})
+              span Suspend
+            +button({bg:'white', shadow:true, classes:'d-none'})(type="button")
+              +icon({name:'triangle-right', fill:'surfie-green', width:'11', height:'14', classes:'button__icon'})
+              span Unsuspend
         .column-group__item
           +button({bg:'white', color:'brick-red', shadow:true})(type="button")| Delete account
     //- Column

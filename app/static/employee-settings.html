@@ -281,11 +281,18 @@
                         </div>
                         <div class="column-group column-group--sm column-group--justify-items-center">
                           <div class="column-group__item">
-                            <button class="button button--shadow button--white" type="button">
-                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="11" height="14">
-                                <use href="images/svg/svg-sprite/symbol/sprite.svg#triangle-right" x="0" y="0"></use>
-                              </svg><span>Unsuspend</span>
-                            </button>
+                            <div class="js-suspend-buttons">
+                              <button class="button button--shadow button--white button--color-tundora" type="button">
+                                <svg class="svg-icon svg-icon--tundora button__icon" width="11" height="14">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#pause" x="0" y="0"></use>
+                                </svg><span>Suspend</span>
+                              </button>
+                              <button class="button button--shadow button--white d-none" type="button">
+                                <svg class="svg-icon svg-icon--surfie-green button__icon" width="11" height="14">
+                                  <use href="images/svg/svg-sprite/symbol/sprite.svg#triangle-right" x="0" y="0"></use>
+                                </svg><span>Unsuspend</span>
+                              </button>
+                            </div>
                           </div>
                           <div class="column-group__item">
                             <button class="button button--shadow button--white button--color-brick-red" type="button">Delete account

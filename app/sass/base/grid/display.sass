@@ -1,19 +1,19 @@
 // Default display styles
 .d-none
-  display: none
+  display: none !important
 .d-block
-  display: block
+  display: block !important
 .d-flex
-  display: flex
+  display: flex !important
 .d-inline-flex
-  display: inline-flex
+  display: inline-flex !important
 
 // Responsive display styles
 @each $bp, $name in $breakpoints
   +media-min($bp)
     .d-#{$name}-none
-      display: none
+      display: none !important
     .d-#{$name}-block
-      display: block
+      display: block !important
     .d-#{$name}-inline-flex
-      display: inline-flex
+      display: inline-flex !important

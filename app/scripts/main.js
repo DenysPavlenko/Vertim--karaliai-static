@@ -16,6 +16,7 @@ import editableText from './modules/editable-text';
 import contentToggle from './modules/content-toggle';
 import catalogFilters from './modules/catalog-filters';
 import manageSkills from './modules/manage-skills';
+import suspendButtons from './modules/suspend-buttons';
 
 // On document ready
 $(() => {
@@ -36,6 +37,7 @@ $(() => {
   contentToggle();
   catalogFilters();
   manageSkills();
+  suspendButtons();
 });
 
 // On window load

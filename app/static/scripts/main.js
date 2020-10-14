@@ -810,6 +810,24 @@ var manageSkills = (function () {
   });
 });
 
+var suspendButtons = (function () {
+  var $buttonsWrap = $('.js-suspend-buttons'); // Return if $buttonsWrap don't exist
+
+  if (!$buttonsWrap.length) {
+    return;
+  }
+
+  var $buttons = $buttonsWrap.find('button');
+  $buttons.each(function (i, elem) {
+    var $button = $(elem);
+    $button.on('click', function () {
+      var $siblingButton = $button.siblings();
+      $siblingButton.removeClass('d-none').show();
+      $button.hide();
+    });
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -828,6 +846,7 @@ $(function () {
   contentToggle();
   catalogFilters();
   manageSkills();
+  suspendButtons();
 }); // On window load
 
 $(window).on('load', function () {});

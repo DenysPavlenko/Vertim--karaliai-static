@@ -263,23 +263,23 @@ svg {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .d-block {
-  display: block;
+  display: block !important;
 }
 
 .d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 .d-inline-flex {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
 }
 
 .mt-0 {
@@ -2642,6 +2642,16 @@ p,
 .button--color-brick-red:focus,
 .button--color-brick-red:active {
   color: #CC2936;
+}
+
+.button--color-tundora {
+  color: #444444;
+}
+
+.button--color-tundora:hover,
+.button--color-tundora:focus,
+.button--color-tundora:active {
+  color: #444444;
 }
 
 .button--radius-primary {
@@ -5173,17 +5183,17 @@ p,
   }
 
   .d-xs-none {
-    display: none;
+    display: none !important;
   }
 
   .d-xs-block {
-    display: block;
+    display: block !important;
   }
 
   .d-xs-inline-flex {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
   }
 
   .mt-xs-0 {
@@ -5676,17 +5686,17 @@ p,
   }
 
   .d-sm-none {
-    display: none;
+    display: none !important;
   }
 
   .d-sm-block {
-    display: block;
+    display: block !important;
   }
 
   .d-sm-inline-flex {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
   }
 
   .mt-sm-0 {
@@ -6179,17 +6189,17 @@ p,
   }
 
   .d-md-none {
-    display: none;
+    display: none !important;
   }
 
   .d-md-block {
-    display: block;
+    display: block !important;
   }
 
   .d-md-inline-flex {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
   }
 
   .mt-md-0 {
@@ -6682,17 +6692,17 @@ p,
   }
 
   .d-lg-none {
-    display: none;
+    display: none !important;
   }
 
   .d-lg-block {
-    display: block;
+    display: block !important;
   }
 
   .d-lg-inline-flex {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
   }
 
   .mt-lg-0 {
@@ -7185,17 +7195,17 @@ p,
   }
 
   .d-xl-none {
-    display: none;
+    display: none !important;
   }
 
   .d-xl-block {
-    display: block;
+    display: block !important;
   }
 
   .d-xl-inline-flex {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
   }
 
   .mt-xl-0 {
@@ -7688,17 +7698,17 @@ p,
   }
 
   .d-xxl-none {
-    display: none;
+    display: none !important;
   }
 
   .d-xxl-block {
-    display: block;
+    display: block !important;
   }
 
   .d-xxl-inline-flex {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
   }
 
   .mt-xxl-0 {
