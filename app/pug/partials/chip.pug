@@ -1,11 +1,11 @@
 include /partials/close
 
 mixin chip(props = {})
-  -const { title, button, close, icon } = props
+  -const { title, border, close, fluid, icon } = props
   -
     const classnames = classNames({
       'chip': true,
-      'chip--button': button,
+      [`chip--border-${border}`]: border,
       [classes]: classes,
     })
 

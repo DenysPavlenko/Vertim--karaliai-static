@@ -19,5 +19,5 @@ mixin button(props = {})
       [classes]: classes
     })
 
-  #{tagType}(href=attributes.href class=classnames)&attributes(attributes)
+  #{tagType}(href=attributes.href class=classnames disabled=disabled)&attributes(attributes)
     block

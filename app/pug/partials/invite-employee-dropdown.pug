@@ -15,9 +15,9 @@ mixin invite-employee-dropdown(props = {})
           .invite-employee-dropdown__item
             +input({bg:'white', classes:'invite-employee-dropdown__item-name'})(value="Name of this link")
             .invite-employee-dropdown__item-input-wrap
-              .input-group.input-group--absolute
+              .input-group
                 +input({border:'alto', classes:'input-group__input invite-employee-dropdown__link-input'})(value="vertimukaraliai.lt/officeworker-registration")
-                .input-group__append-absolute
+                .input-group__append
                   +button({type:'inline', color:'surfie-green'})(type="button")| Copy
             .invite-employee-dropdown__item-remove
               +close({color:'brick-red', size:'14'})

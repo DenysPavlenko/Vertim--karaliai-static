@@ -1,6 +1,8 @@
 include /partials/icon-title
 include /partials/button
 include /partials/lang-pairs-list
+include /partials/fee
+include /partials/repetitions
 -
   var services = [
     {service:{title:'Translation', icon:'translation'}, langPair:true, matt:'C. W. S', unit:'1 = 1700', rate:'9.21 EUR'},
@@ -35,19 +37,9 @@ include /partials/lang-pairs-list
             td
               p #{service.rate}
             td
-              .row-group.row-group--sm.row-group--align-center
-                .row-group__item
-                  p Urgent <span class="text-surfie-green">(+15%)</span>
-                .row-group__item
-                  +button({bg:'white', size:'30', shadow:true, noEvents:true})(type="button")
-                    +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
+              +fee()
             td
-              .row-group.row-group--sm.row-group--align-center
-                .row-group__item
-                  p Rep <span class="text-brick-red">(-30%)</span>
-                .row-group__item
-                  +button({bg:'white', size:'30', shadow:true, noEvents:true})(type="button")
-                    +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
+              +repetitions()
 
 .catalog__content-wrap
   .row

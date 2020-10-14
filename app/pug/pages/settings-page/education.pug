@@ -63,7 +63,7 @@ include /partials/chip
         div(data-simplebar class="custom-scroll preffered-list__scroll")
           each expertise in ['Adobe Acrobat Pro', 'Illustrator', 'Trados']
             .preffered-list__item
-              +chip({title:`${expertise}`, close:true, button:true})
+              +chip({title:`${expertise}`, close:true, border:'silver-chalice'})
     //- Column
     div(class="col-12 col-md-6 col-xl-3 col-xxl-2 mb-40")
       .column-heading
@@ -76,7 +76,7 @@ include /partials/chip
         div(data-simplebar class="custom-scroll preffered-list__scroll")
           each expertise in ['Technical', 'Legal', 'Medical']
             .preffered-list__item
-              +chip({title:`${expertise}`, close:true, button:true})
+              +chip({title:`${expertise}`, close:true, border:'silver-chalice'})
 
     //- Upload
     div(class="col-12 col-xl-6 offset-0 offset-xxl-1")

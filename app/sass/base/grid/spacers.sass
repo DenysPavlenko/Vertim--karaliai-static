@@ -1,5 +1,5 @@
 $max: 40
-// Responsive margins
+// Regular margins
 $i: 0
 $step: 5
 @while $i <= $max
@@ -12,7 +12,6 @@ $step: 5
   .ml-#{$i}
     margin-left: $i+px
   $i: $i + $step
-
 // Responsive margins
 @each $bp, $name in $breakpoints
   $i: 0
@@ -27,3 +26,15 @@ $step: 5
       .ml-#{$name}-#{$i}
         margin-left: $i+px
       $i: $i + $step
+
+// Auto margins
+.ml-auto
+  margin-left: auto
+.mr-auto
+  margin-right: auto
+// Responsive auto margins
+@each $bp, $name in $breakpoints
+  .ml-#{$name}-auto
+    margin-left: auto
+  .mr-#{$name}-auto
+    margin-right: auto

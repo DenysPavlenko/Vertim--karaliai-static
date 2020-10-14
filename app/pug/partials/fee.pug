@@ -1,0 +1,8 @@
+mixin fee(props={})
+
+  .row-group.row-group--nowrap.row-group--sm.row-group--align-center
+    .row-group__item
+      p Urgent <span class="text-surfie-green">(+15%)</span>
+    .row-group__item
+      +button({bg:'white', size:'30', shadow:true, noEvents:true})(type="button")
+        +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})

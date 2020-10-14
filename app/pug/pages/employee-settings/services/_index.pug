@@ -1,6 +1,8 @@
 include /partials/icon-title
 include /partials/button
 include /partials/lang-pairs-list
+include /partials/fee
+include /partials/repetitions
 -
   var services = [
     {service:'Translation', langPair:true, matt:'C. W. S', unit:'1 = 1700', rate:'9.21 EUR', fee:true, repetitions:true},
@@ -25,7 +27,7 @@ include /partials/lang-pairs-list
         each service in services
           tr
             td
-              .row-group.row-group--align-center.row-group--sm
+              .row-group.row-group--nowrap.row-group--align-center.row-group--sm
                 .row-group__item
                   +button({type:'inline'})(type="button")
                     +icon({name:'copy', fill:'surfie-green', width:'12', height:'12'})
@@ -49,28 +51,23 @@ include /partials/lang-pairs-list
             td
               p #{service.rate}
             td
-              .row-group.row-group--sm.row-group--align-center
-                .row-group__item
-                  p Urgent <span class="text-surfie-green">(+15%)</span>
-                .row-group__item
-                  +button({bg:'white', size:'30', shadow:true, noEvents:true})(type="button")
-                    +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
+              +fee()
             td
-              .row-group.row-group--sm.row-group--align-center
-                .row-group__item
-                  p Rep <span class="text-brick-red">(-30%)</span>
-                .row-group__item
-                  +button({bg:'white', size:'30', shadow:true, noEvents:true})(type="button")
-                    +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
+              +repetitions()
 
 .catalog__content-wrap
   .row
     div(class="col-12 col-xxl-11 offset-0 offset-xxl-1")
-      +button({border:'surfie-green'})(type="button")
+      +button({border:'surfie-green'})(type="button" data-content-toggle-button="create-service")
         span Service
         +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
 
-.catalog__content-wrap.mt-40
+.catalog__content-wrap.mt-20.d-none(data-content-toggle-content="create-service")
   .row.justify-content-center
+    div(class="col-12 col-xxl-10 mb-10 d-flex")
+      .ml-auto
+        +button({bg:'alabaster'})(type="button" data-content-toggle-button="create-service")
+          span Close
+          +icon({name:'close', fill:'brick-red', width:'10', height:'10', classes:'button__icon'})
     .col-12.col-xxl-10
       include ./create-service

@@ -2,7 +2,7 @@ include /partials/avatar
 include /partials/button
 include /partials/upload-documents
 include /partials/link
-include /partials/skills-dropdown
+include /partials/create-skills-dropdown
 include /partials/chip
 -
   var list1 = [
@@ -58,12 +58,12 @@ include /partials/chip
           .row-group__item
             h5 Skills:
           .row-group__item
-            +skills-dropdown()
+            +create-skills-dropdown()
       .preffered-list
         div(data-simplebar class="custom-scroll preffered-list__scroll")
           each expertise in ['Adobe Acrobat Pro', 'Illustrator', 'Trados']
             .preffered-list__item
-              +chip({title:`${expertise}`, close:true, button:true})
+              +chip({title:`${expertise}`, close:true, border:'silver-chalice'})
     //- Column
     div(class="col-12 col-md-6 col-xl-3 col-xxl-2 mb-40")
       .column-heading
@@ -71,12 +71,12 @@ include /partials/chip
           .row-group__item
             h5 Expertise:
           .row-group__item
-            +skills-dropdown()
+            //- +create-skills-dropdown()
       .preffered-list
         div(data-simplebar class="custom-scroll preffered-list__scroll")
           each expertise in ['Technical', 'Legal', 'Medical']
             .preffered-list__item
-              +chip({title:`${expertise}`, close:true, button:true})
+              +chip({title:`${expertise}`, close:true, border:'silver-chalice'})
 
     //- Upload
     div(class="col-12 col-xl-6 offset-0 offset-xxl-1")

@@ -1,0 +1,29 @@
+include /partials/input
+include /partials/button
+
+mixin create-skills-dropdown(props = {})
+
+  .dropdown.js-dropdown.create-skills-dropdown(data-dropdown="skills")
+    .dropdown__toggle.create-skills-dropdown__toggle(data-dropdown-toggle="skills")
+      +button({border:'surfie-green', size:'20'})(type="button")
+        +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
+    .dropdown__body.create-skills-dropdown__body
+      .create-skills-dropdown__header
+        p.font-semibold Create new:
+      .create-skills-dropdown__search
+        .create-skills-dropdown__search-input
+          .input-group
+            +input({border:'alto', classes:'input-group__input'})(type="text")
+            .input-group__append
+              +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
+        +button({bg:'white', shadow:true})(type="button")
+          span Create new
+          +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
+      .create-skills-dropdown__variants
+        .create-skills-dropdown__variants-title
+          h5 Chose skill from the list and confirm
+        div(data-dropdown-simplebar class="custom-scroll create-skills-dropdown__variants-container")
+          .column-group.column-group--sm
+            each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
+              .column-group__item
+                +input({border:'alto', disabled:true})(value=item)

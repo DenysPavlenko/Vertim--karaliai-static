@@ -9,9 +9,9 @@ block variables
   - const title = 'Employee Settings page'
   -
     const tabs = [
-      {title:'General', name:'general'},
+      {title:'General', name:'general', isActive:true},
       {title:'Education & Files', name:'education'},
-      {title:'Services & prices', name:'services', isActive:true},
+      {title:'Services & prices', name:'services'},
       {title:'Notifications', name:'notifications'},
     ]
 
@@ -39,11 +39,11 @@ block content
                     .catalog__tab-title #{tab.title}
             .catalog__box
               .catalog__content
-                .catalog__content-item.tabs__content.js-tabs-content(data-content="general")
+                .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="general")
                   include /pages/employee-settings/general
                 .catalog__content-item.tabs__content.js-tab-content(data-content="education")
                   include /pages/employee-settings/education
-                .catalog__content-item.tabs__content.js-tab-content.is-active(data-content="services")
+                .catalog__content-item.tabs__content.js-tab-content(data-content="services")
                   include /pages/employee-settings/services/_index
                 .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
 

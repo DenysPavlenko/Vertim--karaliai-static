@@ -426,6 +426,62 @@ svg {
   margin-left: 40px;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-xxl-auto {
+  margin-left: auto;
+}
+
+.mr-xxl-auto {
+  margin-right: auto;
+}
+
+.ml-xl-auto {
+  margin-left: auto;
+}
+
+.mr-xl-auto {
+  margin-right: auto;
+}
+
+.ml-lg-auto {
+  margin-left: auto;
+}
+
+.mr-lg-auto {
+  margin-right: auto;
+}
+
+.ml-md-auto {
+  margin-left: auto;
+}
+
+.mr-md-auto {
+  margin-right: auto;
+}
+
+.ml-sm-auto {
+  margin-left: auto;
+}
+
+.mr-sm-auto {
+  margin-right: auto;
+}
+
+.ml-xs-auto {
+  margin-left: auto;
+}
+
+.mr-xs-auto {
+  margin-right: auto;
+}
+
 .flex-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -1752,6 +1808,10 @@ p,
   display: none;
 }
 
+.input--disabled {
+  pointer-events: none !important;
+}
+
 .input-animation {
   position: relative;
 }
@@ -3071,15 +3131,16 @@ p,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  border-radius: 3px;
+  border: 1px solid transparent;
 }
 
 .chip__title {
   margin-right: 10px;
 }
 
-.chip--button {
-  border: 1px solid #9D9D9D;
-  border-radius: 3px;
+.chip--border-silver-chalice {
+  border-color: #9D9D9D;
 }
 
 .skill-checkbox {
@@ -4675,6 +4736,61 @@ p,
 
 .create-service__title {
   margin-bottom: 20px;
+}
+
+.create-skills-dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.create-skills-dropdown__body {
+  min-width: 500px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.create-skills-dropdown__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.create-skills-dropdown__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.create-skills-dropdown__search-input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 15px;
+}
+
+.create-skills-dropdown__variants-title {
+  margin-bottom: 10px;
+}
+
+.create-skills-dropdown__variants-container {
+  max-height: 240px;
 }
 
 @media (min-width: 361px) {
@@ -7989,6 +8105,10 @@ p,
   .upload-documents__header-title {
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  .create-service {
+    padding: 30px 15px;
   }
 }
 

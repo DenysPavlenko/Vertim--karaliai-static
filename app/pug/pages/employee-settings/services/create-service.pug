@@ -1,4 +1,5 @@
 include /partials/select
+include /partials/button
 include /partials/input
 
 .create-service
@@ -6,7 +7,7 @@ include /partials/input
     h4.text-surfie-green Create new service
   .create-service__content
     .row
-      .col-3
+      div(class="col-12 col-md-6 col-xl-3 mb-25")
         .form-group
           .form-group__header
             p Service
@@ -18,7 +19,7 @@ include /partials/input
               {name:'translation 3', content:`<span>Translation 3</span>`},
             ]
           })
-      .col-4
+      div(class="col-12 col-md-6 col-xl-5 mb-25")
         .form-group
           .form-group__header
             p Matt name
@@ -39,11 +40,11 @@ include /partials/input
                 .input-group__prepend
                   p €
                 +input({bg:'alabaster', classes:'input-group__input'})(type="number" placeholder="Price")
-      .col-4
+      div(class="col-12 col-md-6 col-xl-3 mb-25")
         .form-group
           .form-group__header
             p Languages:
-          .row-group.row-group--sm
+          .row-group.row-group--flex-1.row-group--sm
             .row-group__item
               +select({
                 label:{name:'source', content:`<span>Source</span>`},
@@ -62,3 +63,71 @@ include /partials/input
                   {name:'target 3', content:`<span>Target 3</span>`},
                 ]
               })
+      div(class="col-12 col-md-6 col-xl-3 mb-25")
+        .form-group
+          .form-group__header
+            p Urgency
+          .row-group.row-group--sm
+            .row-group__item.row-group__item--flex-1
+              +select({
+                label:{name:'lating', content:`<span>Lating</span>`},
+                options:[
+                  {name:'lating', content:`<span>Lating</span>`},
+                  {name:'lating 2', content:`<span>Lating 2</span>`},
+                  {name:'lating 3', content:`<span>Lating 3</span>`},
+                ]
+              })
+            .row-group__item
+              +button({bg:'white', size:'40', shadow:true})
+                +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
+      div(class="col-12 col-md-6 col-xl-2 mb-25")
+        .form-group
+          .form-group__header
+            p Time frame
+          +select({
+            label:{name:'-1 hours', content:`<span>-1 hours</span>`},
+            options:[
+              {name:'-1 hours', content:`<span>-1 hours</span>`},
+              {name:'-1 hours 2', content:`<span>-1 hours 2</span>`},
+              {name:'-1 hours 3', content:`<span>-1 hours 3</span>`},
+            ]
+          })
+      div(class="col-12 col-md-6 col-xl-2 mb-25")
+        .form-group
+          .form-group__header
+            p + fee / -%
+          +input({bg:'alabaster'})(value="-15 %")
+
+    .row
+      div(class="col-12 mb-25")
+        +button({type:'inline', color:'surfie-green'})
+          +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
+          span Create one more
+
+    .row
+      div(class="col-12 col-xl-4 mb-25")
+        .row-group.row-group--align-center
+          .row-group__item.row-group__item--flex-1
+            .form-group
+              .form-group__header
+                p Repeatitions:
+              +input({bg:'alabaster'})(value="30%")
+          .row-group__item
+            h4.text-surfie-green.mt-25 =
+          .row-group__item.row-group__item--flex-1
+            .form-group
+              .form-group__header
+                p Discount:
+              +input({bg:'alabaster'})(value="50%")
+
+    .row
+      div(class="col-12 mb-25")
+        +button({type:'inline', color:'surfie-green'})
+          +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
+          span Create one more
+
+    .row
+      div(class="col-12")
+        +button({bg:'surfie-green'})
+          span Update / Create
+          +icon({name:'plus', fill:'white', width:'10', height:'10', classes:'button__icon'})
