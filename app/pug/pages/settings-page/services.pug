@@ -1,7 +1,6 @@
 include /partials/icon-title
 include /partials/button
 include /partials/lang-pairs-list
-include /partials/repetitions-dropdown
 -
   var services = [
     {service:{title:'Translation', icon:'translation'}, langPair:true, matt:'C. W. S', unit:'1 = 1700', rate:'9.21 EUR'},
@@ -36,9 +35,19 @@ include /partials/repetitions-dropdown
             td
               p #{service.rate}
             td
-              +repetitions-dropdown({text:'Urgent', perc:'(+15%)'})
+              .row-group.row-group--sm.row-group--align-center
+                .row-group__item
+                  p Urgent <span class="text-surfie-green">(+15%)</span>
+                .row-group__item
+                  +button({bg:'white', size:'30', shadow:true, noEvents:true})(type="button")
+                    +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
             td
-              +repetitions-dropdown({text:'Rep', perc:'(-30%)', negative:true})
+              .row-group.row-group--sm.row-group--align-center
+                .row-group__item
+                  p Rep <span class="text-brick-red">(-30%)</span>
+                .row-group__item
+                  +button({bg:'white', size:'30', shadow:true, noEvents:true})(type="button")
+                    +icon({name:'eye', fill:'surfie-green', width:'15', height:'9'})
 
 .catalog__content-wrap
   .row

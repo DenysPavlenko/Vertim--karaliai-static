@@ -4660,28 +4660,6 @@ p,
   margin-bottom: 10px;
 }
 
-.repetitions-dropdown {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
-
-.repetitions-dropdown__toggle.is-active .button__icon {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.repetitions-dropdown__body {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  margin-top: 5px;
-  min-width: 140px;
-  white-space: normal;
-  text-align: center;
-  padding: 20px 15px;
-}
-
 @media (min-width: 361px) {
   .col-xs {
     -webkit-box-flex: 1;
