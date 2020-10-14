@@ -1,0 +1,25 @@
+.permissions-box
+  border: 1px solid $c-alto
+  border-radius: $r-type-1
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px
+  &__toggle
+    display: flex
+    align-items: center
+    cursor: pointer
+    &.is-active
+      .permissions-box__toggle-icon
+        transform: rotate(180deg)
+    &-title
+      margin-right: 5px
+    &-icon
+      transition: 0.2s
+  &__content
+    &-item
+      width: 100%
+      padding: 10px 20px
+      &:nth-child(odd)
+        background-color: $c-alabaster

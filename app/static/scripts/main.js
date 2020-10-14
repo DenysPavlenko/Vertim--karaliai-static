@@ -814,6 +814,24 @@ var suspendButtons = (function () {
   });
 });
 
+var permissionsBox = (function () {
+  var $boxes = $('.js-permissions-box'); // Return if $boxes doesn't exist
+
+  if ($boxes.length === 0) {
+    return;
+  }
+
+  $boxes.each(function (i, elem) {
+    var $box = $(elem);
+    var $boxToggle = $box.find('.permissions-box__toggle');
+    var $boxContent = $box.find('.permissions-box__content');
+    $boxToggle.on('click', function () {
+      $boxToggle.toggleClass('is-active');
+      $boxContent.fadeToggle();
+    });
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -833,6 +851,7 @@ $(function () {
   catalogFilters();
   manageSkills();
   suspendButtons();
+  permissionsBox();
 }); // On window load
 
 $(window).on('load', function () {});

@@ -17,6 +17,7 @@ import contentToggle from './modules/content-toggle';
 import catalogFilters from './modules/catalog-filters';
 import manageSkills from './modules/manage-skills';
 import suspendButtons from './modules/suspend-buttons';
+import permissionsBox from './modules/permissions-box';
 
 // On document ready
 $(() => {
@@ -38,6 +39,7 @@ $(() => {
   catalogFilters();
   manageSkills();
   suspendButtons();
+  permissionsBox();
 });
 
 // On window load

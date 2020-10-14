@@ -14,6 +14,7 @@ block variables
       {title:'Education & Files', name:'education'},
       {title:'Services & prices', name:'services'},
       {title:'Notifications', name:'notifications'},
+      {title:'Permissions', name:'permissions'},
     ]
 
 block content
@@ -47,6 +48,9 @@ block content
                 .catalog__content-item.tabs__content.js-tab-content(data-content="services")
                   include /pages/employee-settings/services/_index
                 .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
+                  include /pages/employee-settings/notifications
+                .catalog__content-item.tabs__content.js-tab-content(data-content="notifications")
+                  include /pages/employee-settings/permissions
 
     +password-change-modal({type:'change', title:'Change password', text:'Cnanging password information Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'})
     +password-change-success-modal({title:'Your password has been changed sucsessfully'})

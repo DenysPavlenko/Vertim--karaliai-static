@@ -1,0 +1,18 @@
+include /partials/checkbox
+
+mixin permissions-box(props={})
+  -const {title} = props
+
+  .permissions-box.js-permissions-box
+    .permissions-box__header
+      .permissions-box__title
+        h5 Project window:
+      .permissions-box__toggle.is-active
+        .permissions-box__toggle-title
+          h6.text-surfie-green Hide
+        .permissions-box__toggle-icon
+          +icon({name:'chevron-down', fill:'surfie-green', width:'8', height:'6'})
+    .permissions-box__content
+      each item, i in ['Add comment', 'Remove comment', 'Add new task', 'Send to client', 'Cancel project']
+        .permissions-box__content-item
+          +checkbox({label:item, checked:i < 3})
