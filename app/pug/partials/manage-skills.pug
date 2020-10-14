@@ -19,7 +19,7 @@ mixin manage-skills(props = {})
           +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
     .manage-skills__form
       .manage-skills__form-wrap
-        +input({border:'alto', classes:'manage-skills__form-input'})(type="text")
+        +input({border:'alto', classes:'manage-skills__form-input', radius:'type-2'})(type="text")
         +button({bg:'transparent', classes:'manage-skills__form-submit'})| Submit
     div(data-dropdown-simplebar class="custom-scroll manage-skills__list")
       .manage-skills__items
@@ -34,4 +34,4 @@ mixin manage-skills(props = {})
               +button({bg:'transparent', classes:'manage-skills__done'})| Done
 
   .manage-skills__footer
-    +button({border:'surfie-green', shadow:true})(type="button" data-dropdown-close="manage-skills-dropdown")| Confirm
+    +button({border:'surfie-green'})(type="button" data-dropdown-close="manage-skills-dropdown")| Confirm

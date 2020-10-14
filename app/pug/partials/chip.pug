@@ -1,11 +1,13 @@
 include /partials/close
 
 mixin chip(props = {})
-  -const { title, border, close, fluid, icon } = props
+  -const { title, border, color, dots, close, fluid, icon, size } = props
   -
     const classnames = classNames({
       'chip': true,
       [`chip--border-${border}`]: border,
+      [`chip--color-${color}`]: color,
+      [`chip--size-${size}`]: size,
       [classes]: classes,
     })
 
@@ -17,3 +19,6 @@ mixin chip(props = {})
     if(close)
       .chip__icon
         +close({color:'brick-red', size:'10'})
+    if(dots)
+      .chip__dots
+        +icon({name:'three-dots', fill:border, width:15, height:3})

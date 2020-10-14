@@ -1,8 +1,9 @@
 mixin input(props = {})
-  -const { classes, border, bg, size, standard, hidden, disabled } = props
+  -const { classes, border, bg, size, standard, hidden, disabled, radius } = props
   -
     const classnames = classNames({
       'input': standard !== false,
+      [`input--radius-${radius}`]: radius,
       [`input--${bg}`]: bg,
       [`input--border-${border}`]: border,
       [`input--${size}`]: size,

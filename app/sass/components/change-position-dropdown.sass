@@ -1,0 +1,30 @@
+.change-position-dropdown
+  display: inline-block
+  // Elements
+  &__body
+    // display: block
+    left: 0
+    min-width: 340px
+    padding: 20px
+    margin-top: 10px
+  &__header
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-bottom: 20px
+  &__search
+    margin-bottom: 20px
+  &__title
+    margin-bottom: 10px
+  &__items
+    max-height: 240px
+    margin-bottom: 15px
+  &__item
+    border: 1px solid $c-alto
+    border-radius: $r-type-2
+    cursor: pointer
+    &:not(:last-child)
+      margin-bottom: 10px
+    &-radio
+      padding: 9px 20px
+      width: 100%

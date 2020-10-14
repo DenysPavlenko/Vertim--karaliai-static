@@ -1,0 +1,36 @@
+include /partials/input
+include /partials/button
+include /partials/chip
+include /partials/radio
+
+mixin change-position-dropdown(props = {})
+  -
+    let positions = [
+      {label:'Project manager', name:'position', value:'Project manager', checked:true},
+      {label:'Admin', name:'position', value:'Admin'},
+      {label:'Sales manager', name:'position', value:'Sales manager'},
+      {label:'Office worker', name:'position', value:'Office worker'},
+      {label:'Procurement managament', name:'position', value:'Procurement managament'},
+      {label:'Some other position', name:'position', value:'Some other position'},
+    ]
+
+  .dropdown.js-dropdown.change-position-dropdown(data-dropdown="change-position-dropdown")
+    .dropdown__toggle.change-position-dropdown__toggle(data-dropdown-toggle="change-position-dropdown")
+      +chip({title:'Project manager', dots:true, border:'boston-blue', size:'sm'})
+    .dropdown__body.change-position-dropdown__body
+      .change-position-dropdown__header
+        h5 Change position
+        h5.text-silver-chalice 5234 positions
+      .change-position-dropdown__search
+        .input-group
+          +input({border:'alto', classes:'input-group__input'})(type="text" placeholder="Search")
+          .input-group__append
+            +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
+      .change-position-dropdown__title
+        h6 Setted position permissions will be applied!
+      div(data-dropdown-simplebar class="custom-scroll change-position-dropdown__items")
+        each position in positions
+          .change-position-dropdown__item
+            +radio({label:position.label, name:position.name, checked:position.checked, classes:'change-position-dropdown__item-radio'})
+      .change-position-dropdown__footer
+        +button({border:'surfie-green'})(type="button" data-dropdown-close="change-position-dropdown")| Confirm

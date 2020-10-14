@@ -1,15 +1,36 @@
 .chip
   display: inline-flex
-  align-items: center
-  padding: 12px 15px
   font-size: rem(14px)
   line-height: 1
   font-weight: 600
   color: $c-tundora
   user-select: none
-  border-radius: $r-primary
+  border-radius: $r-type-1
+  background-color: transparent
   border: 1px solid transparent
   &__title
+    padding: 12px 15px
     margin-right: 10px
-  &--border-silver-chalice
-    border-color: $c-silver-chalice
+  &__icon
+    position: relative
+    left: -15px
+    display: flex
+    align-items: center
+  &__dots
+    padding: 0 15px
+    display: flex
+    align-items: center
+    border-left: 1px solid transparent
+  &--size-sm
+    .chip__title
+      padding: 8px 15px
+  @each $name, $color in ('silver-chalice': $c-silver-chalice, 'surfie-green': $c-surfie-green, 'boston-blue': $c-boston-blue)
+    &--border-#{$name}
+      background-color: $c-white
+      border-color: $color
+      color: $color
+      .chip__dots
+        border-color: rgba($color, 0.25)
+  @each $name, $color in ('silver-chalice': $c-silver-chalice, 'surfie-green': $c-surfie-green, 'boston-blue': $c-boston-blue, 'tundora': $c-tundora)
+    &--color-#{$name}
+      color: $color
