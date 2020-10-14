@@ -7,7 +7,6 @@ function select () {
     var $select = $(elem);
     var $selectLabel = $select.find('.js-select-label');
     var $selectDropdown = $select.find('.js-select-dropdown');
-    var $selectScrollbar = $select.find('[data-select-simplebar]');
     var $optionsContainer = $select.find('.js-select-options');
     var $options = $select.find('.js-select-option');
     var $input = $select.find('.js-select-input');
@@ -24,13 +23,7 @@ function select () {
       toggleSelect(); // Set fixed width to select dropdown
 
       selectDropdownWidth = selectDropdownWidth ? selectDropdownWidth : $selectDropdown.width();
-      $selectDropdown.css('width', selectDropdownWidth); // Initialize SimpleBar scroll
-
-      if ($selectScrollbar.length > 0) {
-        setTimeout(function () {
-          new SimpleBar($selectScrollbar[0]);
-        }, 0);
-      }
+      $selectDropdown.css('width', selectDropdownWidth);
     }); // Select option click logic
 
     $options.each(function (i, elem) {
@@ -299,7 +292,6 @@ var dropdown = (function () {
     var dropdownName = $dropdown.attr('data-dropdown');
     var $dropdownBody = $dropdown.find('.dropdown__body');
     var $dropdownToggle = $dropdown.find('[data-dropdown-toggle]');
-    var $scrollbar = $dropdown.find('[data-dropdown-simplebar]');
     var $dropdownClose = $("[data-dropdown-close=\"".concat(dropdownName, "\"]"));
     var isOpened = false;
     $dropdownToggle.on('click', function () {
@@ -311,12 +303,6 @@ var dropdown = (function () {
       // }
 
       isOpened = !isOpened;
-
-      if ($scrollbar.length > 0) {
-        setTimeout(function () {
-          new SimpleBar($scrollbar[0]);
-        }, 0);
-      }
     });
     $dropdownClose.on('click', function () {
       $dropdownBody.fadeOut(fadeDuration);

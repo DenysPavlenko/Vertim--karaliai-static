@@ -6,7 +6,6 @@ export default function () {
     const $select = $(elem);
     const $selectLabel = $select.find('.js-select-label');
     const $selectDropdown = $select.find('.js-select-dropdown');
-    const $selectScrollbar = $select.find('[data-select-simplebar]');
     const $optionsContainer = $select.find('.js-select-options');
     const $options = $select.find('.js-select-option');
     const $input = $select.find('.js-select-input');
@@ -23,12 +22,6 @@ export default function () {
       // Set fixed width to select dropdown
       selectDropdownWidth = selectDropdownWidth ? selectDropdownWidth : $selectDropdown.width();
       $selectDropdown.css('width', selectDropdownWidth);
-      // Initialize SimpleBar scroll
-      if ($selectScrollbar.length > 0) {
-        setTimeout(() => {
-          new SimpleBar($selectScrollbar[0]);
-        }, 0);
-      }
     });
     // Select option click logic
     $options.each((i, elem) => {

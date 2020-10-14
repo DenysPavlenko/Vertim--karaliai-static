@@ -21,7 +21,7 @@ mixin manage-skills(props = {})
       .manage-skills__form-wrap
         +input({border:'alto', classes:'manage-skills__form-input', radius:'type-2'})(type="text")
         +button({bg:'transparent', classes:'manage-skills__form-submit'})| Submit
-    div(data-dropdown-simplebar class="custom-scroll manage-skills__list")
+    div(data-simplebar class="custom-scroll manage-skills__list")
       .manage-skills__items
         each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
           .manage-skills__item

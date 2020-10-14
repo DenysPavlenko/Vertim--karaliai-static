@@ -28,7 +28,7 @@ mixin change-position-dropdown(props = {})
             +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
       .change-position-dropdown__title
         h6 Setted position permissions will be applied!
-      div(data-dropdown-simplebar class="custom-scroll change-position-dropdown__items")
+      div(data-simplebar class="custom-scroll change-position-dropdown__items")
         each position in positions
           .change-position-dropdown__item
             +radio({label:position.label, name:position.name, checked:position.checked, classes:'change-position-dropdown__item-radio'})

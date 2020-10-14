@@ -12,7 +12,6 @@ export default () => {
     const dropdownName = $dropdown.attr('data-dropdown');
     const $dropdownBody = $dropdown.find('.dropdown__body');
     const $dropdownToggle = $dropdown.find('[data-dropdown-toggle]')
-    const $scrollbar = $dropdown.find('[data-dropdown-simplebar]');
     const $dropdownClose = $(`[data-dropdown-close="${dropdownName}"]`);
     let isOpened = false;
 
@@ -25,11 +24,6 @@ export default () => {
       //   }, 0);
       // }
       isOpened = !isOpened;
-      if ($scrollbar.length > 0) {
-        setTimeout(() => {
-          new SimpleBar($scrollbar[0]);
-        }, 0);
-      }
     });
 
     $dropdownClose.on('click', function () {

@@ -19,7 +19,7 @@ mixin skills-dropdown(props = {})
             +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
       .skills-dropdown__title
         h6 Chose skill from the list and confirm
-      div(data-dropdown-simplebar class="custom-scroll skills-dropdown__wrap")
+      div(data-simplebar class="custom-scroll skills-dropdown__wrap")
         .column-group.column-group--sm
           each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
             .column-group__item
