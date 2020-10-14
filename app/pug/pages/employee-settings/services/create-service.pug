@@ -1,0 +1,64 @@
+include /partials/select
+include /partials/input
+
+.create-service
+  .create-service__title
+    h4.text-surfie-green Create new service
+  .create-service__content
+    .row
+      .col-3
+        .form-group
+          .form-group__header
+            p Service
+          +select({
+            label:{name:'translation', content:`<span>Translation</span>`},
+            options:[
+              {name:'translation', content:`<span>Translation</span>`},
+              {name:'translation 2', content:`<span>Translation 2</span>`},
+              {name:'translation 3', content:`<span>Translation 3</span>`},
+            ]
+          })
+      .col-4
+        .form-group
+          .form-group__header
+            p Matt name
+          .row-group.row-group--sm.row-group--flex-1
+            .row-group__item
+              +select({
+                label:{name:'DHL', content:`<span>DHL</span>`},
+                options:[
+                  {name:'DHL', content:`<span>DHL</span>`},
+                  {name:'DHL 2', content:`<span>DHL 2</span>`},
+                  {name:'DHL 3', content:`<span>DHL 3</span>`},
+                ]
+              })
+            .row-group__item
+              +input({bg:'alabaster'})(value="Value = 1 vnt")
+            .row-group__item
+              .input-group
+                .input-group__prepend
+                  p €
+                +input({bg:'alabaster', classes:'input-group__input'})(type="number" placeholder="Price")
+      .col-4
+        .form-group
+          .form-group__header
+            p Languages:
+          .row-group.row-group--sm
+            .row-group__item
+              +select({
+                label:{name:'source', content:`<span>Source</span>`},
+                options:[
+                  {name:'source', content:`<span>Source</span>`},
+                  {name:'source 2', content:`<span>Source 2</span>`},
+                  {name:'source 3', content:`<span>Source 3</span>`},
+                ]
+              })
+            .row-group__item
+              +select({
+                label:{name:'target', content:`<span>Target</span>`},
+                options:[
+                  {name:'target', content:`<span>Target</span>`},
+                  {name:'target 2', content:`<span>Target 2</span>`},
+                  {name:'target 3', content:`<span>Target 3</span>`},
+                ]
+              })

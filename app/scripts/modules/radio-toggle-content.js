@@ -1,6 +1,6 @@
 export default function () {
   const $selectors = $('[data-radio-toggle]');
-  const $toggleContent = $('[data-radio-toggle-content]');
+  const $toggleContent = $('[data-radio-toggle-contents]');
 
   // Return if $selectors doesn't exist
   if (!$selectors.length) { return; }

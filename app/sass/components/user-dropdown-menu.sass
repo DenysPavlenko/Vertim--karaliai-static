@@ -4,12 +4,18 @@
     flex-direction: column
   &__item
     &:not(:last-child)
-      padding-bottom: 20px
-      margin-bottom: 20px
-      border-bottom: 1px solid $c-alto
+      margin-bottom: 5px
   &__link
     display: flex
     align-items: center
+    height: 40px
+    padding: 0 15px
+    border-radius: $r-secondary
+    transition: 0.2s
+    background-color: transparent
+    &:hover,
+    &.is-active
+      background-color: $c-alabaster
   &__icon
     margin-right: 10px
   &__title

@@ -19,25 +19,25 @@
                 +checkbox({ label:'Simultaneous Interpretig?', checked:true })
               .row
                 div(class="col-12 col-lg-6 mb-15 mb-lg-0")
-                  .input-group
-                    .input-group__prepend
+                  .row-group.row-group--align-center.row-group--sm
+                    .row-group__item
                       p From
-                    .input-group__input
+                    .row-group__item.row-group__item--flex-1
                       +translation-select()
                 .col-12.col-lg-6
-                  .input-group
-                    .input-group__prepend
+                  .row-group.row-group--align-center.row-group--sm
+                    .row-group__item
                       p To
-                    .input-group__input
+                    .row-group__item.row-group__item--flex-1
                       +translation-select()
           div(class="col-12 col-md-6 col-lg-5")
             .form-group
               .form-group__header
                 p Your prefered price per <span class="font-bold">1 hr</span>
-              .input-group
-                .input-group__input
-                  +input({bg:'alabaster'})(type="number" placeholder="0.00")
-                .input-group__append.input-group__append--p-0
+              .row-group.row-group--align-center.row-group--0
+                .row-group__item
+                  +input({bg:'alabaster'})(type="number" placeholder="0.00" style="min-width:70px")
+                .row-group__item
                   +currency-select()
 
       .application-form__card-line

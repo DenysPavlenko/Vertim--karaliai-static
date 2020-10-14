@@ -33,9 +33,9 @@ block content
           .catalog
             .catalog__header
               .catalog__left
-                .input-group.input-group--absolute
+                .input-group
                   +input({bg:'white', classes:'input-group__input'})(type="text" placeholder="Search" style="min-width:180px;")
-                  .input-group__append-absolute
+                  .input-group__append
                     +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
               .catalog__tabs.tabs.js-tabs
                 each tab in tabs
