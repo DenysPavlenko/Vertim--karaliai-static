@@ -296,9 +296,11 @@ var dropdown = (function () {
 
   $dropdowns.each(function (i, elem) {
     var $dropdown = $(elem);
+    var dropdownName = $dropdown.attr('data-dropdown');
     var $dropdownBody = $dropdown.find('.dropdown__body');
     var $dropdownToggle = $dropdown.find('[data-dropdown-toggle]');
     var $scrollbar = $dropdown.find('[data-dropdown-simplebar]');
+    var $dropdownClose = $("[data-dropdown-close=\"".concat(dropdownName, "\"]"));
     var isOpened = false;
     $dropdownToggle.on('click', function () {
       $dropdownToggle.toggleClass('is-active');
@@ -315,6 +317,11 @@ var dropdown = (function () {
           new SimpleBar($scrollbar[0]);
         }, 0);
       }
+    });
+    $dropdownClose.on('click', function () {
+      $dropdownBody.fadeOut(fadeDuration);
+      $dropdownToggle.removeClass('is-active');
+      isOpened = false;
     });
     $document.on('click', function (e) {
       if ($(e.target).parents('[data-dropdown]')[0] !== $dropdown[0] && isOpened) {
@@ -721,6 +728,88 @@ var catalogFilters = (function () {
   });
 });
 
+var manageSkills = (function () {
+  var $manageSkills = $('.js-manage-skills'); // Return if $manageSkills don't exist
+
+  if (!$manageSkills.length) {
+    return;
+  }
+
+  $manageSkills.each(function (i, elem) {
+    var $this = $(elem);
+    var $createButton = $this.find('.manage-skills__create-button');
+    var $form = $this.find('.manage-skills__form');
+    var $formInput = $this.find('.manage-skills__form-input');
+    var $formSubmit = $this.find('.manage-skills__form-submit');
+    var $manageItemsWrap = $this.find('.manage-skills__items');
+    var $manageItems = $this.find('.manage-skills__item'); // Add new item
+
+    $createButton.on('click', function () {
+      $form.show();
+      $formInput.trigger('focus');
+      $formSubmit.on('click', function () {
+        if ($formInput.val()) {
+          createNewSkill($formInput.val());
+          $form.hide().val('');
+        } else {
+          $form.hide();
+        }
+      });
+    });
+    $manageItemsWrap.on('click', function (e) {
+      var $target = $(e.target);
+      var $manageItem = $target.parents('.manage-skills__item');
+
+      if ($manageItem) {
+        var $skill = $manageItem.find('.manage-skills__skill');
+        var $skillTitle = $skill.find('.skill-checkbox__wrap-title');
+        var $checkbox = $skill.find('input');
+        var $input = $manageItem.find('.manage-skills__skill-input');
+        var $edit = $manageItem.find('.manage-skills__edit');
+        var $done = $manageItem.find('.manage-skills__done'); // Stop checkbox propagation
+
+        $checkbox.one('click', function (e) {
+          e.stopPropagation();
+        }); // Show/hide edit button
+
+        $skill.one('change', function (e) {
+          e.stopPropagation();
+
+          if ($checkbox.is(':checked')) {
+            $edit.show();
+          } else {
+            $edit.hide();
+          }
+        }); // Hide edit button and show done button. Copy value to the input. Hide skill.
+
+        $edit.one('click', function (e) {
+          e.stopPropagation();
+          $edit.hide();
+          $done.show();
+          $skill.hide();
+          $input.val($skillTitle.html()).show().trigger('focus');
+        }); // Copy input value to SkillTitle. Hide done, input.
+
+        $done.one('click', function (e) {
+          e.stopPropagation();
+          $done.hide();
+          $skillTitle.html($input.val());
+          $skill.show();
+          $input.hide();
+          $checkbox.prop('checked', false);
+        });
+      }
+    });
+
+    function createNewSkill(title) {
+      var $skill = $manageItems.eq(0).clone(true, true);
+      var $skillTitle = $skill.find('.skill-checkbox__wrap-title');
+      $skillTitle.html(title);
+      $manageItemsWrap.prepend($skill);
+    }
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -738,6 +827,7 @@ $(function () {
   editableText();
   contentToggle();
   catalogFilters();
+  manageSkills();
 }); // On window load
 
 $(window).on('load', function () {});

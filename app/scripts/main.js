@@ -15,6 +15,7 @@ import editAvatarModal from './modules/edit-avatar-modal';
 import editableText from './modules/editable-text';
 import contentToggle from './modules/content-toggle';
 import catalogFilters from './modules/catalog-filters';
+import manageSkills from './modules/manage-skills';
 
 // On document ready
 $(() => {
@@ -34,6 +35,7 @@ $(() => {
   editableText();
   contentToggle();
   catalogFilters();
+  manageSkills();
 });
 
 // On window load

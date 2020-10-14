@@ -169,7 +169,7 @@
             </div>
             <div class="catalog__box">
               <div class="catalog__content">
-                <div class="catalog__content-item tabs__content js-tabs-content is-active" data-content="general">
+                <div class="catalog__content-item tabs__content js-tabs-content" data-content="general">
                   <div class="catalog__content-wrap">
                     <div class="row">
                       <div class="col-12 col-xl-3 col-xxl-2 offset-0 offset-xxl-1 mb-40 mb-xxl-0">
@@ -619,7 +619,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="catalog__content-item tabs__content js-tab-content" data-content="education">
+                <div class="catalog__content-item tabs__content js-tab-content is-active" data-content="education">
                   <div class="catalog__content-wrap">
                     <div class="row">
                       <div class="col-12 col-md-6 col-xl-4 offset-0 offset-xxl-1 mb-40">
@@ -631,7 +631,18 @@
                             <div class="info-list">
                               <div class="info-list__item">
                                 <div class="info-list__left">
-                                  <p class="p-sm font-semibold text-surfie-green">#1:</p>
+                                  <div class="row-group row-group--sm row-group--align-center">
+                                    <div class="row-group__item">
+                                      <p class="p-sm font-semibold text-surfie-green">#1:</p>
+                                    </div>
+                                    <div class="row-group__item">
+                                      <div class="close">
+                                        <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                          <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                        </svg>
+                                      </div>
+                                    </div>
+                                  </div>
                                 </div>
                                 <div class="info-list__right">
                                   <p class="p-sm font-semibold"></p>
@@ -660,7 +671,18 @@
                               <div class="info-list__items">
                                 <div class="info-list__item">
                                   <div class="info-list__left">
-                                    <p class="p-sm font-semibold text-surfie-green">#2:</p>
+                                    <div class="row-group row-group--sm row-group--align-center">
+                                      <div class="row-group__item">
+                                        <p class="p-sm font-semibold text-surfie-green">#2:</p>
+                                      </div>
+                                      <div class="row-group__item">
+                                        <div class="close">
+                                          <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                          </svg>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
                                   <div class="info-list__right">
                                     <p class="p-sm font-semibold"></p>
@@ -697,7 +719,18 @@
                               <p class="p-sm font-semibold text-silver-chalice">Issuing invoice:</p>
                             </div>
                             <div class="info-list__right">
-                              <p class="p-sm font-semibold text-surfie-green">IVP</p>
+                              <div class="row-group row-group--sm row-group--align-center">
+                                <div class="row-group__item">
+                                  <p class="p-sm font-semibold text-surfie-green">IVP</p>
+                                </div>
+                                <div class="row-group__item">
+                                  <div class="close">
+                                    <svg class="svg-icon svg-icon--brick-red" width="10" height="10">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#close" x="0" y="0"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -709,73 +742,303 @@
                               <h5>Skills:</h5>
                             </div>
                             <div class="row-group__item">
-                              <div class="dropdown js-dropdown create-skills-dropdown" data-dropdown="skills">
-                                <div class="dropdown__toggle create-skills-dropdown__toggle" data-dropdown-toggle="skills">
+                              <div class="dropdown js-dropdown manage-skills-dropdown" data-dropdown="manage-skills-dropdown">
+                                <div class="dropdown__toggle manage-skills-dropdown__toggle" data-dropdown-toggle="manage-skills-dropdown">
                                   <button class="button button--border-surfie-green button--size-20" type="button">
                                     <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
                                       <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
                                     </svg>
                                   </button>
                                 </div>
-                                <div class="dropdown__body create-skills-dropdown__body">
-                                  <div class="create-skills-dropdown__header">
-                                    <p class="font-semibold">Create new:</p>
-                                  </div>
-                                  <div class="create-skills-dropdown__search">
-                                    <div class="create-skills-dropdown__search-input">
-                                      <div class="input-group">
-                                        <input class="input input--border-alto input-group__input" type="text">
-                                        <div class="input-group__append">
-                                          <svg class="svg-icon svg-icon--silver-chalice" width="12" height="12">
-                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#search" x="0" y="0"></use>
+                                <div class="dropdown__body manage-skills-dropdown__body">
+                                  <div class="manage-skills js-manage-skills">
+                                    <div class="manage-skills__title">
+                                      <p class="font-semibold">Create new:</p>
+                                    </div>
+                                    <div class="manage-skills__header">
+                                      <div class="manage-skills__search">
+                                        <div class="input-group">
+                                          <input class="input input--border-alto input-group__input manage-skills__search-input" type="text" placeholder="Search">
+                                          <div class="input-group__append">
+                                            <svg class="svg-icon svg-icon--silver-chalice" width="12" height="12">
+                                              <use href="images/svg/svg-sprite/symbol/sprite.svg#search" x="0" y="0"></use>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="manage-skills__create">
+                                        <button class="button button--shadow button--white manage-skills__create-button" type="button"><span>Create new</span>
+                                          <svg class="svg-icon svg-icon--surfie-green button__icon" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
                                           </svg>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="manage-skills__form">
+                                      <div class="manage-skills__form-wrap">
+                                        <input class="input input--border-alto manage-skills__form-input" type="text">
+                                        <button class="button button--transparent manage-skills__form-submit">Submit
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="custom-scroll manage-skills__list" data-dropdown-simplebar>
+                                      <div class="manage-skills__items">
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Trados</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Localise</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Trados</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Localise</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
-                                    <button class="button button--shadow button--white" type="button"><span>Create new</span>
-                                      <svg class="svg-icon svg-icon--surfie-green button__icon" width="10" height="10">
-                                        <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
-                                      </svg>
-                                    </button>
                                   </div>
-                                  <div class="create-skills-dropdown__variants">
-                                    <div class="create-skills-dropdown__variants-title">
-                                      <h5>Chose skill from the list and confirm</h5>
-                                    </div>
-                                    <div class="custom-scroll create-skills-dropdown__variants-container" data-dropdown-simplebar>
-                                      <div class="column-group column-group--sm">
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Aobe acrobat">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Iliustrator">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Trados">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Localise">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Photoshop">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Aobe acrobat">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Iliustrator">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Trados">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Localise">
-                                        </div>
-                                        <div class="column-group__item">
-                                          <input class="input input--border-alto input--disabled" disabled value="Photoshop">
-                                        </div>
-                                      </div>
-                                    </div>
+                                  <div class="manage-skills__footer">
+                                    <button class="button button--shadow button--border-surfie-green" type="button" data-dropdown-close="manage-skills-dropdown">Confirm
+                                    </button>
                                   </div>
                                 </div>
                               </div>
@@ -829,7 +1092,308 @@
                             <div class="row-group__item">
                               <h5>Expertise:</h5>
                             </div>
-                            <div class="row-group__item"></div>
+                            <div class="row-group__item">
+                              <div class="dropdown js-dropdown manage-skills-dropdown" data-dropdown="manage-skills-dropdown">
+                                <div class="dropdown__toggle manage-skills-dropdown__toggle" data-dropdown-toggle="manage-skills-dropdown">
+                                  <button class="button button--border-surfie-green button--size-20" type="button">
+                                    <svg class="svg-icon svg-icon--surfie-green" width="10" height="10">
+                                      <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="dropdown__body manage-skills-dropdown__body">
+                                  <div class="manage-skills js-manage-skills">
+                                    <div class="manage-skills__title">
+                                      <p class="font-semibold">Create new:</p>
+                                    </div>
+                                    <div class="manage-skills__header">
+                                      <div class="manage-skills__search">
+                                        <div class="input-group">
+                                          <input class="input input--border-alto input-group__input manage-skills__search-input" type="text" placeholder="Search">
+                                          <div class="input-group__append">
+                                            <svg class="svg-icon svg-icon--silver-chalice" width="12" height="12">
+                                              <use href="images/svg/svg-sprite/symbol/sprite.svg#search" x="0" y="0"></use>
+                                            </svg>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="manage-skills__create">
+                                        <button class="button button--shadow button--white manage-skills__create-button" type="button"><span>Create new</span>
+                                          <svg class="svg-icon svg-icon--surfie-green button__icon" width="10" height="10">
+                                            <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="manage-skills__form">
+                                      <div class="manage-skills__form-wrap">
+                                        <input class="input input--border-alto manage-skills__form-input" type="text">
+                                        <button class="button button--transparent manage-skills__form-submit">Submit
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="custom-scroll manage-skills__list" data-dropdown-simplebar>
+                                      <div class="manage-skills__items">
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Trados</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Localise</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Aobe acrobat</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Iliustrator</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Trados</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Localise</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                        <div class="manage-skills__item">
+                                          <div class="manage-skills__item-left">
+                                            <label class="skill-checkbox manage-skills__skill">
+                                              <input class="skill-checkbox__input" type="checkbox" name="tag-checkbox" id="tag-checkbox1">
+                                              <div class="skill-checkbox__wrap">
+                                                <div class="skill-checkbox__wrap-title">Photoshop</div>
+                                                <div class="skill-checkbox__wrap-icon">
+                                                  <svg class="svg-icon svg-icon--white" width="12" height="12">
+                                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#plus" x="0" y="0"></use>
+                                                  </svg>
+                                                </div>
+                                              </div>
+                                            </label>
+                                            <input class="input input--border-alto manage-skills__skill-input" type="text">
+                                          </div>
+                                          <div class="manage-skills__item-right">
+                                            <button class="button button--transparent manage-skills__edit">
+                                              <svg class="svg-icon svg-icon--surfie-green button__icon" width="15" height="14">
+                                                <use href="images/svg/svg-sprite/symbol/sprite.svg#pencil" x="0" y="0"></use>
+                                              </svg>
+                                            </button>
+                                            <button class="button button--transparent manage-skills__done">Done
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="manage-skills__footer">
+                                    <button class="button button--shadow button--border-surfie-green" type="button" data-dropdown-close="manage-skills-dropdown">Confirm
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                         <div class="preffered-list">

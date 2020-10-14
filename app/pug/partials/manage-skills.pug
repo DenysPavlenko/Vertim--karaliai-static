@@ -1,0 +1,37 @@
+include /partials/button
+include /partials/input
+include /partials/skill-checkbox
+
+mixin manage-skills(props = {})
+
+  .manage-skills.js-manage-skills
+    .manage-skills__title
+      p.font-semibold Create new:
+    .manage-skills__header
+      .manage-skills__search
+        .input-group
+          +input({border:'alto', classes:'input-group__input manage-skills__search-input'})(type="text" placeholder="Search")
+          .input-group__append
+            +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
+      .manage-skills__create
+        +button({bg:'white', shadow:true, classes:'manage-skills__create-button'})(type="button")
+          span Create new
+          +icon({name:'plus', fill:'surfie-green', width:'10', height:'10', classes:'button__icon'})
+    .manage-skills__form
+      .manage-skills__form-wrap
+        +input({border:'alto', classes:'manage-skills__form-input'})(type="text")
+        +button({bg:'transparent', classes:'manage-skills__form-submit'})| Submit
+    div(data-dropdown-simplebar class="custom-scroll manage-skills__list")
+      .manage-skills__items
+        each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
+          .manage-skills__item
+            .manage-skills__item-left
+              +skill-checkbox({title:item, classes:'manage-skills__skill'})
+              +input({border:'alto', classes:'manage-skills__skill-input'})(type="text")
+            .manage-skills__item-right
+              +button({bg:'transparent', classes:'manage-skills__edit'})
+                +icon({name:'pencil', fill:'surfie-green', width:'15', height:'14', classes:'button__icon'})
+              +button({bg:'transparent', classes:'manage-skills__done'})| Done
+
+  .manage-skills__footer
+    +button({border:'surfie-green', shadow:true})(type="button" data-dropdown-close="manage-skills-dropdown")| Confirm
