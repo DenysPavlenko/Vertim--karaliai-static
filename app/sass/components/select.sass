@@ -25,10 +25,17 @@ $select-height: 40px
     width: auto
     display: inline-block
   &--transparent
+    &:hover
+      .select__label
+        background-color: $c-alabaster
     .select__label
       background-color: transparent
+      transition: 0.2s
       &:before
         background-color: transparent
+      &:focus
+        background-color: $c-alabaster
+        border-color: transparent
   &--inline
     .select__label
       padding-left: 0

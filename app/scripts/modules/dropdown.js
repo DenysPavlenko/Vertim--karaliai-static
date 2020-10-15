@@ -2,6 +2,7 @@ export default () => {
   const $dropdowns = $('.js-dropdown');
   const fadeDuration = 100;
   const $document = $(document);
+  const $body = $('body');
   const $window = $(window);
 
   // Return if $dropdowns doesn't exist
@@ -10,34 +11,53 @@ export default () => {
   $dropdowns.each((i, elem) => {
     const $dropdown = $(elem);
     const dropdownName = $dropdown.attr('data-dropdown');
-    const $dropdownBody = $dropdown.find('.dropdown__body');
+    const $dropdownBox = $dropdown.find('.dropdown__box');
     const $dropdownToggle = $dropdown.find('[data-dropdown-toggle]')
     const $dropdownClose = $(`[data-dropdown-close="${dropdownName}"]`);
     let isOpened = false;
 
     $dropdownToggle.on('click', () => {
       $dropdownToggle.toggleClass('is-active');
-      $dropdownBody.fadeToggle(fadeDuration);
-      // if ($dropdownBody.is(':visible')) {
+      $dropdownBox.fadeToggle(fadeDuration);
+      // if ($dropdownBox.is(':visible')) {
       //   setTimeout(() => {
-      //     setPosition($dropdownBody);
+      //     setPosition($dropdownBox);
       //   }, 0);
       // }
+      if ($dropdownBox.css('position') === 'fixed') {
+        $body.css('overflow-y', 'hidden');
+      }
       isOpened = !isOpened;
     });
 
     $dropdownClose.on('click', function () {
-      $dropdownBody.fadeOut(fadeDuration);
+      $dropdownBox.fadeOut(fadeDuration);
       $dropdownToggle.removeClass('is-active');
       isOpened = false;
+      if ($dropdownBox.css('position') === 'fixed') {
+        $body.css('overflow-y', 'visible');
+      }
     });
 
     $document.on('click', (e) => {
       if ($(e.target).parents('[data-dropdown]')[0] !== $dropdown[0] && isOpened) {
         isOpened = false;
-        $dropdownBody.fadeOut(fadeDuration);
+        $dropdownBox.fadeOut(fadeDuration);
         $dropdownToggle.removeClass('is-active');
+        if ($dropdownBox.css('position') === 'fixed') {
+          $body.css('overflow-y', 'visible');
+        }
       }
+    });
+
+    let timeout;
+    $window.on('resize', () => {
+      clearTimeout(timeout);
+      setTimeout(() => {
+        if ($dropdownBox.css('position') !== 'fixed' && isOpened && $body.css('overflow-y') === 'hidden') {
+          $body.css('overflow-y', 'visible');
+        }
+      }, 100);
     });
 
     // function setPosition(elem) {

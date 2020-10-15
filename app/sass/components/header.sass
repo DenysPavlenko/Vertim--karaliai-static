@@ -30,7 +30,7 @@
       font-weight: 500
       line-height: 1
       color: $c-mine-shaft
-      +media-max($bp-sm)
+      +media-max($bp-md)
         display: none
   &__right
     height: 100%
@@ -69,14 +69,19 @@
     display: flex
     align-items: center
     &:not(:last-child)
-      margin-right: 20px
-      +media-max($bp-xxl)
-        margin-right: 15px
-      +media-max($bp-sm)
-        margin-right: 10px
+      margin-right: 5px
+    &-lang
+      .select__label
+        border-radius: $r-type-3 !important
+        +media-max($bp-sm)
+          padding: 10px 25px 10px 7px
+          &:after
+            right: 7px
+      .select__dropdown
+        margin-top: 21px
   &__burger
     display: none
     +media-max($bp-xl)
       z-index: 30
       display: block
-      margin-left: 10px
+      margin-left: 5px

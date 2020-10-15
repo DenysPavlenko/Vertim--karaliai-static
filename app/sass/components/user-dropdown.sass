@@ -6,8 +6,16 @@
   &__toggle
     display: flex
     align-items: center
+    padding: 15px 10px
+    transition: 0.2s
+    border-radius: $r-type-3
+    +media-max($bp-sm)
+      padding: 10px 5px
+    &:hover
+      background-color: $c-alabaster
     // State
     &.is-active
+      background-color: $c-alabaster
       .user-dropdown__toggle-chevron
         transform: rotate(180deg)
     &-avatar
@@ -27,7 +35,7 @@
         display: none
     &-chevron
       transition: 0.2s
-  &__body
+  &__box
     min-width: 140px
     padding: 10px
     margin-top: 1px

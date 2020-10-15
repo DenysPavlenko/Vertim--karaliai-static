@@ -1,9 +1,10 @@
 include /partials/select
 
 mixin lang-select(props = {})
+  -const { classes } = props
 
   +select({
-    inline:true, h100: true,
+    transparent:true, classes:classes,
     label:{name:'lt', content:`<img src="images/icons/planet.svg"/><span>LT</span>`},
     options:[
       {name:'en', content:`<img src="images/icons/planet.svg"/><span>EN</span>`},

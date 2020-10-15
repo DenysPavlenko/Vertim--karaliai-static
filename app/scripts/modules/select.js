@@ -11,6 +11,7 @@ export default function () {
     const $input = $select.find('.js-select-input');
     const $search = $select.find('.js-select-search');
     const selectedOption = $selectLabel.attr('data-selected') && $selectLabel.attr('data-selected').toLowerCase();
+    const $scrollbar = $select.find('[data-select-simplebar]');
     let selectDropdownWidth;
     // Set a default value to the input if there is a default option
     if (selectedOption) {
@@ -22,6 +23,11 @@ export default function () {
       // Set fixed width to select dropdown
       selectDropdownWidth = selectDropdownWidth ? selectDropdownWidth : $selectDropdown.width();
       $selectDropdown.css('width', selectDropdownWidth);
+      if ($scrollbar.length > 0) {
+        setTimeout(function () {
+          new SimpleBar($scrollbar[0]);
+        }, 0);
+      }
     });
     // Select option click logic
     $options.each((i, elem) => {

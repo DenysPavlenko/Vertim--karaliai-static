@@ -22,7 +22,7 @@ mixin header(props = {})
             .header__dropdown
               +notifications-dropdown()
             .header__dropdown
-              +lang-select()
+              +lang-select({classes:'header__dropdown-lang'})
             .header__dropdown
               +user-dropdown()
           .header__burger

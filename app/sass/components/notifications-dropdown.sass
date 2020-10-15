@@ -5,6 +5,14 @@
   &__toggle
     display: flex
     align-items: center
+    padding: 10px
+    transition: 0.2s
+    border-radius: $r-type-3
+    +media-max($bp-sm)
+      padding: 10px 5px
+    &:hover,
+    &.is-active
+      background-color: $c-alabaster
     &-icon
       margin-right: 10px
     &-title
@@ -14,10 +22,31 @@
       color: $c-surfie-green
       user-select: none
       white-space: nowrap
-  &__body
+  &__box
     min-width: 300px
+    min-height: 0
     margin-top: 1px
     border-radius: 0
+    +media-max($bp-md)
+      position: fixed
+      top: 0
+      left: 0
+      margin-top: 0
+      width: 100%
+      height: 100%
+  &__header
+    display: none
+    width: 100%
+    +media-max($bp-md)
+      display: block
+  &__wrap
+    display: flex
+    flex-direction: column
+    height: 100%
   &__scroll
     max-height: 250px
+    min-height: 0
     padding: 20px
+    +media-max($bp-md)
+      max-height: none
+      flex: 1

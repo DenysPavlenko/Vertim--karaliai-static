@@ -6,7 +6,7 @@ mixin permissions-control-dropdown(props = {})
   .dropdown.js-dropdown.permissions-control-dropdown(data-dropdown="permissions-control-dropdown")
     .dropdown__toggle.permissions-control-dropdown__toggle(data-dropdown-toggle="permissions-control-dropdown")
       +burger()
-    .dropdown__body.permissions-control-dropdown__body
+    .dropdown__box.permissions-control-dropdown__box
       .permissions-control-dropdown__button
         +button({border:'boston-blue', fluid:true})(type="button" data-dropdown-close="permissions-control-dropdown")
           span Edit

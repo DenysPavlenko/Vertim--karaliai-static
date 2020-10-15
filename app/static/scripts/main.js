@@ -12,6 +12,7 @@ function select () {
     var $input = $select.find('.js-select-input');
     var $search = $select.find('.js-select-search');
     var selectedOption = $selectLabel.attr('data-selected') && $selectLabel.attr('data-selected').toLowerCase();
+    var $scrollbar = $select.find('[data-select-simplebar]');
     var selectDropdownWidth; // Set a default value to the input if there is a default option
 
     if (selectedOption) {
@@ -24,6 +25,12 @@ function select () {
 
       selectDropdownWidth = selectDropdownWidth ? selectDropdownWidth : $selectDropdown.width();
       $selectDropdown.css('width', selectDropdownWidth);
+
+      if ($scrollbar.length > 0) {
+        setTimeout(function () {
+          new SimpleBar($scrollbar[0]);
+        }, 0);
+      }
     }); // Select option click logic
 
     $options.each(function (i, elem) {
@@ -281,6 +288,7 @@ var dropdown = (function () {
   var $dropdowns = $('.js-dropdown');
   var fadeDuration = 100;
   var $document = $(document);
+  var $body = $('body');
   var $window = $(window); // Return if $dropdowns doesn't exist
 
   if ($dropdowns.length === 0) {
@@ -290,31 +298,52 @@ var dropdown = (function () {
   $dropdowns.each(function (i, elem) {
     var $dropdown = $(elem);
     var dropdownName = $dropdown.attr('data-dropdown');
-    var $dropdownBody = $dropdown.find('.dropdown__body');
+    var $dropdownBox = $dropdown.find('.dropdown__box');
     var $dropdownToggle = $dropdown.find('[data-dropdown-toggle]');
     var $dropdownClose = $("[data-dropdown-close=\"".concat(dropdownName, "\"]"));
     var isOpened = false;
     $dropdownToggle.on('click', function () {
       $dropdownToggle.toggleClass('is-active');
-      $dropdownBody.fadeToggle(fadeDuration); // if ($dropdownBody.is(':visible')) {
+      $dropdownBox.fadeToggle(fadeDuration); // if ($dropdownBox.is(':visible')) {
       //   setTimeout(() => {
-      //     setPosition($dropdownBody);
+      //     setPosition($dropdownBox);
       //   }, 0);
       // }
+
+      if ($dropdownBox.css('position') === 'fixed') {
+        $body.css('overflow-y', 'hidden');
+      }
 
       isOpened = !isOpened;
     });
     $dropdownClose.on('click', function () {
-      $dropdownBody.fadeOut(fadeDuration);
+      $dropdownBox.fadeOut(fadeDuration);
       $dropdownToggle.removeClass('is-active');
       isOpened = false;
+
+      if ($dropdownBox.css('position') === 'fixed') {
+        $body.css('overflow-y', 'visible');
+      }
     });
     $document.on('click', function (e) {
       if ($(e.target).parents('[data-dropdown]')[0] !== $dropdown[0] && isOpened) {
         isOpened = false;
-        $dropdownBody.fadeOut(fadeDuration);
+        $dropdownBox.fadeOut(fadeDuration);
         $dropdownToggle.removeClass('is-active');
+
+        if ($dropdownBox.css('position') === 'fixed') {
+          $body.css('overflow-y', 'visible');
+        }
       }
+    });
+    var timeout;
+    $window.on('resize', function () {
+      clearTimeout(timeout);
+      setTimeout(function () {
+        if ($dropdownBox.css('position') !== 'fixed' && isOpened && $body.css('overflow-y') === 'hidden') {
+          $body.css('overflow-y', 'visible');
+        }
+      }, 100);
     }); // function setPosition(elem) {
     //   const leftOffset = elem.offset().left;
     //   const rightOffst = $window.width() - (leftOffset + elem.outerWidth());

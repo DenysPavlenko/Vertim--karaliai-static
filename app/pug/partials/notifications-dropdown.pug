@@ -1,3 +1,5 @@
+include /partials/content-header
+
 mixin notifications-dropdown(props = {})
 
   .dropdown.notifications-dropdown.js-dropdown(data-dropdown="notifications")
@@ -5,9 +7,15 @@ mixin notifications-dropdown(props = {})
       .notifications-dropdown__toggle-icon
         +icon({name:'bell', fill:'surfie-green', width:'24', height:'25'})
       .notifications-dropdown__toggle-title 4
-    .dropdown__body.notifications-dropdown__body
-      div(data-simplebar class="custom-scroll notifications-dropdown__scroll")
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
+    .dropdown__box.notifications-dropdown__box
+      .notifications-dropdown__wrap
+        .notifications-dropdown__header
+          +content-header({title:'Notifications'})(data-dropdown-close="notifications")
+        div(data-simplebar class="custom-scroll notifications-dropdown__scroll")
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur dolore deserunt earum, nihil neque quibusdam sapiente, praesentium quisquam eaque expedita autem? Ab distinctio placeat quos velit adipisci harum libero.

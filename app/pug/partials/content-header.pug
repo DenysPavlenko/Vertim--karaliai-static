@@ -1,0 +1,10 @@
+include /partials/close
+
+mixin content-header(props = {})
+  - const { title } = props
+
+  .content-header
+    .content-header__title
+      h3 #{title}
+    .content-header__close
+      +close({color:'alto', size:'15'})&attributes(attributes)
