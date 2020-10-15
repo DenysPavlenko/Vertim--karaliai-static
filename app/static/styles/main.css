@@ -4553,6 +4553,16 @@ p,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.edit-avatar-tool__buttons-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: flex-start;
+  margin-right: 10px;
 }
 
 .edit-avatar {
@@ -8474,7 +8484,7 @@ p,
   }
 
   .edit-avatar-modal {
-    padding: 40px 15px;
+    padding: 50px 15px;
   }
 }
 
@@ -8543,6 +8553,20 @@ p,
   .upload-documents__header-title {
     width: 100%;
     margin-bottom: 15px;
+  }
+
+  .edit-avatar-tool__image-box {
+    width: 240px;
+  }
+
+  .edit-avatar-tool__placeholder-wrap {
+    width: 240px;
+  }
+
+  .edit-avatar-tool__buttons-left {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
   .create-service {
