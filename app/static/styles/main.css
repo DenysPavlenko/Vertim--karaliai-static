@@ -3001,7 +3001,6 @@ p,
 
 .dropdown {
   position: relative;
-  height: 100%;
 }
 
 .dropdown__toggle {
@@ -5094,6 +5093,27 @@ p,
 
 .manage-position-dropdown__input {
   margin-bottom: 20px;
+}
+
+.permissions-control-dropdown {
+  display: inline-block;
+}
+
+.permissions-control-dropdown__toggle {
+  background-color: #FFFFFF;
+  padding: 7px;
+  -webkit-box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.05);
+}
+
+.permissions-control-dropdown__body {
+  min-width: 120px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.permissions-control-dropdown__button:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 @media (min-width: 361px) {
