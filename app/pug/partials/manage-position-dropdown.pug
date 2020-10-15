@@ -1,0 +1,16 @@
+include /partials/button
+include /partials/input
+
+mixin manage-position-dropdown(props={})
+
+  .dropdown.js-dropdown.manage-position-dropdown(data-dropdown="manage-position-dropdown")
+    .dropdown__toggle.manage-position-dropdown__toggle(data-dropdown-toggle="manage-position-dropdown")
+      +button({border:'surfie-green', size:'40'})(type="button")
+        +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
+    .dropdown__body.manage-position-dropdown__body
+      .manage-position-dropdown__title
+        h5 Create postion
+      .manage-position-dropdown__input
+        +input({border:'alto'})(type="text" placeholder="Position name")
+      .manage-position-dropdown__button
+        +button({bg:'surfie-green', fluid:true})(type="button" data-dropdown-close="manage-position-dropdown")| Create

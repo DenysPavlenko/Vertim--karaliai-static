@@ -1,0 +1,46 @@
+extends /layouts/main
+include /partials/header
+include /partials/manage-position-dropdown
+
+block variables
+  - const title = 'Permissions page'
+  -
+    const tabs = [
+      {title:'Admin', name:'admin', isActive:true},
+      {title:'Project manager', name:'projectManager'},
+      {title:'Administrator', name:'administrator'},
+      {title:'Sales manager', name:'salesManager'},
+    ]
+
+block content
+  .permissions-page
+    .permissions-page__header
+      +header()
+    .permissions-page__wrap
+      .container
+        .permissions-page__heading
+          .permissions-page__heading-title
+            h2.text-surfie-green Lukas Baranauskas #221
+          .permissions-page__heading-status
+            h3 Account status: <span class="text-caribbean-green">Approved</span>
+              span.icon-inline
+                +icon({name:'check', fill:'caribbean-green', width:'15', height:'13'})
+        .permissions-page__catalog
+          .catalog
+            .catalog__header
+              .catalog__tabs.tabs.js-tabs
+                each tab in tabs
+                  div(class=`catalog__tab js-tabs-tab ${tab.isActive ? 'is-active' : ''}` data-tab=tab.name)
+                    .catalog__tab-title #{tab.title}
+              .catalog__right
+                +manage-position-dropdown()
+            .catalog__box
+              .catalog__content
+                .catalog__content-item.tabs__content.js-tabs-content.is-active(data-content="admin")
+                  include /pages/permissions-page/admin
+                .catalog__content-item.tabs__content.js-tab-content(data-content="projectManager")
+                  //- include /pages/permissions-page/education
+                .catalog__content-item.tabs__content.js-tab-content(data-content="administrator")
+                  //- include /pages/permissions-page/services
+                .catalog__content-item.tabs__content.js-tab-content(data-content="salesManager")
+                  //- include /pages/permissions-page/notifications
