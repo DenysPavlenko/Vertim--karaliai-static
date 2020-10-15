@@ -6,32 +6,38 @@ include /partials/lang-combinations-dropdown
 include /partials/choose-actions-dropdown
 include /partials/massive-actions-dropdown
 include /partials/view-select
+include /partials/name-select-dropdown
+include /partials/checkbox
 -
   var users = [
-    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Lukas Baranauskas'}, accType:'Freelance', services:['proofreading', 'translation'], languages:true, status:'Wating for approval', actions:true },
-    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:['proofreading', 'translation', 'interpreting', 'creative-editing'], languages:true, status:'Wating for approval', actions:true },
-    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:[], languages:true, status:'Wating for approval', actions:true },
-    { id:'12879452', name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:false, services:[], languages:true, status:'Wating for approval', actions:true },
+    {name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Lukas Baranauskas'}, accType:'Freelance', services:['proofreading', 'translation'], languages:true, status:'Wating for approval', actions:true },
+    {name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:['proofreading', 'translation', 'interpreting', 'creative-editing'], languages:true, status:'Wating for approval', actions:true },
+    {name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:'Full time', services:[], languages:true, status:'Wating for approval', actions:true },
+    {name:{'link':'employee-settings.html', 'image':'images/user/avatar.jpg', name:'Marija Juodijenė'}, accType:false, services:[], languages:true, status:'Wating for approval', actions:true },
   ]
 
 .table-holder
-  table.table
+  table.table.js-table.table--with-checkbox
     thead
       tr
-        each heading in ['ID:', 'Name:', 'Acc type:', 'Services:', 'Languages:', 'Status:', 'Actions:']
+        th
+        th
+          +name-select-dropdown()
+        each heading in ['Acc type:', 'Services:', 'Languages:', 'Status:', 'Actions:']
           th
             h5 #{heading}
     tbody
       each user in users
-        tr
+        tr.js-table-tr
           td
-            p #{user.id}
+            +checkbox({classes:'js-table-checkbox'})
           td
             a(href=user.name.link class="row-group row-group--sm row-group--align-center row-group--nowrap")
               .row-group__item
                 +avatar({image:user.name.image})
               .row-group__item
                 p.font-bold #{user.name.name}
+                p.text-silver-chalice #1287
           td
             if(user.accType)
               if(user.accType === 'Freelance')

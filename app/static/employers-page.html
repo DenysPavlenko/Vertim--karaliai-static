@@ -472,14 +472,29 @@
               <div class="catalog__content">
                 <div class="catalog__content-item tabs__content js-tabs-content is-active" data-content="employees">
                   <div class="table-holder">
-                    <table class="table">
+                    <table class="table js-table table--with-checkbox">
                       <thead>
                         <tr>
+                          <th></th>
                           <th>
-                            <h5>ID:</h5>
-                          </th>
-                          <th>
-                            <h5>Name:</h5>
+                            <div class="dropdown name-select-dropdown js-dropdown js-name-select-dropdown" data-dropdown="name-select-dropdown">
+                              <div class="dropdown__toggle name-select-dropdown__toggle" data-dropdown-toggle="name-select-dropdown">
+                                <div class="name-select-dropdown__toggle-title">
+                                  <h5>Name</h5>
+                                </div>
+                                <div class="name-select-dropdown__toggle-icon">
+                                  <svg class="svg-icon svg-icon--surfie-green" width="8" height="5">
+                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="dropdown__box name-select-dropdown__box">
+                                <div class="name-select-dropdown__buttons">
+                                  <div class="name-select-dropdown__button" data-action="select" data-dropdown-close="name-select-dropdown">Select all</div>
+                                  <div class="name-select-dropdown__button" data-action="deselect" data-dropdown-close="name-select-dropdown">Deselect all</div>
+                                </div>
+                              </div>
+                            </div>
                           </th>
                           <th>
                             <h5>Acc type:</h5>
@@ -499,9 +514,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -511,6 +530,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Lukas Baranauskas</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -596,9 +616,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -608,6 +632,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -695,9 +720,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -707,6 +736,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -788,9 +818,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -800,6 +834,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -940,14 +975,29 @@
                 </div>
                 <div class="catalog__content-item tabs__content js-tabs-content" data-content="registrations">
                   <div class="table-holder">
-                    <table class="table">
+                    <table class="table js-table table--with-checkbox">
                       <thead>
                         <tr>
+                          <th></th>
                           <th>
-                            <h5>ID:</h5>
-                          </th>
-                          <th>
-                            <h5>Name:</h5>
+                            <div class="dropdown name-select-dropdown js-dropdown js-name-select-dropdown" data-dropdown="name-select-dropdown">
+                              <div class="dropdown__toggle name-select-dropdown__toggle" data-dropdown-toggle="name-select-dropdown">
+                                <div class="name-select-dropdown__toggle-title">
+                                  <h5>Name</h5>
+                                </div>
+                                <div class="name-select-dropdown__toggle-icon">
+                                  <svg class="svg-icon svg-icon--surfie-green" width="8" height="5">
+                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="dropdown__box name-select-dropdown__box">
+                                <div class="name-select-dropdown__buttons">
+                                  <div class="name-select-dropdown__button" data-action="select" data-dropdown-close="name-select-dropdown">Select all</div>
+                                  <div class="name-select-dropdown__button" data-action="deselect" data-dropdown-close="name-select-dropdown">Deselect all</div>
+                                </div>
+                              </div>
+                            </div>
                           </th>
                           <th>
                             <h5>Acc type:</h5>
@@ -967,9 +1017,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -979,6 +1033,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Lukas Baranauskas</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -1064,9 +1119,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -1076,6 +1135,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -1163,9 +1223,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -1175,6 +1239,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -1256,9 +1321,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -1268,6 +1337,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -1408,14 +1478,29 @@
                 </div>
                 <div class="catalog__content-item tabs__content js-tabs-content" data-content="archieved">
                   <div class="table-holder">
-                    <table class="table">
+                    <table class="table js-table table--with-checkbox">
                       <thead>
                         <tr>
+                          <th></th>
                           <th>
-                            <h5>ID:</h5>
-                          </th>
-                          <th>
-                            <h5>Name:</h5>
+                            <div class="dropdown name-select-dropdown js-dropdown js-name-select-dropdown" data-dropdown="name-select-dropdown">
+                              <div class="dropdown__toggle name-select-dropdown__toggle" data-dropdown-toggle="name-select-dropdown">
+                                <div class="name-select-dropdown__toggle-title">
+                                  <h5>Name</h5>
+                                </div>
+                                <div class="name-select-dropdown__toggle-icon">
+                                  <svg class="svg-icon svg-icon--surfie-green" width="8" height="5">
+                                    <use href="images/svg/svg-sprite/symbol/sprite.svg#chevron-down" x="0" y="0"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <div class="dropdown__box name-select-dropdown__box">
+                                <div class="name-select-dropdown__buttons">
+                                  <div class="name-select-dropdown__button" data-action="select" data-dropdown-close="name-select-dropdown">Select all</div>
+                                  <div class="name-select-dropdown__button" data-action="deselect" data-dropdown-close="name-select-dropdown">Deselect all</div>
+                                </div>
+                              </div>
+                            </div>
                           </th>
                           <th>
                             <h5>Acc type:</h5>
@@ -1435,9 +1520,13 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -1447,6 +1536,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Lukas Baranauskas</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -1532,9 +1622,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -1544,6 +1638,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -1631,9 +1726,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -1643,6 +1742,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>
@@ -1724,9 +1824,13 @@
                             </div>
                           </td>
                         </tr>
-                        <tr>
+                        <tr class="js-table-tr">
                           <td>
-                            <p>12879452</p>
+                            <label class="checkbox js-table-checkbox">
+                              <div class="checkbox__box">
+                                <input class="checkbox__input" type="checkbox"><span class="checkbox__checkmark"></span>
+                              </div><span class="checkbox__name"></span>
+                            </label>
                           </td>
                           <td><a class="row-group row-group--sm row-group--align-center row-group--nowrap" href="employee-settings.html">
                               <div class="row-group__item">
@@ -1736,6 +1840,7 @@
                               </div>
                               <div class="row-group__item">
                                 <p class="font-bold">Marija Juodijenė</p>
+                                <p class="text-silver-chalice">#1287</p>
                               </div>
                             </a></td>
                           <td>

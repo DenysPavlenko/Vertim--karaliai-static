@@ -18,6 +18,8 @@ import catalogFilters from './modules/catalog-filters';
 import manageSkills from './modules/manage-skills';
 import suspendButtons from './modules/suspend-buttons';
 import permissionsBox from './modules/permissions-box';
+import nameSelectDropdown from './modules/name-select-dropdown';
+import tableRowCheck from './modules/table-row-check';
 
 // On document ready
 $(() => {
@@ -40,6 +42,8 @@ $(() => {
   manageSkills();
   suspendButtons();
   permissionsBox();
+  nameSelectDropdown();
+  tableRowCheck();
 });
 
 // On window load

@@ -1,0 +1,12 @@
+mixin name-select-dropdown(props = {})
+
+  .dropdown.name-select-dropdown.js-dropdown.js-name-select-dropdown(data-dropdown="name-select-dropdown")
+    .dropdown__toggle.name-select-dropdown__toggle(data-dropdown-toggle="name-select-dropdown")
+      .name-select-dropdown__toggle-title
+        h5 Name
+      .name-select-dropdown__toggle-icon
+        +icon({name:'chevron-down', fill:'surfie-green', width:'8', height:'5'})
+    .dropdown__box.name-select-dropdown__box
+      .name-select-dropdown__buttons
+        .name-select-dropdown__button(data-action="select" data-dropdown-close="name-select-dropdown") Select all
+        .name-select-dropdown__button(data-action="deselect" data-dropdown-close="name-select-dropdown") Deselect all

@@ -1,0 +1,31 @@
+.name-select-dropdown
+  display: inline-block
+  // Elements
+  &__toggle
+    display: flex
+    align-items: center
+    &-title
+      margin-right: 5px
+    &-icon
+      transition: 0.2s
+    &.is-active
+      .name-select-dropdown__toggle-icon
+        transform: rotate(180deg)
+  &__box
+    left: 0
+    min-width: 130px
+    margin-top: 10px
+    padding: 10px 0
+  &__button
+    padding: 12px 15px
+    text-align: center
+    font-size: rem(14px)
+    line-height: 1
+    font-weight: 600
+    cursor: pointer
+    transition: 0.2s
+    color: $c-tundora
+    &:hover,
+    &.is-active
+      background-color: $c-surfie-green
+      color: $c-white

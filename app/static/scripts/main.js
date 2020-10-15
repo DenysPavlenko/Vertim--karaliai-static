@@ -861,6 +861,65 @@ var permissionsBox = (function () {
   });
 });
 
+var nameSelectDropdown = (function () {
+  var $dropdowns = $('.js-name-select-dropdown');
+  var $table = $('.js-table'); // Return if $dropdowns || table don't exist
+
+  if (!$dropdowns.length || !$table.length) {
+    return;
+  }
+
+  var $tableTr = $table.find('.js-table-tr');
+  var $tableCheckboxes = $table.find('.js-table-checkbox');
+  $dropdowns.each(function (i, elem) {
+    var $dropdown = $(elem);
+    var $buttons = $dropdown.find('.name-select-dropdown__button');
+    $buttons.on('click', function (e) {
+      var $button = $(e.currentTarget);
+      var action = $button.attr('data-action');
+      $buttons.removeClass('is-active');
+      $button.addClass('is-active');
+      handleCheckboxes(action);
+      handleTableRows(action);
+    });
+  });
+
+  function handleCheckboxes(action) {
+    var $input = $tableCheckboxes.find('input');
+    $input.prop('checked', action === 'select' ? true : false);
+  }
+
+  function handleTableRows(action) {
+    if (action === 'select') {
+      $tableTr.addClass('is-checked');
+    } else {
+      $tableTr.removeClass('is-checked');
+    }
+  }
+});
+
+var tableRowCheck = (function () {
+  var $table = $('.js-table'); // Return if $table doesn't exist
+
+  if (!$table.length) {
+    return;
+  }
+
+  var $tableCheckboxes = $table.find('.js-table-checkbox');
+  $tableCheckboxes.each(function (i, elem) {
+    var $input = $(elem).find('input');
+    $input.on('click', function () {
+      var $tr = $input.parents('tr');
+
+      if ($input.prop('checked')) {
+        $tr.addClass('is-checked');
+      } else {
+        $tr.removeClass('is-checked');
+      }
+    });
+  });
+});
+
 $(function () {
   svg4everybody();
   select();
@@ -881,6 +940,8 @@ $(function () {
   manageSkills();
   suspendButtons();
   permissionsBox();
+  nameSelectDropdown();
+  tableRowCheck();
 }); // On window load
 
 $(window).on('load', function () {});
