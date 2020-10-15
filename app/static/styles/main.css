@@ -4882,7 +4882,6 @@ p,
 }
 
 .invite-employee-dropdown__box {
-  display: block;
   right: 0;
   min-width: 650px;
   margin-top: 5px;
