@@ -1,6 +1,7 @@
 include /partials/input
 include /partials/button
 include /partials/skill-checkbox
+include /partials/content-header
 
 mixin skills-dropdown(props = {})
 
@@ -9,20 +10,24 @@ mixin skills-dropdown(props = {})
       +button({border:'surfie-green', size:'20'})(type="button")
         +icon({name:'plus', fill:'surfie-green', width:'10', height:'10'})
     .dropdown__box.skills-dropdown__box
-      .skills-dropdown__header
-        h5 Skills
-        h5.text-silver-chalice 5234 skills
-      .skills-dropdown__search
-        .input-group
-          +input({border:'alto', classes:'input-group__input'})(type="text" placeholder="Search")
-          .input-group__append
-            +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
-      .skills-dropdown__title
-        h6 Chose skill from the list and confirm
-      div(data-simplebar class="custom-scroll skills-dropdown__wrap")
-        .column-group.column-group--sm
-          each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
-            .column-group__item
-              +skill-checkbox({title:item, classes:'skills-dropdown__skill'})
-      .skills-dropdown__footer
-        +button({border:'surfie-green'})(type="button" data-dropdown-close="skills-dropdown")| Confirm
+      .skills-dropdown__content
+        .skills-dropdown__header
+          +content-header({title:'Skills'})(data-dropdown-close="skills-dropdown")
+        .skills-dropdown__body
+          .skills-dropdown__heading
+            h5 Skills
+            h5.text-silver-chalice 5234 skills
+          .skills-dropdown__search
+            .input-group
+              +input({border:'alto', classes:'input-group__input'})(type="text" placeholder="Search")
+              .input-group__append
+                +icon({name:'search', fill:'silver-chalice', width:'12', height:'12'})
+          .skills-dropdown__title
+            h6 Chose skill from the list and confirm
+          div(data-simplebar class="custom-scroll skills-dropdown__scroll")
+            .column-group.column-group--sm
+              each item in ['Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop', 'Aobe acrobat', 'Iliustrator', 'Trados', 'Localise', 'Photoshop']
+                .column-group__item
+                  +skill-checkbox({title:item, classes:'skills-dropdown__skill'})
+          .skills-dropdown__footer
+            +button({border:'surfie-green'})(type="button" data-dropdown-close="skills-dropdown")| Confirm
