@@ -11,30 +11,56 @@
       .invite-employee-dropdown__toggle-icon
         transform: rotate(180deg)
   &__box
+    display: block
     right: 0
     min-width: 650px
     margin-top: 5px
-    padding: 20px 50px 20px 10px
     white-space: normal
+    +media-max($bp-md)
+      position: fixed
+      top: 0
+      left: 0
+      margin-top: 0
+      width: 100%
+      min-width: 100%
+      height: 100%
   &__items
     display: flex
     flex-direction: column
+  &__header
+    display: none
+    +media-max($bp-md)
+      display: block
+  &__body
+    padding: 20px 20px 20px 10px
   &__item
     position: relative
     display: flex
     align-items: center
+    flex-wrap: wrap
     flex: 1
     margin-bottom: 10px
-    &-name
-      margin-right: 10px
-      max-width: 160px
-    &-input-wrap
-      flex: 1
-    &-remove
-      position: absolute
-      top: 50%
-      right: -30px
-      transform: translateY(-50%)
+  &__name
+    margin-right: 10px
+    flex: 1 0 140px
+    max-width: 140px
+    +media-max($bp-sm)
+      max-width: 100%
+      flex: 1 0 100%
+      margin-bottom: 5px
+  &__link
+    position: relative
+    padding-right: 30px
+    flex: 1 0 200px
+    &-input
+      padding-right: 60px !important
+  &__remove
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+    z-index: 2
   &__button
     display: flex
     justify-content: flex-end
+    padding-right: 30px

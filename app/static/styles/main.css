@@ -4882,10 +4882,10 @@ p,
 }
 
 .invite-employee-dropdown__box {
+  display: block;
   right: 0;
   min-width: 650px;
   margin-top: 5px;
-  padding: 20px 50px 20px 10px;
   white-space: normal;
 }
 
@@ -4899,6 +4899,14 @@ p,
   flex-direction: column;
 }
 
+.invite-employee-dropdown__header {
+  display: none;
+}
+
+.invite-employee-dropdown__body {
+  padding: 20px 20px 20px 10px;
+}
+
 .invite-employee-dropdown__item {
   position: relative;
   display: -webkit-box;
@@ -4907,29 +4915,41 @@ p,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   margin-bottom: 10px;
 }
 
-.invite-employee-dropdown__item-name {
+.invite-employee-dropdown__name {
   margin-right: 10px;
-  max-width: 160px;
-}
-
-.invite-employee-dropdown__item-input-wrap {
   -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -ms-flex: 1 0 140px;
+  flex: 1 0 140px;
+  max-width: 140px;
 }
 
-.invite-employee-dropdown__item-remove {
+.invite-employee-dropdown__link {
+  position: relative;
+  padding-right: 30px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 200px;
+  flex: 1 0 200px;
+}
+
+.invite-employee-dropdown__link-input {
+  padding-right: 60px !important;
+}
+
+.invite-employee-dropdown__remove {
   position: absolute;
   top: 50%;
-  right: -30px;
+  right: 0;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 2;
 }
 
 .invite-employee-dropdown__button {
@@ -4939,6 +4959,7 @@ p,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+  padding-right: 30px;
 }
 
 .preffered-list__scroll {
@@ -5061,7 +5082,7 @@ p,
   height: 100%;
 }
 
-.manage-skills-dropdown__content {
+.manage-skills-dropdown__box {
   min-width: 500px;
   padding: 20px;
   margin-top: 10px;
@@ -8519,6 +8540,20 @@ p,
   .edit-avatar-modal {
     padding: 50px 15px;
   }
+
+  .invite-employee-dropdown__box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+  }
+
+  .invite-employee-dropdown__header {
+    display: block;
+  }
 }
 
 @media (max-width: 576px) {
@@ -8600,6 +8635,14 @@ p,
     width: 100%;
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .invite-employee-dropdown__name {
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    margin-bottom: 5px;
   }
 
   .create-service {
