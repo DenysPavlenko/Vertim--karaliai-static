@@ -8,8 +8,8 @@ mixin permissions-control-dropdown(props = {})
       +burger()
     .dropdown__box.permissions-control-dropdown__box
       .permissions-control-dropdown__button
-        +button({border:'boston-blue', fluid:true})(type="button" data-dropdown-close="permissions-control-dropdown")
+        +button({border:'boston-blue', fluid:true})(type="button")
           span Edit
           +icon({name:'pencil', fill:'boston-blue', width:12, height:12, classes:'button__icon'})
       .permissions-control-dropdown__button
-        +button({border:'brick-red', fluid:true})(type="button" data-dropdown-close="permissions-control-dropdown")| Delete
+        +button({border:'brick-red', fluid:true})(type="button")| Delete
